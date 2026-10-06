@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Animated listing preview</title>
+<style>
+  :root { --bg: #f6f5f2; --fg: #1c1c1c; --muted: #6b6b6b; --card: #fff; --line: #e4e2dc; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #151515; --fg: #eee; --muted: #9a9a9a; --card: #1f1f1f; --line: #333; } }
+  body { margin: 0; padding: 24px 16px 64px; background: var(--bg); color: var(--fg); font: 15px/1.5 system-ui, sans-serif; }
+  main { max-width: 1680px; margin: 0 auto; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  p.lede { color: var(--muted); margin: 0 0 24px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 640px), 1fr)); gap: 20px; }
+  figure { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  figure img { display: block; width: 100%; height: auto; }
+  figcaption { padding: 10px 14px; font-size: 13px; color: var(--muted); }
+  figcaption b { color: var(--fg); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Kite listing image 5, animated</h1>
+  <p class="lede">Open this file locally. Every image below is a file in <code>output/</code>; if it moves here, it moves in a browser.</p>
+  <div class="grid">
+    <figure><img src="output/kite-listing-5-animated.png" alt="APNG, full colour"><figcaption><b>kite-listing-5-animated.png</b>: APNG, full colour, 4.2 MB</figcaption></figure>
+    <figure><img src="output/kite-listing-5-animated-lite.png" alt="APNG, 256 colours"><figcaption><b>kite-listing-5-animated-lite.png</b>: APNG, 256 colours, 0.6 MB</figcaption></figure>
+    <figure><img src="output/kite-listing-5-animated-gif-renamed.png" alt="GIF saved as .png"><figcaption><b>kite-listing-5-animated-gif-renamed.png</b>: GIF bytes with a .png name, 0.76 MB (what the live competitor listing serves)</figcaption></figure>
+    <figure><img src="output/kite-listing-5-static.png" alt="Static fallback"><figcaption><b>kite-listing-5-static.png</b>: static fallback (untouched Figma export)</figcaption></figure>
+  </div>
+</main>
+</body>
+</html>
