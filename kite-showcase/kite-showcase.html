@@ -1,0 +1,687 @@
+<title>Kite Showcase</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600&display=swap">
+<style>
+/* Layout: an admin screen inside Kite. Left: the discount (free-form). Right: how Kite reads it, then every display format with a live storefront preview and a fit verdict. Below: the three routes onto the store and the open questions. */
+:root {
+  --bg: #F1F1F1;
+  --surface: #FFFFFF;
+  --ink: #303030;
+  --muted: #616161;
+  --faint: #8A8A8A;
+  --line: #E3E3E3;
+  --fill: #F7F7F7;
+  --primary: #303030;
+  --on-primary: #FFFFFF;
+  --great: #0C7A50;
+  --great-soft: #E3F5EC;
+  --ok: #8A5A00;
+  --ok-soft: #FFF1D6;
+  --no: #8A8A8A;
+  --no-soft: #F1F1F1;
+  --focus: #005BD3;
+  --sf-bg: #EEF2EC;
+  --sf-card: #FBFCFA;
+  --sf-ink: #1E2A22;
+  --sf-muted: #5E6B62;
+  --sf-accent: #355F46;
+  --sf-accent-soft: #DCE8DF;
+  --sf-line: #D3DCD4;
+  --font-ui: "Inter", -apple-system, "Segoe UI", system-ui, sans-serif;
+  --font-brand: "Cormorant Garamond", Georgia, serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1A1A1A; --surface: #262626; --ink: #E8E8E8; --muted: #B0B0B0; --faint: #8F8F8F; --line: #3A3A3A; --fill: #2E2E2E;
+    --primary: #F2F2F2; --on-primary: #1A1A1A; --great: #5BD39C; --great-soft: #173326; --ok: #F2B84B; --ok-soft: #3A2D12;
+    --no: #9A9A9A; --no-soft: #2E2E2E; --focus: #6FA8FF;
+    --sf-bg: #161D18; --sf-card: #1D2520; --sf-ink: #E3EBE5; --sf-muted: #9DAEA2; --sf-accent: #8CC7A4; --sf-accent-soft: #24372B; --sf-line: #2D3931;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1A1A1A; --surface: #262626; --ink: #E8E8E8; --muted: #B0B0B0; --faint: #8F8F8F; --line: #3A3A3A; --fill: #2E2E2E;
+  --primary: #F2F2F2; --on-primary: #1A1A1A; --great: #5BD39C; --great-soft: #173326; --ok: #F2B84B; --ok-soft: #3A2D12;
+  --no: #9A9A9A; --no-soft: #2E2E2E; --focus: #6FA8FF;
+  --sf-bg: #161D18; --sf-card: #1D2520; --sf-ink: #E3EBE5; --sf-muted: #9DAEA2; --sf-accent: #8CC7A4; --sf-accent-soft: #24372B; --sf-line: #2D3931;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 13.5px/1.5 var(--font-ui); }
+.wrap { max-width: 1240px; margin: 0 auto; padding-inline: 16px; padding-block: 20px 60px; }
+h1, h2, h3, h4 { margin: 0; line-height: 1.25; text-wrap: balance; }
+h1 { font-size: 22px; font-weight: 700; }
+h2 { font-size: 15px; font-weight: 600; }
+h3 { font-size: 13.5px; font-weight: 600; }
+p { margin: 0; }
+button, input, select { font: inherit; color: inherit; }
+button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
+.muted { color: var(--muted); }
+
+.intro { display: grid; gap: 10px; margin-bottom: 18px; }
+.intro p { max-width: 80ch; color: var(--muted); font-size: 14px; }
+.flowline { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 13px; }
+.flowline span.step { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 4px 10px; }
+.flowline span.arr { color: var(--faint); }
+
+.layout { display: grid; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); gap: 16px; align-items: start; }
+@media (max-width: 900px) { .layout { grid-template-columns: minmax(0, 1fr); } }
+.card { background: var(--surface); border-radius: 12px; box-shadow: 0 1px 0 rgba(0,0,0,.07), 0 0 0 1px var(--line); padding: 16px; display: grid; gap: 12px; min-width: 0; }
+.card > * { min-width: 0; }
+.stack { display: grid; gap: 16px; min-width: 0; }
+.sticky { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 12px); }
+@media (max-width: 900px) { .sticky { position: static; } }
+
+/* discount editor */
+.presets { display: flex; flex-wrap: wrap; gap: 6px; }
+.presets button { border: 1px solid var(--line); background: var(--surface); border-radius: 8px; padding: 4px 9px; font-size: 12.5px; cursor: pointer; }
+.presets button[aria-pressed="true"] { background: var(--primary); color: var(--on-primary); border-color: var(--primary); }
+.field { display: grid; gap: 4px; }
+.field > label, .lbl { font-size: 12px; font-weight: 500; color: var(--muted); }
+input[type=text], input[type=number], select { width: 100%; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); padding: 6px 8px; min-width: 0; }
+input[type=number] { font-variant-numeric: tabular-nums; }
+.cond { display: grid; grid-template-columns: minmax(0, 1fr) 30px; gap: 6px; align-items: start; background: var(--fill); border-radius: 10px; padding: 8px; }
+.cond .inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 6px; }
+.cond .inner > :first-child { grid-column: 1 / -1; }
+.cond .kindtag { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--faint); grid-column: 1 / -1; }
+.iconbtn { width: 30px; height: 30px; border: 0; border-radius: 8px; background: transparent; cursor: pointer; display: grid; place-items: center; color: var(--muted); }
+.iconbtn:hover { background: var(--line); }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.seg button { border: 0; background: var(--surface); padding: 4px 10px; cursor: pointer; font-size: 12.5px; }
+.seg button[aria-pressed="true"] { background: var(--primary); color: var(--on-primary); }
+.row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.between { justify-content: space-between; }
+.tiers { display: grid; gap: 6px; }
+.tier { display: grid; grid-template-columns: auto minmax(0, 1fr) auto minmax(0, 1fr) 30px; gap: 6px; align-items: center; font-size: 12.5px; }
+.btn { border: 1px solid var(--line); background: var(--surface); border-radius: 8px; padding: 5px 10px; cursor: pointer; font-size: 12.5px; font-weight: 500; }
+.btn:hover { background: var(--fill); }
+.check { display: flex; gap: 8px; align-items: center; font-size: 13px; }
+.divider { height: 1px; background: var(--line); }
+
+/* reading */
+.reading { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+@media (max-width: 640px) { .reading { grid-template-columns: minmax(0, 1fr); } }
+.rbox { background: var(--fill); border-radius: 10px; padding: 10px 12px; display: grid; gap: 4px; align-content: start; }
+.rbox ul { margin: 0; padding-left: 16px; display: grid; gap: 2px; }
+.shape { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.shape .pill { font-weight: 600; background: var(--primary); color: var(--on-primary); border-radius: 999px; padding: 3px 10px; font-size: 12.5px; }
+
+/* shopper sim */
+.sim { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; }
+.sim .ctl { display: flex; gap: 8px; align-items: center; font-size: 12.5px; }
+.sim input[type=range] { width: 130px; accent-color: var(--primary); }
+.sim output { font-variant-numeric: tabular-nums; font-weight: 600; min-width: 36px; }
+.stepper { display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: 8px; }
+.stepper button { width: 26px; height: 26px; border: 0; background: transparent; cursor: pointer; }
+.stepper output { text-align: center; min-width: 22px; }
+
+/* formats */
+.legend { display: flex; flex-wrap: wrap; gap: 8px; font-size: 12px; color: var(--muted); }
+.formats { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.fmt { background: var(--surface); border-radius: 12px; box-shadow: 0 0 0 1px var(--line); display: grid; grid-template-rows: auto auto 1fr auto; overflow: hidden; min-width: 0; }
+.fmt.no { box-shadow: 0 0 0 1px var(--line); background: var(--fill); }
+.fmt-head { padding: 12px 12px 6px; display: flex; justify-content: space-between; gap: 8px; align-items: start; }
+.badge { font-size: 11.5px; font-weight: 600; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.badge.great { background: var(--great-soft); color: var(--great); }
+.badge.ok { background: var(--ok-soft); color: var(--ok); }
+.badge.no { background: var(--no-soft); color: var(--no); box-shadow: inset 0 0 0 1px var(--line); }
+.why { padding: 0 12px 10px; font-size: 12.5px; color: var(--muted); }
+.preview { margin: 0 12px; border-radius: 10px; background: var(--sf-bg); color: var(--sf-ink); padding: 12px; display: grid; gap: 8px; align-content: center; min-height: 96px; font-size: 13px; }
+.fmt.no .preview { opacity: .45; filter: grayscale(.7); }
+.places { padding: 10px 12px 12px; display: flex; flex-wrap: wrap; gap: 4px; }
+.place { font-size: 11px; color: var(--muted); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; }
+details.nofit > summary { cursor: pointer; font-weight: 600; font-size: 13.5px; padding: 4px 0; list-style: none; }
+details.nofit > summary::-webkit-details-marker { display: none; }
+details.nofit > summary::before { content: ""; display: inline-block; width: 7px; height: 7px; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: rotate(-45deg); margin-right: 8px; transition: transform .15s; }
+details.nofit[open] > summary::before { transform: rotate(45deg); }
+details.nofit > .formats { margin-top: 10px; }
+
+/* storefront preview atoms */
+.sf-bar { height: 8px; border-radius: 99px; background: var(--sf-line); position: relative; overflow: hidden; }
+.sf-bar i { position: absolute; inset: 0 auto 0 0; background: var(--sf-accent); border-radius: 99px; }
+.sf-msg { font-size: 13px; }
+.sf-msg b { color: var(--sf-accent); }
+.sf-small { font-size: 11.5px; color: var(--sf-muted); }
+.sf-marks { display: flex; justify-content: space-between; font-size: 11px; color: var(--sf-muted); gap: 4px; }
+.sf-marks span.hit { color: var(--sf-accent); font-weight: 600; }
+.sf-list { display: grid; gap: 5px; }
+.sf-item { display: grid; grid-template-columns: 18px minmax(0, 1fr); gap: 8px; align-items: center; font-size: 12.5px; }
+.sf-item .tick { width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid var(--sf-line); display: grid; place-items: center; background: var(--sf-card); }
+.sf-item.done .tick { background: var(--sf-accent); border-color: var(--sf-accent); color: var(--sf-card); }
+.sf-item.done span { text-decoration: line-through; color: var(--sf-muted); }
+.sf-prod { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 10px; align-items: center; }
+.sf-thumb { width: 48px; height: 48px; border-radius: 8px; background: #F2D9A8; display: grid; place-items: center; position: relative; }
+.sf-tag { position: absolute; top: -6px; left: -6px; background: var(--sf-accent); color: var(--sf-card); font-size: 10px; font-weight: 600; padding: 1px 5px; border-radius: 4px; white-space: nowrap; }
+.sf-price { display: flex; gap: 6px; align-items: baseline; flex-wrap: wrap; font-variant-numeric: tabular-nums; }
+.sf-price s { color: var(--sf-muted); font-size: 12px; }
+.sf-price b { font-weight: 600; }
+.sf-table { width: 100%; border-collapse: collapse; font-size: 12px; font-variant-numeric: tabular-nums; }
+.sf-table td { padding: 3px 2px; border-bottom: 1px solid var(--sf-line); }
+.sf-table td:last-child { text-align: right; }
+.sf-table tr.on td { color: var(--sf-accent); font-weight: 600; }
+.sf-announce { background: var(--sf-accent); color: var(--sf-card); text-align: center; border-radius: 6px; padding: 6px 8px; font-size: 12.5px; }
+.sf-code { display: flex; gap: 6px; align-items: center; justify-content: space-between; border: 1.5px dashed var(--sf-accent); border-radius: 8px; padding: 6px 10px; font-weight: 600; letter-spacing: .06em; }
+.sf-code small { letter-spacing: 0; font-weight: 500; color: var(--sf-muted); }
+.sf-clock { display: flex; gap: 6px; justify-content: center; }
+.sf-clock span { background: var(--sf-card); border: 1px solid var(--sf-line); border-radius: 6px; padding: 4px 6px; text-align: center; font-variant-numeric: tabular-nums; font-weight: 600; min-width: 40px; }
+.sf-clock small { display: block; font-size: 10px; font-weight: 400; color: var(--sf-muted); }
+.sf-gifts { display: flex; gap: 6px; }
+.sf-gift { flex: 1; border: 1px solid var(--sf-line); background: var(--sf-card); border-radius: 8px; padding: 6px; font-size: 11.5px; text-align: center; }
+.sf-gift.sel { border-color: var(--sf-accent); box-shadow: inset 0 0 0 1px var(--sf-accent); }
+.sf-btn { background: var(--sf-accent); color: var(--sf-card); border-radius: 6px; padding: 5px 10px; font-size: 12px; font-weight: 600; text-align: center; }
+.sf-or { text-align: center; font-size: 11px; color: var(--sf-muted); }
+
+/* routes + own design */
+.routes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 760px) { .routes { grid-template-columns: minmax(0, 1fr); } }
+.route { background: var(--fill); border-radius: 10px; padding: 12px; display: grid; gap: 6px; align-content: start; }
+.route .tag { font-size: 11.5px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+.own { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px; }
+@media (max-width: 760px) { .own { grid-template-columns: minmax(0, 1fr); } }
+.vals { display: grid; gap: 0; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.val { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 10px; padding: 7px 10px; border-bottom: 1px solid var(--line); font-size: 12.5px; }
+.val:last-child { border-bottom: 0; }
+.val code { font: 500 11.5px ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--muted); overflow-wrap: anywhere; }
+.prompt { background: var(--fill); border-radius: 10px; padding: 10px 12px; font-size: 13px; }
+.bundle { background: var(--sf-bg); color: var(--sf-ink); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.bundle .ttl { font-family: var(--font-brand); font-size: 24px; font-weight: 600; }
+.bundle .grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.bundle .bp { background: var(--sf-card); border: 1px solid var(--sf-line); border-radius: 8px; padding: 8px; display: grid; gap: 4px; font-size: 12px; }
+.bundle .bp .sw { height: 40px; border-radius: 6px; }
+.notes { display: grid; gap: 14px; }
+.notes ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; max-width: 86ch; }
+.notes li b { font-weight: 600; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <div class="intro">
+    <span class="muted" style="font-size:12px;letter-spacing:.06em;text-transform:uppercase">Kite · experimental · show a discount on your store</span>
+    <h1>Any discount in, every way to show it out</h1>
+    <p>Kite doesn't need to know which template built a discount. It reads what the shopper has to do, what they get, and who can get it. Those three answers decide which formats make sense on the storefront, and Kite can say why the others don't. Build any discount on the left, then change the shopper's cart to see each format react.</p>
+    <div class="flowline" aria-label="Flow">
+      <span class="step">Create any discount</span><span class="arr">→</span>
+      <span class="step">Kite reads its shape</span><span class="arr">→</span>
+      <span class="step">Formats that fit, and why others don't</span><span class="arr">→</span>
+      <span class="step">Put it anywhere: Kite places it, a block, or your own design</span>
+    </div>
+  </div>
+
+  <div class="layout">
+    <div class="stack sticky">
+      <section class="card" aria-labelledby="d-title">
+        <div class="row between"><h2 id="d-title">Discount</h2><span class="muted" style="font-size:12px">Edit anything</span></div>
+        <div class="field">
+          <span class="lbl">Start from an example</span>
+          <div class="presets" id="presets"></div>
+        </div>
+        <div class="field"><label for="d-name">Name</label><input type="text" id="d-name"></div>
+        <div class="divider"></div>
+        <div class="row between">
+          <h3>Shopper must</h3>
+          <div class="seg" role="group" aria-label="Match">
+            <button type="button" id="m-all" data-match="all">Meet all</button>
+            <button type="button" id="m-any" data-match="any">Meet any</button>
+          </div>
+        </div>
+        <div id="conds" class="stack" style="gap:8px"></div>
+        <div class="row">
+          <select id="add-cond" aria-label="Add a condition">
+            <option value="">Add a condition…</option>
+            <option value="spend">Spend at least</option>
+            <option value="qty">Buy a number of items</option>
+            <option value="includes">Have a specific product in cart</option>
+            <option value="code">Enter a code</option>
+            <option value="tag">Be a tagged customer</option>
+            <option value="market">Shop from a market</option>
+          </select>
+        </div>
+        <div id="tiers-wrap"></div>
+        <div class="divider"></div>
+        <h3>Shopper gets</h3>
+        <div id="reward"></div>
+        <div class="divider"></div>
+        <label class="check"><input type="checkbox" id="d-ends"> Ends at a set time</label>
+      </section>
+    </div>
+
+    <div class="stack">
+      <section class="card" aria-labelledby="r-title">
+        <div class="row between"><h2 id="r-title">How Kite reads it</h2><div class="shape" id="shape"></div></div>
+        <div class="reading" id="reading"></div>
+      </section>
+
+      <section class="card" aria-labelledby="s-title">
+        <div class="row between"><h2 id="s-title">Preview as a shopper</h2><span class="muted" style="font-size:12px" id="sim-state"></span></div>
+        <div class="sim">
+          <div class="ctl"><label for="sim-total">Cart total</label><input type="range" id="sim-total" min="0" max="150" step="1"><output id="o-total"></output></div>
+          <div class="ctl"><span>Items that count</span><span class="stepper"><button type="button" id="it-dec" aria-label="Fewer items">−</button><output id="o-items"></output><button type="button" id="it-inc" aria-label="More items">+</button></span></div>
+          <label class="ctl"><input type="checkbox" id="sim-prod"> <span id="sim-prod-label">Has the product</span></label>
+          <label class="ctl"><input type="checkbox" id="sim-tag"> <span id="sim-tag-label">Tagged customer</span></label>
+          <label class="ctl"><input type="checkbox" id="sim-code"> <span>Entered the code</span></label>
+        </div>
+      </section>
+
+      <section class="stack" aria-labelledby="f-title">
+        <div class="row between"><h2 id="f-title">Ways to show it</h2>
+          <div class="legend"><span class="badge great">Good fit</span><span class="badge ok">Works, with a catch</span><span class="badge no">Doesn't fit</span></div>
+        </div>
+        <div class="formats" id="fits"></div>
+        <details class="nofit" id="nofit-wrap" open><summary id="nofit-sum"></summary><div class="formats" id="nofits"></div></details>
+      </section>
+    </div>
+  </div>
+
+  <section class="card" style="margin-top:22px" aria-labelledby="rt-title">
+    <h2 id="rt-title">How it gets onto the store</h2>
+    <div class="routes">
+      <div class="route"><span class="tag">1 · Kite places it</span><h3>Pick a format, Kite puts it in the usual spot</h3><p class="muted">Announcement bar, under the add-to-cart button, in the cart drawer. Nothing to do in the theme. What Kite does today, for every format above.</p></div>
+      <div class="route"><span class="tag">2 · Add a Kite block</span><h3>Drop a block anywhere in the theme editor</h3><p class="muted">One "Kite offer" block. The merchant picks the discount and the format in the block settings, and can put it in any section on any page, including a bundle or landing page.</p></div>
+      <div class="route"><span class="tag">3 · Your own design</span><h3>Keep your design, Kite fills in the live values</h3><p class="muted">For custom bundle builders, a routine finder, a headless store. The merchant (or their AI) designs the UI. Kite supplies the next step, progress, prices and savings, and makes sure checkout matches.</p></div>
+    </div>
+  </section>
+
+  <section class="card" style="margin-top:16px" aria-labelledby="own-title">
+    <div class="row between"><h2 id="own-title">Route 3: your own design, for this discount</h2><span class="muted" style="font-size:12px">Updates with the discount and the cart above</span></div>
+    <div class="own">
+      <div class="stack" style="gap:10px">
+        <h3>What Kite tells your page, live</h3>
+        <div class="vals" id="vals"></div>
+        <h3>Or just tell your AI</h3>
+        <div class="prompt" id="prompt"></div>
+      </div>
+      <div class="stack" style="gap:10px">
+        <h3>A merchant's own bundle section using those values</h3>
+        <div class="bundle" id="bundle"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card notes" style="margin-top:16px" aria-labelledby="n-title">
+    <h2 id="n-title">What we're imagining</h2>
+    <ul>
+      <li><b>The discount decides the format, not the template.</b> Steps that add up on one measure (spend, or a count of items) can fill a bar. Several different steps become a checklist. A choice between steps becomes "pick one". No steps means the price just changes. A product-level reward can show on the price; an order-level one can't.</li>
+      <li><b>Kite explains the "no".</b> A merchant who wants a progress bar for "add a serum, spend $60, be a VIP" is told why that would mislead the shopper, and what would make it fit (drop to one measure, or split it into tiers).</li>
+      <li><b>Hidden rules stay hidden.</b> Customer tags, markets and campaign links decide who sees the offer. They never appear as a step, because the shopper can't act on them. Guests see "Log in to see member prices" where that applies.</li>
+      <li><b>One discount, many surfaces.</b> The same discount can show as a bar in the cart, a price on the product page and a line in a custom bundle builder at the same time. All of them read the same live state, so they never disagree.</li>
+      <li><b>Kite stays responsible for the numbers.</b> Whatever the surface, Kite makes sure the price it shows is the price at checkout. That's what makes route 3 safe to hand to a merchant's developer or AI.</li>
+    </ul>
+    <h2>Questions to settle</h2>
+    <ul>
+      <li><b>Where does this screen live?</b> A "Show on store" step at the end of creating any discount, a single storefront page across all discounts, or both?</li>
+      <li><b>Several discounts on one surface.</b> Free shipping at $50 and a gift at $100 share one measure, so one bar can carry both. A spend goal and an item goal can't share a bar. Should Kite suggest combinations across discounts?</li>
+      <li><b>How much freedom in route 3?</b> Live values only, or also Kite's own building blocks (bar, checklist, price) that a merchant's design can drop in?</li>
+      <li><b>Unlock prices before the shopper qualifies.</b> "$34 when you buy 3" sells the offer, but it isn't the price yet. Is that always shown, or a merchant choice?</li>
+    </ul>
+  </section>
+</div>
+
+<script>
+/* ---------- example discounts (any shape; nothing here is a template) ---------- */
+const PRESETS = {
+  ship: { label: 'Free shipping over $75', d: { name: 'Free shipping over $75', match: 'all', conds: [{ kind: 'spend', min: 75 }], tiers: null, reward: { type: 'freeShipping', value: 0, on: 'order' }, ends: false } },
+  routine: { label: 'Routine tiers', d: { name: 'Build your routine', match: 'all', conds: [{ kind: 'qty', min: 3, scope: 'Skincare' }], tiers: [{ at: 3, value: 10 }, { at: 4, value: 15 }, { at: 5, value: 20 }], reward: { type: 'percent', value: 10, on: 'qualifying' }, ends: false } },
+  bxgy: { label: 'Buy 2 serums, cleanser 50% off', d: { name: 'Serum duo + cleanser', match: 'all', conds: [{ kind: 'qty', min: 2, scope: 'Serums' }], tiers: null, reward: { type: 'getY', value: 50, on: 'qualifying', get: 1, of: 'Cleansers' }, ends: false } },
+  custom: { label: 'Custom: serum + $60 + VIP', d: { name: 'VIP serum bonus', match: 'all', conds: [{ kind: 'includes', product: 'Vitamin C Serum' }, { kind: 'spend', min: 60 }, { kind: 'tag', tag: 'VIP' }], tiers: null, reward: { type: 'amount', value: 10, on: 'order' }, ends: false } },
+  member: { label: 'Members get 15% off', d: { name: 'Member pricing', match: 'all', conds: [{ kind: 'tag', tag: 'VIP' }], tiers: null, reward: { type: 'percent', value: 15, on: 'everything' }, ends: false } },
+  flash: { label: 'Weekend code', d: { name: 'Weekend flash', match: 'all', conds: [{ kind: 'code', code: 'FLASH20' }], tiers: null, reward: { type: 'percent', value: 20, on: 'everything' }, ends: true } },
+  either: { label: 'Gift: spend $100 or 4 items', d: { name: 'Gift with purchase', match: 'any', conds: [{ kind: 'spend', min: 100 }, { kind: 'qty', min: 4, scope: 'any product' }], tiers: null, reward: { type: 'freeGift', value: 0, on: 'order', gift: 'Travel Mist' }, ends: false } },
+};
+const KIND = {
+  spend: { label: 'Spend at least', act: true, measure: 'amount' },
+  qty: { label: 'Buy a number of items', act: true, measure: 'qty' },
+  includes: { label: 'Have a product in cart', act: true },
+  code: { label: 'Enter a code', act: true },
+  tag: { label: 'Tagged customer', act: false },
+  market: { label: 'Shop from a market', act: false },
+};
+const PRODUCT = { title: 'Vitamin C Serum', price: 40 };
+const clone = o => JSON.parse(JSON.stringify(o));
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const money = n => '$' + (Math.round(n * 100) / 100).toFixed(2).replace(/\.00$/, '');
+const $ = id => document.getElementById(id);
+
+let presetKey = 'custom';
+let d = clone(PRESETS[presetKey].d);
+let shopper = { total: 48, items: 2, hasProduct: true, tagged: true, code: false };
+
+/* ---------- reading a discount ---------- */
+function measurables() { return d.conds.filter(c => KIND[c.kind].measure); }
+function tierable() { const m = measurables(); return d.conds.filter(c => KIND[c.kind].act).length === 1 && m.length === 1 ? m[0] : null; }
+function tiersActive() { return d.tiers && d.tiers.length >= 2 && tierable(); }
+
+function read() {
+  const actionable = d.conds.filter(c => KIND[c.kind].act);
+  const gates = d.conds.filter(c => !KIND[c.kind].act);
+  const meas = actionable.filter(c => KIND[c.kind].measure);
+  let shape, shapeWhy;
+  if (actionable.length === 0) { shape = 'always'; shapeWhy = gates.length ? 'Nothing to do. Eligible shoppers just get it.' : 'Nothing to do. Everyone gets it.'; }
+  else if (actionable.length === 1 && meas.length === 1) { shape = tiersActive() ? 'ladder' : 'linear'; shapeWhy = tiersActive() ? 'One measure with several goals along it.' : 'One measure that grows toward a goal.'; }
+  else if (actionable.length === 1) { shape = 'single'; shapeWhy = 'One yes-or-no step.'; }
+  else if (d.match === 'any') { shape = 'paths'; shapeWhy = 'Any one of several different steps.'; }
+  else { shape = 'checklist'; shapeWhy = `${actionable.length} separate steps that all have to happen.`; }
+  const r = d.reward;
+  const itemReward = ['percent', 'amount', 'fixedPrice'].includes(r.type) && r.on !== 'order';
+  const productScoped = itemReward || r.type === 'getY' || meas.some(c => c.kind === 'qty' && c.scope && c.scope !== 'any product');
+  return { actionable, gates, meas, shape, shapeWhy, itemReward, productScoped };
+}
+
+function condMet(c) {
+  switch (c.kind) {
+    case 'spend': return shopper.total >= c.min;
+    case 'qty': return shopper.items >= c.min;
+    case 'includes': return shopper.hasProduct;
+    case 'code': return shopper.code;
+    case 'tag': return shopper.tagged;
+    case 'market': return true;
+  }
+}
+function condProgress(c) {
+  if (c.kind === 'spend') return Math.min(1, shopper.total / Math.max(1, c.min));
+  if (c.kind === 'qty') return Math.min(1, shopper.items / Math.max(1, c.min));
+  return condMet(c) ? 1 : 0;
+}
+function condStep(c) {
+  switch (c.kind) {
+    case 'spend': return condMet(c) ? `Spent ${money(c.min)}` : `Spend ${money(c.min - shopper.total)} more`;
+    case 'qty': { const left = c.min - shopper.items; return condMet(c) ? `${c.min} ${c.scope === 'any product' ? 'items' : esc(c.scope) + ' items'} added` : `Add ${left} more ${c.scope === 'any product' ? (left === 1 ? 'item' : 'items') : esc(c.scope) + (left === 1 ? ' item' : ' items')}`; }
+    case 'includes': return condMet(c) ? `${esc(c.product)} added` : `Add ${esc(c.product)}`;
+    case 'code': return condMet(c) ? `Code ${esc(c.code)} applied` : `Enter code ${esc(c.code)}`;
+    case 'tag': return `Customer tagged ${esc(c.tag)}`;
+    case 'market': return `Shopping from ${esc(c.market)}`;
+  }
+}
+function condSentence(c) {
+  switch (c.kind) {
+    case 'spend': return `Spend at least ${money(c.min)}`;
+    case 'qty': return `Buy ${c.min}+ ${c.scope === 'any product' ? 'items' : 'items from ' + esc(c.scope)}`;
+    case 'includes': return `Have ${esc(c.product)} in the cart`;
+    case 'code': return `Enter the code ${esc(c.code)}`;
+    case 'tag': return `Customer is tagged ${esc(c.tag)}`;
+    case 'market': return `Shopping from ${esc(c.market)}`;
+  }
+}
+function rewardValue() {
+  if (!tiersActive()) return d.reward.value;
+  const c = tierable(); const have = c.kind === 'spend' ? shopper.total : shopper.items;
+  let v = 0; for (const t of d.tiers) if (have >= t.at) v = t.value; return v;
+}
+function rewardText(value = d.reward.value) {
+  const r = d.reward;
+  const on = r.on === 'order' ? 'the order' : r.on === 'everything' ? 'everything' : 'those items';
+  switch (r.type) {
+    case 'percent': return `${value}% off ${on}`;
+    case 'amount': return r.on === 'order' ? `${money(value)} off the order` : `${money(value)} off each item`;
+    case 'fixedPrice': return `Items for ${money(value)} each`;
+    case 'freeShipping': return 'Free shipping';
+    case 'freeGift': return `A free ${esc(r.gift || 'gift')}`;
+    case 'getY': return `${r.get || 1} ${esc(r.of || 'item')} at ${value}% off`;
+  }
+}
+function gatesOk(R) { return R.gates.every(condMet); }
+function status(R) {
+  const act = R.actionable;
+  const actOk = act.length === 0 ? true : d.match === 'any' ? act.some(condMet) : act.every(condMet);
+  return { unlocked: actOk && gatesOk(R), actOk, gated: !gatesOk(R) };
+}
+function nextGoal() {
+  if (!tiersActive()) return null;
+  const c = tierable(); const have = c.kind === 'spend' ? shopper.total : shopper.items;
+  const t = d.tiers.find(t => have < t.at); if (!t) return null;
+  const left = t.at - have;
+  return { tier: t, text: c.kind === 'spend' ? `Spend ${money(left)} more` : `Add ${left} more ${left === 1 ? 'item' : 'items'}` };
+}
+function unitPrice(v = rewardValue()) {
+  const r = d.reward; const p = PRODUCT.price;
+  if (r.type === 'percent') return p * (1 - v / 100);
+  if (r.type === 'amount') return Math.max(0, p - v);
+  if (r.type === 'fixedPrice') return Math.min(p, v);
+  return p;
+}
+function headline(R) {
+  const st = status(R);
+  if (st.gated && R.gates.some(g => g.kind === 'tag')) return { text: `Members tagged ${esc(R.gates.find(g => g.kind === 'tag').tag)} get <b>${rewardText(rewardValue() || d.reward.value)}</b>`, sub: 'Shown to everyone else as "Log in to see member prices"' };
+  const ng = nextGoal();
+  if (ng) return { text: `${ng.text} to get <b>${rewardText(ng.tier.value)}</b>`, sub: st.unlocked ? `Now: ${rewardText(rewardValue())}` : '' };
+  if (st.unlocked) return { text: `You've unlocked <b>${rewardText(rewardValue() || d.reward.value)}</b>`, sub: '' };
+  if (R.shape === 'checklist') { const left = R.actionable.filter(c => !condMet(c)).length; return { text: `${left} ${left === 1 ? 'step' : 'steps'} left to get <b>${rewardText()}</b>`, sub: '' }; }
+  if (R.shape === 'paths') return { text: `${R.actionable.map(condStep).join(' or ')} to get <b>${rewardText()}</b>`, sub: '' };
+  const c = R.actionable[0];
+  return { text: `${condStep(c)} to get <b>${rewardText()}</b>`, sub: '' };
+}
+
+/* ---------- storefront snippets ---------- */
+const svgCheck = '<svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.5l2.2 2.2L9.5 3.8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const bottle = '<svg width="22" height="34" viewBox="0 0 46 70" aria-hidden="true"><rect x="15" y="2" width="16" height="12" rx="3" fill="#C8873A"/><rect x="6" y="14" width="34" height="54" rx="9" fill="#F7E6C4" stroke="#C8873A" stroke-width="2"/></svg>';
+function sfBar(pct) { return `<div class="sf-bar"><i style="width:${Math.round(pct * 100)}%"></i></div>`; }
+
+/* ---------- formats: each says what it needs, and checks the discount against it ---------- */
+const FORMATS = [
+  { id: 'message', name: 'Offer message', places: ['Announcement bar', 'Product page', 'Cart', 'Anywhere'],
+    fit: () => ({ level: 'great', why: 'Every discount can be said in a sentence. The text changes as the shopper gets closer.' }),
+    render: R => { const h = headline(R); return `<div class="sf-announce">${h.text.replace(/<b>|<\/b>/g, '')}</div>${h.sub ? `<div class="sf-small">${h.sub}</div>` : ''}`; } },
+
+  { id: 'bar', name: 'Progress bar', places: ['Cart drawer', 'Cart page', 'Product page', 'Anywhere'],
+    fit: R => {
+      if (R.shape === 'linear') return { level: 'great', why: `One measure (${R.meas[0].kind === 'spend' ? 'spend' : 'item count'}) that fills toward one goal.` };
+      if (R.shape === 'ladder') return { level: 'ok', why: 'Works, but a milestone bar shows all the goals along the way.' };
+      if (R.shape === 'checklist') return { level: 'no', why: `This discount has ${R.actionable.length} separate steps (${R.actionable.map(condSentence).join('; ').toLowerCase()}). They don't add up on one line, so a bar would show progress that isn't real. Use a checklist, or drop to one measure.` };
+      if (R.shape === 'paths') return { level: 'no', why: 'The shopper can qualify in different ways, so there is no single line to fill. Use "pick one".' };
+      if (R.shape === 'single') return { level: 'no', why: 'One yes-or-no step. There is nothing to fill gradually.' };
+      return { level: 'no', why: 'Nothing for the shopper to do, so nothing to progress toward.' };
+    },
+    render: R => { const c = R.meas[0] || R.actionable[0]; const p = c ? condProgress(c) : 0; const h = headline(R); return `<div class="sf-msg">${h.text}</div>${sfBar(p)}<div class="sf-marks"><span>${c && c.kind === 'spend' ? money(shopper.total) : shopper.items + ' items'}</span><span>${c ? (c.kind === 'spend' ? money(c.min) : c.min + ' items') : ''}</span></div>`; } },
+
+  { id: 'milestones', name: 'Milestone bar', places: ['Cart drawer', 'Cart page', 'Product page', 'Anywhere'],
+    fit: R => R.shape === 'ladder' ? { level: 'great', why: `${d.tiers.length} goals on the same measure, so they line up on one bar.` }
+      : R.shape === 'linear' ? { level: 'no', why: 'Only one goal. Add tiers on the same measure to get milestones.' }
+      : { level: 'no', why: 'Milestones need goals on one shared measure. This discount has none.' },
+    render: R => { const c = tierable() || R.meas[0]; if (!c || !d.tiers) return `<div class="sf-small">Needs tiers</div>`; const have = c.kind === 'spend' ? shopper.total : shopper.items; const max = d.tiers[d.tiers.length - 1].at; const h = headline(R);
+      return `<div class="sf-msg">${h.text}</div>${sfBar(Math.min(1, have / max))}<div class="sf-marks">${d.tiers.map(t => `<span class="${have >= t.at ? 'hit' : ''}">${c.kind === 'spend' ? money(t.at) : t.at + ' items'}<br>${rewardText(t.value).replace(' those items', '')}</span>`).join('')}</div>`; } },
+
+  { id: 'checklist', name: 'Checklist', places: ['Cart drawer', 'Cart page', 'Product page', 'Anywhere'],
+    fit: R => R.shape === 'checklist' ? { level: 'great', why: 'Separate steps, each ticked off on its own, in any order.' }
+      : R.shape === 'paths' ? { level: 'ok', why: 'Shows the options, but only one needs ticking. "Pick one" is clearer.' }
+      : { level: 'no', why: R.actionable.length ? 'Only one step. A checklist of one is just a message.' : 'No steps to tick off.' },
+    render: R => `<div class="sf-msg">${headline(R).text}</div><div class="sf-list">${R.actionable.map(c => `<div class="sf-item ${condMet(c) ? 'done' : ''}"><span class="tick">${condMet(c) ? svgCheck : ''}</span><span>${condStep(c)}</span></div>`).join('') || '<div class="sf-small">No steps</div>'}</div>` },
+
+  { id: 'paths', name: 'Pick one', places: ['Cart drawer', 'Product page', 'Anywhere'],
+    fit: R => R.shape === 'paths' ? { level: 'great', why: 'Any one of these unlocks it. Show them side by side.' } : { level: 'no', why: 'Only for discounts the shopper can unlock in more than one way.' },
+    render: R => R.actionable.map((c, i) => `${i ? '<div class="sf-or">or</div>' : ''}<div class="sf-item ${condMet(c) ? 'done' : ''}"><span class="tick">${condMet(c) ? svgCheck : ''}</span><span>${condStep(c)}</span></div>`).join('') + `<div class="sf-small">to get ${rewardText()}</div>` },
+
+  { id: 'price', name: 'Sale price on products', places: ['Product page', 'Collection cards', 'Search', 'Cart lines'],
+    fit: R => {
+      if (!R.itemReward) return { level: 'no', why: d.reward.type === 'freeShipping' || d.reward.type === 'freeGift' ? 'The reward isn\'t a price change.' : d.reward.type === 'getY' ? 'Only the "get" item changes price, and only once the "buy" items are in. Use the offer card.' : 'The saving comes off the order total, not off each item, so no product price changes.' };
+      if (R.actionable.length === 0) return { level: 'great', why: R.gates.length ? 'The price simply changes for eligible shoppers. Others see the normal price.' : 'The price simply changes. Nothing to unlock.' };
+      return { level: 'ok', why: 'Only true once the shopper qualifies. Before that, show the price with the offer instead.' };
+    },
+    render: R => { const st = status(R); const on = R.itemReward && st.unlocked; return `<div class="sf-prod"><div class="sf-thumb">${bottle}</div><div><div style="font-weight:600">${PRODUCT.title}</div><div class="sf-price">${on ? `<b>${money(unitPrice())}</b><s>${money(PRODUCT.price)}</s>` : `<b>${money(PRODUCT.price)}</b>`}</div><div class="sf-small">${on ? rewardText(rewardValue()) : st.gated && R.itemReward ? 'Log in to see member prices' : 'Full price for this shopper right now'}</div></div></div>`; } },
+
+  { id: 'unlockprice', name: 'Price with the offer', places: ['Product page', 'Collection cards', 'Bundle pages'],
+    fit: R => {
+      if (!R.itemReward) return { level: 'no', why: 'Needs a reward that lowers each item\'s price.' };
+      if (R.actionable.length === 0) return { level: 'no', why: 'Nothing to unlock. Just show the sale price.' };
+      if (R.meas.length === 1 && R.actionable.length === 1) return { level: 'great', why: 'Shows what an item will cost once the shopper reaches the goal.' };
+      return { level: 'ok', why: 'Works, but the condition is long to say next to a price.' };
+    },
+    render: R => { const c = R.meas[0] || R.actionable[0]; const top = tiersActive() ? d.tiers[0] : null; const v = top ? top.value : d.reward.value; const cond = c ? (c.kind === 'qty' ? `when you buy ${top ? top.at : c.min}` : c.kind === 'spend' ? `when you spend ${money(top ? top.at : c.min)}` : 'with the offer') : ''; return `<div class="sf-prod"><div class="sf-thumb">${bottle}</div><div><div style="font-weight:600">${PRODUCT.title}</div><div class="sf-price"><b>${money(PRODUCT.price)}</b></div><div class="sf-small" style="color:var(--sf-accent);font-weight:600">${money(unitPrice(v))} ${cond}</div></div></div>`; } },
+
+  { id: 'breaks', name: 'Quantity breaks table', places: ['Product page', 'Bundle pages'],
+    fit: R => {
+      const c = tierable();
+      if (c && c.kind === 'qty' && R.itemReward && tiersActive()) return { level: 'great', why: 'Item-count tiers with a price change per item: the classic "buy more, pay less" table.' };
+      if (c && c.kind === 'qty' && R.itemReward) return { level: 'ok', why: 'Only one break. The table will have two rows.' };
+      return { level: 'no', why: c && c.kind === 'spend' ? 'The goal is spend, not item count, so the price doesn\'t depend on quantity of one product.' : 'Needs an item-count goal and a per-item price change.' };
+    },
+    render: R => { const c = tierable(); const rows = c && c.kind === 'qty' ? [{ at: 1, value: 0 }].concat(tiersActive() ? d.tiers : [{ at: c.min, value: d.reward.value }]) : [{ at: 1, value: 0 }]; const have = shopper.items; let cur = rows[0]; rows.forEach(r => { if (have >= r.at) cur = r; });
+      return `<table class="sf-table">${rows.map(r => `<tr class="${r === cur ? 'on' : ''}"><td>Buy ${r.at}${r === rows[rows.length - 1] ? '+' : ''}</td><td>${r.value ? rewardText(r.value).replace(' those items', '') : 'Regular price'}</td><td>${money(unitPrice(r.value))} each</td></tr>`).join('')}</table>`; } },
+
+  { id: 'badge', name: 'Badge on product cards', places: ['Collection cards', 'Search', 'Home page'],
+    fit: R => R.productScoped ? { level: 'great', why: 'The offer belongs to certain products, so their cards can carry a badge.' } : { level: 'ok', why: 'The offer is on the whole order, so every card would carry the same badge. Better as a message.' },
+    render: R => `<div class="sf-prod"><div class="sf-thumb">${bottle}<span class="sf-tag">${d.reward.type === 'getY' ? 'Buy 2, save' : d.reward.type === 'freeGift' ? 'Free gift' : d.reward.type === 'freeShipping' ? 'Free shipping' : (tiersActive() ? 'Up to ' + rewardText(d.tiers[d.tiers.length - 1].value).split(' ')[0] + ' off' : rewardText(d.reward.value).split(' ').slice(0, 2).join(' '))}</span></div><div><div style="font-weight:600">${PRODUCT.title}</div><div class="sf-small">${esc(d.name)}</div></div></div>` },
+
+  { id: 'offer', name: 'Buy X, get Y card', places: ['Product page', 'Cart drawer', 'Anywhere'],
+    fit: R => d.reward.type === 'getY' ? { level: 'great', why: 'There is a "buy" part and a "get" part, so show both with an add button.' } : { level: 'no', why: 'No item the shopper gets as a result. The reward is a discount on what they already chose.' },
+    render: R => { const c = R.meas[0]; const st = status(R); return `<div class="sf-msg">${c ? `Buy ${c.min} ${esc(c.scope)}` : 'Buy'}, get <b>${rewardText()}</b></div><div class="sf-list"><div class="sf-item ${st.actOk ? 'done' : ''}"><span class="tick">${st.actOk ? svgCheck : ''}</span><span>${c ? condStep(c) : ''}</span></div></div><div class="sf-btn">${st.unlocked ? 'Add your ' + esc(d.reward.of || 'item') + ' at ' + d.reward.value + '% off' : 'See ' + esc(d.reward.of || 'items')}</div>`; } },
+
+  { id: 'gift', name: 'Gift picker', places: ['Cart drawer', 'Cart page', 'Product page'],
+    fit: () => d.reward.type === 'freeGift' ? { level: 'great', why: 'The reward is a product. Let the shopper see it, or choose it.' } : { level: 'no', why: 'No gift in this discount.' },
+    render: R => { const st = status(R); return `<div class="sf-msg">${st.unlocked ? 'Choose your free gift' : headline(R).text}</div><div class="sf-gifts"><div class="sf-gift ${st.unlocked ? 'sel' : ''}">${esc(d.reward.gift || 'Gift')}</div><div class="sf-gift">Lip Balm</div></div>`; } },
+
+  { id: 'code', name: 'Code to copy', places: ['Announcement bar', 'Product page', 'Pop-up', 'Anywhere'],
+    fit: R => R.actionable.some(c => c.kind === 'code') ? { level: 'great', why: 'The shopper has to type something, so show it and make it easy to copy.' } : { level: 'no', why: 'This discount applies by itself. There is no code to show.' },
+    render: R => { const c = d.conds.find(c => c.kind === 'code'); return `<div class="sf-msg">${rewardText()} with code</div><div class="sf-code">${esc(c ? c.code : 'CODE')}<small>${shopper.code ? 'Applied' : 'Copy'}</small></div>`; } },
+
+  { id: 'countdown', name: 'Countdown', places: ['Announcement bar', 'Product page', 'Cart', 'Anywhere'],
+    fit: () => d.ends ? { level: 'great', why: 'The discount has an end time, so urgency is honest.' } : { level: 'no', why: 'No end time. A countdown would be fake urgency.' },
+    render: () => `<div class="sf-small" style="text-align:center">${esc(d.name)} ends in</div><div class="sf-clock"><span>1<small>day</small></span><span>06<small>hrs</small></span><span>42<small>min</small></span></div>` },
+
+  { id: 'own', name: 'Your own design', places: ['Bundle pages', 'Custom sections', 'Headless', 'Anywhere'],
+    fit: () => ({ level: 'great', why: 'Any discount. Kite supplies the live values (route 3 below), the merchant decides how it looks.' }),
+    render: R => { const h = headline(R); return `<div style="font-family:var(--font-brand);font-size:20px;font-weight:600">Your routine</div><div class="sf-msg">${h.text}</div><div class="sf-small">Your design, Kite's numbers</div>`; } },
+];
+
+/* ---------- editor ---------- */
+function renderPresets() {
+  $('presets').innerHTML = Object.entries(PRESETS).map(([k, p]) => `<button type="button" data-preset="${k}" aria-pressed="${k === presetKey}">${esc(p.label)}</button>`).join('');
+}
+function condEditor(c, i) {
+  const x = '<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3.5 3.5l7 7M10.5 3.5l-7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>';
+  let fields = '';
+  if (c.kind === 'spend') fields = `<div class="field"><label for="c${i}-min">Amount ($)</label><input type="number" id="c${i}-min" min="1" value="${c.min}" data-ci="${i}" data-k="min"></div>`;
+  if (c.kind === 'qty') fields = `<div class="field"><label for="c${i}-min">Items</label><input type="number" id="c${i}-min" min="1" value="${c.min}" data-ci="${i}" data-k="min"></div><div class="field"><label for="c${i}-scope">From</label><select id="c${i}-scope" data-ci="${i}" data-k="scope">${['any product', 'Skincare', 'Serums', 'Cleansers'].map(s => `<option ${s === c.scope ? 'selected' : ''}>${s}</option>`).join('')}</select></div>`;
+  if (c.kind === 'includes') fields = `<div class="field" style="grid-column:1/-1"><label for="c${i}-p">Product</label><input type="text" id="c${i}-p" value="${esc(c.product)}" data-ci="${i}" data-k="product"></div>`;
+  if (c.kind === 'code') fields = `<div class="field" style="grid-column:1/-1"><label for="c${i}-code">Code</label><input type="text" id="c${i}-code" value="${esc(c.code)}" data-ci="${i}" data-k="code"></div>`;
+  if (c.kind === 'tag') fields = `<div class="field" style="grid-column:1/-1"><label for="c${i}-tag">Customer tag</label><input type="text" id="c${i}-tag" value="${esc(c.tag)}" data-ci="${i}" data-k="tag"></div>`;
+  if (c.kind === 'market') fields = `<div class="field" style="grid-column:1/-1"><label for="c${i}-m">Market</label><input type="text" id="c${i}-m" value="${esc(c.market)}" data-ci="${i}" data-k="market"></div>`;
+  return `<div class="cond"><div class="inner"><span class="kindtag">${KIND[c.kind].label}${KIND[c.kind].act ? '' : ' · who can get it'}</span>${fields}</div><button type="button" class="iconbtn" data-rm="${i}" aria-label="Remove condition">${x}</button></div>`;
+}
+function renderEditor() {
+  $('d-name').value = d.name;
+  $('m-all').setAttribute('aria-pressed', String(d.match === 'all'));
+  $('m-any').setAttribute('aria-pressed', String(d.match === 'any'));
+  $('conds').innerHTML = d.conds.map(condEditor).join('') || '<p class="muted">No conditions. Everyone gets it.</p>';
+  const c = tierable();
+  const unit = c ? (c.kind === 'spend' ? '$' : 'items') : '';
+  const rUnit = d.reward.type === 'percent' || d.reward.type === 'getY' ? '%' : '$';
+  const tierOk = c && ['percent', 'amount', 'fixedPrice', 'getY'].includes(d.reward.type);
+  $('tiers-wrap').innerHTML = tierOk ? `<div class="tiers">
+      <label class="check"><input type="checkbox" id="t-on" ${d.tiers ? 'checked' : ''}> Add tiers on this ${c.kind === 'spend' ? 'spend' : 'item count'}</label>
+      ${d.tiers ? d.tiers.map((t, i) => `<div class="tier"><span>At</span><input type="number" aria-label="Tier ${i + 1} threshold" value="${t.at}" min="1" data-ti="${i}" data-k="at"><span>${unit}, get ${rUnit}</span><input type="number" aria-label="Tier ${i + 1} value" value="${t.value}" min="0" data-ti="${i}" data-k="value"><button type="button" class="iconbtn" data-trm="${i}" aria-label="Remove tier"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3.5 3.5l7 7M10.5 3.5l-7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button></div>`).join('') + '<div><button type="button" class="btn" id="t-add">Add tier</button></div>' : ''}
+    </div>` : '';
+  const r = d.reward;
+  $('reward').innerHTML = `<div class="field"><label for="r-type">Reward</label><select id="r-type">
+      ${[['percent', '% off'], ['amount', '$ off'], ['fixedPrice', 'Set price per item'], ['freeShipping', 'Free shipping'], ['freeGift', 'Free gift'], ['getY', 'Get another item discounted']].map(([v, l]) => `<option value="${v}" ${v === r.type ? 'selected' : ''}>${l}</option>`).join('')}
+    </select></div>
+    ${['percent', 'amount', 'fixedPrice', 'getY'].includes(r.type) && !d.tiers ? `<div class="field"><label for="r-val">${r.type === 'percent' || r.type === 'getY' ? 'Percent off' : 'Amount ($)'}</label><input type="number" id="r-val" min="0" value="${r.value}"></div>` : ''}
+    ${['percent', 'amount'].includes(r.type) ? `<div class="field"><label for="r-on">Applies to</label><select id="r-on">${[['qualifying', 'The items that qualify'], ['everything', 'Every product'], ['order', 'The order total']].map(([v, l]) => `<option value="${v}" ${v === r.on ? 'selected' : ''}>${l}</option>`).join('')}</select></div>` : ''}
+    ${r.type === 'freeGift' ? `<div class="field"><label for="r-gift">Gift</label><input type="text" id="r-gift" value="${esc(r.gift || '')}"></div>` : ''}
+    ${r.type === 'getY' ? `<div class="field"><label for="r-of">Discounted item comes from</label><select id="r-of">${['Cleansers', 'Serums', 'Skincare'].map(s => `<option ${s === r.of ? 'selected' : ''}>${s}</option>`).join('')}</select></div>` : ''}`;
+  $('d-ends').checked = !!d.ends;
+}
+
+/* ---------- right side ---------- */
+function renderAll() {
+  const R = read();
+  const shapeName = { always: 'Always on', linear: 'One measure', ladder: 'One measure, several goals', single: 'One step', checklist: 'Several separate steps', paths: 'Any one of several steps' }[R.shape];
+  $('shape').innerHTML = `<span class="pill">${shapeName}</span><span class="muted">${R.shapeWhy}</span>`;
+  const tierList = tiersActive() ? `<ul>${d.tiers.map(t => `<li>${tierable().kind === 'spend' ? money(t.at) : t.at + ' items'}: ${rewardText(t.value)}</li>`).join('')}</ul>` : '';
+  $('reading').innerHTML = `
+    <div class="rbox"><span class="lbl">What the shopper does</span>${R.actionable.length ? `<ul>${R.actionable.map(c => `<li>${condSentence(c)}</li>`).join('')}</ul>${R.actionable.length > 1 ? `<span class="muted">${d.match === 'any' ? 'Any one of these' : 'All of these'}</span>` : ''}` : '<p>Nothing. It applies by itself.</p>'}</div>
+    <div class="rbox"><span class="lbl">What they get</span><p>${tiersActive() ? 'Depends on the tier:' : rewardText()}</p>${tierList}</div>
+    <div class="rbox"><span class="lbl">Who can get it</span>${R.gates.length ? `<ul>${R.gates.map(c => `<li>${condSentence(c)}</li>`).join('')}</ul><span class="muted">Not shown as a step. The shopper can't act on it.</span>` : '<p>Everyone</p>'}${d.ends ? '<p class="muted">Ends at a set time</p>' : ''}</div>`;
+
+  // shopper sim labels
+  const inc = d.conds.find(c => c.kind === 'includes'); const tag = d.conds.find(c => c.kind === 'tag');
+  $('sim-prod-label').textContent = inc ? `Has ${inc.product}` : 'Has the product';
+  $('sim-tag-label').textContent = tag ? `Tagged ${tag.tag}` : 'Tagged customer';
+  $('o-total').textContent = money(shopper.total); $('sim-total').value = shopper.total;
+  $('o-items').textContent = shopper.items;
+  $('sim-prod').checked = shopper.hasProduct; $('sim-tag').checked = shopper.tagged; $('sim-code').checked = shopper.code;
+  const st = status(R);
+  $('sim-state').innerHTML = st.unlocked ? '<span class="badge great">Unlocked for this shopper</span>' : st.gated ? '<span class="badge no">Not eligible</span>' : '<span class="badge ok">Not unlocked yet</span>';
+
+  const rank = { great: 0, ok: 1, no: 2 };
+  const all = FORMATS.map(f => ({ f, v: f.fit(R) })).sort((a, b) => (rank[a.v.level] - rank[b.v.level]) || ((a.f.id === 'own') - (b.f.id === 'own')));
+  const card = ({ f, v }) => `<article class="fmt ${v.level}"><div class="fmt-head"><h3>${f.name}</h3><span class="badge ${v.level}">${{ great: 'Good fit', ok: 'With a catch', no: "Doesn't fit" }[v.level]}</span></div><p class="why">${v.why}</p><div class="preview">${f.render(R)}</div><div class="places">${f.places.map(p => `<span class="place">${p}</span>`).join('')}</div></article>`;
+  const fits = all.filter(x => x.v.level !== 'no'); const nofits = all.filter(x => x.v.level === 'no');
+  $('fits').innerHTML = fits.map(card).join('');
+  $('nofits').innerHTML = nofits.map(card).join('');
+  $('nofit-sum').textContent = `Doesn't fit this discount (${nofits.length}), and why`;
+  $('nofit-wrap').hidden = nofits.length === 0;
+
+  renderOwn(R);
+}
+
+function renderOwn(R) {
+  const st = status(R); const h = headline(R); const ng = nextGoal();
+  const meas = R.meas[0];
+  const progress = R.shape === 'linear' || R.shape === 'ladder' ? Math.round(condProgress(tierable() && d.tiers ? { ...tierable(), min: d.tiers[d.tiers.length - 1].at } : meas) * 100) + '%' : 'Not available (no single measure)';
+  const steps = R.actionable.map(c => `${condMet(c) ? 'done' : 'to do'}: ${condStep(c)}`).join(' · ') || 'none';
+  const plain = s => s.replace(/<[^>]+>/g, '');
+  const rows = [
+    ['Status', st.unlocked ? 'Unlocked' : st.gated ? 'Not eligible (hidden rule)' : 'Locked', 'status'],
+    ['What to say now', plain(h.text), 'message'],
+    ['Next step', ng ? ng.text : (st.unlocked ? 'None, all done' : R.actionable.filter(c => !condMet(c)).map(condStep).join(d.match === 'any' ? ' or ' : ', ') || 'None'), 'next_step'],
+    ['Progress', progress, 'progress'],
+    ['Steps', steps, 'steps'],
+    ['Reward now', st.unlocked ? rewardText(rewardValue() || d.reward.value) : 'Nothing yet', 'reward'],
+    [`Price of ${PRODUCT.title}`, R.itemReward && st.unlocked ? `${money(unitPrice())} (was ${money(PRODUCT.price)})` : money(PRODUCT.price), 'price'],
+    ['Ends', d.ends ? 'In 1 day 6 hours' : 'No end time', 'ends_at'],
+  ];
+  $('vals').innerHTML = rows.map(([k, v, t]) => `<div class="val"><span>${k}<br><code>${t}</code></span><span>${esc(v)}</span></div>`).join('');
+  $('prompt').innerHTML = `"On my bundle page, use Kite to show the <b>${esc(d.name)}</b> discount. Under the products, show what the shopper needs to do next${R.shape === 'linear' || R.shape === 'ladder' ? ' with a progress line' : R.shape === 'checklist' ? ' as a checklist' : ''}, and update each product's price as they pick items."`;
+  const prods = [['Oat Cleanser', 24, '#E9DCC6'], [PRODUCT.title, PRODUCT.price, '#F2D9A8'], ['Barrier Cream', 32, '#E4E9DF']];
+  const pct = R.shape === 'linear' || R.shape === 'ladder' ? parseInt(progress, 10) / 100 : null;
+  $('bundle').innerHTML = `<div class="ttl">Build your routine</div>
+    <div class="grid3">${prods.map(([n, p, c]) => { const disc = R.itemReward && st.unlocked && d.reward.on !== 'order'; const np = d.reward.type === 'percent' ? p * (1 - rewardValue() / 100) : d.reward.type === 'amount' ? Math.max(0, p - rewardValue()) : d.reward.type === 'fixedPrice' ? Math.min(p, rewardValue()) : p; return `<div class="bp"><div class="sw" style="background:${c}"></div><b>${n}</b><span class="sf-price">${disc ? `<b>${money(np)}</b><s>${money(p)}</s>` : `<b>${money(p)}</b>`}</span></div>`; }).join('')}</div>
+    <div class="sf-msg" style="font-size:14px">${h.text}</div>
+    ${pct != null ? sfBar(pct) : R.actionable.length > 1 ? `<div class="sf-list">${R.actionable.map(c => `<div class="sf-item ${condMet(c) ? 'done' : ''}"><span class="tick">${condMet(c) ? svgCheck : ''}</span><span>${condStep(c)}</span></div>`).join('')}</div>` : ''}
+    <div class="sf-btn" style="padding:8px">Add routine to cart</div>`;
+}
+
+/* ---------- events ---------- */
+function rerender(full = true) { if (full) renderEditor(); renderAll(); }
+document.addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  if (b.dataset.preset) { presetKey = b.dataset.preset; d = clone(PRESETS[presetKey].d); renderPresets(); rerender(); }
+  else if (b.dataset.match) { d.match = b.dataset.match; rerender(); }
+  else if (b.dataset.rm != null) { d.conds.splice(Number(b.dataset.rm), 1); if (!tierable()) d.tiers = null; rerender(); }
+  else if (b.dataset.trm != null) { d.tiers.splice(Number(b.dataset.trm), 1); if (!d.tiers.length) d.tiers = null; rerender(); }
+  else if (b.id === 't-add') { const last = d.tiers[d.tiers.length - 1]; d.tiers.push({ at: last.at + 1, value: last.value + 5 }); rerender(); }
+  else if (b.id === 'it-inc') { shopper.items = Math.min(12, shopper.items + 1); rerender(false); }
+  else if (b.id === 'it-dec') { shopper.items = Math.max(0, shopper.items - 1); rerender(false); }
+});
+document.addEventListener('change', e => {
+  const t = e.target;
+  if (t.id === 'add-cond' && t.value) {
+    const k = t.value; const def = { spend: { min: 50 }, qty: { min: 3, scope: 'any product' }, includes: { product: 'Vitamin C Serum' }, code: { code: 'SAVE10' }, tag: { tag: 'VIP' }, market: { market: 'United States' } }[k];
+    d.conds.push({ kind: k, ...def }); t.value = ''; if (!tierable()) d.tiers = null; rerender();
+  } else if (t.id === 't-on') {
+    const c = tierable(); d.tiers = t.checked ? [{ at: c.min, value: d.reward.value || 10 }, { at: c.min + (c.kind === 'spend' ? 50 : 1), value: (d.reward.value || 10) + 5 }] : null; rerender();
+  } else if (t.id === 'r-type') {
+    d.reward = { ...d.reward, type: t.value, on: ['percent', 'amount'].includes(t.value) ? (d.reward.on === 'order' || d.reward.on === 'everything' || d.reward.on === 'qualifying' ? d.reward.on : 'qualifying') : (t.value === 'fixedPrice' || t.value === 'getY' ? 'qualifying' : 'order'), value: d.reward.value || 10, gift: d.reward.gift || 'Travel Mist', of: d.reward.of || 'Cleansers', get: 1 };
+    if (!['percent', 'amount', 'fixedPrice', 'getY'].includes(t.value)) d.tiers = null;
+    rerender();
+  } else if (t.id === 'r-on') { d.reward.on = t.value; rerender(); }
+  else if (t.id === 'r-of') { d.reward.of = t.value; rerender(false); }
+  else if (t.id === 'd-ends') { d.ends = t.checked; rerender(false); }
+  else if (t.id === 'sim-prod') { shopper.hasProduct = t.checked; rerender(false); }
+  else if (t.id === 'sim-tag') { shopper.tagged = t.checked; rerender(false); }
+  else if (t.id === 'sim-code') { shopper.code = t.checked; rerender(false); }
+  else if (t.dataset.ci != null && t.tagName === 'SELECT') { d.conds[Number(t.dataset.ci)][t.dataset.k] = t.value; rerender(false); }
+});
+document.addEventListener('input', e => {
+  const t = e.target;
+  if (t.id === 'sim-total') { shopper.total = Number(t.value); rerender(false); }
+  else if (t.id === 'd-name') { d.name = t.value; rerender(false); }
+  else if (t.id === 'r-val') { const v = Number(t.value); if (t.value !== '' && Number.isFinite(v)) { d.reward.value = v; rerender(false); } }
+  else if (t.id === 'r-gift') { d.reward.gift = t.value; rerender(false); }
+  else if (t.dataset.ci != null && t.tagName === 'INPUT') { const c = d.conds[Number(t.dataset.ci)]; const k = t.dataset.k; c[k] = k === 'min' ? Math.max(1, Number(t.value) || 1) : t.value; if (k === 'min' && d.tiers && d.tiers.length) d.tiers[0].at = c.min; rerender(false); }
+  else if (t.dataset.ti != null) { const v = Number(t.value); if (t.value !== '' && Number.isFinite(v)) { d.tiers[Number(t.dataset.ti)][t.dataset.k] = v; if (t.dataset.k === 'at' && Number(t.dataset.ti) === 0) { const c = tierable(); if (c) c.min = v; } rerender(false); } }
+});
+
+renderPresets();
+rerender();
+</script>
