@@ -1,0 +1,903 @@
+<title>Kite Live Pricing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Cormorant+Garamond:wght@500;600&display=swap">
+<style>
+/* Layout: a working doc. Thesis, then the live demo (merchant storefront left, engine internals right), then the write-up in one reading column. */
+:root {
+  --bg: #F4F6F9;
+  --surface: #FFFFFF;
+  --ink: #141821;
+  --muted: #586174;
+  --line: #DCE1E9;
+  --accent: #2C57CF;
+  --accent-soft: #E7EDFB;
+  --ok: #1B7A55;
+  --ok-soft: #E2F3EB;
+  --warn: #9C5A00;
+  --warn-soft: #FBF0DD;
+  --bad: #B3261E;
+  --bad-soft: #FBE7E5;
+  --code-bg: #F0F2F6;
+  /* the merchant's own storefront look, deliberately not Kite's */
+  --sf-bg: #EEF2EC;
+  --sf-card: #FBFCFA;
+  --sf-ink: #1E2A22;
+  --sf-muted: #5E6B62;
+  --sf-accent: #355F46;
+  --sf-line: #D3DCD4;
+  --font-display: "Familjen Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-brand: "Cormorant Garamond", Georgia, serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E1117; --surface: #161A23; --ink: #E6E9F0; --muted: #9AA3B4; --line: #2A303D;
+    --accent: #8AA6FF; --accent-soft: #1C2644; --ok: #5DCB9C; --ok-soft: #12281F;
+    --warn: #F0B45C; --warn-soft: #2D2414; --bad: #FF8A80; --bad-soft: #2E1715; --code-bg: #10141C;
+    --sf-bg: #161D18; --sf-card: #1C241F; --sf-ink: #E3EBE5; --sf-muted: #9DAEA2; --sf-accent: #8CC7A4; --sf-line: #2C3830;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E1117; --surface: #161A23; --ink: #E6E9F0; --muted: #9AA3B4; --line: #2A303D;
+  --accent: #8AA6FF; --accent-soft: #1C2644; --ok: #5DCB9C; --ok-soft: #12281F;
+  --warn: #F0B45C; --warn-soft: #2D2414; --bad: #FF8A80; --bad-soft: #2E1715; --code-bg: #10141C;
+  --sf-bg: #161D18; --sf-card: #1C241F; --sf-ink: #E3EBE5; --sf-muted: #9DAEA2; --sf-accent: #8CC7A4; --sf-line: #2C3830;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.55; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 20px; padding-block: 28px 64px; }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(30px, 4.4vw, 46px); font-weight: 700; letter-spacing: -0.01em; }
+h2 { font-size: 24px; font-weight: 600; }
+h3 { font-size: 17px; font-weight: 600; }
+p { margin: 0; }
+code, pre, .mono { font-family: var(--font-mono); font-size: 0.86em; }
+code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; overflow-wrap: anywhere; }
+a { color: var(--accent); }
+.eyebrow { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.lede { font-size: 17px; max-width: 68ch; color: var(--ink); }
+.muted { color: var(--muted); }
+.chip { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 500; padding: 3px 9px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); white-space: nowrap; }
+.chip.ok { background: var(--ok-soft); color: var(--ok); }
+.chip.warn { background: var(--warn-soft); color: var(--warn); }
+.chip.bad { background: var(--bad-soft); color: var(--bad); }
+.dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+
+header.top { display: grid; gap: 14px; padding-bottom: 26px; border-bottom: 1px solid var(--line); }
+.verified { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* ---------- demo ---------- */
+.demo-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px; margin-block: 30px 14px; }
+.offer-tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+.offer-tabs button { font: 500 13.5px var(--font-body); border: 1px solid var(--line); background: var(--surface); color: var(--ink); padding: 7px 12px; border-radius: 8px; cursor: pointer; }
+.offer-tabs button[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+.offer-tabs button:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.demo { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+@media (max-width: 920px) { .demo { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 520px) { .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } .ladder-marks span { font-size: 11px; } }
+
+.frame { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--sf-bg); min-width: 0; }
+.frame-bar { display: flex; align-items: center; gap: 10px; padding: 8px 12px; background: var(--surface); border-bottom: 1px solid var(--line); font-size: 12.5px; color: var(--muted); }
+.frame-bar .url { font-family: var(--font-mono); background: var(--code-bg); border-radius: 6px; padding: 2px 8px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.frame-bar .who { margin-left: auto; white-space: nowrap; }
+
+.sf { color: var(--sf-ink); padding: 22px 16px 20px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+.sf-brand { font-family: var(--font-brand); font-size: 26px; font-weight: 600; letter-spacing: 0.01em; }
+.sf-title { font-family: var(--font-brand); font-size: 34px; font-weight: 500; line-height: 1.05; }
+.sf-sub { color: var(--sf-muted); font-size: 14px; }
+.nudge { border-radius: 10px; padding: 11px 14px; background: var(--sf-card); border: 1px solid var(--sf-line); font-size: 14.5px; display: flex; gap: 10px; align-items: center; min-height: 46px; }
+.nudge strong { color: var(--sf-accent); }
+.nudge svg { flex: none; color: var(--sf-accent); }
+.ladder { display: grid; gap: 6px; }
+.ladder-track { position: relative; height: 8px; background: var(--sf-line); border-radius: 99px; }
+.ladder-fill { position: absolute; inset: 0 auto 0 0; background: var(--sf-accent); border-radius: 99px; transition: width .25s ease; }
+.ladder-marks { position: relative; height: 34px; font-size: 12px; color: var(--sf-muted); }
+.ladder-marks span { position: absolute; transform: translateX(-50%); text-align: center; white-space: nowrap; line-height: 1.25; }
+.ladder-marks span.hit { color: var(--sf-accent); font-weight: 600; }
+.ladder-marks span:first-child { transform: none; text-align: left; }
+.ladder-marks span.end { transform: translateX(-100%); text-align: right; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+.card { background: var(--sf-card); border: 1px solid var(--sf-line); border-radius: 10px; padding: 10px; display: grid; gap: 7px; align-content: start; }
+.card .art { aspect-ratio: 4 / 3; max-width: 100%; border-radius: 7px; display: grid; place-items: center; }
+.card .name { font-weight: 600; font-size: 14px; line-height: 1.25; }
+.card .size { font-size: 12px; color: var(--sf-muted); }
+.price { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px; font-variant-numeric: tabular-nums; }
+.price .now { font-weight: 600; }
+.price s { color: var(--sf-muted); font-size: 13px; }
+.hint { font-size: 12px; color: var(--sf-accent); min-height: 17px; line-height: 1.35; }
+.hint.off { color: var(--sf-muted); }
+.stepper { display: flex; align-items: center; justify-content: space-between; border: 1px solid var(--sf-line); border-radius: 8px; overflow: hidden; }
+.stepper button { width: 34px; height: 30px; border: 0; background: transparent; color: var(--sf-ink); font-size: 17px; cursor: pointer; }
+.stepper button:hover { background: var(--sf-line); }
+.stepper output { font-variant-numeric: tabular-nums; font-weight: 600; }
+
+.summary { background: var(--sf-card); border: 1px solid var(--sf-line); border-radius: 10px; padding: 14px; display: grid; gap: 8px; }
+.row { display: flex; justify-content: space-between; gap: 12px; font-variant-numeric: tabular-nums; }
+.row.total { font-weight: 600; font-size: 17px; border-top: 1px solid var(--sf-line); padding-top: 8px; }
+.row .save { color: var(--sf-accent); }
+.addbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; }
+.btn-sf { font: 600 14px var(--font-body); background: var(--sf-accent); color: var(--sf-card); border: 0; border-radius: 8px; padding: 10px 16px; cursor: pointer; }
+.btn-sf:disabled { opacity: .45; cursor: not-allowed; }
+.status { font-size: 12.5px; }
+
+/* ---------- engine panel ---------- */
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; min-width: 0; }
+.panel > *, .sf > *, .surface > *, .doc section > * { min-width: 0; }
+.panel h3 { flex-wrap: wrap; }
+.panel h3 .chip { white-space: normal; overflow-wrap: anywhere; }
+.panel h3 { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.stat { background: var(--code-bg); border-radius: 8px; padding: 8px 10px; min-width: 0; }
+.stat b { display: block; font-family: var(--font-display); font-size: 20px; font-variant-numeric: tabular-nums; }
+.stat span { font-size: 11.5px; color: var(--muted); }
+.editor { display: grid; gap: 8px; }
+.editor .er { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 13.5px; }
+.editor input[type=number] { width: 64px; font: 500 13.5px var(--font-mono); padding: 4px 6px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink); }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.seg button { font: 500 12.5px var(--font-body); background: var(--surface); color: var(--ink); border: 0; padding: 6px 10px; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--surface); }
+.tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--line); }
+.tabs button { font: 500 12.5px var(--font-body); background: none; border: 0; border-bottom: 2px solid transparent; color: var(--muted); padding: 6px 8px; cursor: pointer; }
+.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+pre.io { margin: 0; background: var(--code-bg); border-radius: 8px; padding: 10px 12px; max-height: 300px; overflow: auto; font-size: 11.5px; line-height: 1.5; color: var(--ink); white-space: pre; }
+.note { font-size: 13px; color: var(--muted); }
+.warnbox { border-radius: 8px; padding: 10px 12px; background: var(--warn-soft); color: var(--warn); font-size: 13px; }
+.warnbox.bad { background: var(--bad-soft); color: var(--bad); }
+
+/* ---------- other surfaces ---------- */
+.surfaces { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 18px; }
+.surface { background: var(--sf-bg); color: var(--sf-ink); border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.surface .lbl { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--sf-muted); }
+table.qty { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; font-size: 14px; }
+table.qty td, table.qty th { padding: 6px 4px; border-bottom: 1px solid var(--sf-line); text-align: right; }
+table.qty td:first-child, table.qty th:first-child { text-align: left; }
+table.qty th { font-weight: 500; color: var(--sf-muted); font-size: 12.5px; }
+table.qty tr.best td { color: var(--sf-accent); font-weight: 600; }
+.minibar { display: grid; gap: 8px; background: var(--sf-card); border: 1px solid var(--sf-line); border-radius: 10px; padding: 12px; }
+
+/* ---------- write-up ---------- */
+.doc { max-width: 860px; margin-top: 54px; display: grid; gap: 40px; }
+.doc section { display: grid; gap: 14px; }
+.doc p, .doc li { max-width: 70ch; }
+.doc ul, .doc ol { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.flow { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr); gap: 10px; align-items: stretch; }
+.flow .box { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px; display: grid; gap: 4px; align-content: start; font-size: 13.5px; min-width: 0; }
+.flow .box b { font-family: var(--font-display); font-size: 15px; }
+.flow .arrow { align-self: center; color: var(--muted); font-family: var(--font-mono); }
+.flow .lane { display: grid; gap: 10px; min-width: 0; }
+.flow .box.hl { border-color: var(--accent); background: var(--accent-soft); }
+@media (max-width: 760px) { .flow { grid-template-columns: minmax(0, 1fr); } .flow .arrow { transform: rotate(90deg); justify-self: center; } }
+.tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+table.cmp { border-collapse: collapse; width: 100%; min-width: 640px; font-size: 13.5px; }
+table.cmp th, table.cmp td { padding: 9px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+table.cmp thead th { font-family: var(--font-display); font-size: 14px; background: var(--code-bg); }
+table.cmp tbody th { font-weight: 500; color: var(--muted); width: 22%; }
+table.cmp td.pick { background: var(--accent-soft); }
+table.cmp tr:last-child th, table.cmp tr:last-child td { border-bottom: 0; }
+pre.code { margin: 0; background: var(--code-bg); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; overflow-x: auto; font-size: 12.5px; line-height: 1.6; color: var(--ink); }
+.steps { counter-reset: s; list-style: none; padding: 0 !important; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 4px 10px; }
+.steps li::before { content: counter(s); grid-row: span 2; width: 24px; height: 24px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font: 600 13px var(--font-display); display: grid; place-items: center; }
+.steps li b { font-weight: 600; }
+.qs li b { font-weight: 600; }
+footer.end { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); max-width: 860px; }
+@media (prefers-reduced-motion: reduce) { .ladder-fill { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <span class="eyebrow">Kite · storefront pricing · working prototype</span>
+    <h1>Run Kite's discount function in the browser, and let any page price itself</h1>
+    <p class="lede">Shopify only runs a discount function once items are in the cart. Today Kite fills the gap with a hand-written JavaScript copy of the Rust logic, and the two drift apart. This page tests a different idea: compile the same function to WebAssembly once, then run that file both in Shopify and in the shopper's browser. Every price, nudge and tier below comes from Kite's real <code>custom-discount-builder</code> function, built from the app7 repo and running on this page.</p>
+    <div class="verified">
+      <span class="chip ok"><span class="dot"></span>Built 5 Kite functions to WebAssembly</span>
+      <span class="chip ok"><span class="dot"></span>Runs here with a 6-call WASI shim</span>
+      <span class="chip ok" id="chip-speed"><span class="dot"></span>Loading function…</span>
+      <span class="chip warn"><span class="dot"></span>Not connected to a store: predictions only</span>
+    </div>
+  </header>
+
+  <div class="demo-head">
+    <div>
+      <span class="eyebrow">Live demo</span>
+      <h2>A merchant's own bundle page, built only on <code>Kite.quote</code></h2>
+    </div>
+    <div class="offer-tabs" role="group" aria-label="Offer configured in Kite">
+      <button type="button" id="tab-tiered" data-offer="tiered" aria-pressed="true">Routine tiers</button>
+      <button type="button" id="tab-bxgy" data-offer="bxgy" aria-pressed="false">Buy 2, 3rd off</button>
+      <button type="button" id="tab-set" data-offer="set" aria-pressed="false">Any 3 for $75</button>
+    </div>
+  </div>
+
+  <div class="demo">
+    <div class="frame">
+      <div class="frame-bar"><span class="url">halden-skin.com/pages/build-your-routine</span><span class="who">Merchant's code, no Kite widget</span></div>
+      <div class="sf">
+        <div>
+          <div class="sf-brand">Halden</div>
+        </div>
+        <div style="display:grid;gap:6px">
+          <div class="sf-title">Build your routine</div>
+          <div class="sf-sub" id="sf-sub">Pick any steps. The more you add, the more you save.</div>
+        </div>
+        <div class="nudge" id="nudge" aria-live="polite"></div>
+        <div class="ladder" id="ladder"></div>
+        <div class="grid" id="grid"></div>
+        <div class="summary" id="summary"></div>
+        <div class="addbar">
+          <span class="status" id="sf-status"></span>
+          <button type="button" class="btn-sf" id="add-btn">Add routine to cart</button>
+        </div>
+        <div id="add-result" hidden></div>
+      </div>
+    </div>
+
+    <aside class="panel" aria-label="Engine internals">
+      <h3>Under the hood <span class="chip" id="build-chip">custom-discount-builder.wasm</span></h3>
+      <div class="stats">
+        <div class="stat"><b id="st-runs">0</b><span>function runs for this update</span></div>
+        <div class="stat"><b id="st-ms">0</b><span>ms of function time</span></div>
+        <div class="stat"><b id="st-size">0</b><span>KB wasm (<span id="st-gz">109</span> KB gzipped)</span></div>
+      </div>
+
+      <div class="editor" id="editor"></div>
+
+      <div class="editor">
+        <div class="er"><b>How the page adds to cart</b></div>
+        <div class="seg" role="group" aria-label="How the page adds to cart">
+          <button type="button" id="mode-kite" data-mode="kite" aria-pressed="true">Kite.addToCart</button>
+          <button type="button" id="mode-theme" data-mode="theme" aria-pressed="false">Theme's own /cart/add.js</button>
+        </div>
+        <p class="note" id="mode-note"></p>
+      </div>
+
+      <div>
+        <div class="tabs" role="tablist">
+          <button type="button" role="tab" id="t-contract" aria-selected="true" data-io="contract">Published offer</button>
+          <button type="button" role="tab" id="t-in" aria-selected="false" data-io="input">Function input</button>
+          <button type="button" role="tab" id="t-out" aria-selected="false" data-io="output">Function output</button>
+        </div>
+        <pre class="io" id="io" tabindex="0"></pre>
+      </div>
+      <p class="note">The published offer is the exact JSON Kite writes to the discount's <code>discount-configuration</code> metafield, so the function in the browser and the function at checkout read the same thing. Edit the offer above and the page reprices instantly.</p>
+    </aside>
+  </div>
+
+  <div class="surfaces">
+    <div class="surface">
+      <span class="lbl">Same engine · product page quantity table</span>
+      <h3 id="pdp-title">Vitamin C Serum</h3>
+      <table class="qty" id="pdp"></table>
+      <p class="sf-sub" style="font-size:12.5px">Priced by asking the function about carts of 1 to 5 units. The page doesn't need to know the tier rules.</p>
+    </div>
+    <div class="surface">
+      <span class="lbl">Same engine · cart drawer bar</span>
+      <div class="minibar" id="minibar"></div>
+      <p class="sf-sub" style="font-size:12.5px">Reads the same quote as the bundle page. A theme or headless site can render it however it likes.</p>
+    </div>
+  </div>
+
+  <main class="doc">
+    <section>
+      <span class="eyebrow">How it works</span>
+      <h2>One discount function, run in two places</h2>
+      <p>A Shopify discount function takes a JSON description of a cart and returns JSON discounts. It doesn't touch the network or any other state, so the same compiled file gives the same answer wherever it runs. Kite's functions use <code>shopify_function 0.8</code>, which reads its input on stdin and writes its result on stdout. A browser can provide those six system calls in about 60 lines of JavaScript. That is all the "runtime" on this page is.</p>
+      <div class="flow" aria-label="Data flow">
+        <div class="lane">
+          <div class="box"><b>Kite admin</b>Merchant saves an offer. Kite builds the function config (the <code>metafieldInfo</code> JSON).</div>
+        </div>
+        <span class="arrow">→</span>
+        <div class="lane">
+          <div class="box"><b>Shopify</b>Config goes on the discount metafield. The <code>.wasm</code> is deployed with the app. Runs at cart and checkout.</div>
+          <div class="box hl"><b>Storefront (new)</b>The same config is published as an offer contract. The same <code>.wasm</code> is served from Kite's CDN.</div>
+        </div>
+        <span class="arrow">→</span>
+        <div class="lane">
+          <div class="box hl"><b>Kite.quote</b>Builds the function input from any hypothetical cart, runs the function, turns its output into prices and messages.</div>
+          <div class="box"><b>Any UI</b>Bundle builders, product page tables, cart bars, headless sites, or an AI agent writing theme code.</div>
+        </div>
+      </div>
+      <p>The function returns discounts and a message, nothing else. Everything a shopper-facing page needs beyond that, such as "add 1 more to get 15% off" or "this item would cost $21.60", comes from asking the function what-if questions. The engine re-runs it on the cart plus one more item, then plus two, and reports the first change. Each run takes well under a millisecond once loaded. A whole update on this page, often 60 or more runs, finishes in a few milliseconds. Because the rules live inside the function, this works the same way for tiers, buy-X-get-Y, set pricing, and any rule type Kite adds later. Nobody re-implements the rules in JavaScript.</p>
+    </section>
+
+    <section>
+      <span class="eyebrow">Options compared</span>
+      <h2>Three ways to price before checkout</h2>
+      <div class="tablewrap">
+        <table class="cmp">
+          <thead><tr><th></th><th>Hand-written JS copy (today)</th><th>Kite's function in the browser (this page)</th><th>Throwaway Storefront API cart</th></tr></thead>
+          <tbody>
+            <tr><th>Matches checkout</th><td>Drifts. Earlier review found mismatched rule types, a missing URL/test-mode gate, opposite error handling and two separate compressors.</td><td class="pick">Same binary as checkout for Kite's own discount.</td><td>Exact, including other apps' discounts and combination settings.</td></tr>
+            <tr><th>Speed</th><td>Instant</td><td class="pick">Under 1 ms per quote, after a one-time load of about 90 to 110 KB gzipped per function</td><td>One network round trip per quote. Not measured here; expect hundreds of ms.</td></tr>
+            <tr><th>Before add-to-cart</th><td>Yes</td><td class="pick">Yes, any hypothetical cart</td><td>Yes. Functions run on every <code>cartCreate</code> and line mutation.</td></tr>
+            <tr><th>Knows other discounts</th><td>No</td><td class="pick">No. Reconcile with <code>/cart.js</code> after add.</td><td>Yes</td></tr>
+            <tr><th>Upkeep</th><td>Every Rust change is ported by hand</td><td class="pick">Rebuild and publish. One input builder per function.</td><td>None</td></tr>
+            <tr><th>Main risk</th><td>Silent wrong prices</td><td class="pick">Input must match each function's GraphQL query. A future crate upgrade may change the host interface.</td><td>Bot protection (<code>430</code> responses). No delete, so carts pile up until they expire.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><b>Recommendation:</b> use the in-browser function for every interaction. Keep <code>/cart.js</code> as the source of truth once items are in the cart. A throwaway Storefront API cart is an optional "confirm" step for headless storefronts or high-value bundles. Tokenless Storefront API access covers cart reads and writes from a theme. Shopify has no dedicated preview or dry-run endpoint.</p>
+    </section>
+
+    <section>
+      <span class="eyebrow">What the engine needs from the page</span>
+      <h2>Every function input field has a storefront source</h2>
+      <p>The function's input query (<code>generate_cart_run.graphql</code>) is the full list of what it can see. Each field can be filled on a theme without asking Shopify anything:</p>
+      <div class="tablewrap">
+        <table class="cmp">
+          <thead><tr><th>Function input</th><th>Where the storefront gets it</th></tr></thead>
+          <tbody>
+            <tr><th>lines: price, quantity, product, variant</th><td>The page's own selection, or the live cart from <code>/cart.js</code> plus the hypothetical items</td></tr>
+            <tr><th><code>inCollections</code>, <code>hasTags</code>, <code>productType</code></th><td>Liquid <code>product.collections</code>, <code>product.tags</code>, <code>product.type</code>; or the Storefront API for headless. Only the IDs named in the config need checking.</td></tr>
+            <tr><th><code>lineAttributeKey1</code></th><td>The properties <code>Kite.addToCart</code> will stamp, such as <code>_kite_bundle</code> or <code>_kite_bxgy_item</code></td></tr>
+            <tr><th><code>CFData</code> (<code>_kite_ccdData</code>), <code>cartAttributeKey1</code></th><td>Current cart attributes, which Kite already writes through <code>gfgDiscountAllocationSync</code></td></tr>
+            <tr><th><code>buyerIdentity</code>, customer tags</th><td>Liquid <code>customer</code> and <code>customer.tags</code>. Unknown until login, so tag-gated offers are labelled as unconfirmed.</td></tr>
+            <tr><th><code>market.handle</code>, <code>presentmentCurrencyRate</code></th><td>Liquid <code>localization.market.handle</code> and <code>Shopify.currency.rate</code></td></tr>
+            <tr><th><code>discount.metafield</code></th><td>The published offer contract, which is the same JSON</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <span class="eyebrow">What a merchant's agent writes</span>
+      <h2>The bundle page above, in about 20 lines</h2>
+      <p>This is the whole integration surface. An agent reading a one-page <code>llms.txt</code> could produce it without knowing Kite's internals:</p>
+<pre class="code">&lt;script type="module"&gt;
+  await Kite.ready;                                   // loads the offers + function .wasm once
+  const offer = Kite.offers({ collection: 'routine' })[0];
+
+  async function render(selection) {                  // selection: [{ variantId, quantity }]
+    const q = await Kite.quote({ lines: selection });  // runs Kite's discount function locally
+    for (const line of q.lines) {
+      priceEl(line.variantId).innerHTML = line.finalPrice &lt; line.price
+        ? `&lt;s&gt;${money(line.price)}&lt;/s&gt; ${money(line.finalPrice)}` : money(line.price);
+    }
+    nudgeEl.textContent = q.next
+      ? `Add ${q.next.remaining} more to get ${q.next.message}`   // found by what-if runs
+      : q.applied.map(a =&gt; a.message).join(' · ');
+    totalEl.textContent = money(q.total);
+    badgeEl.dataset.state = q.confidence;              // 'predicted' until Shopify confirms
+  }
+
+  addBtn.onclick = () =&gt; Kite.addToCart(selection, { offerId: offer.id });
+  // stamps the line properties the function needs, then checks /cart.js and fires
+  // Kite.on('update') if Shopify's real price differs from the prediction
+&lt;/script&gt;</pre>
+      <p class="muted">The API names are a proposal. The demo on this page implements <code>quote</code>, the what-if nudges, and the add-to-cart properties. <code>Kite.ready</code>, <code>offers</code>, <code>on</code> and the reconcile step are not built yet.</p>
+    </section>
+
+    <section>
+      <span class="eyebrow">What it takes</span>
+      <h2>Build order</h2>
+      <ol class="steps">
+        <li><b>Publish the function config to the storefront.</b><span>Today <code>routes/frontend/frontend.service.js</code> (around line 491) loads consolidated discounts with <code>.select('-metafieldInfo …')</code>, so the storefront never sees what the function sees. Add a sanitised copy to the payload. Replace <code>privateCampaignValue</code> with a hash so private campaigns stay private, and the engine compares the hash of the shopper's campaign. Headless sites need it as a metaobject or a shop metafield with storefront access, because <code>app.metafields</code> is only readable inside Kite's app embed.</span></li>
+        <li><b>Ship the same <code>.wasm</code> to Kite's CDN.</b><span><code>shopify app deploy</code> already builds each function. Upload the identical file, named by its content hash, and put the hash in the contract so the browser and Shopify always run the same build. Load it only on pages that call <code>Kite.quote</code>.</span></li>
+        <li><b>Build <code>Kite.js</code>.</b><span>The WASI shim, one input builder per function (written from each function's <code>.graphql</code> query), output-to-price allocation, what-if nudges, <code>addToCart</code> with the required properties, and reconcile against <code>/cart.js</code> on Shopify's <code>shopify:cart:lines-update</code> event. That event's payload has no discount details, so reconcile has to re-fetch <code>/cart.js</code>.</span></li>
+        <li><b>Write agent-facing docs.</b><span>An <code>llms.txt</code> with the contract, the four API calls, "always add through <code>Kite.addToCart</code>", and three worked examples.</span></li>
+        <li><b>Move Kite's own widgets onto it.</b><span>Strikethrough, BXGY, progress bar and volume tiers call <code>Kite.quote</code>, and <code>strikethrough-logic.js</code> plus the maths in <code>customDiscountLogic.js</code> go away. This gives the same result as the existing <code>remove-storefront-discount-calculation-plan.md</code> without losing storefront prices.</span></li>
+      </ol>
+    </section>
+
+    <section>
+      <span class="eyebrow">Found while building this</span>
+      <h2>Things to know</h2>
+      <ul>
+        <li><b>A bad config crashes the function, it doesn't return zero.</b> One of my test configs left out <code>qualifierType</code> on a rule. The function panicked (<code>generate_cart_run.rs:1192</code>). At checkout that means "no discount". In the browser, the engine should report "unknown" and show no price, not a $0 discount.</li>
+        <li><b>Line properties decide eligibility.</b> Switch the add mode to "Theme's own /cart/add.js" on the "Any 3 for $75" offer. Without <code>_kite_bundle</code> on the lines, the real function returns nothing. A merchant's page that skips <code>Kite.addToCart</code> shows a price the shopper won't get.</li>
+        <li><b>"Multiply set pricing" repeats whole sets.</b> It discounts every item in each complete set. It can't express "every 3rd item 10% off" on its own, which matters if merchants ask for repeating BXGY on custom pages.</li>
+        <li><b>The test fixture in the repo is stale.</b> <code>custom-discount-builder/input.json</code> has no <code>buyerIdentity.isAuthenticated</code>, so the current function rejects it. Running functions outside Shopify would catch drift like this in CI.</li>
+        <li><b>Stacking is still Shopify's call.</b> Other apps' discounts and the merchant's combination settings are invisible to any one function. The engine assumes Kite's offers don't stack with each other (best discount per line wins) and marks every price as predicted until <code>/cart.js</code> confirms it.</li>
+        <li><b>Size is in line with today.</b> Each function is about 230 to 310 KB raw and 90 to 110 KB gzipped, before <code>wasm-opt</code>. The <code>customDiscountLogic.js</code> bundle that ships today is 122 KB minified.</li>
+      </ul>
+    </section>
+
+    <section>
+      <span class="eyebrow">Decisions for the team</span>
+      <h2>Open questions</h2>
+      <ul class="qs">
+        <li><b>Which surfaces first?</b> The churned store's case (custom bundle builder, DiscountKit Live) suggests bundle pages and product-page tiers.</li>
+        <li><b>How public should offer rules be?</b> <code>app_data</code> is already rendered into every page by the app embed, so most rules are visible today. A versioned public contract makes that a commitment.</li>
+        <li><b>Headless in v1?</b> Theme-only can use the existing app embed. Headless needs the metaobject route and a hosted script.</li>
+        <li><b>Who owns the removal plan?</b> This approach and <code>remove-storefront-discount-calculation-plan.md</code> both delete the JavaScript maths; they should become one plan.</li>
+        <li><b>Is DiscountKit Live the bar?</b> From the meeting notes, it publishes a metafield and the merchant's UI does the maths. Shipping the maths too goes a step further.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="end">Prototype built from <code>skailama/backend-discountAndGift-app7</code> at <code>769ed9b</code> (<code>extensions/custom-discount-builder</code>, unmodified, <code>cargo build --release --target wasm32-wasip1</code>). Products and offers are examples, not merchant data. Shopify facts are from shopify.dev (API 2026-10).</footer>
+</div>
+
+<script>
+const WASM_B64 = "__WASM_B64__";
+const WASM_GZ_KB = __WASM_GZ_KB__;
+
+/* =====================================================================
+   1. Runtime: run a Shopify Function (shopify_function 0.8, WASI stdin/stdout)
+   ===================================================================== */
+const Runtime = {
+  module: null, bytes: 0, runs: 0, ms: 0,
+  async load() {
+    const bin = atob(WASM_B64);
+    const bytes = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    this.bytes = bytes.length;
+    this.module = await WebAssembly.compile(bytes);
+  },
+  async run(exportName, input) {
+    const inBytes = new TextEncoder().encode(JSON.stringify(input));
+    let pos = 0, mem;
+    const out = [], err = [];
+    const EXIT = Symbol('exit');
+    let exitCode = 0;
+    const view = () => new DataView(mem.buffer);
+    const wasi = {
+      random_get(ptr, len) { crypto.getRandomValues(new Uint8Array(mem.buffer, ptr, len)); return 0; },
+      environ_get() { return 0; },
+      environ_sizes_get(c, s) { view().setUint32(c, 0, true); view().setUint32(s, 0, true); return 0; },
+      fd_read(fd, iovs, n, nread) {
+        let total = 0;
+        for (let i = 0; i < n; i++) {
+          const p = view().getUint32(iovs + i * 8, true), l = view().getUint32(iovs + i * 8 + 4, true);
+          const chunk = inBytes.subarray(pos, pos + l);
+          new Uint8Array(mem.buffer, p, chunk.length).set(chunk);
+          pos += chunk.length; total += chunk.length;
+          if (chunk.length < l) break;
+        }
+        view().setUint32(nread, total, true); return 0;
+      },
+      fd_write(fd, iovs, n, nwritten) {
+        let total = 0;
+        for (let i = 0; i < n; i++) {
+          const p = view().getUint32(iovs + i * 8, true), l = view().getUint32(iovs + i * 8 + 4, true);
+          (fd === 1 ? out : err).push(new Uint8Array(mem.buffer, p, l).slice());
+          total += l;
+        }
+        view().setUint32(nwritten, total, true); return 0;
+      },
+      proc_exit(code) { exitCode = code; throw EXIT; },
+    };
+    const instance = await WebAssembly.instantiate(this.module, { wasi_snapshot_preview1: wasi });
+    mem = instance.exports.memory;
+    const t0 = performance.now();
+    let crashed = false;
+    try { instance.exports[exportName](); }
+    catch (e) { if (e !== EXIT || exitCode !== 0) crashed = true; }
+    const dt = performance.now() - t0;
+    this.runs++; this.ms += dt;
+    const dec = parts => new TextDecoder().decode(parts.length ? new Uint8Array(parts.reduce((a, b) => a.concat(Array.from(b)), [])) : new Uint8Array());
+    const stdout = dec(out), stderr = dec(err);
+    let output = null;
+    if (!crashed) { try { output = JSON.parse(stdout); } catch { crashed = true; } }
+    return { ok: !crashed, output, stderr, ms: dt };
+  },
+};
+
+/* =====================================================================
+   2. Example store data (fictional)
+   ===================================================================== */
+const CATALOG = [
+  { productId: '7101', variantId: '71011', title: 'Oat Milk Cleanser', size: '150 ml', price: 24, color: '#E9DCC6', cap: '#B9A07A' },
+  { productId: '7102', variantId: '71021', title: 'Rice Water Toner', size: '200 ml', price: 28, color: '#DCE6EE', cap: '#8BA4B8' },
+  { productId: '7103', variantId: '71031', title: 'Vitamin C Serum', size: '30 ml', price: 40, color: '#F2D9A8', cap: '#C8873A' },
+  { productId: '7104', variantId: '71041', title: 'Barrier Cream', size: '50 ml', price: 32, color: '#E4E9DF', cap: '#8FA284' },
+  { productId: '7106', variantId: '71061', title: 'Night Retinal', size: '30 ml', price: 46, color: '#DCD3E8', cap: '#8C7AA8' },
+  { productId: '7105', variantId: '71051', title: 'Mineral SPF 30', size: '50 ml', price: 18, color: '#F4EEDF', cap: '#C7B98F' },
+];
+const ROUTINE_IDS = ['7101', '7102', '7103', '7104', '7106']; // SPF is outside the offer on purpose
+const byId = Object.fromEntries(CATALOG.map(p => [p.productId, p]));
+const money = n => '$' + (Math.round(n * 100) / 100).toFixed(2).replace(/\.00$/, '');
+
+/* =====================================================================
+   3. Offer configs: the JSON Kite writes to discount-configuration
+   ===================================================================== */
+const gate = () => ({ rulesGlobalOperator: 'AND', rulesGlobalList: [{ rulesOperator: 'AND', rulesList: [] }] });
+const productsRule = (op, n) => ({ ruleType: 'products', type: 'PRODUCT', ruleValue: { operatorType: 'include', value: ROUTINE_IDS, qualifierType: 'overallQty', qualifierOperatorType: op, qualifierValue: n } });
+
+const OFFERS = {
+  tiered: {
+    title: 'Routine tiers', sub: 'Pick any steps. The more you add, the more you save.',
+    params: { tiers: [[3, 10], [4, 15], [5, 20]] },
+    build(p) {
+      return {
+        discountFunctionType: 'CONSOLIDATED_CUSTOM_DISCOUNT', discountTitle: 'Build your routine', metricsArray: ['products'],
+        discountTriggeredRulesData: gate(),
+        segmentsData: { discountApplicationStrategy: 'MAXIMUM', segmentsList: p.tiers.map(([n, pct]) => ({
+          discountType: 'PERCENTAGE', discountValue: pct, message: `${pct}% off`, appliesToEachItem: true,
+          sortByOrder: 'ascending', sortBasedOn: 'productPrice',
+          buyXRulesData: { rulesOperator: 'AND', rulesList: [productsRule('greaterThanOrEqualTo', n)] },
+          getYRulesData: { rulesOperator: 'OR', rulesList: [productsRule('greaterThanOrEqualTo', 0)] },
+        })) },
+      };
+    },
+  },
+  bxgy: {
+    title: 'Buy 2, get the 3rd 10% off', sub: 'Buy two steps and your lowest-priced extra step is discounted.',
+    params: { buy: 2, pct: 10 },
+    build(p) {
+      return {
+        discountFunctionType: 'CONSOLIDATED_CUSTOM_DISCOUNT', discountTitle: `Buy ${p.buy}, get 1 ${p.pct}% off`, metricsArray: ['products'],
+        discountTriggeredRulesData: gate(),
+        segmentsData: { discountApplicationStrategy: 'ALL', segmentsList: [{
+          discountType: 'PERCENTAGE', discountValue: p.pct, message: `${p.pct}% off your lowest-priced item`, appliesToEachItem: true,
+          sortByOrder: 'ascending', sortBasedOn: 'productPrice', totalLimit: 1,
+          buyXRulesData: { rulesOperator: 'AND', rulesList: [productsRule('greaterThanOrEqualTo', p.buy + 1)] },
+          getYRulesData: { rulesOperator: 'OR', itemCount: 1, rulesList: [productsRule('greaterThanOrEqualTo', 0)] },
+        }] },
+      };
+    },
+  },
+  set: {
+    title: 'Any 3 for $75', sub: 'Any three routine steps for one set price.',
+    params: { size: 3, price: 75 },
+    build(p) {
+      return {
+        discountFunctionType: 'CONSOLIDATED_CUSTOM_DISCOUNT', discountTitle: `Any ${p.size} for $${p.price}`,
+        lineAttributeKey1: '_kite_bundle', metricsArray: ['products', 'lineAttributes'],
+        discountTriggeredRulesData: gate(),
+        segmentsData: { discountApplicationStrategy: 'ALL', segmentsList: [{
+          discountType: 'FIXED_PRICE', discountValue: p.price, message: `Any ${p.size} for ${money(p.price)}`, appliesToEachItem: false,
+          sortByOrder: 'descending', sortBasedOn: 'productPrice', totalLimit: p.size,
+          buyXRulesData: { rulesOperator: 'AND', rulesList: [productsRule('greaterThanOrEqualTo', p.size)] },
+          getYRulesData: { rulesOperator: 'AND', itemCount: p.size, rulesList: [
+            productsRule('greaterThanOrEqualTo', 0),
+            { ruleType: 'lineAttributes', type: 'PRODUCT', ruleValue: { operatorType: 'include', attributeKey: { operatorType: 'is', value: '_kite_bundle' }, attributeValue: { operatorType: 'is', value: 'routine' }, qualifierType: 'overallQty', qualifierOperatorType: 'greaterThanOrEqualTo', qualifierValue: 0 } },
+          ] },
+        }] },
+      };
+    },
+  },
+};
+
+/* =====================================================================
+   4. Kite.quote: build input, run function, allocate output to prices
+   ===================================================================== */
+const Kite = {
+  ctx: { market: 'us', currency: 'USD', rate: 1, customer: null, cartAttributes: {} },
+  memo: new Map(),
+  last: null,
+
+  buildInput(config, lines) {
+    const subtotal = lines.reduce((s, l) => s + l.price * l.quantity, 0);
+    const attrKey = config.lineAttributeKey1;
+    const cartKey = config.cartAttributeKey1;
+    return {
+      cart: {
+        CFData: { value: JSON.stringify(this.ctx.cartAttributes._kite_ccdData || {}) },
+        cartAttributeKey1: cartKey ? { key: cartKey, value: this.ctx.cartAttributes[cartKey] ?? null } : null,
+        lines: lines.map((l, i) => ({
+          cost: { amountPerQuantity: { amount: l.price.toFixed(2) } },
+          quantity: l.quantity,
+          id: `gid://shopify/CartLine/${i}`,
+          sellingPlanAllocation: null,
+          merchandise: {
+            __typename: 'ProductVariant',
+            id: `gid://shopify/ProductVariant/${l.variantId}`,
+            product: {
+              id: `gid://shopify/Product/${l.productId}`,
+              inCollections: (config.selectedCollectionIds || []).map(c => ({ collectionId: c, isMember: (l.collections || []).includes(c) })),
+              hasTags: (config.selectedProductTags || []).map(t => ({ tag: t, hasTag: (l.tags || []).includes(t) })),
+              productType: l.productType || '',
+            },
+          },
+          lineAttributeKey1: attrKey && l.properties?.[attrKey] != null ? { key: attrKey, value: String(l.properties[attrKey]) } : null,
+        })),
+        cost: { subtotalAmount: { amount: subtotal.toFixed(2), currencyCode: this.ctx.currency } },
+        buyerIdentity: { isAuthenticated: !!this.ctx.customer, customer: this.ctx.customer ? { hasTags: (config.selectedCustomerTags || []).map(t => ({ tag: t, hasTag: this.ctx.customer.tags.includes(t) })) } : null },
+        retailLocation: null,
+      },
+      localization: { market: { handle: this.ctx.market } },
+      presentmentCurrencyRate: String(this.ctx.rate),
+      discount: { metafield: { value: JSON.stringify(config) } },
+    };
+  },
+
+  // Turn productDiscountsAdd candidates into per-line amounts, the way Shopify applies them.
+  allocate(output, lines) {
+    const op = (output?.operations || []).find(o => o.productDiscountsAdd)?.productDiscountsAdd;
+    const perLine = lines.map(() => 0);
+    if (!op) return { perLine, applied: [] };
+    const idx = id => Number(String(id).split('/').pop());
+    let cands = op.candidates.map(c => {
+      const amounts = lines.map(() => 0);
+      const targets = c.targets.map(t => t.cartLine).filter(Boolean).map(t => ({ i: idx(t.id), q: t.quantity ?? lines[idx(t.id)].quantity }));
+      if (c.value.percentage) {
+        const pct = Number(c.value.percentage.value) / 100;
+        targets.forEach(t => { amounts[t.i] += lines[t.i].price * t.q * pct; });
+      } else if (c.value.fixedAmount) {
+        const amt = Number(c.value.fixedAmount.amount);
+        if (c.value.fixedAmount.appliesToEachItem) targets.forEach(t => { amounts[t.i] += amt * t.q; });
+        else {
+          const base = targets.reduce((s, t) => s + lines[t.i].price * t.q, 0) || 1;
+          targets.forEach(t => { amounts[t.i] += amt * (lines[t.i].price * t.q) / base; });
+        }
+      }
+      return { message: c.message || '', amounts, total: amounts.reduce((a, b) => a + b, 0) };
+    });
+    if (op.selectionStrategy === 'FIRST') cands = cands.slice(0, 1);
+    else if (op.selectionStrategy === 'MAXIMUM') cands = cands.length ? [cands.reduce((a, b) => (b.total > a.total ? b : a))] : [];
+    cands.forEach(c => c.amounts.forEach((a, i) => { perLine[i] += a; }));
+    perLine.forEach((a, i) => { perLine[i] = Math.min(Math.round(a * 100) / 100, lines[i].price * lines[i].quantity); });
+    return { perLine, applied: cands.filter(c => c.total > 0.0001).map(c => ({ message: c.message, amount: Math.round(c.total * 100) / 100 })) };
+  },
+
+  async quote(config, lines, { record = false } = {}) {
+    const key = JSON.stringify([config, lines.map(l => [l.productId, l.quantity, l.properties])]);
+    if (!record && this.memo.has(key)) return this.memo.get(key);
+    const input = this.buildInput(config, lines);
+    const res = await Runtime.run('generate_cart_run', input);
+    const subtotal = lines.reduce((s, l) => s + l.price * l.quantity, 0);
+    let q;
+    if (!res.ok) {
+      q = { ok: false, error: res.stderr.trim().split('\n').find(Boolean) || 'function crashed', subtotal, total: subtotal, discount: 0, lines: lines.map(l => ({ ...l, finalUnit: l.price, discount: 0 })), applied: [], confidence: 'unknown' };
+    } else {
+      const { perLine, applied } = this.allocate(res.output, lines);
+      const discount = perLine.reduce((a, b) => a + b, 0);
+      q = { ok: true, subtotal, discount, total: subtotal - discount, applied, confidence: 'predicted',
+        lines: lines.map((l, i) => ({ ...l, discount: perLine[i], finalUnit: (l.price * l.quantity - perLine[i]) / l.quantity })) };
+    }
+    q.key = q.applied.map(a => a.message).sort().join('|');
+    if (record) this.last = { input, output: res.output, stderr: res.stderr };
+    this.memo.set(key, q);
+    if (this.memo.size > 4000) this.memo.clear();
+    return q;
+  },
+
+  // What-if: smallest number of extra units (of any product) that unlocks a new message.
+  async next(config, lines, base, maxK = 8) {
+    let best = null;
+    for (const p of CATALOG) {
+      for (let k = 1; k <= maxK; k++) {
+        if (best && k >= best.remaining) break;
+        const q = await this.quote(config, withAdded(lines, p, k));
+        if (!q.ok) break;
+        const newMsgs = q.applied.filter(a => !base.applied.some(b => b.message === a.message));
+        if (q.key !== base.key && newMsgs.length && q.discount > base.discount + 0.004) {
+          if (!best || k < best.remaining || (k === best.remaining && p.price < best.product.price)) {
+            best = { remaining: k, product: p, message: newMsgs[0].message, quote: q };
+          }
+          break;
+        }
+      }
+    }
+    return best;
+  },
+};
+
+let addMode = 'kite';
+function lineProps() { return addMode === 'kite' ? { _kite_bundle: 'routine' } : {}; }
+function makeLine(p, quantity) { return { productId: p.productId, variantId: p.variantId, title: p.title, price: p.price, quantity, properties: lineProps() }; }
+function withAdded(lines, p, k) {
+  const out = lines.map(l => ({ ...l }));
+  const hit = out.find(l => l.productId === p.productId);
+  if (hit) hit.quantity += k; else out.push(makeLine(p, k));
+  return out;
+}
+
+/* =====================================================================
+   5. The merchant's page (rendering only; all numbers come from Kite.quote)
+   ===================================================================== */
+const state = { offer: 'tiered', qty: { '7101': 1, '7103': 1 } };
+let ioTab = 'contract';
+let renderSeq = 0;
+
+const $ = id => document.getElementById(id);
+const config = () => OFFERS[state.offer].build(OFFERS[state.offer].params);
+const cartLines = () => CATALOG.filter(p => state.qty[p.productId] > 0).map(p => makeLine(p, state.qty[p.productId]));
+
+const bottle = (p) => `<svg width="46" height="70" viewBox="0 0 46 70" aria-hidden="true"><rect x="15" y="2" width="16" height="12" rx="3" fill="${p.cap}"/><rect x="6" y="14" width="34" height="54" rx="9" fill="${p.color}" stroke="${p.cap}" stroke-width="1.5"/><rect x="12" y="32" width="22" height="14" rx="2" fill="${p.cap}" opacity=".35"/></svg>`;
+const check = '<svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const spark = '<svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2v5M10 13v5M2 10h5M13 10h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+
+async function render() {
+  const seq = ++renderSeq;
+  Runtime.runs = 0; Runtime.ms = 0;
+  const cfg = config();
+  const lines = cartLines();
+  const count = lines.reduce((s, l) => s + l.quantity, 0);
+
+  const q = await Kite.quote(cfg, lines, { record: true });
+  const nxt = q.ok ? await Kite.next(cfg, lines, q) : null;
+
+  // milestones for the ladder, discovered by repeated what-if runs with the best probe product
+  const marks = [];
+  if (q.ok) {
+    let curLines = lines, cur = q, curCount = count, guard = 0;
+    for (const a of q.applied) marks.push({ at: null, message: a.message, hit: true });
+    let step = nxt;
+    while (step && guard++ < 4) {
+      curCount += step.remaining;
+      marks.push({ at: curCount, message: step.message, hit: false });
+      curLines = withAdded(curLines, step.product, step.remaining); cur = step.quote;
+      step = await Kite.next(cfg, curLines, cur, 6);
+    }
+  }
+
+  // per-card "what this item would cost if added"
+  const ifAdded = {};
+  for (const p of CATALOG) ifAdded[p.productId] = q.ok ? await Kite.quote(cfg, withAdded(lines, p, 1)) : null;
+
+  // product page table: carts of 1..5 units of one product
+  const pdpProduct = byId['7103'];
+  const pdpRows = [];
+  for (let n = 1; n <= 5; n++) pdpRows.push({ n, q: await Kite.quote(cfg, [makeLine(pdpProduct, n)]) });
+
+  if (seq !== renderSeq) return;
+
+  // --- nudge
+  const nudge = $('nudge');
+  if (!q.ok) nudge.innerHTML = `<span><strong>Price unavailable.</strong> The discount function couldn't read this offer, so no discount is shown.</span>`;
+  else if (nxt) nudge.innerHTML = `${spark}<span>Add <strong>${nxt.remaining} more</strong> to get <strong>${nxt.message}</strong>${q.applied.length ? ` <span style="color:var(--sf-muted)">· now: ${q.applied.map(a => a.message).join(', ')}</span>` : ''}</span>`;
+  else if (q.applied.length) nudge.innerHTML = `${check}<span><strong>${q.applied.map(a => a.message).join(', ')}</strong> unlocked. You save ${money(q.discount)}.</span>`;
+  else nudge.innerHTML = `<span>No offer applies to this selection.</span>`;
+
+  // --- ladder
+  const ladder = $('ladder');
+  const future = marks.filter(m => m.at != null);
+  const maxAt = Math.max(count, ...future.map(m => m.at), 1);
+  const reachedText = marks.filter(m => m.hit).map(m => m.message).join(', ');
+  const ladderMarks = [`<span class="${marks.some(m => m.hit) ? 'hit' : ''}" style="left:0">${count} in routine${reachedText ? `<br>${reachedText}` : ''}</span>`]
+    .concat(future.map(m => { const x = Math.min(100, (m.at / maxAt) * 100); return `<span class="${x > 82 ? 'end' : ''}" style="left:${x}%">${m.at} items<br>${m.message}</span>`; }));
+  ladder.innerHTML = future.length || marks.length
+    ? `<div class="ladder-track"><div class="ladder-fill" style="width:${Math.min(100, (count / maxAt) * 100)}%"></div></div><div class="ladder-marks">${future.length ? ladderMarks.join('') : ladderMarks[0]}</div>`
+    : '';
+
+  // --- product grid
+  $('grid').innerHTML = CATALOG.map(p => {
+    const qty = state.qty[p.productId] || 0;
+    const inQ = q.lines.find(l => l.productId === p.productId);
+    const after = ifAdded[p.productId];
+    const afterLine = after?.lines.find(l => l.productId === p.productId);
+    let priceHtml, hint = '', hintCls = 'hint';
+    if (inQ && inQ.discount > 0.004) priceHtml = `<span class="now">${money(inQ.finalUnit)}</span><s>${money(p.price)}</s>`;
+    else priceHtml = `<span class="now">${money(p.price)}</span>`;
+    if (after && after.ok) {
+      const gain = after.discount - q.discount;
+      const unlocked = after.applied.find(a => !q.applied.some(b => b.message === a.message));
+      if (unlocked && gain > 0.004) hint = `Add one: unlocks ${unlocked.message}, saves ${money(gain)}`;
+      else if (gain > 0.004) hint = `Add one at ${money(afterLine.finalUnit)}`;
+      else { hint = ROUTINE_IDS.includes(p.productId) ? (addMode === 'theme' && state.offer === 'set' ? 'No discount: line property missing' : 'Full price at this step') : 'Not part of this offer'; hintCls = 'hint off'; }
+    }
+    return `<div class="card">
+      <div class="art" style="background:${p.color}33">${bottle(p)}</div>
+      <div><div class="name">${p.title}</div><div class="size">${p.size}</div></div>
+      <div class="price">${priceHtml}</div>
+      <div class="${hintCls}">${hint}</div>
+      <div class="stepper"><button type="button" data-dec="${p.productId}" aria-label="Remove one ${p.title}">−</button><output aria-live="polite">${qty}</output><button type="button" data-inc="${p.productId}" aria-label="Add one ${p.title}">+</button></div>
+    </div>`;
+  }).join('');
+
+  // --- summary
+  $('summary').innerHTML = `
+    <div class="row"><span>${count} item${count === 1 ? '' : 's'}</span><span>${money(q.subtotal)}</span></div>
+    ${q.applied.map(a => `<div class="row"><span>${a.message}</span><span class="save">−${money(a.amount)}</span></div>`).join('')}
+    <div class="row total"><span>Routine total</span><span>${money(q.total)}</span></div>`;
+  $('sf-status').innerHTML = !q.ok ? '<span class="chip bad"><span class="dot"></span>Unknown: function crashed</span>'
+    : `<span class="chip warn" title="Kite's function ran in this browser. Shopify confirms once items are in the cart."><span class="dot"></span>Predicted by Kite's function</span>`;
+  $('add-btn').disabled = count === 0;
+
+  // --- product page table
+  $('pdp-title').textContent = `${pdpProduct.title} · ${OFFERS[state.offer].title}`;
+  const bestN = pdpRows.reduce((b, r) => (r.q.total / r.n < b.q.total / b.n - 0.004 ? r : b), pdpRows[0]).n;
+  $('pdp').innerHTML = `<tr><th>Quantity</th><th>Each</th><th>Total</th></tr>` + pdpRows.map(r =>
+    `<tr class="${r.n === bestN && r.q.discount > 0 ? 'best' : ''}"><td>${r.n}</td><td>${money(r.q.total / r.n)}</td><td>${r.q.discount > 0 ? `<s style="color:var(--sf-muted);font-weight:400">${money(r.q.subtotal)}</s> ` : ''}${money(r.q.total)}</td></tr>`).join('');
+
+  // --- cart bar
+  const pct = nxt ? Math.min(100, (count / (count + nxt.remaining)) * 100) : 100;
+  $('minibar').innerHTML = `
+    <div class="row"><span>${nxt ? `${nxt.remaining} item${nxt.remaining === 1 ? '' : 's'} from <b>${nxt.message}</b>` : (q.applied.length ? `<b>${q.applied[0].message}</b> applied` : 'No offer yet')}</span><span>${money(q.total)}</span></div>
+    <div class="ladder-track"><div class="ladder-fill" style="width:${pct}%"></div></div>
+    <div class="row" style="font-size:12.5px;color:var(--sf-muted)"><span>Saving ${money(q.discount)}</span><span>${count} in cart</span></div>`;
+
+  // --- internals
+  $('st-runs').textContent = Runtime.runs;
+  $('st-ms').textContent = Runtime.ms.toFixed(1);
+  renderIO();
+  renderEditor();
+  $('mode-note').innerHTML = addMode === 'kite'
+    ? 'Lines carry <code>_kite_bundle: routine</code>, which the set-price offer requires.'
+    : 'Lines are added without Kite\'s properties. Offers that check a line property stop applying, and the real function returns nothing for them.';
+}
+
+function renderIO() {
+  const io = $('io');
+  if (ioTab === 'contract') {
+    io.textContent = JSON.stringify({ id: `offer_${state.offer}`, title: OFFERS[state.offer].title, function: { handle: 'custom-discount-builder', build: 'sha256:<content hash of the .wasm>' }, config: config() }, null, 2);
+  } else if (ioTab === 'input') {
+    const inp = structuredClone(Kite.last?.input || {});
+    if (inp.discount) inp.discount.metafield.value = '<the published config, as a string>';
+    io.textContent = JSON.stringify(inp, null, 2);
+  } else {
+    io.textContent = Kite.last?.output ? JSON.stringify(Kite.last.output, null, 2) : (Kite.last?.stderr || '');
+  }
+}
+
+function renderEditor() {
+  const ed = $('editor');
+  if (ed.dataset.for === state.offer) return;
+  ed.dataset.for = state.offer;
+  const o = OFFERS[state.offer];
+  let html = `<div class="er"><b>Offer in Kite admin</b><span class="muted">· edit to reprice</span></div>`;
+  if (state.offer === 'tiered') {
+    html += o.params.tiers.map(([n, pct], i) => `<div class="er"><label for="tq${i}">Tier ${i + 1}: buy</label><input type="number" id="tq${i}" min="1" max="12" value="${n}" data-tier="${i}" data-k="0"><label for="tp${i}">items, get</label><input type="number" id="tp${i}" min="0" max="90" value="${pct}" data-tier="${i}" data-k="1"><span>% off</span></div>`).join('');
+  } else if (state.offer === 'bxgy') {
+    html += `<div class="er"><label for="bb">Buy</label><input type="number" id="bb" min="1" max="6" value="${o.params.buy}" data-p="buy"><label for="bp">get the next one</label><input type="number" id="bp" min="0" max="100" value="${o.params.pct}" data-p="pct"><span>% off</span></div>`;
+  } else {
+    html += `<div class="er"><label for="ss">Any</label><input type="number" id="ss" min="2" max="6" value="${o.params.size}" data-p="size"><label for="sp">for $</label><input type="number" id="sp" min="1" max="500" value="${o.params.price}" data-p="price"></div>`;
+  }
+  ed.innerHTML = html;
+}
+
+/* =====================================================================
+   6. Wiring
+   ===================================================================== */
+document.addEventListener('click', e => {
+  const t = e.target.closest('button');
+  if (!t) return;
+  if (t.dataset.inc) { state.qty[t.dataset.inc] = (state.qty[t.dataset.inc] || 0) + 1; render(); }
+  else if (t.dataset.dec) { state.qty[t.dataset.dec] = Math.max(0, (state.qty[t.dataset.dec] || 0) - 1); render(); }
+  else if (t.dataset.offer) {
+    state.offer = t.dataset.offer;
+    document.querySelectorAll('[data-offer]').forEach(b => b.setAttribute('aria-pressed', String(b === t)));
+    $('sf-sub').textContent = OFFERS[state.offer].sub;
+    $('add-result').hidden = true;
+    render();
+  } else if (t.dataset.mode) {
+    addMode = t.dataset.mode;
+    document.querySelectorAll('[data-mode]').forEach(b => b.setAttribute('aria-pressed', String(b === t)));
+    $('add-result').hidden = true;
+    render();
+  } else if (t.dataset.io) {
+    ioTab = t.dataset.io;
+    document.querySelectorAll('[data-io]').forEach(b => b.setAttribute('aria-selected', String(b === t)));
+    renderIO();
+  } else if (t.id === 'add-btn') {
+    showAdd();
+  }
+});
+
+document.addEventListener('input', e => {
+  const el = e.target;
+  if (!el.closest('#editor')) return;
+  const v = Number(el.value);
+  if (!Number.isFinite(v) || el.value === '') return;
+  const o = OFFERS[state.offer];
+  if (el.dataset.tier != null) o.params.tiers[Number(el.dataset.tier)][Number(el.dataset.k)] = v;
+  else if (el.dataset.p) o.params[el.dataset.p] = v;
+  render();
+});
+
+async function showAdd() {
+  const lines = cartLines();
+  const items = lines.map(l => ({ id: Number(l.variantId), quantity: l.quantity, ...(Object.keys(l.properties).length ? { properties: l.properties } : {}) }));
+  const shown = await Kite.quote(config(), lines);
+  const box = $('add-result');
+  box.hidden = false;
+  const body = JSON.stringify({ items }, null, 2);
+  box.innerHTML = `<div class="summary" style="gap:10px">
+    <div class="row"><b>${addMode === 'kite' ? 'Kite.addToCart would send' : 'The theme would send'}</b><span class="status">POST /cart/add.js</span></div>
+    <pre class="io" style="max-height:180px">${body.replace(/</g, '&lt;')}</pre>
+    <div class="note" style="color:var(--sf-muted)">Not connected to a store, so nothing is sent. With these exact lines, Kite's function would give the cart ${money(shown.total)}${shown.discount > 0 ? ` (${money(shown.discount)} off)` : ' (no discount)'}. Kite would then read <code>/cart.js</code> and flag any difference from the predicted price, for example when another app's discount stacks.</div>
+  </div>`;
+}
+
+(async () => {
+  try {
+    await Runtime.load();
+    $('st-size').textContent = Math.round(Runtime.bytes / 1024);
+    $('st-gz').textContent = WASM_GZ_KB;
+    await render();
+    const per = Runtime.runs ? (Runtime.ms / Runtime.runs) : 0;
+    $('chip-speed').innerHTML = `<span class="dot"></span>${per.toFixed(2)} ms per run in your browser`;
+  } catch (err) {
+    $('chip-speed').className = 'chip bad';
+    $('chip-speed').innerHTML = '<span class="dot"></span>WebAssembly failed to load in this browser';
+    $('nudge').textContent = 'The function could not be loaded here: ' + err.message;
+  }
+})();
+</script>
