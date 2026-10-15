@@ -3,9 +3,9 @@ import AppKit
 /// Draws the cat. The window follows the cat around; the simulation works in screen
 /// coordinates, so drawing just shifts by the window's origin.
 final class CatView: NSView {
-    static let size = NSSize(width: 300, height: 270)
+    static func size(scale: CGFloat) -> NSSize { NSSize(width: 300 * scale, height: 270 * scale) }
     /// Where the cat's root (the ground under its body) sits inside the view.
-    static let anchor = CGPoint(x: 150, y: 95)
+    static func anchor(scale: CGFloat) -> CGPoint { CGPoint(x: 150 * scale, y: 95 * scale) }
 
     weak var sim: CatSim?
     var onPress: (() -> Void)?

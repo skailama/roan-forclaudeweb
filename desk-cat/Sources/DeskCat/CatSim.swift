@@ -140,11 +140,16 @@ struct Perception {
 // MARK: - Simulation
 
 final class CatSim {
-    static let boxW: CGFloat = 120
-    static let boxRim: CGFloat = 90
     static let gravity: CGFloat = 2400
     static let tailCount = 10
-    static let tailSegment: CGFloat = 6.2
+
+    /// Overall size (Settings → Size). Cat-local units are multiplied by this on the way to the screen.
+    var scale: CGFloat = 1
+    var boxW: CGFloat { 120 * scale }
+    var boxRim: CGFloat { 90 * scale }
+    var tailSegment: CGFloat { 6.2 * scale }
+    /// How readily it plays (Settings → Personality); playfulness drifts back to this after play.
+    var playfulBase: CGFloat = 0.7
 
     // World, set by the controller each frame
     var floorY: CGFloat = 0
@@ -254,7 +259,7 @@ final class CatSim {
         let shoulder = CGPoint(x: p.cx + 2, y: p.cy - p.cr * 0.45)
         let hipJoint = CGPoint(x: p.hx + 2, y: p.hy - p.hr * 0.35)
         // paws hooked over the box rim
-        let rimY = boxClip.map { $0 - pos.y } ?? 0
+        let rimY = boxClip.map { ($0 - pos.y) / scale } ?? 0
         let r = clamp01(rim.x)
         if r > 0, let nf = feet[.nf], let ff = feet[.ff] {
             feet[.nf] = CGPoint(x: lerp(nf.x, p.cx + 14, r), y: lerp(nf.y, rimY + 2, r))
@@ -284,14 +289,14 @@ final class CatSim {
     /// Cat-local point -> world (applies facing, squash and lean around the root).
     func toWorld(_ lx: CGFloat, _ ly: CGFloat) -> CGPoint {
         let sy = squash.x, sx = 1 + (1 - sy) * 0.7, f = turnScale(facing.x, 0.35)
-        let x = lx * f * sx, y = ly * sy
+        let x = lx * f * sx * scale, y = ly * sy * scale
         let a = lean.x + swing.x, c = cos(a), s = sin(a)
         let purrShake = purr.x * sin(time * 90) * 0.35
         return CGPoint(x: pos.x + x * c - y * s + purrShake, y: pos.y + x * s + y * c)
     }
 
     func toLocal(_ wx: CGFloat, _ wy: CGFloat) -> CGPoint {
-        CGPoint(x: (wx - pos.x) / turnScale(facing.x, 0.35), y: wy - pos.y)
+        CGPoint(x: (wx - pos.x) / (turnScale(facing.x, 0.35) * scale), y: (wy - pos.y) / scale)
     }
 
     func headWorld() -> CGPoint {
@@ -306,7 +311,7 @@ final class CatSim {
     func initTail() {
         let r = tailRoot(skeleton())
         let f = sgn(facing.x) == 0 ? 1 : sgn(facing.x)
-        tail = (0..<Self.tailCount).map { i in CGPoint(x: r.x - CGFloat(i) * Self.tailSegment * f, y: r.y + CGFloat(i) * 2) }
+        tail = (0..<Self.tailCount).map { i in CGPoint(x: r.x - CGFloat(i) * tailSegment * f, y: r.y + CGFloat(i) * 2) }
     }
 
     /// A chain that chases a mood-driven shape, so it lags behind the body and settles on its own.
@@ -320,14 +325,14 @@ final class CatSim {
         for i in 1..<Self.tailCount {
             let u = CGFloat(i) / CGFloat(Self.tailCount)
             ang += tailCurl.x * u + tailAmp.x * u * sin(tailPhase - CGFloat(i) * 0.55) * 1.4
-            let tx = x - cos(ang) * f * Self.tailSegment, ty = y + sin(ang) * Self.tailSegment
+            let tx = x - cos(ang) * f * tailSegment, ty = y + sin(ang) * tailSegment
             var p = tail[i]
             let k = 1 - exp(-dt * lerp(26, 9, u))
             p.x += (tx - p.x) * k; p.y += (ty - p.y) * k
             let prev = tail[i - 1]
             let ddx = p.x - prev.x, ddy = p.y - prev.y, dd = max(hypot(ddx, ddy), 1)
-            p = CGPoint(x: prev.x + ddx / dd * Self.tailSegment, y: prev.y + ddy / dd * Self.tailSegment)
-            if boxClip == nil && !held { p.y = max(p.y, floorY + 3.5) }   // rests on the floor
+            p = CGPoint(x: prev.x + ddx / dd * tailSegment, y: prev.y + ddy / dd * tailSegment)
+            if boxClip == nil && !held { p.y = max(p.y, floorY + 3.5 * scale) }   // rests on the floor
             tail[i] = p
             x = p.x; y = p.y
         }
@@ -463,7 +468,7 @@ final class CatSim {
 
     private func emitHeart() {
         let h = headWorld()
-        hearts.append(Heart(x: h.x + rnd(-12, 12), y: h.y + 26, age: 0))
+        hearts.append(Heart(x: h.x + rnd(-12, 12) * scale, y: h.y + 26 * scale, age: 0))
         if hearts.count > 8 { hearts.removeFirst() }
     }
 
@@ -511,7 +516,7 @@ final class CatSim {
         } else {
             interest = max(0, interest - dt * 0.3)
         }
-        let petting = dH < 30 && ptrSpeed > 12 && ptrSpeed < 650 && !air && !held
+        let petting = dH < 30 * scale && ptrSpeed > 12 && ptrSpeed < 650 && !air && !held
         petTime = petting ? petTime + dt : max(0, petTime - dt * 2)
         if petting { lastPet = time }
         if !moving || !near { noticed = false }
@@ -531,7 +536,7 @@ final class CatSim {
     private func decideOut(_ per: Perception) -> Act {
         let lowPtr = ptrY - floorY < 110
         if interest > 0.35 && per.near {
-            if per.dH < 78 { return pick([(.swat, 45), (.watch, 35), (.groom, 8 * (1 - playful)), (.sit, 10)]) }
+            if per.dH < 78 * scale { return pick([(.swat, 45), (.watch, 35), (.groom, 8 * (1 - playful)), (.sit, 10)]) }
             if lowPtr && abs(ptrX - pos.x) < 420 { return pick([(.stalk, 40 * playful), (.watch, 35), (.approach, 15), (.sit, 10)]) }
             return pick([(.watch, 55), (.approach, abs(ptrX - pos.x) > 140 ? 25 : 0), (.look, 12)])
         }
@@ -580,6 +585,7 @@ final class CatSim {
         let a = act
         t += dt
         relax(per)
+        playful += (playfulBase - playful) * min(1, dt * 0.03)
         blinkMaybe()
         if !sleeping && time.truncatingRemainder(dividingBy: 7) < dt && chance(0.5) { earTwitch() }
 
@@ -678,12 +684,12 @@ final class CatSim {
             placeInBox(d.peekValue)
         } else {
             squash.target = 1; boxClip = nil
-            let side: CGFloat = box.x + Self.boxW + 70 < maxX ? 1 : -1
+            let side: CGFloat = box.x + boxW + 70 < maxX ? 1 : -1
             outSince = time
             let bored = rnd(60, 150)
             // clear the rim comfortably, then drop to the floor beside the box
-            launch(box.x + Self.boxW / 2 + side * (Self.boxW / 2 + 55), floorY,
-                   box.y + Self.boxRim + 40 - max(pos.y, floorY), .land)
+            launch(box.x + boxW / 2 + side * (boxW / 2 + 55 * scale), floorY,
+                   box.y + boxRim + 40 * scale - max(pos.y, floorY), .land)
             d.bored = bored; d.fromBox = true
         }
     }
@@ -695,9 +701,9 @@ final class CatSim {
         squash.target = 1 + clamp(abs(velY) / 2600, 0, 0.22)
         lean.target = clamp(velY / 1800, -0.35, 0.35) * (sgn(facing.target) == 0 ? 1 : sgn(facing.target))
         // stay hidden by the box front while climbing out of it or dropping into it
-        let rimY = box.y + Self.boxRim
-        let overBox = abs(pos.x - (box.x + Self.boxW / 2)) < Self.boxW / 2 + 10
-        let hidden = overBox && ((d.fromBox && pos.y < rimY) || (d.then == .box && velY < 0 && pos.y < rimY + 40))
+        let rimY = box.y + boxRim
+        let overBox = abs(pos.x - (box.x + boxW / 2)) < boxW / 2 + 10
+        let hidden = overBox && ((d.fromBox && pos.y < rimY) || (d.then == .box && velY < 0 && pos.y < rimY + 40 * scale))
         boxClip = hidden ? rimY : nil
         if d.fromBox && velY < 0 { boxShow.target = 0 }   // tuck the box away once the cat is out
         if d.then == .box && velY < 0 && pos.y <= d.landY { landInBox(); return }
@@ -780,15 +786,15 @@ final class CatSim {
 
     private func goHome(_ dt: CGFloat) {
         boxShow.target = 1
-        let cx = box.x + Self.boxW / 2, onFloor = box.y - floorY < 10
+        let cx = box.x + boxW / 2, onFloor = box.y - floorY < 10
         let side: CGFloat = sgn(pos.x - cx) == 0 ? 1 : sgn(pos.x - cx)
-        let spot = onFloor ? cx + side * (Self.boxW / 2 + 34) : cx + side * 30
+        let spot = onFloor ? cx + side * (boxW / 2 + 34 * scale) : cx + side * 30 * scale
         pose(.stand); mood(.walk); lookForward()
-        if t < 0.5 { brake(dt); lookAt(cx, box.y + Self.boxRim); return }
+        if t < 0.5 { brake(dt); lookAt(cx, box.y + boxRim); return }
         if moveToward(spot, 120, dt, 5) {
             faceTo(cx, 1)
             d.prep += dt; squash.target = 0.8; pose(.crouch); crouch.target = 0.5
-            if d.prep > 0.22 { squash.target = 1; launch(cx, box.y + Self.boxRim - 30, 34, .box) }
+            if d.prep > 0.22 { squash.target = 1; launch(cx, box.y + boxRim - 30 * scale, 34, .box) }
         }
     }
 
@@ -804,9 +810,9 @@ final class CatSim {
     }
 
     func placeInBox(_ peek: CGFloat) {
-        let rimY = box.y + Self.boxRim
-        pos.x = box.x + Self.boxW / 2
-        pos.y = rimY + lerp(-98, -40, clamp01(peek)) + max(0, peek - 1) * 60
+        let rimY = box.y + boxRim
+        pos.x = box.x + boxW / 2
+        pos.y = rimY + (lerp(-98, -40, clamp01(peek)) + max(0, peek - 1) * 60) * scale
         boxClip = rimY
     }
 
@@ -836,7 +842,7 @@ final class CatSim {
             if t.truncatingRemainder(dividingBy: 0.7) < dt { emitHeart() }
         }
         // batting from the box
-        if swat == nil && per.dH < 75 && per.dH > 30 && per.moving && ptrSpeed < 1500 && d.peek.x > 0.9 && chance(dt * 1.6) {
+        if swat == nil && per.dH < 75 * scale && per.dH > 30 * scale && per.moving && ptrSpeed < 1500 && d.peek.x > 0.9 && chance(dt * 1.6) {
             startSwat(CGPoint(x: ptrX, y: ptrY))
         }
         if swat != nil { rim.target = 0 }
@@ -850,7 +856,7 @@ final class CatSim {
         open.target = 1; dil.target = 1
         lookAt(ptrX + facing.x * 40, ptrY - 80)
         swing.target = clamp(-ptrVX / 2200, -0.5, 0.5)
-        pos = CGPoint(x: ptrX, y: ptrY - 8)
+        pos = CGPoint(x: ptrX, y: ptrY - 8 * scale)
         boxShow.target = 1
     }
 
@@ -886,11 +892,11 @@ final class CatSim {
 
     func release() {
         held = false; hold.target = 0; swing.target = 0; earL.target = 0; earR.target = 0
-        let overBox = ptrX > box.x - 10 && ptrX < box.x + Self.boxW + 10 && ptrY > box.y && ptrY < box.y + Self.boxRim + 120
+        let overBox = ptrX > box.x - 10 && ptrX < box.x + boxW + 10 && ptrY > box.y && ptrY < box.y + boxRim + 120
         air = true
         if overBox {
             velX = 0; velY = 0
-            go(.air, ActData(landY: box.y + Self.boxRim - 30, then: .box))
+            go(.air, ActData(landY: box.y + boxRim - 30 * scale, then: .box))
         } else {
             velX = clamp(ptrVX * 0.5, -500, 500); velY = clamp(ptrVY * 0.3, -200, 400)
             boxShow.target = 0

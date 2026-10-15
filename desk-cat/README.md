@@ -46,6 +46,19 @@ The cat is drawn entirely in code, but it isn't a set of fixed pictures. It's a 
 
 "Wander on its own" (on by default) lets it leave the box every few minutes.
 
+## Settings
+
+Menu bar cat → **Settings…** (⌘,). Everything applies live and is remembered:
+
+- **Name** on the box
+- **Coat** and **Eyes** colour: presets, or any colour from the colour well
+- **Size**: small, medium, large
+- **Personality**: calm (plays less, stays in the box longer), normal, playful
+- **Box colour**: presets or any colour; the cardboard shading follows it
+- **Wander out of the box on its own**, **Open at login** (the login option needs the bundled `DeskCat.app`)
+
+To add another option: add a field to `Look` in `Look.swift` (with its save/load key), derive any colours in `Palette`, add a control to `SettingsWindow.swift`, and read it where it's drawn or simulated.
+
 ## Code map
 
 | File | Role |
@@ -57,6 +70,8 @@ The cat is drawn entirely in code, but it isn't a set of fixed pictures. It's a 
 | `BoxView.swift` / `CatView.swift` | The box window and the cat window |
 | `AppDelegate.swift` | Menu-bar icon, menu, rename dialog |
 | `PetWindow.swift` | Transparent, always-on-top, non-activating panel |
+| `Look.swift` | Customisable look and personality, and the colours derived from it |
+| `SettingsWindow.swift` | The Settings window |
 | `Settings.swift` | Name, box position, roaming toggle |
 
 ## Lightweight

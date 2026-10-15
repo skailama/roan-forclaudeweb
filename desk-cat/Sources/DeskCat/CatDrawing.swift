@@ -1,23 +1,10 @@
 import AppKit
 
-/// Colours shared by the cat and the box.
-enum Palette {
-    static let ink = CGColor(srgbRed: 0.114, green: 0.114, blue: 0.122, alpha: 1)
-    static let inkFar = CGColor(srgbRed: 0.169, green: 0.169, blue: 0.180, alpha: 1)
-    static let pawRim = CGColor(srgbRed: 0.29, green: 0.29, blue: 0.31, alpha: 1)
-    static let white = CGColor(srgbRed: 1, green: 1, blue: 1, alpha: 1)
-    static let box = CGColor(srgbRed: 1, green: 0.976, blue: 0.416, alpha: 1)
-    static let mouth = CGColor(srgbRed: 1, green: 0.561, blue: 0.639, alpha: 1)
-    static let heart = CGColor(srgbRed: 1, green: 0.42, blue: 0.545, alpha: 1)
-    static let inkText = NSColor(srgbRed: 0.114, green: 0.114, blue: 0.122, alpha: 1)
-    static let shadow = CGColor(srgbRed: 0, green: 0, blue: 0, alpha: 1)
-}
-
 /// Soft contact shadow: a few stacked translucent ellipses, a cheap blur.
 func drawGroundShadow(_ ctx: CGContext, center: CGPoint, rx: CGFloat, ry: CGFloat, alpha: CGFloat) {
     guard alpha > 0.005 else { return }
     ctx.saveGState()
-    ctx.setFillColor(Palette.shadow)
+    ctx.setFillColor(Palette.current.shadow)
     ctx.setAlpha(alpha * 0.32)
     for i in 0..<4 {
         let k = 1 + CGFloat(i) * 0.22
@@ -30,29 +17,29 @@ func drawGroundShadow(_ ctx: CGContext, center: CGPoint, rx: CGFloat, ry: CGFloa
 /// window's origin sits at its own (0, 0). Port of the drawing code in `playground.html`.
 extension CatSim {
     func draw(in ctx: CGContext) {
-        let sk = skeleton(), p = sk.p
+        let sk = skeleton(), p = sk.p, pal = Palette.current, s = scale
         if boxClip == nil && !held {     // shadow shrinks and fades as it leaves the ground
             let k = clamp01(1 - max(0, pos.y - floorY) / 220)
-            drawGroundShadow(ctx, center: CGPoint(x: pos.x, y: floorY + 1), rx: 36 * (0.6 + 0.4 * k), ry: 4, alpha: 0.2 * k)
+            drawGroundShadow(ctx, center: CGPoint(x: pos.x, y: floorY + 1), rx: 36 * s * (0.6 + 0.4 * k), ry: 4 * s, alpha: 0.2 * k)
         }
         ctx.saveGState()
         if let clipY = boxClip {
             ctx.clip(to: CGRect(x: -100_000, y: clipY, width: 200_000, height: 100_000))
         }
         drawTail(ctx)
-        drawLeg(ctx, sk.legs[.fb], Palette.inkFar)
-        drawLeg(ctx, sk.legs[.ff], Palette.inkFar)
+        drawLeg(ctx, sk.legs[.fb], pal.coatFar)
+        drawLeg(ctx, sk.legs[.ff], pal.coatFar)
         let hip = toWorld(p.hx, p.hy), chest = toWorld(p.cx, p.cy)
-        let sy = squash.x, sx = 1 + (1 - sy) * 0.7, vol = sqrt(sx * sy)
+        let sy = squash.x, sx = 1 + (1 - sy) * 0.7, vol = sqrt(sx * sy) * s
         let back = lerp(-1.5, 2.5, clamp01(crouch.x)), belly = lerp(-2, -4, clamp01(lie.x))
         bean(ctx, hip, p.hr * vol, chest, p.cr * vol, back: back, belly: belly)
-        line(ctx, chest, toWorld(p.kx, p.ky), 17, Palette.ink)   // neck
-        drawLeg(ctx, sk.legs[.nb], Palette.ink)
+        line(ctx, chest, toWorld(p.kx, p.ky), 17 * s, pal.coat)   // neck
+        drawLeg(ctx, sk.legs[.nb], pal.coat)
         let pawUp = max(paw.x, groom.x) > 0.3
-        if !pawUp && (boxClip == nil || rim.x < 0.5) { drawLeg(ctx, sk.legs[.nf], Palette.ink) }
+        if !pawUp && (boxClip == nil || rim.x < 0.5) { drawLeg(ctx, sk.legs[.nf], pal.coat) }
         drawHead(ctx, sk)
-        // A paw in front of the face gets a faint rim so it still reads against the black head.
-        if pawUp { drawLeg(ctx, sk.legs[.nf], Palette.ink, outline: Palette.pawRim) }
+        // A paw in front of the face gets a faint rim so it still reads against the head.
+        if pawUp { drawLeg(ctx, sk.legs[.nf], pal.coat, outline: pal.pawRim) }
         ctx.restoreGState()
 
         // Paws hooked over the rim sit in front of the box, so they're drawn unclipped.
@@ -60,14 +47,14 @@ extension CatSim {
             for id in [LegID.ff, .nf] {
                 guard let leg = sk.legs[id] else { continue }
                 let f = toWorld(leg.foot.x, leg.foot.y)
-                ctx.setFillColor(Palette.ink)
-                ctx.fillEllipse(in: CGRect(x: f.x - 6.5, y: f.y - 5, width: 13, height: 10))
-                ctx.setStrokeColor(Palette.white)
-                ctx.setLineWidth(1.3)
+                ctx.setFillColor(pal.coat)
+                ctx.fillEllipse(in: CGRect(x: f.x - 6.5 * s, y: f.y - 5 * s, width: 13 * s, height: 10 * s))
+                ctx.setStrokeColor(pal.detail)
+                ctx.setLineWidth(1.3 * s)
                 ctx.setLineCap(.round)
                 for dx: CGFloat in [-2.2, 2.2] {
-                    ctx.move(to: CGPoint(x: f.x + dx, y: f.y - 4.5))
-                    ctx.addLine(to: CGPoint(x: f.x + dx, y: f.y - 1.8))
+                    ctx.move(to: CGPoint(x: f.x + dx * s, y: f.y - 4.5 * s))
+                    ctx.addLine(to: CGPoint(x: f.x + dx * s, y: f.y - 1.8 * s))
                 }
                 ctx.strokePath()
             }
@@ -97,7 +84,8 @@ extension CatSim {
         let dx = b.x - a.x, dy = b.y - a.y, d = max(hypot(dx, dy), 1)
         let nx = -dy / d, ny = dx / d
         let mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2, mr = (ra + rb) / 2
-        ctx.setFillColor(Palette.ink)
+        let coat = Palette.current.coat
+        ctx.setFillColor(coat)
         ctx.move(to: CGPoint(x: a.x + nx * ra, y: a.y + ny * ra))
         ctx.addQuadCurve(to: CGPoint(x: b.x + nx * rb, y: b.y + ny * rb),
                          control: CGPoint(x: mx + nx * (mr + back), y: my + ny * (mr + back)))
@@ -106,30 +94,31 @@ extension CatSim {
                          control: CGPoint(x: mx - nx * (mr + belly), y: my - ny * (mr + belly)))
         ctx.closePath()
         ctx.fillPath()
-        fillCircle(ctx, a, ra, Palette.ink)
-        fillCircle(ctx, b, rb, Palette.ink)
+        fillCircle(ctx, a, ra, coat)
+        fillCircle(ctx, b, rb, coat)
     }
 
     private func drawLeg(_ ctx: CGContext, _ leg: Leg?, _ color: CGColor, outline: CGColor? = nil) {
         guard let leg else { return }
         let a = toWorld(leg.anchor.x, leg.anchor.y), k = toWorld(leg.knee.x, leg.knee.y), f = toWorld(leg.foot.x, leg.foot.y)
-        let dir: CGFloat = facing.x >= 0 ? 1 : -1
+        let dir: CGFloat = facing.x >= 0 ? 1 : -1, s = scale
+        let fx = f.x + 1.5 * dir * s, fy = f.y + s
         if let outline {
-            line(ctx, k, f, 10, outline)
+            line(ctx, k, f, 10 * s, outline)
             ctx.setFillColor(outline)
-            ctx.fillEllipse(in: CGRect(x: f.x + 1.5 * dir - 6.6, y: f.y + 1 - 5.6, width: 13.2, height: 11.2))
+            ctx.fillEllipse(in: CGRect(x: fx - 6.6 * s, y: fy - 5.6 * s, width: 13.2 * s, height: 11.2 * s))
         }
-        line(ctx, a, k, 9.5, color)
-        line(ctx, k, f, 7.5, color)
+        line(ctx, a, k, 9.5 * s, color)
+        line(ctx, k, f, 7.5 * s, color)
         ctx.setFillColor(color)
-        ctx.fillEllipse(in: CGRect(x: f.x + 1.5 * dir - 5.2, y: f.y + 1 - 4.2, width: 10.4, height: 8.4))
+        ctx.fillEllipse(in: CGRect(x: fx - 5.2 * s, y: fy - 4.2 * s, width: 10.4 * s, height: 8.4 * s))
     }
 
     private func drawTail(_ ctx: CGContext) {
         let n = tail.count, puff = tailPuff.x
         guard n > 1 else { return }
         for i in 0..<(n - 1) {
-            line(ctx, tail[i], tail[i + 1], lerp(7.5, 4.6, CGFloat(i) / CGFloat(n - 1)) * puff, Palette.ink)
+            line(ctx, tail[i], tail[i + 1], lerp(7.5, 4.6, CGFloat(i) / CGFloat(n - 1)) * puff * scale, Palette.current.coat)
         }
     }
 
@@ -150,7 +139,7 @@ extension CatSim {
         ctx.translateBy(x: mx, y: my)
         ctx.rotate(by: rot)
         ctx.translateBy(x: -mx, y: -my)
-        ctx.setFillColor(Palette.ink)
+        ctx.setFillColor(Palette.current.coat)
         ctx.move(to: b1)
         ctx.addQuadCurve(to: tip, control: CGPoint(x: lerp(b1.x, tip.x, 0.5) - 2.5, y: lerp(b1.y, tip.y, 0.5) + 1))
         ctx.addQuadCurve(to: b2, control: CGPoint(x: lerp(b2.x, tip.x, 0.5) + 1.5, y: lerp(b2.y, tip.y, 0.5) + 2))
@@ -164,8 +153,9 @@ extension CatSim {
     }
 
     private func eye(_ ctx: CGContext, _ x: CGFloat, _ y: CGFloat, _ r: CGFloat, _ gzx: CGFloat, _ gzy: CGFloat) {
+        let pal = Palette.current
         let openness = clamp01(open.x * blinkAmount)
-        ctx.setStrokeColor(Palette.white)
+        ctx.setStrokeColor(pal.detail)
         ctx.setLineCap(.round)
         ctx.setLineWidth(2.2)
         if clamp01(happy.x) > 0.5 {          // ^ ^
@@ -181,19 +171,24 @@ extension CatSim {
             return
         }
         let eyeRect = CGRect(x: x - r, y: y - r * (1 - openness) * 0.35 - r * openness, width: r * 2, height: r * 2 * openness)
+        if let ring = pal.eyeRing {
+            ctx.setStrokeColor(ring)
+            ctx.setLineWidth(1.4)
+            ctx.strokeEllipse(in: eyeRect)
+        }
         ctx.saveGState()
-        ctx.setFillColor(Palette.white)
+        ctx.setFillColor(pal.sclera)
         ctx.fillEllipse(in: eyeRect)
         ctx.addEllipse(in: eyeRect)
         ctx.clip()
         let px = x + gzx * r * 0.42, py = y + gzy * r * 0.34
         let w = r * (0.34 + 0.62 * clamp01(dil.x)), h = r * 1.5
-        ctx.setFillColor(Palette.ink)
+        ctx.setFillColor(pal.pupil)
         ctx.move(to: CGPoint(x: px, y: py + h / 2))
         ctx.addQuadCurve(to: CGPoint(x: px, y: py - h / 2), control: CGPoint(x: px + w * 1.05, y: py))
         ctx.addQuadCurve(to: CGPoint(x: px, y: py + h / 2), control: CGPoint(x: px - w * 1.05, y: py))
         ctx.fillPath()
-        fillCircle(ctx, CGPoint(x: px + w * 0.28, y: py + r * 0.3), r * 0.17, Palette.white)
+        fillCircle(ctx, CGPoint(x: px + w * 0.28, y: py + r * 0.3), r * 0.17, RGB.white.cg())
         ctx.restoreGState()
     }
 
@@ -204,12 +199,12 @@ extension CatSim {
         ctx.saveGState()
         ctx.translateBy(x: c.x, y: c.y)
         ctx.rotate(by: lean.x + swing.x * 0.5)
-        ctx.scaleBy(x: turnScale(hf, 0.6), y: sy)
+        ctx.scaleBy(x: turnScale(hf, 0.6) * scale, y: sy * scale)
         ctx.rotate(by: a)
         // ears rotate outward/back when flattened
         ear(ctx, CGPoint(x: -22, y: 8), CGPoint(x: -7, y: 18), CGPoint(x: -18, y: 34), earL.x * 0.9)
         ear(ctx, CGPoint(x: 6, y: 18), CGPoint(x: 21, y: 9), CGPoint(x: 19, y: 34), -earR.x * 0.9)
-        ctx.setFillColor(Palette.ink)
+        ctx.setFillColor(Palette.current.coat)
         headPath(ctx, 25, 21)
         ctx.fillPath()
         // gaze in head space (undo the head's own flip and tilt)
@@ -220,7 +215,7 @@ extension CatSim {
         eye(ctx, 12.5, 2, 8, rx, ry)
         if yawn.x > 0.05 {
             let yv = clamp01(yawn.x)
-            ctx.setFillColor(Palette.mouth)
+            ctx.setFillColor(Palette.current.mouth)
             ctx.fillEllipse(in: CGRect(x: 4 - 4 * yv, y: -10 - 6.5 * yv, width: 8 * yv, height: 13 * yv))
         }
         ctx.restoreGState()
@@ -233,11 +228,11 @@ extension CatSim {
             let u = (zzz * 0.45 + CGFloat(i) / 3).truncatingRemainder(dividingBy: 1)
             let attrs: [NSAttributedString.Key: Any] = [
                 .font: NSFont.systemFont(ofSize: 10 + u * 8, weight: .bold),
-                .foregroundColor: Palette.inkText,
+                .foregroundColor: Palette.current.inkText,
             ]
             ctx.saveGState()
             ctx.setAlpha(sin(.pi * u) * 0.85)
-            ("z" as NSString).draw(at: CGPoint(x: h.x + 18 + u * 22 * dir, y: h.y + 22 + u * 34), withAttributes: attrs)
+            ("z" as NSString).draw(at: CGPoint(x: h.x + (18 + u * 22) * dir * scale, y: h.y + (22 + u * 34) * scale), withAttributes: attrs)
             ctx.restoreGState()
         }
     }
@@ -246,13 +241,13 @@ extension CatSim {
         let a = 7 + h.age * 4, d = a / CGFloat(2).squareRoot(), r = a / 2
         ctx.saveGState()
         ctx.setAlpha(max(0, 1 - h.age / 1.4))
-        ctx.setFillColor(Palette.heart)
+        ctx.setFillColor(Palette.current.heart)
         ctx.addLines(between: [CGPoint(x: h.x, y: h.y + d), CGPoint(x: h.x + d, y: h.y),
                                CGPoint(x: h.x, y: h.y - d), CGPoint(x: h.x - d, y: h.y)])
         ctx.closePath()
         ctx.fillPath()
-        fillCircle(ctx, CGPoint(x: h.x - d / 2, y: h.y + d / 2), r, Palette.heart)
-        fillCircle(ctx, CGPoint(x: h.x + d / 2, y: h.y + d / 2), r, Palette.heart)
+        fillCircle(ctx, CGPoint(x: h.x - d / 2, y: h.y + d / 2), r, Palette.current.heart)
+        fillCircle(ctx, CGPoint(x: h.x + d / 2, y: h.y + d / 2), r, Palette.current.heart)
         ctx.restoreGState()
     }
 }

@@ -38,10 +38,11 @@ final class CatController: NSObject {
     private var catDragging = false
 
     override init() {
-        boxView = BoxView(frame: NSRect(origin: .zero, size: BoxView.size))
-        boxWindow = PetWindow.make(size: BoxView.size)
-        catView = CatView(frame: NSRect(origin: .zero, size: CatView.size))
-        catWindow = PetWindow.make(size: CatView.size)
+        let scale = Look.current.size.scale
+        boxView = BoxView(frame: NSRect(origin: .zero, size: BoxView.size(scale: scale)))
+        boxWindow = PetWindow.make(size: BoxView.size(scale: scale))
+        catView = CatView(frame: NSRect(origin: .zero, size: CatView.size(scale: scale)))
+        catWindow = PetWindow.make(size: CatView.size(scale: scale))
         super.init()
         boxWindow.contentView = boxView
         catWindow.contentView = catView
@@ -59,6 +60,7 @@ final class CatController: NSObject {
     }
 
     func start() {
+        applyLook()
         placeBox()
         updateWorld()
         sim.roams = Settings.roamsOnItsOwn
@@ -75,9 +77,24 @@ final class CatController: NSObject {
     func letOut() { sim.letOut() }
     func callHome() { sim.callHome() }
 
+    /// Picks up the current `Look`: size, personality and colours. Safe to call any time.
+    func applyLook() {
+        let look = Look.current
+        let scale = look.size.scale
+        sim.scale = scale
+        sim.playfulBase = look.personality.playfulness
+        sim.roamDelay = look.personality.roamDelay
+        boxView.scale = scale
+        catWindow.setContentSize(CatView.size(scale: scale))
+        boxWindow.setContentSize(BoxView.size(scale: scale))
+        boxView.needsDisplay = true
+        catView.needsDisplay = true
+        syncWindows()
+    }
+
     func resetBoxPosition() {
         guard let frame = NSScreen.main?.visibleFrame else { return }
-        sim.box = CGPoint(x: frame.maxX - CatSim.boxW - 90, y: frame.minY)
+        sim.box = CGPoint(x: frame.maxX - sim.boxW - 90, y: frame.minY)
         Settings.boxOrigin = sim.box
     }
 
@@ -117,7 +134,7 @@ final class CatController: NSObject {
 
     /// The cat lives on the screen its box is on; the floor is just above the Dock.
     private func updateWorld() {
-        let center = CGPoint(x: sim.box.x + CatSim.boxW / 2, y: sim.box.y + 40)
+        let center = CGPoint(x: sim.box.x + sim.boxW / 2, y: sim.box.y + 40)
         let screen = NSScreen.screens.first { $0.frame.contains(center) } ?? NSScreen.main
         guard let vf = screen?.visibleFrame else { return }
         sim.floorY = vf.minY
@@ -127,11 +144,12 @@ final class CatController: NSObject {
 
     private func syncWindows() {
         // Whole-point window positions; the sub-point remainder is drawn, so motion stays smooth.
-        let catOrigin = CGPoint(x: (sim.pos.x - CatView.anchor.x).rounded(), y: (sim.pos.y - CatView.anchor.y).rounded())
+        let anchor = CatView.anchor(scale: sim.scale), inset = BoxView.inset(scale: sim.scale)
+        let catOrigin = CGPoint(x: (sim.pos.x - anchor.x).rounded(), y: (sim.pos.y - anchor.y).rounded())
         if catWindow.frame.origin != catOrigin { catWindow.setFrameOrigin(catOrigin) }
         catView.needsDisplay = true
 
-        let boxOrigin = CGPoint(x: (sim.box.x - BoxView.inset.x).rounded(), y: (sim.box.y - BoxView.inset.y).rounded())
+        let boxOrigin = CGPoint(x: (sim.box.x - inset.x).rounded(), y: (sim.box.y - inset.y).rounded())
         if boxWindow.frame.origin != boxOrigin { boxWindow.setFrameOrigin(boxOrigin) }
         boxView.show = sim.boxShow.x
         let visible = sim.boxShow.x > 0.02 || sim.boxShow.target > 0
@@ -159,7 +177,7 @@ final class CatController: NSObject {
 
     private func placeBox() {
         if let saved = Settings.boxOrigin,
-           NSScreen.screens.contains(where: { $0.visibleFrame.contains(CGPoint(x: saved.x + CatSim.boxW / 2, y: saved.y + 40)) }) {
+           NSScreen.screens.contains(where: { $0.visibleFrame.contains(CGPoint(x: saved.x + sim.boxW / 2, y: saved.y + 40)) }) {
             sim.box = saved
         } else {
             resetBoxPosition()
