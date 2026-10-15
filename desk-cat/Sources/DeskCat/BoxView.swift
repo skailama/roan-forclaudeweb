@@ -1,150 +1,73 @@
 import AppKit
 
-/// The yellow box with the cat's name on it, and the cat peeking out when it's home.
-/// Drag it anywhere; click the cat to let it out; click the box to play peekaboo.
+/// The yellow box with the cat's name on it. The cat itself is drawn by `CatView` in a window
+/// just above this one; while it's home, its body is clipped at the rim so it sits "inside".
 final class BoxView: NSView {
-    static let size = NSSize(width: 180, height: 260)
-    static let headCenter = CGPoint(x: 84, y: 170)
-    static let boxTop: CGFloat = 117
+    static let size = NSSize(width: 220, height: 130)
+    /// Where the box body's bottom-left corner sits inside the view.
+    static let inset = CGPoint(x: 50, y: 0)
 
-    struct State: Equatable {
-        var name = ""
-        var catHome = true
-        var peek: CGFloat = 1          // 1 = peeking out, 0 = ducked into the box
-        var tilt: CGFloat = -0.3
-        var look = CGVector.zero
-        var dilation: CGFloat = 0
-        var eyesClosed = false
-        var asleep = false
-        var hearts: [Heart] = []
-    }
+    var name = "" { didSet { if name != oldValue { needsDisplay = true } } }
+    /// Pop-in/out scale from the simulation's box spring (0 hidden, 1 shown, overshoots a little).
+    var show: CGFloat = 1 { didSet { if abs(show - oldValue) > 0.0005 { needsDisplay = true } } }
 
-    /// Only redraws when something visible actually changed, so an idle cat costs nothing.
-    var state = State() {
-        didSet { if state != oldValue { needsDisplay = true } }
-    }
-    var onClick: ((CGPoint) -> Void)?
-    var onDragEnded: (() -> Void)?
+    var onDragStart: (() -> Void)?
+    var onDrag: ((CGVector) -> Void)?
+    var onDragEnd: (() -> Void)?
     var menuProvider: (() -> NSMenu?)?
 
-    private var dragStartMouse = CGPoint.zero
-    private var dragStartOrigin = CGPoint.zero
-    private var dragging = false
-
-    // MARK: Mouse
+    private var dragStart = CGPoint.zero
 
     override func acceptsFirstMouse(for event: NSEvent?) -> Bool { true }
 
     override func mouseDown(with event: NSEvent) {
-        dragStartMouse = NSEvent.mouseLocation
-        dragStartOrigin = window?.frame.origin ?? .zero
-        dragging = false
+        dragStart = NSEvent.mouseLocation
+        onDragStart?()
     }
 
     override func mouseDragged(with event: NSEvent) {
         let m = NSEvent.mouseLocation
-        let dx = m.x - dragStartMouse.x, dy = m.y - dragStartMouse.y
-        if !dragging && hypot(dx, dy) < 3 { return }
-        dragging = true
-        window?.setFrameOrigin(CGPoint(x: dragStartOrigin.x + dx, y: dragStartOrigin.y + dy))
+        onDrag?(CGVector(dx: m.x - dragStart.x, dy: m.y - dragStart.y))
     }
 
-    override func mouseUp(with event: NSEvent) {
-        if dragging {
-            onDragEnded?()
-        } else {
-            onClick?(convert(event.locationInWindow, from: nil))
-        }
-        dragging = false
-    }
+    override func mouseUp(with event: NSEvent) { onDragEnd?() }
 
     override func menu(for event: NSEvent) -> NSMenu? { menuProvider?() }
-
-    // MARK: Drawing
 
     override func draw(_ dirtyRect: NSRect) {
         guard let ctx = NSGraphicsContext.current?.cgContext else { return }
         ctx.clear(bounds)
-        let s = state
-        let drop = (1 - s.peek) * 85
-        if s.catHome {
-            drawPeekingCat(ctx, drop: drop)
-        }
-        drawBox(ctx)
-        if s.catHome && s.peek > 0.8 {
-            drawPaws(ctx, drop: drop)
-        }
-        drawName()
-        if s.catHome && s.asleep {
-            drawZzz()
-        }
-        for heart in s.hearts {
-            CatArt.heart(ctx, heart)
-        }
-    }
-
-    /// Shoulders and head, drawn before the box so the box hides the rest of the body.
-    private func drawPeekingCat(_ ctx: CGContext, drop: CGFloat) {
-        let s = state
+        let s = show
+        guard s > 0.02 else { return }
+        let w = CatSim.boxW
         ctx.saveGState()
-        ctx.translateBy(x: 0, y: -drop)
-        ctx.setFillColor(Palette.ink)
-        ctx.fillEllipse(in: CGRect(x: 40, y: 98, width: 88, height: 66))
-        CatArt.head(ctx, at: Self.headCenter, scale: 1, tilt: s.tilt, look: s.look,
-                    dilation: s.dilation, eyesClosed: s.eyesClosed)
-        ctx.restoreGState()
-    }
-
-    private func drawBox(_ ctx: CGContext) {
+        // Pop from the bottom centre, a little taller than wide while it springs.
+        ctx.translateBy(x: Self.inset.x + w / 2, y: Self.inset.y)
+        ctx.scaleBy(x: clamp(s, 0, 1.3), y: clamp(s * (1 + (1 - s) * 0.35), 0, 1.4))
+        ctx.setAlpha(clamp01(s * 3))
+        ctx.translateBy(x: -w / 2, y: 0)
         ctx.setFillColor(Palette.box)
         ctx.addLines(between: [
-            CGPoint(x: 21, y: Self.boxTop), CGPoint(x: 159, y: Self.boxTop),
-            CGPoint(x: 177, y: 78), CGPoint(x: 159, y: 78),
-            CGPoint(x: 159, y: 0), CGPoint(x: 21, y: 0),
-            CGPoint(x: 21, y: 78), CGPoint(x: 3, y: 78),
+            CGPoint(x: 0, y: 90), CGPoint(x: 120, y: 90), CGPoint(x: 136, y: 62), CGPoint(x: 120, y: 62),
+            CGPoint(x: 120, y: 0), CGPoint(x: 0, y: 0), CGPoint(x: 0, y: 62), CGPoint(x: -16, y: 62),
         ])
         ctx.closePath()
         ctx.fillPath()
-    }
-
-    /// Two paws hooked over the rim, with little toe notches.
-    private func drawPaws(_ ctx: CGContext, drop: CGFloat) {
-        let y = Self.boxTop - drop
-        for x: CGFloat in [52, 98] {
-            ctx.setFillColor(Palette.ink)
-            ctx.fillEllipse(in: CGRect(x: x - 12, y: y - 9, width: 24, height: 17))
-            ctx.setStrokeColor(Palette.eyeWhite)
-            ctx.setLineWidth(1.6)
-            ctx.setLineCap(.round)
-            for dx: CGFloat in [-4, 4] {
-                ctx.move(to: CGPoint(x: x + dx, y: y - 8))
-                ctx.addLine(to: CGPoint(x: x + dx, y: y - 4))
-            }
-            ctx.strokePath()
-        }
+        drawName()
+        ctx.restoreGState()
     }
 
     /// The name, shrunk to fit the front of the box.
     private func drawName() {
-        let name = state.name as NSString
-        guard name.length > 0 else { return }
-        var fontSize: CGFloat = 26
+        let text = name as NSString
+        guard text.length > 0 else { return }
+        var fontSize: CGFloat = 22
         var attrs: [NSAttributedString.Key: Any] = [:]
         repeat {
-            attrs = [.font: NSFont.systemFont(ofSize: fontSize, weight: .semibold),
-                     .foregroundColor: Palette.inkText]
-            if name.size(withAttributes: attrs).width <= 122 { break }
+            attrs = [.font: NSFont.systemFont(ofSize: fontSize, weight: .semibold), .foregroundColor: Palette.inkText]
+            if text.size(withAttributes: attrs).width <= 100 { break }
             fontSize -= 1
         } while fontSize > 9
-        name.draw(at: CGPoint(x: 30, y: 12), withAttributes: attrs)
-    }
-
-    private func drawZzz() {
-        let small: [NSAttributedString.Key: Any] = [.font: NSFont.systemFont(ofSize: 12, weight: .bold),
-                                                    .foregroundColor: Palette.inkText]
-        let big: [NSAttributedString.Key: Any] = [.font: NSFont.systemFont(ofSize: 16, weight: .bold),
-                                                  .foregroundColor: Palette.inkText]
-        ("z" as NSString).draw(at: CGPoint(x: 146, y: 204), withAttributes: small)
-        ("Z" as NSString).draw(at: CGPoint(x: 156, y: 216), withAttributes: big)
+        text.draw(at: CGPoint(x: 10, y: 6), withAttributes: attrs)
     }
 }
