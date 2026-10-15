@@ -1,0 +1,595 @@
+<title>DeskCat Playground</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+  /* Layout: a fake Mac desktop as the hero stage, a narrow control rail beside it, install steps below. */
+  :root {
+    --bg: #f6f5f0;
+    --surface: #ffffff;
+    --fg: #1f1f1f;
+    --muted: #63615a;
+    --line: #e2dfd4;
+    --box: #fffa6b;
+    --box-ink: #1f1f1f;
+    --focus: #1f1f1f;
+    --font-ui: "Onest", "Helvetica Neue", Arial, sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #161614; --surface: #201f1c; --fg: #f1efe8; --muted: #a8a59a; --line: #34322d; --focus: #fffa6b;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #161614; --surface: #201f1c; --fg: #f1efe8; --muted: #a8a59a; --line: #34322d; --focus: #fffa6b;
+    color-scheme: dark;
+  }
+  body {
+    background: var(--bg); color: var(--fg); font-family: var(--font-ui); font-size: 15px; line-height: 1.5;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 28px 48px;
+  }
+  .wrap { max-width: 1160px; margin: 0 auto; display: grid; gap: 28px; }
+  header { display: grid; gap: 6px; }
+  h1 { font-size: 30px; line-height: 1.15; font-weight: 700; margin: 0; letter-spacing: -0.01em; text-wrap: balance; }
+  h1 mark { background: var(--box); color: var(--box-ink); padding: 0 6px; }
+  header p { margin: 0; color: var(--muted); max-width: 62ch; }
+  .play { display: grid; grid-template-columns: minmax(0, 1fr) 290px; gap: 20px; align-items: start; }
+  @media (max-width: 860px) { .play { grid-template-columns: minmax(0, 1fr); } }
+  .stage { position: relative; width: 100%; height: clamp(440px, 64vh, 620px); border-radius: 12px; overflow: hidden;
+           border: 1px solid var(--line); touch-action: none; user-select: none; -webkit-user-select: none; }
+  .stage canvas { display: block; width: 100%; height: 100%; cursor: default; }
+  .rail { display: grid; gap: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px; }
+  .label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  .status { display: grid; gap: 6px; }
+  .chip { justify-self: start; display: inline-flex; align-items: center; gap: 8px; background: var(--box); color: var(--box-ink);
+          font-weight: 600; padding: 5px 12px; border-radius: 999px; font-size: 14px; }
+  .chip i { width: 8px; height: 8px; border-radius: 50%; background: var(--box-ink); }
+  .field { display: grid; gap: 6px; }
+  input[type="text"] { font: inherit; padding: 9px 11px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); }
+  .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  button { font: inherit; font-weight: 600; padding: 9px 14px; border-radius: 8px; border: 1px solid var(--fg); background: var(--fg); color: var(--bg); cursor: pointer; }
+  button.ghost { background: transparent; color: var(--fg); }
+  label.check { display: flex; gap: 8px; align-items: center; cursor: pointer; }
+  :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .try { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+  .try li { display: grid; grid-template-columns: 1fr; gap: 1px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+  .try li:last-child { border-bottom: 0; padding-bottom: 0; }
+  .try b { font-weight: 600; }
+  .try span { color: var(--muted); font-size: 14px; }
+  .install { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  @media (max-width: 760px) { .install { grid-template-columns: minmax(0, 1fr); } }
+  .install section { display: grid; gap: 10px; align-content: start; min-width: 0; }
+  h2 { font-size: 20px; margin: 0; font-weight: 700; text-wrap: balance; }
+  h3 { font-size: 16px; margin: 0; font-weight: 600; }
+  ol { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+  code, pre { font-family: var(--font-mono); font-size: 13px; }
+  pre { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; overflow-x: auto; }
+  p.note { margin: 0; color: var(--muted); font-size: 14px; max-width: 70ch; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>DeskCat <mark>Playground</mark></h1>
+    <p>A browser copy of the Mac app's cat, running the same behaviour rules. The grey area below is a pretend desktop. Move your pointer around it.</p>
+  </header>
+
+  <div class="play">
+    <div class="stage" id="stage"><canvas id="desk" aria-label="Pretend desktop with the cat in its box"></canvas></div>
+
+    <aside class="rail">
+      <div class="status">
+        <span class="label">Cat is</span>
+        <span class="chip" id="status"><i></i><span id="statusText">In the box</span></span>
+      </div>
+      <div class="field">
+        <label class="label" for="catName">Name on the box</label>
+        <input type="text" id="catName" maxlength="24" value="Mochi" autocomplete="off">
+      </div>
+      <div class="row">
+        <button type="button" id="toggleOut">Let it out</button>
+        <label class="check"><input type="checkbox" id="roam" checked> Wander on its own</label>
+      </div>
+      <div class="field">
+        <span class="label">Things to try</span>
+        <ul class="try">
+          <li><b>Move the pointer</b><span>The eyes follow it and the head tilts.</span></li>
+          <li><b>Hover gently over its head</b><span>That's petting. Hearts appear.</span></li>
+          <li><b>Drag the box</b><span>The cat rides along.</span></li>
+          <li><b>Click the cat</b><span>It jumps out. Click the box to call it back.</span></li>
+          <li><b>Keep the pointer near it, then hold still</b><span>It crouches, wiggles and pounces.</span></li>
+          <li><b>Swipe fast right past it</b><span>It ducks, or runs home spooked.</span></li>
+          <li><b>Drag the cat</b><span>You pick it up by the scruff. Drop it on the box.</span></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <div class="install">
+    <section>
+      <h2>Run the real app: download it</h2>
+      <ol>
+        <li>On GitHub, open the repo's <b>Actions</b> tab and choose the latest <b>DeskCat macOS build</b> run.</li>
+        <li>Under <b>Artifacts</b>, download <b>DeskCat-app</b>, then unzip it (twice) to get <code>DeskCat.app</code>.</li>
+        <li>The app isn't signed with an Apple Developer ID yet, so macOS blocks the first launch. Clear that once in Terminal:</li>
+      </ol>
+      <pre>xattr -dr com.apple.quarantine ~/Downloads/DeskCat.app
+open ~/Downloads/DeskCat.app</pre>
+      <p class="note">The cat appears near the bottom-right of your screen. Quit it from the cat icon in the menu bar.</p>
+    </section>
+    <section>
+      <h2>Or build it yourself</h2>
+      <ol>
+        <li>Install Apple's command line tools once: <code>xcode-select --install</code></li>
+        <li>Get the code from the branch <code>claude/intelligent-noether-dt656x</code>.</li>
+        <li>Run it:</li>
+      </ol>
+      <pre>cd desk-cat
+swift run</pre>
+      <p class="note">To keep it as a normal app, run <code>./scripts/make-app.sh</code> and drag <code>build/DeskCat.app</code> into Applications.</p>
+    </section>
+  </div>
+  <p class="note">In this preview the cat wanders out sooner than on the Mac (about 30 seconds instead of a few minutes), so you get to see it.</p>
+</div>
+
+<script>
+(() => {
+  // ---- Geometry (matches BoxView / CatView in the Swift app; y points up) ----
+  const BOX = { w: 180, h: 260, head: { x: 84, y: 170 }, top: 117 };
+  const CAT = { w: 120, h: 120, feet: { x: 60, y: 6 } };
+  const COL = { ink: "#1f1f1f", box: "#fffa6b", white: "#ffffff", heart: "#ff6690" };
+  const MENU_BAR = 26;
+  const LIFETIME = 1.2;
+
+  const canvas = document.getElementById("desk");
+  const stage = document.getElementById("stage");
+  const ctx = canvas.getContext("2d");
+  let W = 800, H = 500, dpr = 1;
+
+  const clamp = (v, lo, hi) => Math.min(Math.max(v, lo), hi);
+  const approach = (v, t, rate, dt) => { const n = v + (t - v) * Math.min(1, rate * dt); return Math.abs(t - n) < 0.002 ? t : n; };
+  const rand = (a, b) => a + Math.random() * (b - a);
+  const now = () => performance.now() / 1000;
+
+  // ---- State ----
+  let name = "Mochi";
+  let roams = true;
+  const box = { x: 0, y: 0 };
+  let mode = { k: "home" };
+  const mouse = { x: 0, y: 0 }, vel = { x: 0, y: 0 };
+  let lastMouseMove = now(), lastTick = now();
+  const feet = { x: 0, y: 0 };
+  let facingRight = true, walkPhase = 0, lastPlay = now(), boredAfter = 120;
+  let peek = 1, tilt = -0.3, duckUntil = 0, nextRoam = now() + rand(25, 40);
+  let blinkUntil = 0, nextBlink = now() + 3;
+  let hearts = [], heartCooldown = 0;
+  let boxState = {}, catState = {};
+  let drag = null;
+
+  // ---- Sizing ----
+  function resize() {
+    const r = stage.getBoundingClientRect();
+    dpr = window.devicePixelRatio || 1;
+    W = Math.max(300, r.width); H = Math.max(300, r.height);
+    canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+    box.x = clamp(box.x, 0, W - BOX.w);
+    box.y = clamp(box.y, 0, H - MENU_BAR - 140);
+  }
+  function resetBox() { box.x = W - BOX.w - 24; box.y = 14; }
+  function bounds() {
+    const minX = 40, maxX = W - 40, minY = 0, maxY = H - MENU_BAR - 100;
+    return { minX, maxX: Math.max(minX, maxX), minY, maxY: Math.max(minY, maxY) };
+  }
+  const clampToScreen = (p) => { const b = bounds(); return { x: clamp(p.x, b.minX, b.maxX), y: clamp(p.y, b.minY, b.maxY) }; };
+
+  // ---- Pointer ----
+  function toDesk(e) { const r = canvas.getBoundingClientRect(); return { x: e.clientX - r.left, y: H - (e.clientY - r.top) }; }
+  let rawMouse = { x: 0, y: 0 };
+  canvas.addEventListener("pointermove", (e) => {
+    rawMouse = toDesk(e);
+    if (drag && drag.what === "box") {
+      const dx = rawMouse.x - drag.start.x, dy = rawMouse.y - drag.start.y;
+      if (!drag.moved && Math.hypot(dx, dy) < 3) return;
+      drag.moved = true;
+      box.x = clamp(drag.origin.x + dx, -20, W - BOX.w + 20);
+      box.y = clamp(drag.origin.y + dy, 0, H - MENU_BAR - 120);
+    } else if (drag && drag.what === "cat") {
+      catDragged();
+    }
+  });
+  canvas.addEventListener("pointerdown", (e) => {
+    rawMouse = toDesk(e);
+    canvas.setPointerCapture(e.pointerId);
+    const p = rawMouse;
+    if (mode.k !== "home" && hitCat(p)) {
+      drag = { what: "cat", moved: false };
+      catPressed();
+    } else if (hitBox(p)) {
+      drag = { what: "box", moved: false, start: { ...p }, origin: { ...box } };
+    }
+  });
+  const endDrag = () => {
+    if (!drag) return;
+    if (drag.what === "box" && !drag.moved) boxClicked({ x: rawMouse.x - box.x, y: rawMouse.y - box.y });
+    if (drag.what === "cat") catReleased();
+    drag = null;
+  };
+  canvas.addEventListener("pointerup", endDrag);
+  canvas.addEventListener("pointercancel", endDrag);
+
+  function hitBox(p) {
+    const lx = p.x - box.x, ly = p.y - box.y;
+    if (lx >= 3 && lx <= 177 && ly >= 0 && ly <= BOX.top) return true;
+    return mode.k === "home" && Math.hypot(lx - BOX.head.x, ly - BOX.head.y + (1 - peek) * 85) < 48;
+  }
+  function hitCat(p) {
+    const lx = p.x - (feet.x - CAT.feet.x), ly = p.y - (feet.y - CAT.feet.y);
+    return lx > 18 && lx < 108 && ly > 0 && ly < 100;
+  }
+
+  function trackPointer(dt, t) {
+    const dx = rawMouse.x - mouse.x, dy = rawMouse.y - mouse.y;
+    if (Math.abs(dx) + Math.abs(dy) > 0.5) lastMouseMove = t;
+    if (dt > 0) { const k = Math.min(1, dt * 12); vel.x += (dx / dt - vel.x) * k; vel.y += (dy / dt - vel.y) * k; }
+    mouse.x = rawMouse.x; mouse.y = rawMouse.y;
+  }
+  const pointerSpeed = () => Math.hypot(vel.x, vel.y);
+
+  // ---- Hearts ----
+  function addHeart(p, force) {
+    if (!force && heartCooldown > 0) return;
+    heartCooldown = 0.3;
+    hearts.push({ x: p.x, y: p.y, age: 0 });
+    if (hearts.length > 10) hearts.shift();
+  }
+  function ageHearts(dt) {
+    heartCooldown -= dt;
+    for (const h of hearts) { h.age += dt; h.y += 18 * dt; }
+    hearts = hearts.filter((h) => h.age <= LIFETIME);
+  }
+
+  // ---- Actions ----
+  function letOut() {
+    if (mode.k !== "home") return;
+    const from = { x: box.x + BOX.head.x, y: box.y + BOX.top - 10 };
+    const rightX = box.x + BOX.w + 50;
+    const to = { x: rightX < bounds().maxX ? rightX : box.x - 50, y: Math.max(bounds().minY, box.y) };
+    feet.x = from.x; feet.y = from.y;
+    hearts = []; lastPlay = now(); boredAfter = rand(90, 200);
+    mode = { k: "jumpOut", from, to, t: 0 };
+  }
+  function callHome() {
+    if (mode.k === "home" || mode.k === "jumpIn") return;
+    mode = { k: "goHome", speed: 200 };
+  }
+  function arriveHome() {
+    mode = { k: "home" }; hearts = []; peek = 0; nextRoam = now() + rand(30, 60);
+  }
+  function boxClicked(p) {
+    if (mode.k === "home") { if (p.y > BOX.top - 5) letOut(); else duckUntil = now() + 0.5; }
+    else callHome();
+  }
+  const isBusy = () => ["home", "held", "jumpOut", "jumpIn", "pounce", "goHome"].includes(mode.k);
+
+  let grab = { x: 0, y: 0 }, dragged = false;
+  function catPressed() { grab = { x: rawMouse.x - feet.x, y: rawMouse.y - feet.y }; dragged = false; }
+  function catDragged() {
+    const m = rawMouse;
+    if (!dragged) {
+      if (Math.hypot(m.x - feet.x - grab.x, m.y - feet.y - grab.y) <= 3) return;
+      if (isBusy() && mode.k !== "held") return;
+      dragged = true; mode = { k: "held" }; grab = { x: 0, y: 74 };
+    }
+    feet.x = m.x - grab.x; feet.y = m.y - grab.y;
+  }
+  function catReleased() {
+    if (dragged) {
+      dragged = false;
+      const m = rawMouse;
+      const over = m.x >= box.x && m.x <= box.x + BOX.w && m.y >= box.y && m.y <= box.y + BOX.top + 30;
+      if (over) mode = { k: "jumpIn", from: { ...feet }, t: 0 };
+      else { const c = clampToScreen(feet); feet.x = c.x; feet.y = c.y; mode = { k: "sit", left: 3 }; }
+    } else {
+      lastPlay = now();
+      const h = headPoint(catState.pose || "sit", facingRight);
+      for (let i = 0; i < 3; i++) addHeart({ x: h.x - 12 + i * 12, y: h.y + 18 }, true);
+      if (!isBusy()) mode = { k: "sit", left: 3 };
+    }
+  }
+
+  // ---- Helpers ----
+  function step(target, speed, dt) {
+    const t = clampToScreen(target);
+    const dx = t.x - feet.x, dy = t.y - feet.y, d = Math.hypot(dx, dy);
+    if (d < 4) return false;
+    const s = Math.min(d, speed * dt);
+    feet.x += dx / d * s; feet.y += dy / d * s;
+    if (Math.abs(dx) > 2) facingRight = dx > 0;
+    walkPhase += s * 0.12;
+    return true;
+  }
+  const face = (x) => { if (Math.abs(x - feet.x) > 8) facingRight = x > feet.x; };
+  const arc = (a, b, t, h) => ({ x: a.x + (b.x - a.x) * t, y: a.y + (b.y - a.y) * t + Math.sin(Math.PI * t) * h });
+  const gaze = (vx, vy, d) => { if (d <= 1) return { x: 0, y: 0 }; const r = Math.min(1, d / 90); return { x: vx / d * r, y: vy / d * r }; };
+  const homeDrop = () => ({ x: box.x + BOX.head.x, y: box.y + BOX.top - 10 });
+  const homeApproach = () => (feet.x < box.x + BOX.w / 2 ? { x: box.x - 30, y: box.y } : { x: box.x + BOX.w + 30, y: box.y });
+  const randomSpot = (p) => clampToScreen({ x: p.x + rand(-400, 400), y: p.y + rand(-250, 250) });
+  function headPoint(pose, right) {
+    const p = pose === "sit" ? { x: 66, y: 70 } : pose === "held" ? { x: 60, y: 80 } : pose === "crouch" ? { x: 90, y: 45 } : { x: 90, y: 58 };
+    return right ? p : { x: CAT.w - p.x, y: p.y };
+  }
+
+  // ---- Brain: in the box ----
+  function tickHome(dt, t) {
+    const hx = box.x + BOX.head.x, hy = box.y + BOX.head.y;
+    const vx = mouse.x - hx, vy = mouse.y - hy, d = Math.hypot(vx, vy);
+    const idle = t - lastMouseMove;
+    if (d < 160 && pointerSpeed() > 2000) duckUntil = t + 1.2;
+    const target = t < duckUntil ? 0 : 1;
+    peek = approach(peek, target, target < peek ? 14 : 5, dt);
+    tilt = approach(tilt, -0.3 - clamp(vx / 800, -0.3, 0.2), 6, dt);
+    const sp = pointerSpeed();
+    const petting = d < 40 && peek > 0.9 && sp > 20 && sp < 900;
+    if (petting) { lastPlay = t; addHeart({ x: BOX.head.x + rand(-14, 14), y: BOX.head.y + 36 }); }
+    const asleep = idle > 45;
+    boxState = { home: true, peek, tilt, look: gaze(vx, vy, d), dil: clamp((200 - d) / 100, 0, 1),
+                 asleep, closed: asleep || t < blinkUntil, petting };
+    if (roams && t > nextRoam && idle < 20) letOut();
+  }
+
+  // ---- Brain: out of the box ----
+  function tickOut(dt, t) {
+    const d = Math.hypot(mouse.x - feet.x, mouse.y - (feet.y + 35));
+    const idle = t - lastMouseMove, active = idle < 1.0, sp = pointerSpeed();
+    const petting = d < 42 && sp > 20 && sp < 900;
+    let pose = "sit", excited = false;
+    if (d < 140 && sp > 2800 && !isBusy()) mode = { k: "goHome", speed: 560 };
+    const m = mode;
+    switch (m.k) {
+      case "jumpOut": {
+        const nt = Math.min(1, m.t + dt / 0.5);
+        Object.assign(feet, arc(m.from, m.to, nt, 70));
+        facingRight = m.to.x >= m.from.x; pose = "leap";
+        mode = nt >= 1 ? { k: "sit", left: 1.5 } : { ...m, t: nt };
+        break;
+      }
+      case "wander":
+        pose = "walk";
+        if (active && d > 70 && d < 280) mode = { k: "chase" };
+        else if (!step(m.to, 110, dt)) mode = { k: "sit", left: rand(2, 5) };
+        break;
+      case "sit": {
+        let left = m.left - dt;
+        if (petting) { left = Math.max(left, 2); lastPlay = t; const h = headPoint("sit", facingRight); addHeart({ x: h.x + rand(-10, 10), y: h.y + 18 }); }
+        if (d < 320) face(mouse.x);
+        if (active && d > 70 && d < 280 && !petting) mode = { k: "chase" };
+        else if (left <= 0) mode = (t - lastPlay > boredAfter || idle > 30) ? { k: "goHome", speed: 130 } : { k: "wander", to: randomSpot(feet) };
+        else mode = { k: "sit", left, petting };
+        break;
+      }
+      case "chase":
+        excited = true;
+        if (!active) mode = d > 50 && d < 110 ? { k: "crouch", left: 0.6 } : { k: "sit", left: 3 };
+        else if (d > 420) mode = { k: "sit", left: 2 };
+        else if (d < 42 && sp < 900) mode = { k: "sit", left: 3 };
+        else if (d > 55) { pose = "walk"; step({ x: mouse.x, y: mouse.y - 35 }, 260, dt); }
+        else face(mouse.x);
+        break;
+      case "crouch":
+        excited = true; pose = "crouch"; walkPhase += dt * 30; face(mouse.x);
+        if (active && d > 120) mode = { k: "chase" };
+        else if (m.left - dt <= 0) { lastPlay = t; mode = { k: "pounce", from: { ...feet }, to: clampToScreen({ x: mouse.x, y: mouse.y - 30 }), t: 0 }; }
+        else mode = { k: "crouch", left: m.left - dt };
+        break;
+      case "pounce": {
+        excited = true;
+        const nt = Math.min(1, m.t + dt / 0.35);
+        Object.assign(feet, arc(m.from, m.to, nt, 40)); pose = "leap";
+        mode = nt >= 1 ? { k: "sit", left: 2.5 } : { ...m, t: nt };
+        break;
+      }
+      case "goHome":
+        pose = "walk";
+        if (!step(homeApproach(), m.speed, dt)) mode = { k: "jumpIn", from: { ...feet }, t: 0 };
+        break;
+      case "jumpIn": {
+        const nt = Math.min(1, m.t + dt / 0.45), to = homeDrop();
+        Object.assign(feet, arc(m.from, to, nt, 60));
+        facingRight = to.x >= m.from.x; pose = "leap";
+        if (nt >= 1) { arriveHome(); return; }
+        mode = { ...m, t: nt };
+        break;
+      }
+      case "held":
+        excited = true; pose = "held";
+        break;
+    }
+    const ox = feet.x - CAT.feet.x, oy = feet.y - CAT.feet.y;
+    const h = headPoint(pose, facingRight);
+    const vx = mouse.x - (ox + h.x), vy = mouse.y - (oy + h.y), hd = Math.hypot(vx, vy);
+    const dozing = pose === "sit" && idle > 30;
+    catState = { pose, right: facingRight, phase: walkPhase, look: gaze(vx, vy, hd),
+                 dil: excited ? 1 : clamp((200 - hd) / 100, 0, 1), closed: dozing || t < blinkUntil,
+                 sway: dozing ? 0 : Math.sin(t * 2.6) * 4 };
+  }
+
+  // ---- Drawing (port of CatArt / BoxView / CatView) ----
+  function head(cx, cy, s, a, look, dil, closed) {
+    ctx.save(); ctx.translate(cx, cy); ctx.rotate(a); ctx.scale(s, s);
+    ctx.fillStyle = COL.ink; ctx.strokeStyle = COL.ink; ctx.lineJoin = "round"; ctx.lineWidth = 5;
+    for (const e of [[[-35, 8], [-10, 27], [-30, 52]], [[8, 28], [33, 10], [38, 46]]]) {
+      ctx.beginPath(); ctx.moveTo(...e[0]); ctx.lineTo(...e[1]); ctx.lineTo(...e[2]); ctx.closePath(); ctx.fill(); ctx.stroke();
+    }
+    ctx.beginPath(); ctx.ellipse(0, 0, 37, 31, 0, 0, Math.PI * 2); ctx.fill();
+    const gx = look.x * Math.cos(a) + look.y * Math.sin(a), gy = -look.x * Math.sin(a) + look.y * Math.cos(a);
+    eye(-13, 4, 10, gx, gy, dil, closed); eye(15, -6, 10, gx, gy, dil, closed);
+    ctx.restore();
+  }
+  function eye(x, y, r, lx, ly, dil, closed) {
+    if (closed) {
+      ctx.strokeStyle = COL.white; ctx.lineWidth = r * 0.28; ctx.lineCap = "round";
+      ctx.beginPath(); ctx.moveTo(x - r * 0.75, y); ctx.quadraticCurveTo(x, y - r * 0.6, x + r * 0.75, y); ctx.stroke();
+      return;
+    }
+    ctx.fillStyle = COL.white; ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
+    const w = r * (0.5 + 0.55 * dil), h = r * 1.05;
+    ctx.save(); ctx.translate(x + lx * r * 0.38, y + ly * r * 0.38); ctx.rotate(-0.35);
+    ctx.beginPath(); ctx.moveTo(0, h / 2); ctx.quadraticCurveTo(w, 0, 0, -h / 2); ctx.quadraticCurveTo(-w, 0, 0, h / 2);
+    ctx.fillStyle = COL.ink; ctx.fill(); ctx.restore();
+  }
+  function limb(ax, ay, bx, by, w) {
+    ctx.strokeStyle = COL.ink; ctx.lineWidth = w; ctx.lineCap = "round";
+    ctx.beginPath(); ctx.moveTo(ax, ay); ctx.lineTo(bx, by); ctx.stroke();
+  }
+  function tail(ax, ay, cx, cy, bx, by, w) {
+    ctx.strokeStyle = COL.ink; ctx.lineWidth = w; ctx.lineCap = "round";
+    ctx.beginPath(); ctx.moveTo(ax, ay); ctx.quadraticCurveTo(cx, cy, bx, by); ctx.stroke();
+  }
+  function oval(x, y, w, h) { ctx.fillStyle = COL.ink; ctx.beginPath(); ctx.ellipse(x + w / 2, y + h / 2, w / 2, h / 2, 0, 0, Math.PI * 2); ctx.fill(); }
+  function heart(hh) {
+    const a = 9 + hh.age * 4, d = a / Math.SQRT2, r = a / 2;
+    ctx.save(); ctx.globalAlpha = Math.max(0, 1 - hh.age / LIFETIME); ctx.fillStyle = COL.heart;
+    ctx.beginPath(); ctx.moveTo(hh.x, hh.y + d); ctx.lineTo(hh.x + d, hh.y); ctx.lineTo(hh.x, hh.y - d); ctx.lineTo(hh.x - d, hh.y); ctx.closePath(); ctx.fill();
+    for (const [mx, my] of [[hh.x - d / 2, hh.y + d / 2], [hh.x + d / 2, hh.y + d / 2]]) { ctx.beginPath(); ctx.arc(mx, my, r, 0, Math.PI * 2); ctx.fill(); }
+    ctx.restore();
+  }
+  function text(str, x, y, size, weight) {
+    ctx.save(); ctx.translate(x, y); ctx.scale(1, -1);
+    ctx.font = `${weight} ${size}px Onest, "Helvetica Neue", Arial, sans-serif`;
+    ctx.fillStyle = COL.ink; ctx.textBaseline = "bottom"; ctx.fillText(str, 0, 0); ctx.restore();
+  }
+
+  function drawBox() {
+    const s = boxState, drop = (1 - (s.peek ?? 1)) * 85;
+    ctx.save(); ctx.translate(box.x, box.y);
+    if (s.home) {
+      ctx.save(); ctx.translate(0, -drop);
+      oval(40, 98, 88, 66);
+      head(BOX.head.x, BOX.head.y, 1, s.tilt, s.look, s.dil, s.closed);
+      ctx.restore();
+    }
+    ctx.fillStyle = COL.box; ctx.beginPath();
+    [[21, 117], [159, 117], [177, 78], [159, 78], [159, 0], [21, 0], [21, 78], [3, 78]].forEach(([x, y], i) => (i ? ctx.lineTo(x, y) : ctx.moveTo(x, y)));
+    ctx.closePath(); ctx.fill();
+    if (s.home && s.peek > 0.8) {
+      const y = BOX.top - drop;
+      for (const x of [52, 98]) {
+        oval(x - 12, y - 9, 24, 17);
+        ctx.strokeStyle = COL.white; ctx.lineWidth = 1.6; ctx.lineCap = "round"; ctx.beginPath();
+        for (const dx of [-4, 4]) { ctx.moveTo(x + dx, y - 8); ctx.lineTo(x + dx, y - 4); }
+        ctx.stroke();
+      }
+    }
+    if (name) {
+      let size = 26;
+      ctx.font = `600 ${size}px Onest, "Helvetica Neue", Arial, sans-serif`;
+      while (size > 9 && ctx.measureText(name).width > 122) { size -= 1; ctx.font = `600 ${size}px Onest, "Helvetica Neue", Arial, sans-serif`; }
+      text(name, 30, 12, size, 600);
+    }
+    if (s.home && s.asleep) { text("z", 146, 204, 12, 700); text("Z", 156, 216, 16, 700); }
+    if (s.home) hearts.forEach(heart);
+    ctx.restore();
+  }
+
+  function drawCat() {
+    const s = catState;
+    ctx.save(); ctx.translate(feet.x - CAT.feet.x, feet.y - CAT.feet.y);
+    ctx.save();
+    if (!s.right) { ctx.translate(CAT.w, 0); ctx.scale(-1, 1); }
+    const look = s.right ? s.look : { x: -s.look.x, y: s.look.y };
+    const hp = headPoint(s.pose, true), g = CAT.feet.y;
+    if (s.pose === "sit") {
+      oval(32, g, 42, 30); oval(44, g + 8, 36, 50);
+      limb(66, 34, 66, g + 4, 8); limb(75, 34, 75, g + 4, 8);
+      tail(36, g + 8, 50, g - 3, 88 + s.sway * 0.5, g + 4 + Math.max(0, s.sway), 6.5);
+      head(hp.x, hp.y, 0.55, -0.2, look, s.dil, s.closed);
+    } else if (s.pose === "held") {
+      tail(60, 30, 66 + s.sway, 14, 58, 6, 6);
+      limb(52, 48, 48, 30, 7); limb(68, 48, 72, 30, 7); limb(54, 30, 50, 12, 7); limb(66, 30, 70, 12, 7);
+      oval(45, 24, 30, 46);
+      head(hp.x, hp.y, 0.55, 0, look, s.dil, s.closed);
+    } else {
+      const crouch = s.pose === "crouch", low = crouch ? 9 : 0, wig = crouch ? Math.sin(s.phase) * 2 : 0, hip = 36 - low;
+      tail(36 + wig, hip + 8, 16, hip + 12 + s.sway, 20 + s.sway, hip + 36, 6.5);
+      for (const [x, off] of [[42, 0], [74, Math.PI], [52, Math.PI], [84, 0]]) {
+        const front = x > 60; let fx = x, fy = g;
+        if (s.pose === "walk") { fx += Math.sin(s.phase + off) * 6; fy += Math.max(0, Math.cos(s.phase + off)) * 4; }
+        else if (s.pose === "leap") { fx += front ? 9 : -9; fy += 4; }
+        limb(x + (front ? 0 : wig), hip, fx, fy + 4, 8);
+      }
+      oval(32 + wig, hip - 12, 60, 30);
+      head(hp.x, hp.y, 0.5, -0.12 + (s.pose === "walk" ? Math.sin(s.phase * 0.5) * 0.04 : 0), look, s.dil, s.closed);
+    }
+    ctx.restore();
+    hearts.forEach(heart);
+    ctx.restore();
+  }
+
+  function drawDesk() {
+    const grd = ctx.createLinearGradient(0, H, W, 0);
+    grd.addColorStop(0, "#b9c7d6"); grd.addColorStop(1, "#dcd6c8");
+    ctx.fillStyle = grd; ctx.fillRect(0, 0, W, H);
+    // A pretend app window, to show the cat floats above other windows.
+    const wx = Math.min(70, W * 0.08), ww = Math.min(380, W * 0.55), wh = Math.min(240, H * 0.45), wy = H - MENU_BAR - 40 - wh;
+    ctx.fillStyle = "rgba(0,0,0,0.10)"; ctx.fillRect(wx + 3, wy - 5, ww, wh);
+    ctx.fillStyle = "#fbfbf8"; ctx.fillRect(wx, wy, ww, wh);
+    ctx.fillStyle = "#ecebe6"; ctx.fillRect(wx, wy + wh - 28, ww, 28);
+    ctx.fillStyle = "#c9c7bf";
+    for (let i = 0; i < 3; i++) { ctx.beginPath(); ctx.arc(wx + 16 + i * 18, wy + wh - 14, 5, 0, Math.PI * 2); ctx.fill(); }
+    ctx.fillStyle = "#e3e1da";
+    for (let i = 0; i < 5; i++) ctx.fillRect(wx + 20, wy + wh - 56 - i * 26, ww * (i % 2 ? 0.55 : 0.75), 9);
+    // Menu bar
+    ctx.fillStyle = "rgba(250,250,247,0.82)"; ctx.fillRect(0, H - MENU_BAR, W, MENU_BAR);
+    ctx.save(); ctx.translate(W - 28, H - MENU_BAR / 2 - 1); ctx.scale(0.22, 0.22);
+    ctx.fillStyle = COL.ink; ctx.beginPath(); ctx.ellipse(0, 0, 37, 31, 0, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(-35, 8); ctx.lineTo(-10, 27); ctx.lineTo(-30, 52); ctx.closePath(); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(8, 28); ctx.lineTo(33, 10); ctx.lineTo(38, 46); ctx.closePath(); ctx.fill();
+    ctx.restore();
+  }
+
+  // ---- Status chip + controls ----
+  const statusText = document.getElementById("statusText");
+  const toggleBtn = document.getElementById("toggleOut");
+  const LABELS = { jumpOut: "Jumping out", wander: "Exploring", chase: "Chasing your pointer", crouch: "About to pounce",
+                   pounce: "Pouncing", goHome: "Heading home", jumpIn: "Hopping in", held: "Picked up" };
+  let lastLabel = "";
+  function updateStatus() {
+    let label;
+    if (mode.k === "home") label = boxState.asleep ? "Asleep in the box" : boxState.petting ? "Being petted" : "In the box";
+    else if (mode.k === "sit") label = mode.petting ? "Being petted" : catState.closed && catState.sway === 0 ? "Dozing" : "Sitting";
+    else label = LABELS[mode.k];
+    if (label !== lastLabel) {
+      lastLabel = label; statusText.textContent = label;
+      toggleBtn.textContent = mode.k === "home" ? "Let it out" : "Call it back";
+    }
+  }
+  document.getElementById("catName").addEventListener("input", (e) => { name = e.target.value.trim().slice(0, 24); });
+  document.getElementById("roam").addEventListener("change", (e) => { roams = e.target.checked; });
+  toggleBtn.addEventListener("click", () => (mode.k === "home" ? letOut() : callHome()));
+
+  // ---- Loop ----
+  function frame() {
+    const t = now(), dt = Math.min(t - lastTick, 0.1);
+    lastTick = t;
+    trackPointer(dt, t);
+    ageHearts(dt);
+    if (t > nextBlink) { blinkUntil = t + 0.14; nextBlink = t + rand(2.5, 6); }
+    if (mode.k === "home") tickHome(dt, t); else tickOut(dt, t);
+    ctx.setTransform(dpr, 0, 0, -dpr, 0, H * dpr);   // y-up, like AppKit
+    drawDesk();
+    drawBox();
+    if (mode.k !== "home") drawCat();
+    updateStatus();
+    requestAnimationFrame(frame);
+  }
+
+  resize(); resetBox();
+  rawMouse = { x: W * 0.4, y: H * 0.5 }; mouse.x = rawMouse.x; mouse.y = rawMouse.y;
+  new ResizeObserver(() => { resize(); }).observe(stage);
+  requestAnimationFrame(frame);
+})();
+</script>
