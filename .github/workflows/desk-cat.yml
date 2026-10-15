@@ -1,0 +1,26 @@
+name: DeskCat macOS build
+
+on:
+  push:
+    paths:
+      - "desk-cat/**"
+      - ".github/workflows/desk-cat.yml"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-14
+    defaults:
+      run:
+        working-directory: desk-cat
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build app bundle
+        run: ./scripts/make-app.sh
+      - name: Zip
+        run: cd build && ditto -c -k --keepParent DeskCat.app DeskCat.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: DeskCat-app
+          path: desk-cat/build/DeskCat.zip
+          retention-days: 30
