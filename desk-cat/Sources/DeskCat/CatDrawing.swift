@@ -10,6 +10,20 @@ enum Palette {
     static let mouth = CGColor(srgbRed: 1, green: 0.561, blue: 0.639, alpha: 1)
     static let heart = CGColor(srgbRed: 1, green: 0.42, blue: 0.545, alpha: 1)
     static let inkText = NSColor(srgbRed: 0.114, green: 0.114, blue: 0.122, alpha: 1)
+    static let shadow = CGColor(srgbRed: 0, green: 0, blue: 0, alpha: 1)
+}
+
+/// Soft contact shadow: a few stacked translucent ellipses, a cheap blur.
+func drawGroundShadow(_ ctx: CGContext, center: CGPoint, rx: CGFloat, ry: CGFloat, alpha: CGFloat) {
+    guard alpha > 0.005 else { return }
+    ctx.saveGState()
+    ctx.setFillColor(Palette.shadow)
+    ctx.setAlpha(alpha * 0.32)
+    for i in 0..<4 {
+        let k = 1 + CGFloat(i) * 0.22
+        ctx.fillEllipse(in: CGRect(x: center.x - rx * k, y: center.y - ry * k, width: rx * k * 2, height: ry * k * 2))
+    }
+    ctx.restoreGState()
 }
 
 /// Draws the cat in world (screen) coordinates. The caller translates the context so the
@@ -17,6 +31,10 @@ enum Palette {
 extension CatSim {
     func draw(in ctx: CGContext) {
         let sk = skeleton(), p = sk.p
+        if boxClip == nil && !held {     // shadow shrinks and fades as it leaves the ground
+            let k = clamp01(1 - max(0, pos.y - floorY) / 220)
+            drawGroundShadow(ctx, center: CGPoint(x: pos.x, y: floorY + 1), rx: 36 * (0.6 + 0.4 * k), ry: 4, alpha: 0.2 * k)
+        }
         ctx.saveGState()
         if let clipY = boxClip {
             ctx.clip(to: CGRect(x: -100_000, y: clipY, width: 200_000, height: 100_000))

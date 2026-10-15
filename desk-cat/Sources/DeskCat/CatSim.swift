@@ -177,7 +177,7 @@ final class CatSim {
     var earL = Spring(0, f: 6, z: 0.35), earR = Spring(0, f: 6, z: 0.35)
     var paw = Spring(0, f: 8, z: 0.55), pawX = Spring(30, f: 11, z: 0.45), pawY = Spring(30, f: 11, z: 0.45), rim = Spring(0, f: 5, z: 0.7)
     var groom = Spring(0, f: 3, z: 0.8), wiggle = Spring(0, f: 4, z: 0.8), purr = Spring(0, f: 3, z: 1)
-    var tailBase = Spring(2.2, f: 2.2, z: 0.6), tailCurl = Spring(0.1, f: 2, z: 0.6), tailAmp = Spring(0.12, f: 2, z: 0.8)
+    var tailBase = Spring(-1.0, f: 2.2, z: 0.6), tailCurl = Spring(0.36, f: 2, z: 0.6), tailAmp = Spring(0.1, f: 2, z: 0.8)
     var tailFreq: CGFloat = 1.6
     var tailPuff = Spring(1, f: 5, z: 0.5)
     var tailPhase: CGFloat = 0
@@ -327,6 +327,7 @@ final class CatSim {
             let prev = tail[i - 1]
             let ddx = p.x - prev.x, ddy = p.y - prev.y, dd = max(hypot(ddx, ddy), 1)
             p = CGPoint(x: prev.x + ddx / dd * Self.tailSegment, y: prev.y + ddy / dd * Self.tailSegment)
+            if boxClip == nil && !held { p.y = max(p.y, floorY + 3.5) }   // rests on the floor
             tail[i] = p
             x = p.x; y = p.y
         }
@@ -415,17 +416,20 @@ final class CatSim {
 
     private enum Mood { case relaxed, walk, happy, hunt, alert, scared, sleep, box }
 
+    /// Tail shape per mood: (base angle, curl, sway, sway speed, puff).
+    /// Angles are measured from straight back (0); up is positive, down negative. Curl bends each
+    /// segment a little more, so a drooping base with positive curl makes the relaxed "J" shape.
     private func mood(_ m: Mood) {
         let v: (CGFloat, CGFloat, CGFloat, CGFloat, CGFloat)
         switch m {
-        case .relaxed: v = (2.2, 0.15, 0.12, 1.4, 1)
-        case .walk: v = (2.0, 0.1, 0.16, 2.2, 1)
-        case .happy: v = (1.45, -0.5, 0.1, 1.6, 1)
-        case .hunt: v = (2.95, 0.05, 0.06, 7, 1)
-        case .alert: v = (2.4, 0.2, 0.05, 3, 1)
-        case .scared: v = (1.5, 0.2, 0.04, 2, 1.9)
-        case .sleep: v = (3.4, 0.55, 0.0, 1, 1)
-        case .box: v = (1.9, 0.3, 0.12, 1.4, 1)
+        case .relaxed: v = (-1.0, 0.36, 0.1, 1.2, 1)
+        case .walk: v = (0.15, 0.3, 0.12, 2.2, 1)
+        case .happy: v = (1.2, 0.14, 0.08, 1.6, 1)
+        case .hunt: v = (-0.3, 0.05, 0.07, 7, 1)
+        case .alert: v = (-0.15, 0.3, 0.05, 3, 1)
+        case .scared: v = (1.0, 0.25, 0.04, 2, 1.9)
+        case .sleep: v = (-1.35, -0.42, 0, 1, 1)
+        case .box: v = (-0.6, 0.35, 0.1, 1.4, 1)
         }
         tailBase.target = v.0; tailCurl.target = v.1; tailAmp.target = v.2; tailFreq = v.3; tailPuff.target = v.4
     }
@@ -842,7 +846,7 @@ final class CatSim {
     private func heldTick() {
         pose(.stand); hold.target = 1; sit.target = 0
         earL.target = 0.5; earR.target = 0.5; mood(.scared); tailPuff.target = 1
-        tailBase.target = 4.4; tailCurl.target = 0.15
+        tailBase.target = -1.45; tailCurl.target = 0.08   // hangs down
         open.target = 1; dil.target = 1
         lookAt(ptrX + facing.x * 40, ptrY - 80)
         swing.target = clamp(-ptrVX / 2200, -0.5, 0.5)
