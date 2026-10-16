@@ -6,16 +6,16 @@ Usage: python3 -I scripts/find_redactions.py <ocr_dir> <out.json>
 frame's regions cover the time from halfway to the previous sample until
 halfway to the next one, and identical boxes in neighbouring samples merge.
 
-What gets blurred (video pixels):
-  - any line mentioning the store ("Gindos", "Gindo's", OCR slips like "Glndo"), and
-    the first rows of "Recent searches where your products appeared" (branded queries)
-  - the Shopify admin URL (it carries the store handle) and the store switcher
-  - on the store's own pages, its product names, photos and copy:
-      Product readiness   product titles above each "Current:" line
-      Agent lens          result cards sold by "(You)"
-      Optimize prompts    product list rows, and the modal's title, fields,
-                          image and AI suggestions
-      Catalog mapping     the product preview panel
+What gets blurred (video pixels): names and photos, not the text around them.
+  - the store's name wherever it's read ("Gindos", "Gindo's", OCR slips like "Glndo"),
+    including the handle inside the admin URL, and the collaboration that names it
+    ("2 Fools Apple Sauced")
+  - the store switcher, bottom left of the admin
+  - lists that are only the store's product names, and product photos with its label:
+      Product readiness   the product list
+      Agent lens          the photo on the store's own result card
+      Optimize prompts    the product list, and the photo in the modal
+      Catalog mapping     the photo in the product preview
 """
 import json
 import re
@@ -26,8 +26,24 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from ocr_lines import lines  # noqa: E402
 
 NAME = re.compile(r"g[il1|][nm]d[o0]|[il1]nd[o0]['’]?s\b|gindos?", re.I)
-PAD_X, PAD_Y = 8, 6
+# Names to blur wherever they appear in running text: the store ("Gindo's", the
+# handle "gindos" inside the URL), and the collaboration product that names it
+# ("2 Fools Apple Sauced", "2 Fools Cider").
+NAMES = [
+    re.compile(r"[^\s/]*(?:" + NAME.pattern + r")[^\s/]*", re.I),
+    re.compile(r"\b2\s*Fools(\s+(Apple\s+Sauced|Cider|Pinehopple))?\b", re.I),
+    re.compile(r"\bApple\s+Sauced\b", re.I),
+]
+PAD_X, PAD_Y = 3, 5
 VIDEO_W, VIDEO_H = 1986, 1050
+TAB = [423, 10, 50, 22]   # "Gindos" in the browser tab; the tab never moves while Neetika shares
+
+try:  # proportional-font widths, to place a name inside a longer token (the URL)
+    from PIL import ImageFont
+    _FONT = ImageFont.truetype("/usr/share/fonts/opentype/inter/Inter-Regular.otf", 40)
+    text_width = _FONT.getlength
+except Exception:  # no Pillow/font: fall back to equal-width characters
+    text_width = len
 
 
 def box(x, y, w, h, pad_x=PAD_X, pad_y=PAD_Y):
@@ -39,29 +55,47 @@ def find(ls, pattern, x_min=0, x_max=VIDEO_W, y_min=0, y_max=VIDEO_H):
     return [l for l in ls if rx.search(l["text"]) and x_min <= l["x"] <= x_max and y_min <= l["y"] <= y_max]
 
 
+def name_boxes(line):
+    """Boxes around just the names in a line. A match inside a longer token (the store
+    handle in the URL) gets its share of that token's width, padded for the estimate."""
+    words, spans, text = line["words"], [], ""
+    for w in words:
+        a = len(text) + (1 if text else 0)
+        text += (" " if text else "") + w["text"]
+        spans.append((a, a + len(w["text"])))
+    out = []
+    for rx in NAMES:
+        for m in rx.finditer(text):
+            s, e = m.span()
+            for w, (a, b) in zip(words, spans):
+                if a >= e or b <= s:
+                    continue
+                token = w["text"]
+                i0, i1 = max(0, s - a), min(len(token), e - a)
+                partial = i0 > 0 or i1 < len(token)
+                full = text_width(token) or 1
+                x0 = w["x"] + w["w"] * text_width(token[:i0]) / full
+                x1 = w["x"] + w["w"] * text_width(token[:i1]) / full
+                out.append(box(x0, w["y"], x1 - x0, w["h"], pad_x=6 if partial else PAD_X))
+    return out
+
+
 def regions_for(ls):
     out = []
     admin = find(ls, r"admin\.shopify\.com", y_max=90)
 
-    # 1. anything naming the store
+    # 1. the store's name, and names that point to it, wherever they're read: the tab,
+    #    the URL's store handle, search terms, vendor labels, product copy
     for l in ls:
-        if not NAME.search(l["text"]):
-            continue
-        if l["y"] < 35:
-            # browser tab: blur that tab's title only, not its neighbour
-            w = next((w for w in l["words"] if NAME.search(w["text"])), l)
-            out.append(box(w["x"] - 22, w["y"], 225, w["h"]))
-        else:
-            out.append(box(l["x"], l["y"], l["w"], l["h"]))
+        out += name_boxes(l)
 
-    # 1b. agentic overview: the top "recent searches" rows are the store's branded queries;
-    #     anchor on the heading, which OCR still reads mid-scroll when the rows blur
+    # 1b. agentic overview: the first two "recent searches" start with the store's name.
+    #     OCR loses those words mid-scroll but keeps the heading, so blur by position too.
     for h in find(ls, r"Recent searches where", x_min=540, x_max=600):
-        out.append([560, h["y"] + 22, 460, 88])
+        out.append([597, h["y"] + 28, 50, 22])
+        out.append([597, h["y"] + 72, 50, 22])
 
-    # 2. admin chrome: URL bar text, store switcher (avatar + name)
-    for l in admin:
-        out.append(box(l["x"], l["y"], 1440 - l["x"], l["h"], pad_y=8))
+    # 2. store switcher, bottom left of the admin (avatar + name)
     if admin:
         out.append([44, 1004, 100, 34])
 
@@ -69,7 +103,7 @@ def regions_for(ls):
     url = " ".join(l["text"] for l in admin)
     page = lambda heading, path: re.search(heading, header, re.I) or (path and re.search(path, url))
 
-    # 3. product readiness: every product title in the list (UI text in that column is known)
+    # 3. product readiness: the product list is nothing but the store's product names
     if page(r"Product readiness", r"product-readiness"):
         ui = re.compile(r"^\W{0,3}\s*(Current|Suggested|As of the last|Categ|Clateg|Description|Descriptiqn|"
                         r"Empty desc|Hide products|In the first|No\b|Product (checks|readiness)|Re-analyze|"
@@ -78,52 +112,24 @@ def regions_for(ls):
             if 295 <= l["x"] <= 330 and l["y"] > 140 and len(l["text"]) >= 6 and not ui.match(l["text"]):
                 out.append(box(l["x"], l["y"], max(l["w"], 520), l["h"]))
 
-    # 4. agent lens: result cards sold by the store ("Gindos (You)" as the vendor)
+    # 4. agent lens: the store's own result card shows its label on the bottle; blur the photo
     if page(r"Agent lens", r"agent-lens"):
         for v in find(ls, r"\(You\)", x_min=500):
-            out.append([v["x"] - 18, v["y"] - 285, 270, 345])
+            out.append([v["x"] - 18, v["y"] - 262, 270, 252])
 
-    # 5. optimize for prompts: the product list (names + thumbnails) and the modal contents
+    # 5. optimize for prompts: the product list (names + thumbnails) and the product photo
     modal_title = find(ls, r"^Optimize\s*[-·.]", x_min=480, x_max=520, y_max=260)
     if page(r"Optimize", r"/app/products") or modal_title:
         list_w = 188 if modal_title else 440   # names end before "Product health"; the modal covers the list from x=483
         out.append([294, 290, list_w, VIDEO_H - 290])
-        for t in modal_title:
-            out.append(box(t["x"], t["y"], 900, t["h"]))
-        modal = [l for l in ls if 500 <= l["x"] <= 1450]
-        for a in find(modal, r"^Title$", x_max=530):
-            out.append([510, a["y"] + 14, 920, 42])
-        for a in find(modal, r"^Description$", x_max=530):
-            out.append([510, a["y"] + 14, 920, 104])
-        for a in find(modal, r"^Images$", x_max=530):
+        for a in find([l for l in ls if 500 <= l["x"] <= 530], r"^Images$"):
             out.append([510, a["y"] + 30, 120, 105])
-        for a in find(modal, r"^Suggested title", x_max=545):
-            out.append([522, a["y"] + 16, 900, 32])
-        for a in find(modal, r"^Suggested description", x_max=545):
-            end = [b for b in find(modal, r"^Apply to description") if b["y"] > a["y"]]
-            bottom = min(b["y"] for b in end) - 6 if end else a["y"] + 200
-            out.append([522, a["y"] + 16, 900, bottom - a["y"] - 16])
 
-        # fallbacks keyed on the buttons, for frames where OCR misses the "Suggested ..." labels
-        for b in find(modal, r"^Apply to title", x_max=545):
-            out.append([522, b["y"] - 40, 900, 34])
-        for b in find(modal, r"^Apply to desc", x_max=545):
-            top = max([t["y"] + 30 for t in find(modal, r"^Apply to title", x_max=545) if t["y"] < b["y"]] or [b["y"] - 160])
-            out.append([522, top, 900, b["y"] - 6 - top])
-
-        # any other long line of product copy in the modal body (the AI suggestions, the
-        # description field); OCR often can't read the dark "Apply to ..." buttons or the labels
-        ui_modal = re.compile(r"^\W{0,3}\s*(Product (health|details)|OK on|This checks|above\.|Run a buyer|kun a buyer|"
-                              r"Suggestions are|Live top|None of your|What to fix|Prompt checker|Lead with|ead with|"
-                              r"Agents summar|View-only|Images|Title|Description|Suggested|Apply to|best\b)", re.I)
-        for l in modal:
-            bullet = re.match(r"^[e*«¢•·]\s", l["text"])   # "What to fix" advice stays readable
-            if 520 <= l["x"] <= 540 and l["w"] >= 200 and not ui_modal.match(l["text"]) and not bullet:
-                out.append([516, l["y"] - 5, 910, l["h"] + 10])
-
-    # 6. catalog mapping: the preview of one of the store's products
+    # 6. catalog mapping: the product photo (and its thumbnail) in the preview panel
     if page(r"Catalog Mapping", r"_ps=1"):
-        out.append([1350, 330, 295, VIDEO_H - 330])
+        for p in find(ls, r"^Preview$", x_min=1380, x_max=1440, y_max=420):
+            out.append([1364, p["y"] + 66, 32, 40])
+            out.append([1350, p["y"] + 124, 100, 98])
 
     return [[round(v) for v in r] for r in out]
 
@@ -161,11 +167,9 @@ def main(ocr_dir, out_path):
     # The browser tab naming the store sits in the same place for as long as Neetika's
     # window is shared; blur it end to end so a missed OCR sample can't leave a gap.
     tabs = [r for r in done if r["box"][1] < 35]
+    done = [r for r in done if r["box"][1] >= 35]
     if tabs:
-        x0 = min(r["box"][0] for r in tabs); x1 = max(r["box"][0] + r["box"][2] for r in tabs)
-        y0 = min(r["box"][1] for r in tabs); y1 = max(r["box"][1] + r["box"][3] for r in tabs)
-        done.append({"t0": min(r["t0"] for r in tabs), "t1": max(r["t1"] for r in tabs),
-                     "box": [x0, y0, x1 - x0, y1 - y0]})
+        done.append({"t0": min(r["t0"] for r in tabs), "t1": max(r["t1"] for r in tabs), "box": TAB})
     # a little slack either side: over-blurring for a tenth of a second is harmless
     out = [{"t0": round(r["t0"] - 0.1, 3), "t1": round(r["t1"] + 0.1, 3),
             "x": r["box"][0], "y": r["box"][1], "w": r["box"][2], "h": r["box"][3]} for r in done]

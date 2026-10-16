@@ -4,7 +4,7 @@ Cleanup of the Zoom recording of **BFCM Prep Live** (15 Oct 2026, Sid and Neetik
 
 | What | Where |
 |---|---|
-| Trimmed video, demo store blurred (55:28, 1986x1050, H.264/AAC) | `output/BFCM-Prep-Live-2026.mp4`, not in git (too big); sent in the session |
+| Trimmed video, demo store's name blurred (55:28, 1986x1050, H.264/AAC) | `output/BFCM-Prep-Live-2026.mp4`, not in git (too big); sent in the session |
 | Captions for YouTube | `output/BFCM-Prep-Live-2026.en.srt` |
 | Title, description, chapters | `youtube.md` |
 | Email thumbnail, play button only | `thumbnails/email-play.jpg` (1200x675) |
@@ -25,22 +25,19 @@ The whole trimmed video was scanned for silences over 4 seconds, black frames an
 
 ## The demo store is blurred
 
-The AEO demo runs in a real customer's Shopify admin. The store can't be recognised in the video: it still reads as "a hot sauce store", but nothing names it.
+The AEO demo runs in a real customer's Shopify admin. Only **names** are blurred, so the demo still reads: search terms, descriptions and the app's advice stay visible, with the store's name blanked inside them ("[blur] hot sauce starter kit", "Everyday Hot Sauce [blur] Original Fresh & Spicy is our award-winning twist…").
 
 | Where | When (trimmed) | Blurred |
 |---|---|---|
-| Browser tab "Gindos · …" | 19:30 to 54:50, whenever Neetika's screen is shared | the tab's title |
-| Shopify admin | 42:05 to 49:15, and 52:59 to 53:21 | the URL bar (it carries the store handle) and the store switcher, bottom left |
-| Any line naming the store | same | "Gindos (You)", "Best-ranked product: Gindo's …" and so on |
-| Agentic overview | 42:47 to 44:40 | the first two "Recent searches where your products appeared" rows ("gindo's hot sauce starter kit"…), anchored on the heading so they stay blurred mid-scroll |
-| Product readiness | 44:47 to 46:00 | every product name in the list |
-| Agent lens | 46:00 to 48:10 | the store's own result card (photo, name, price) |
-| Optimize for prompts | 48:10 to 49:15, 52:59 to 53:02 | the product list, and in the modal the product's title, description, photo and the AI-suggested title and description. The "What to fix" advice stays readable |
-| Catalog mapping | 44:00 to 44:37 | the product preview panel |
+| Browser tab | 19:30 to 54:50, whenever Neetika's screen is shared | "Gindos" in the tab title |
+| Shopify admin | 42:05 to 49:15, and 52:59 to 53:21 | the store handle inside the URL, and the store switcher (bottom left) |
+| Anywhere in the app | same | the store's name ("Gindos", "Gindo's") and the collaboration that names it ("2 Fools Apple Sauced", "2 Fools Cider"), word by word, in search terms, vendor labels, product titles, descriptions and AI suggestions |
+| Product readiness, Optimize for prompts | 44:47 to 46:00, 48:10 to 49:15 | the product lists, which are nothing but the store's product names |
+| Product photos | Agent lens, Catalog mapping, Optimize | the store's bottles, whose labels show its name |
 
-How it was found: Neetika's shared screen was OCR'd (every 5 s on slides; every 0.5 s in the admin, and every 0.1 s wherever the screen scrolled), and `scripts/find_redactions.py` turns the text into blur boxes, by page. The finished video was then OCR'd again at moments in between those samples, looking for the store name and its product names. The first check caught two leaks (a branded search row mid-scroll at 43:04, and the AI-suggested description at 48:50 to 49:05); both rules were fixed and the check re-run clean.
+How it was found: Neetika's shared screen was OCR'd (every 5 s on slides; every 0.5 s in the admin, and every 0.1 s wherever the screen scrolled), and `scripts/find_redactions.py` turns the words into blur boxes. Where OCR loses words mid-scroll (the branded search rows), the blur is placed relative to a heading it still reads. The finished video was then OCR'd again at moments in between those samples, looking for the store's name, "2 Fools", "Apple Sauced" and the listed product names.
 
-What stays: the app's own interface, the competitor results (Pepper Palace, Hatch Chile Store…, which are public), revenue and product counts, and Neetika saying "hot sauce" and "food and beverage".
+What stays readable: the app's interface and advice, competitor results (Pepper Palace, Hatch Chile Store…, which are public), product names that don't contain the brand ("Vampire Slayer", "Original Fresh & Spicy", "Jalapeño Poblano"), revenue and product counts.
 
 ## Rebuilding
 
