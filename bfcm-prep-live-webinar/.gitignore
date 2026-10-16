@@ -1,0 +1,4 @@
+# Video is too big for git; it's delivered by download link (see README)
+*.mp4
+*.zip
+work/

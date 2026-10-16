@@ -1,0 +1,725 @@
+WEBVTT
+
+00:00:42.000 --> 00:00:47.000
+Hey, Dustin. Hey Rick, can you hear us?
+
+00:00:47.000 --> 00:00:52.000
+have to comment in the chat. I don't think they can
+
+00:00:52.000 --> 00:00:59.000
+I don't think we can hear them, so
+
+00:00:59.000 --> 00:01:24.000
+Yes. Okay, perfect.
+
+00:01:24.000 --> 00:01:54.000
+We'll wait a couple of minutes and then we'll get started as soon as more people join.
+
+00:02:47.000 --> 00:03:17.000
+We'll just wait one more minute, and then we'll get started.
+
+00:03:45.000 --> 00:04:00.000
+Alright, perfect. Welcome, everyone. Welcome to the webinar. We are here today to discuss strategies on how to make this a successful Black Friday in what we are calling this as the first true Black Friday of the AI era
+
+00:04:00.000 --> 00:04:07.000
+I know ChatGPT has been around for a while, but I think something significant shifted in the last 8 to 10 months
+
+00:04:07.000 --> 00:04:23.000
+That's completely changed the game in how we strategize for Black Friday and the things that we do. A quick intro. I'm Sid. I'm the founder at Skai Lama. I think we've I've spoken to some of you, Neetika, who's also the co-founder, has spoken to other folks here
+
+00:04:23.000 --> 00:04:35.000
+And we have been working with e-commerce and DTC brands for the last five years now, primarily helping them with increasing average order value and conversions.
+
+00:04:35.000 --> 00:04:54.000
+Let me be clear about one thing. I've attended quite a few webinars, and 90% of those is are like one hour long sales switches to their actual products and services. We're going to make sure this is none of that. There's no secret. We run a few apps in the bundling and the discounting domain, but we're not here to talk about our apps
+
+00:04:54.000 --> 00:05:17.000
+Whatever we are going to talk about are things that we've learned over the last 8 to 10 months of working with brands across different sizes, across the continent. As of today, we work with 6,000 plus brands, and we've seen it across different categories. We are trying different strategies, so this is all sort of a consolidation of everything that we've learned that could be applied to this Black Friday
+
+00:05:17.000 --> 00:05:34.000
+As as an outcome of this, we are not going to ask you to download our apps. Everything that we are going to talk about is going to be sent to you in the form of, you know, sidekick questions or toolkits that you can use with your AI chatbots to strategize and come up with a personalized strategy for your
+
+00:05:34.000 --> 00:05:52.000
+for your own brand. With that out of the way, what I want to do is now talk about the agenda for today's session. In the next hour, we're going to talk about 4 different things, primarily 3 we might not be able to get to the fourth one, but that's fairly straightforward, and we'll send you more information
+
+00:05:52.000 --> 00:06:10.000
+We are first and foremost when it's Black Friday, Cyber Monday, we have to talk about the offer strategy. So we're going to look at a real-life case study, a real-life account, obviously sensitized, you're not going to, you know, we're not going to talk about the brand names, but we're going to talk about the actual data and the audit that we did to come up with the personalized strategy and talk about how you can do the same thing
+
+00:06:10.000 --> 00:06:16.000
+As a subset of offers and promotions, there's bundling, which is a big part of
+
+00:06:16.000 --> 00:06:32.000
+giving away a higher perceived value of discount and increasing the average order value. The third thing is completely new, more relevant than… more relevant now than ever, the AI search and how Agentic commerce and AI chatbots find you and recommend you
+
+00:06:32.000 --> 00:06:51.000
+And then, if we do get time, we're going to talk about what happens after they pay, the kind of strategies that you can use in post-purchase thank you pages and even from a marketing strategy after that, right? We're going to talk about a bunch of different prompts that you can use on your own sidekick to get the data. We're going to give you toolkits that you can use that data to run and come up with your own strategy
+
+00:06:51.000 --> 00:06:58.000
+Alright, with that, let's get into Black Friday's office strategy.
+
+00:06:58.000 --> 00:07:13.000
+The big thing that we've learned over the years, and some of you obviously know it, that this is Black Friday and Cyber Monday is not just about a weekend. The money is really made either side of it, pre-Black Friday and post-Black Friday. Obviously, the weekend is a big driver on driving sales volume and getting new customers
+
+00:07:13.000 --> 00:07:28.000
+But it is a three-phased weekend, right? The first phase, some, you know, want to define it as two to three weeks before November. For our purpose, we define everything from 1st of November leading up to Black Friday. Then there's obviously the weekend, and then what happens
+
+00:07:28.000 --> 00:07:47.000
+6 months from Black Friday up to May, right? The primary goal of the… before Black Friday season is to make sure that we stop the wait and get some of the user… some of the customers to actually buy during that period. Then, for Black Friday, the main thing to understand and decide is what's the depth of discounting that you're okay with, given your margins
+
+00:07:47.000 --> 00:08:08.000
+And how do you craft strategies that stick to that? And then obviously post Black Friday, the idea is how do you, for the new customers that you've acquired, how do you get the second order? As we all know, during Black Friday, the cost of acquisition in terms of acquiring a new customer sometimes goes as high as 2x. So the depth on how far you want to sort of discount it
+
+00:08:08.000 --> 00:08:27.000
+really matters. And the best way to figure all of this out on what the right strategy is lies in your experience as a brand last year. So you would have done some things last year. You would have a lot of data from last year. And the whole aspect of this being the first Black Friday for the AI era
+
+00:08:27.000 --> 00:08:29.000
+means that you can now come up with
+
+00:08:29.000 --> 00:08:46.000
+an offer strategy that's rooted in your data, rooted in your business objectives, in a matter of few hours. What… and some of this would have been impossible earlier, and some of this would have taken weeks and multiple people to pull out the data, make sense of it, analyze it, come up with the right strategy, debate it out, all of that, right?
+
+00:08:46.000 --> 00:09:07.000
+So the four-step process is we're going to ask 5 simple questions to Sidekick from September to May, what happened last year. Then we're gonna figure out the insights from those… from that data. We're gonna tell… we're gonna talk about the objectives that, you know, we can have for different phases of Black Friday and for different customer sets, and then come up with a personalized plan.
+
+00:09:07.000 --> 00:09:12.000
+All of this is going to be no code, no app required, plain English, things that you can run on your own end.
+
+00:09:12.000 --> 00:09:21.000
+The best way to start is actually look at a case study that we, that we did for one of the US, United States beauty brands, right? What we saw
+
+00:09:21.000 --> 00:09:34.000
+This is the lay of the line, right? So we, based on the five questions that I was talking about that we asked on Psychic, this was the lay of the line. This is what happened from September till January end. The big thing to note is
+
+00:09:34.000 --> 00:09:52.000
+Black Friday was, of course, 2x higher than any other week. They drove 53,000 orders on Black Friday. They obviously paid for it in the highest depth of discount. That's about 40% of normal prices. And it's important to know what happened pre and after. So
+
+00:09:52.000 --> 00:10:06.000
+for sort of sales in the 25 to 27, 23 to 27% range that happened before, that obviously had an influence on what happened on Black Friday as well. So this is the lay of the land. Let's double click on what happened before Black Friday, right?
+
+00:10:06.000 --> 00:10:24.000
+by Black Friday, 25% was old news, right? So, if you've done an… if you've done Offer September, October, even leading up, like, late October, early November, that is a certain headline discount site-wide discount. That is now your anchor that you know… that you have no option but to beat if you want to attract
+
+00:10:24.000 --> 00:10:48.000
+the Black Friday conscious shopper, right? So you can see they did 25%, 27%. What you see as the bars are the number of orders that they received in those months. And it's very visible that even at a higher discount, you know, we… our data already suggests across 500 stores that ran offers last year that we analyzed, leading up to BFCM, especially October, is generally a lull because now everyone's waiting if it's not like
+
+00:10:48.000 --> 00:11:05.000
+a product that they immediately need. Everybody's now waiting for the big deal. So even if there was a higher discount, there was a lull, and they got much lower number of orders. But the bigger point is you've anchored the customer at a certain discount rate because of a site-wide head, you know, headline discount that you publicized. Now you have no option
+
+00:11:05.000 --> 00:11:16.000
+But to give away a much higher discount on Black Friday. In total, September, October, they had already given $1 million in discount by running those 2 sales, right?
+
+00:11:16.000 --> 00:11:27.000
+What happened during that period? During that period, they acquired roughly 13,200 customers and gave away $2.9 million in discount.
+
+00:11:27.000 --> 00:11:48.000
+If you just focus on the the new customers that they acquired, which is a big part of, you know, doing Black Friday sales for any brand is to acquire new customers that you can hopefully retain. They ended up paying about $220, right? That doesn't mean that $220 was the discount for every new customer. A lot of the returning customers obviously use that discount as well. But if you
+
+00:11:48.000 --> 00:12:04.000
+Truly focus just on the new customer acquisition, they have gave away 220 discount for every new customer that they acquired, and at 40% of normal prices that every shopper got, both old and new. What was interesting in their data, and this is all from those five Sidekick
+
+00:12:04.000 --> 00:12:20.000
+sort of questions that you can ask your, you know, that you can ask your sidekick and get the data. The interesting thing was, there was a 30% off and then an extra code on top of it, right? Only 22% of the total orders were actually new customers, 78% were returning customers
+
+00:12:20.000 --> 00:12:23.000
+19% of the people
+
+00:12:23.000 --> 00:12:47.000
+took the code on top of that. There is a VIP 30% code that's on top of the 30% price markdown that they had already done. They just changed the prices on the store, versus 40% of the people who were returning customers got the code, right? Now, there's a school of thought, and these are… these are the, you know, sort of strategy discussions that you need to have internally. Did we really need to give away that much discount to a returning customer? Could we have come up with office strategies that were targeted
+
+00:12:47.000 --> 00:12:59.000
+differently for a new customer versus a returning customer. And the other problematic thing, of course, is the new customer AOV was $55 compared to returning customers, which was $85, right?
+
+00:12:59.000 --> 00:13:06.000
+All we're trying to do here is get a lay of the land using the data and sort of drawing insights from it.
+
+00:13:06.000 --> 00:13:14.000
+What happened after? There were two more sales that happened in December, and the interesting thing to note was customers that were acquired in
+
+00:13:14.000 --> 00:13:28.000
+September and October were 2x more likely to come back and buy compared to the ones that were acquired on Black Friday. The LTV of a customer acquired on Black Friday was $65, so on an average, they came back and spent
+
+00:13:28.000 --> 00:13:44.000
+10 additional dollars versus somebody who was acquired in September and October came back and spent in total $106, right? So, Black Friday customers, it's a fair sort of conclusion to make. The Black Friday customers that we acquired came for nothing but the 40% discount
+
+00:13:44.000 --> 00:13:54.000
+And… could you have used some strategies to sort of lure them back in January and February, which are generally slower periods, right? So these are things that we want to solve for. So
+
+00:13:54.000 --> 00:14:12.000
+The idea we are not advocating for, hey, you know, you should reduce the discount. What we are advocating for is given what's happened in the Shopify ecosystem with Shopify functions and the ability to create, you know, highly customized discounts run natively so there's no headache of coding and all of that
+
+00:14:12.000 --> 00:14:28.000
+You should really think about the different strategies that are at your hand and how you can apply to your business objectives. So for the same store, same set of customers, what we are doing this year, and this is still in discussion, some of it, you know, we are going to be changing, adding, but before it was
+
+00:14:28.000 --> 00:14:46.000
+2 25% sales in September and October. We've already discussed, and instead of, you know, running headline sales in headline percentage sales or site-wide sales in September and October, they've already gone ahead and changed it to free gifts and tiered discounts, where the AOE can be potentially higher.
+
+00:14:46.000 --> 00:15:06.000
+For the weekend, they've made sure the code doesn't stack on top of the 30% that they're already doing. What they want to do for the VIP customers is more aligned with free gifts and samplers and stuff like that. And they have a channel-specific strategy now based on the data that they got last year. What they're also doing this year, which is interesting and more sort of brands should use this
+
+00:15:06.000 --> 00:15:07.000
+is
+
+00:15:07.000 --> 00:15:19.000
+Instead of giving a 30% off code on Black Friday, for certain customers, they're also doing a store credit, which is threshold-dependent, and that store credit kicks in in January
+
+00:15:19.000 --> 00:15:37.000
+expires in February. So there's a two-month period where they're forcing… not forcing people, but at least giving them an incentive to come back and buy a refill, buy a new product, right? And when you do strategies like that, what ends up happening is your overall margin impact is much lesser
+
+00:15:37.000 --> 00:15:51.000
+Because they've come back in two orders to get the same sort of discount, right? So these are a few strategies that they're trying. But the point of all of this was not to say, hey, these are the strategies that you should be applying. The point of going through this case study was to say
+
+00:15:51.000 --> 00:16:07.000
+What would have taken ages last year, some of it, as I said, would have been impossible to really understand, can now be done by a single individual who has all the context, with all these AI tools that are available in a few hours, right? So, what we want to do now is
+
+00:16:07.000 --> 00:16:25.000
+Help you figure out how can you run the same analysis for your own store starts, obviously, at the 5 questions that you need to ask sidekick very simply, who bought week on week from September all the way till January? What are the discounts that ran? What are the codes that ran?
+
+00:16:25.000 --> 00:16:36.000
+And how deep were those codes? Which channels sold the best and to whom new customers or existing customers? Did the Black Friday customers come back in 60, 80, 60, 90, 120 day period
+
+00:16:36.000 --> 00:16:51.000
+And if you cut the prices by changing the prices on Shopify, marking them down, it's important for you to get the real debt, right? So you can just copy-paste these questions on Sidekick, and you're going to get data, which can then lead to insights
+
+00:16:51.000 --> 00:17:07.000
+on each phase, right? So before Black Friday, you can now estimate, was there a lull? Was there a period where, you know, your week-on-week orders were much lesser compared to normal? How many sale weeks did you run before Black Friday, and did that impact your Black Friday
+
+00:17:07.000 --> 00:17:27.000
+Okay? How many customers do you think were waiting for the sales, and how many early codes did you give away? And did they really pull in the demand, or did you… did it just cost you margin without actually getting you the demand, right? For the weekend, it's important to know what was the real depth. A lot of time brands plan for a 30% off when the data comes in because of the welcome code and this code and the affiliate code
+
+00:17:27.000 --> 00:17:44.000
+The real discount is much, much larger. Now, I'm not saying that's good or bad, but it's good to know what the real discount was. How many of those codes were stagged? How many codes were actually out there? There's a lot of surprises thrown in when we've done these audits on a long tail of
+
+00:17:44.000 --> 00:17:58.000
+codes that they weren't really aware on that were stacking on top of other things, and it's important to know how many codes were out there that were used last year. Who got it? New customers versus returning? What was the basket size, channel, and the same thing for, you know, after how many people came back
+
+00:17:58.000 --> 00:18:16.000
+Did they come back in December, or when did they come back, and what was the real value of those customers, and did they ever buy in full price or not? Or did you just attract the discount hunters, right? These are all insights that will automatically be drawn from the insights based on the skill that we're going to send you, the AI skill that you're going to send you if you feed it the data
+
+00:18:16.000 --> 00:18:26.000
+It'll give you all these insights. Then comes, you know, what your objectives are for this year. If your objective is to win new customers, here are a few different strategies
+
+00:18:26.000 --> 00:18:43.000
+that you can look for a starter set, increasing the average order value. So in their case, the $55 was the average order value. We're coming up with a starter set that at $65 right smaller sizes of their products, but at $65 trying to pull the Aob slightly higher, at least right
+
+00:18:43.000 --> 00:18:59.000
+It can run… it can be run to its own landing pages. So the important thing to know with the kind of customizations and flexibility that's available in terms of planning the promotions, you can now come up with strategies that are hyper-specific to an ad set
+
+00:18:59.000 --> 00:19:24.000
+to a customer segment, to a specific landing page, to a specific collection, to a specific market, and you can track them really well and understand the analytics, right? If your objective is to grow the basket, and if you're trying to impact everyone at the weekend, we can do tiered spend, where, you know, you're going to get a higher discount if you spend more, a really good gift above a certain threshold, you can do build your own boxes, build your own bundles. That are some things that we're going to talk about in the bundling section anyways
+
+00:19:24.000 --> 00:19:48.000
+If you want to reward your customers without leaking discounts, you give early access or a gift to your VIP set of customers, and you can make promises about the prices being the lowest they are. And a good way to do that is not giving away a site-wide discount of 20%, you know, pre-Black Friday, giving a different discount that's hard to compare on the actual discount
+
+00:19:48.000 --> 00:19:54.000
+on Black Friday is a great way to say this is the best offer, you know, for these products or this… these set.
+
+00:19:54.000 --> 00:20:14.000
+Yeah, again, early access at the weekend price, an exclusive setup price promise. A price promise goes a long way. Obviously, making a promise also means that you have to keep it and not, you know, discount it further. And if you want to bring them back a store credit in January or February only, store credit goes a long way as well, right? These are some offers to consider. But again.
+
+00:20:14.000 --> 00:20:31.000
+There's a lot more that you can do. So these are all the potential offers that you can think of. There's a bunch of sort of sub-segments that come within these. The most common are percentage off and dollar off. Then there's free gift with purchase, but then you can do, you know, buy three, get two at 50% off, or
+
+00:20:31.000 --> 00:21:00.000
+Buy four and get one free, you can do tiered spends, higher the spend, higher the discount, you can do stats and starter bundles that have a higher perceived value of discount. You can do credits for later that sort of incentivize people to come back. And then, as I said, you can do highly targeted and landing page codes, run ads to specific landing pages, come up with bundles that are only on those landing pages and the discount is going to be only for those customers who add from this landing page. None of the other store, like, you know, visitors need to know.
+
+00:21:00.000 --> 00:21:19.000
+So what Shopify has made possible with Shopify functions and different apps that are available, one of them is ours, but that's besides the point. You can configure a lot of these discounts natively on Shopify, but the first and foremost thing is to use the data, come up with the insights, figure out the objectives, and then
+
+00:21:19.000 --> 00:21:35.000
+figure out what are the offers that you want to run, right? The important thing to note this time around when you do set these discounts is to set it up correctly in a way that you can track this much better for next year. There are apps that already have MCP access, and if you track the codes, if you
+
+00:21:35.000 --> 00:21:49.000
+you know, create the codes which are hyper-specific to a customer segment, or to, you know, a channel, you can track a lot of these better for next year analysis, or even during that period to figure out what you should be doing in December and January.
+
+00:21:49.000 --> 00:22:08.000
+So yeah, as I said, you know, just wrapping up on creating this offer strategy, the idea is to come up with a hyper-personalized strategy for you, for your own brand, that's rooted in data from what happened last year. So you ask the questions to Sidekick, you add the skill to Claude or any other bot
+
+00:22:08.000 --> 00:22:24.000
+that you use, that we're going to be sending to you on Tuesday. You paste all the data, and also the questions, objectives of this year's goal, and then you get a personalized plan that you can sort of tweak around. Remember to do… not do a few things, make sure there's not
+
+00:22:24.000 --> 00:22:39.000
+Unintentional stacking, all the stray codes, try and let's try and remove those, make sure prices of Black Friday are not beaten pre and post. Let's not do same depth for all customers. A newer customer is
+
+00:22:39.000 --> 00:22:55.000
+way more useful than a returning customer. Returning customer might have bought with a slightly lesser discount. How do you craft that strategy? Those are the things that you can sort of come up with. And then, as I said, don't go deeper after. And the one line sort of takeaway that I want to leave you with when you come up with
+
+00:22:55.000 --> 00:22:59.000
+you know, Black Friday offer strategy is to make sure that
+
+00:22:59.000 --> 00:23:10.000
+You understand that the season doesn't end on Cyber Monday. It ends when you know what Black Friday, Cyber Monday really cost you. And that takes analysis post-Black Friday and the retention and all of those numbers as well
+
+00:23:10.000 --> 00:23:12.000
+Cool.
+
+00:23:12.000 --> 00:23:29.000
+We are going to be sending you all of this information, and with that, let's do a segue into bundling. As I said, a lot of the office strategy leads into bundles, and the bundles are a great way to sort of improve conversion as well as the average order value. So Neetika is going to take you through some strategies
+
+00:23:29.000 --> 00:23:37.000
+on what we've seen with brands having worked with them, you know, in the last 8-10 months on doing interesting things.
+
+00:23:37.000 --> 00:23:53.000
+Alright. Thanks, Sid. That was a great session on offers and a great segue now into bundles. Very similar to offers, we are going to study do a case study where we look at the store data, come up with a bundling strategy.
+
+00:23:53.000 --> 00:24:10.000
+And really see how, with the help of Sidekick AI, you can build, you know, your own bundling strategy for your store, right? Essentially, what we've seen internally is that almost all of your bundles are already sitting in your data
+
+00:24:10.000 --> 00:24:24.000
+Right? We've done a lot of data analysis across a lot of stores, and we've always found that what people are actually buying already or putting together with hand is what the bundles should start reflecting, right?
+
+00:24:24.000 --> 00:24:26.000
+So if you see here
+
+00:24:26.000 --> 00:24:41.000
+In about 13 or 16 stores, right, that we audited 700 orders, and a fragrance brand had the same 2 perfumes, 3,400 orders, two different brands, that were already selling, but people are putting together it by hand, right?
+
+00:24:41.000 --> 00:24:58.000
+But here, what we found was the brand was actually selling a quantity ladder. So they were selling more of the same pants when people were actually putting together two different pants together. Right. So you definitely need to go into your data and first start looking at
+
+00:24:58.000 --> 00:25:13.000
+What are people actually already buying right? The other thing that you know to keep in mind is a very different like a pre BFCM, BFCM and post BFCM needs different offers, needs different bundles
+
+00:25:13.000 --> 00:25:32.000
+Each customer type itself needs a different bundle, right? A new customer from an ad, a brand-aware customer coming from, you know, coming directly or directly to your collections page, you know, someone that you're acquiring organically needs to be sent to different bundle types, because each bundle has a job, right?
+
+00:25:32.000 --> 00:25:48.000
+In AI era, you know, creating bundles and figuring out bundles is not hard. What we really need to do is start digging a little bit more deeper into the data to just figure out what bundle suits at what stage
+
+00:25:48.000 --> 00:25:49.000
+Right?
+
+00:25:49.000 --> 00:26:12.000
+Every bundle is actually just 4 decisions, right? What to bundle, which is essentially which products go together, what the offer needs to be, and it ties back to a lot of what Siddha has been saying, right? A lot of the sidekick prompts help here as well, but essentially what and how do you price your bundles, right? Is it a quantity break? Is it a fixed price bundle? Is it
+
+00:26:12.000 --> 00:26:18.000
+percentage of, prior, you just need to decide, who this offer is for and how do you price it
+
+00:26:18.000 --> 00:26:36.000
+of where it lives, extremely important. A lot of new customers directly land on a PDP from your ad. You need to make sure the bundles that you're selling there, you know, are serve a purpose for new customers compared to something in your navigation where, you know, a brand-aware customers
+
+00:26:36.000 --> 00:26:45.000
+Even new customers, when they're navigating, you know, go to the menu, the navigation or the homepage panel, right?
+
+00:26:45.000 --> 00:27:05.000
+What to name it, or call it is essentially the fourth and one of the most important decisions we've seen for bundle. It's once you start tying your bundle to an emotion, we've seen a much, much better conversion, right? How all of these decisions tie back into, you know, a particular store, we just go through that
+
+00:27:05.000 --> 00:27:20.000
+But before we do that, 3 shoppers, right, we're going to cover, like, there is a new customer who's never bought from you, may come from ads, AI assistant lands on the product page, right? Needs a very first easy S very different bundle from a brand aware customer who knows you.
+
+00:27:20.000 --> 00:27:32.000
+Hasn't bought much yet, right? Plans on your homepage collection needs help choosing because he knows what your products are, but requires, you know, a mix and match, or a reason to, you know, buy more than one.
+
+00:27:32.000 --> 00:27:51.000
+A returning customer has bought before, so it's… he's probably coming from your email, your SMS, or your loyalty program, right? Or wherever your email is sending them. They need the next size, a refill, or something new, not a deeper price, right? Because we saw in the offer a lot of time returning customers would buy
+
+00:27:51.000 --> 00:27:58.000
+Most likely anyways from you, even if you don't offer, like, a very deep discount, right?
+
+00:27:58.000 --> 00:28:13.000
+So we are going to go through a natural personal care brand. We work with this store. It's a US-based store. It's a men's grooming brand. Essentially $18,000 a month, $35 AOV, $60 was the free shipping line
+
+00:28:13.000 --> 00:28:29.000
+6 in 10 orders are new customers and about 1.6 orders per customer, right? We follow the exact same strategy in terms of asking Sidekick, reading, you know, the data, what findings come out of it, and finally build the bundles per finding
+
+00:28:29.000 --> 00:28:45.000
+These are the five questions that, you know, you need to start with. Essentially, what is already selling? So your top 10 products last 10 months, last 12 months, what goes together? So what people are already buying together, which bundles already sell
+
+00:28:45.000 --> 00:29:02.000
+Right? Who buys and how often? So, new versus returning customer, what's your AOE? What's your order per customer over the last 12 months? And where is the order landing, right? In terms of increments, is it the first $20, $40, $50, how far away from the shipping threshold, or how
+
+00:29:02.000 --> 00:29:17.000
+Much beyond the shipping threshold, right? This essentially gives you this kind of data in terms of what the sales are looking like, what are people are already buying together, what bundles are selling, and who buys, and how often, right?
+
+00:29:17.000 --> 00:29:30.000
+This essentially then leads to 5 findings that we had for this store, right? We'll go through each of these findings, and then I'll walk you through what bundles we built for each of these particular findings that came up.
+
+00:29:30.000 --> 00:29:41.000
+So the first one was essentially the three pack always outsells the single, but the average order is still 35 and free shipping starts at 60, right?
+
+00:29:41.000 --> 00:29:52.000
+A simple fix here was, you know, a new customer is landing before the weekend, most likely comes here, because this is where they're running their ads
+
+00:29:52.000 --> 00:30:10.000
+This is their most picked, right? You… we just put another one right next to it that says, hey, it ships free, you clear the shipping threshold, and you get a year's worth of product with you, right? So you have your whole year, you're saving $16, and it ships free
+
+00:30:10.000 --> 00:30:34.000
+Right? Suddenly, we saw that, you know, now this quantity ladder has led people to this particular tier more than buying just the 3 states, right? Now, some more examples right here, for example, for this particular brand, we again did the same thing where the three was, you know, 3 ships free plus gift. But then another lander tells them, Hey, you're saving a lot more
+
+00:30:34.000 --> 00:30:50.000
+unlocking a mystery gift, right? The idea is not to show you, like, you know, different designs here. The idea is that, essentially, the findings for these stores is the same, right? What we are doing
+
+00:30:50.000 --> 00:31:04.000
+is we are building custom bundles suited for those stores, right? It is not hard to do a lot of this with Claude, with your devs, right? Earlier, building these bundles like simple quantity breaks is simple
+
+00:31:04.000 --> 00:31:22.000
+Right? But truly building quality breaks where, you know, now it starts making sense for your brand is suited for what you, you know, want to sell to your customers required a lot of dev work. Now it doesn't, right? Just simply by connecting your store data to an NEMCP
+
+00:31:22.000 --> 00:31:39.000
+With your LLM using, like, you know, minimum dev work, all of this is possible alone, like, by any brand now, right? So yeah, so this is, you know, the first finding that we had. And these are some of the bundles that you know we built around this finding. And then finally.
+
+00:31:39.000 --> 00:31:55.000
+The next finding was like about $1,300 orders were putting a body wash or soap with deodorant by hand, right? 5,600 more bought it as a combo from a page shoppers never see. So how do I put what people were already buying
+
+00:31:55.000 --> 00:32:13.000
+In front of them, when the SKUs were so many that like it was very hard for someone to actually navigate to every product and find what they need, right? So what we did here was, while they were already buying this, we went ahead and added an entire build your morning routine right on the PDP.
+
+00:32:13.000 --> 00:32:30.000
+So any new customer who's buying a particular scent natural deodorant pack can then right here add a body wash, add a body spray. You get, you know, the shipping free and you've crossed, you know, you get a free gift or whatever offer you want to run, but essentially you want
+
+00:32:30.000 --> 00:32:38.000
+you know, encourage them to order all of it together, and hopefully increase the basket size as well as the AOE.
+
+00:32:38.000 --> 00:32:53.000
+Very similar, right? Just the vibes or the cherry pair. Again, right? This is a saddle brand where, you know, a lot of people were only buying saddle and then coming back and buying maple lined robes, right?
+
+00:32:53.000 --> 00:32:58.000
+So it was just obvious that, you know, you go ahead and sell all of it together
+
+00:32:58.000 --> 00:33:17.000
+The third finding that we had from the data was like there are three pack, six-pack, and the body wash 3-pack, they all sell, they're all fixed scents. But a brand-aware customer is now coming back. You need to now expose them to different scents, right? They were all coming back and still buying, you know, one or two things that they were already buying. So how do you make sure
+
+00:33:17.000 --> 00:33:35.000
+They buy more from you, right? This is where mix and match comes in handy. This is where, you know, different scents, you give a quantity order discount, and, you know, you expose them to all your products in a single page, different sense, and you know, much easier to buy with a subscription as well.
+
+00:33:35.000 --> 00:33:55.000
+A very different use case of a very similar thing was, you know, when you have a lot of SKUs, you also don't want to offer mix and match in a way where the customer is getting confused. So what we did was we did this case, like 12 bottles fixed, right? This is our pick for you
+
+00:33:55.000 --> 00:34:13.000
+Even if you want to change, you go ahead and then swap, right? But essentially here, you're making sure, even though when someone is brand aware, but a lot of SKUs you want to still not expose them to, you know, too much, otherwise, you know, confusion, all of that
+
+00:34:13.000 --> 00:34:22.000
+So yeah, so these are some examples of how you, you know, how brand aware customers are can be shown more of mix and match.
+
+00:34:22.000 --> 00:34:37.000
+The fourth finding we had for them was, you know, the Try Them All kit was their top five product, right? But once the try all kit was bought, there was nothing else that we were selling them again
+
+00:34:37.000 --> 00:34:57.000
+Right? So for a returning customer, what we did was now, like, you know, send them an email and get them to this page right? You've already found your favorite right now for that particular scent. Here's everything that you can now buy right? So this was an email campaign that you can run. Essentially, once you have found what you like
+
+00:34:57.000 --> 00:35:08.000
+Here's everything else, like, you know, an offer, a discount, however you want to price it. But this is, this was something that was targeting the returning customers.
+
+00:35:08.000 --> 00:35:30.000
+Finally, customers ordering 1.6 time, returning customers spend no more than the new ones, right? So how do you get the returning customers to now have their AOV higher than your first basket, right? So what we really did was, you know, build never run out on your morning. So like, you know, go for a subscription every six weeks, 10 weeks, come back
+
+00:35:30.000 --> 00:35:43.000
+Get your deliveries, right? Or refill packs, right? You've already bought from us. Stent designs now take you up until July. Select your design, you have your, you know, refills ready.
+
+00:35:43.000 --> 00:35:57.000
+So yeah, so these were, you know, five findings that we had for this particular store. We built their entire, you know, bundling journey and again, right? All of this
+
+00:35:57.000 --> 00:36:19.000
+is simply… is… can… is doable by you also, right? You just have to go to Sidekick, ask for the relevant data, you have to dig into, you know, what's currently happening, what are people buying, and all of the prompts that we gave, right? And looking at that, you know, come up with a bundling strategy, like I said, every bundle has four decisions, one by one. If you
+
+00:36:19.000 --> 00:36:37.000
+you know, map out your customers, map out your templates to each of those, figure out the strategy, and then the build part now is not as hard, like, you know, what used to take, like I said, what used to take months is now just a couple of days, right? So that's the power of AI you need to use, that whatever strategy comes out
+
+00:36:37.000 --> 00:36:44.000
+can be customized for you, for your store, and that's what you need to present to your customer.
+
+00:36:44.000 --> 00:37:08.000
+Finally, from the four decisions, one of the decisions was where it lives, right? There are a number of places in a shopper journey where you could place bundles. Top bar is where everyone sees it, menu is mostly for brand-aware customers, homepage, again, brand aware and returning, but when you send your new customers to, let's say, a product page, or if they land from like a Google or an agent directly to a product page
+
+00:37:08.000 --> 00:37:25.000
+That's where you expose them to your top two three products right there. And after the order also, we've seen a lot of post-purchase upsells happening in terms of, you know, quick refill packs, quick bundles, that's also a great place to upsell
+
+00:37:25.000 --> 00:37:27.000
+To returning customers.
+
+00:37:27.000 --> 00:37:45.000
+Finally, the fourth decision we had was naming your bundles, as you would have seen in a lot of examples before. These bundles were not really called like a triode, duo, mix and match kit, right? They had names because they were essentially, you know, targeting a certain emotion. They were targeting a need
+
+00:37:45.000 --> 00:38:06.000
+So, you're coming back, how many sticks do you need, right? Build your pack, found your favorite, fill a freezer for someone you love, right? Set a Thanksgiving table. So a lot of these namings we've seen have resulted in slightly higher conversion, than, you know, your typical trio duo sales, names.
+
+00:38:06.000 --> 00:38:23.000
+Alright, so this is sort of like the summary, right? Give each bundle a job, a shopper, and a page, right? With new customers before BFCM. Here's where, you know, the bundle types that we showed you were like a ladder or a routine
+
+00:38:23.000 --> 00:38:39.000
+The weekend, put the depth inside the sets, right? Go for deeper offers, but send them to build your own pages. It's mostly for brand aware pages, build your pack, quality breaks, right? December, start doing gifting, and we'll go slightly deeper into this
+
+00:38:39.000 --> 00:38:54.000
+And finally, January is when you need to target your returning customers with refill packs, found your favorites, come back, right? All your email campaigns start running here. Like I said, you know, each shape has its offer, you just need to figure out
+
+00:38:54.000 --> 00:38:57.000
+what that is
+
+00:38:57.000 --> 00:39:13.000
+Gifting in the last quarter becomes extremely important and targeting those customers, you know, you could build your gift boxes. What we've generally seen is again a fixed price gift boxes work the most
+
+00:39:13.000 --> 00:39:29.000
+Because these are, you know, price sensitive customers. So a lot of time, you know, gifts under $50, gift under $100, gift under $200. Who are you buying for? Right. Those sort of things start working. And then, you know, putting a card, putting
+
+00:39:29.000 --> 00:39:46.000
+You know, a note, all of that start working, but essentially a box needs to be built around the person or the occasion. Generally, a fixed price box with wrapping card included is what we've seen convert the highest for when it comes to gift boxes
+
+00:39:46.000 --> 00:40:01.000
+A gift page in the menu, the December home page, thank you page. This is essentially where you could put your gift boxes. And again, right from a naming perspective, like for new parents at the Thanksgiving table for
+
+00:40:01.000 --> 00:40:04.000
+a baby, a Christmas dinner, right?
+
+00:40:04.000 --> 00:40:11.000
+these are some of the, you know, examples of gift boxes
+
+00:40:11.000 --> 00:40:37.000
+Once you actually find a bundle that sells, right, what we've now seen a lot of brands doing is actually running ads directly to their bundling pages, right? Essentially, what we see here is, you know, once you've figured out what offer is working, what your pre-curated sets that are working, so there's a brand who's done like, you know, pre-curated sets and build your own on the same page
+
+00:40:37.000 --> 00:40:53.000
+Right? So I'll get your running ads now directly here. So now what that does is, you know, for your customers, they're able to see a lot of your SKUs and products right here. And, you know, the offer starts making sense, the products start making sense, but how do you reach this place
+
+00:40:53.000 --> 00:41:07.000
+is once you've run a lot of your data, a lot of your analysis, you run a couple of bundles, and all of that then leads you to, you know, figuring out what's working, and then you can even run, you know, your ads directly to it.
+
+00:41:07.000 --> 00:41:22.000
+These are the 7 prompts we'll obviously send it to you, and then we'll also send a skill that with these prompts will help you figure out the bundle strategy itself, right? So all the findings and the strategies that you were seeing, you'll be able to generate for your store as well.
+
+00:41:22.000 --> 00:41:33.000
+Yeah, so this is just one picture, I think we've gone through it. That's the end to the funding section. And now we are going to move on to
+
+00:41:33.000 --> 00:41:42.000
+A very interesting section on AI right AEO, which is essentially Ask Engine Optimization
+
+00:41:42.000 --> 00:41:54.000
+Will shoppers reach your store through AI this BFCM, right? Shopify is already started sending your products to
+
+00:41:54.000 --> 00:42:08.000
+you know, has already started sending your products to all these Llms. You probably are already seeing, you know, traffic from Llms. You're seeing, you know, purchases from Llm. But what
+
+00:42:08.000 --> 00:42:20.000
+The data is also telling is there is a higher conversion from people who coming from LLMs and also greater revenue per visit from AI referred shoppers, right?
+
+00:42:20.000 --> 00:42:31.000
+These are, you know, high intent driven customers who you want to make sure are, you know, increasing in terms of the size of your customers, customer segment, right?
+
+00:42:31.000 --> 00:42:38.000
+How do we essentially do that? That's what I'm going to take you through this section.
+
+00:42:38.000 --> 00:42:49.000
+AI shopping, like, there are two different things, right? One is an LLM chat recommendation, and the other is Agentic shopping, right? What that means is
+
+00:42:49.000 --> 00:43:02.000
+Simply when you type, you know, what are good running shoe brands, an LLM would suggest, you know, different products, it'll tell you the price point, what the reviews are saying, you follow the link, and you end up on that website where you complete your purchase, right?
+
+00:43:02.000 --> 00:43:17.000
+The other part is an agentic shopping, where the agent itself is checking out and completing the entire transaction, right? So you've said, like, you know, find my running shoes and $100 that can arrive by Friday, right? Agent finds it
+
+00:43:17.000 --> 00:43:35.000
+puts it in the cart and completes it, right? Both of these matter, right? This is getting traffic to your website. This is directly converting for you from an agent, right? How you appear in both of those is essentially recommendation is where, like, your brand needs to get named.
+
+00:43:35.000 --> 00:43:40.000
+Right? Agentic shopping is where the sales happen.
+
+00:43:40.000 --> 00:43:43.000
+Now, how do you get recommended? There are two ways.
+
+00:43:43.000 --> 00:44:05.000
+Route A the other web route A via the Shopify product catalog. This is a longer play. This you can do in, you know, a week's time right? So we'll focus more here. But essentially the web is everything you've been doing so far anyways, right from an SEO perspective, whatever you were doing for product pages
+
+00:44:05.000 --> 00:44:21.000
+blog posts, FAQs, making sure, you know, you're getting listed in other gift guides, in other recipe blogs, for example, if you're a food and beverage brand, the Reddit threads, right? The good work that you are doing from a website perspective is what
+
+00:44:21.000 --> 00:44:38.000
+you know, is now helping you get cited by LLMs as well. The second part is your Shopify product catalog, essentially your entire product taxonomy from what category each product is selling title, price, stock, shipping, reviews
+
+00:44:38.000 --> 00:44:50.000
+Right, everything that Shopify is passing to LLMs to read is what, you know, your root be is, right? Both of these help you get recommended.
+
+00:44:50.000 --> 00:45:05.000
+I am now going to actually… okay, so this is quickly on route A, like, if you were to, you know, search for something like what is the best hot sauce? This is how an LLM would come up with, you know, recommendation. It'll tell you some of their picks
+
+00:45:05.000 --> 00:45:11.000
+You know, why they're picking this, and a lot of this is, again, coming from your product pages.
+
+00:45:11.000 --> 00:45:26.000
+If you were to go to Google and select best hot sale, like, you know, this AI overview, is, you know, what, again, you know, if the AI overview starts recommending you is because, you know, your, description, title, etc.
+
+00:45:26.000 --> 00:45:33.000
+everything is, you know, matching this particular intent flow. So this is how, you know, the route A works
+
+00:45:33.000 --> 00:45:43.000
+But let's now go to route B, and let me quickly show you what that means right is your store being cited in the Shopify catalog today?
+
+00:45:43.000 --> 00:45:58.000
+4 checks, store readiness, product readiness, how your shoppers are shopping, optimize for prompts. So I'll do a quick demo here. Essentially, this is a store check, right? The high-level store checks is, is your store public
+
+00:45:58.000 --> 00:46:19.000
+Are you on an eligible plan, ships to yours or Canada earlier, you know, a lot of Shopify had only allowed for US or Canada. Now, even if you're outside US, you can still ship to US, but then there are some certain restrictions depending on which LLM you're on. Content compliancy, extremely important. Your shipping policies, privacy policies, all of these need to be updated
+
+00:46:19.000 --> 00:46:36.000
+On your website, right? So these are very high level store checks which get you at least eligible to get listed right? Now, review your AI channel. This is something that you do on. So if you go to as on your sales channel, if you go to Agentic
+
+00:46:36.000 --> 00:46:55.000
+This is where you will find, you know, what Shopify is already putting you on, right? So if you allow Shopify to manage for me, you're currently getting listed on all of these AI chats, right? Now, what you could do here is like Shopify is already telling you what recent searches
+
+00:46:55.000 --> 00:47:11.000
+your products appeared for, and let's say, you know, this particular brand is in food and beverage. So for this particular category, what people are searching for so that these, you know, are the intent prompts essentially that will help you
+
+00:47:11.000 --> 00:47:31.000
+Understand what your title or description needs to have, right? Just updating your title and description, you know, basis, you know, what you think it should be now is not relevant. What you really need to think about is how are people finding you right? What are they searching for? What is important to them
+
+00:47:31.000 --> 00:47:41.000
+Right? Those are your intent prompts, and once you have those, that is what then helps you, you know, write your proper titles, descriptions, categories, etc.
+
+00:47:41.000 --> 00:48:04.000
+What Shopify has also actually done is if you go to your product catalog, you can select any product. Right now, this is set to like product title, but essentially you could set another meta field in your product page. And what that could do is you could have a separate title and description on your website
+
+00:48:04.000 --> 00:48:21.000
+But what agents need could be another title or description, right? So these could be much more nuanced for intent prompts that we were just talking about. And you could write, you know, anything here, but it will not reflect on your actual page
+
+00:48:21.000 --> 00:48:27.000
+Yeah, so this is all in your, Agentic sales channel.
+
+00:48:27.000 --> 00:48:33.000
+And now the second part of your product catalog, right? How do you face that?
+
+00:48:33.000 --> 00:48:49.000
+So, product readiness is essentially all everything on your when you update your product, right? Right now, for example, you have, you will see probably here there are categories missing category improvements needed
+
+00:48:49.000 --> 00:49:07.000
+You might have listed some other categories, Shopify thinks it's some another category right? So there are category improvements, descriptions missing, you know, you've got to review a few things individually. This is a big no, right? If your products have no inventory, that's a big bad signal to Llms that you're out of stock.
+
+00:49:07.000 --> 00:49:17.000
+But essentially, if you have no inventory, then this is this is happening because these should be unlisted products or archived products, right? So do not leave products that you're not selling
+
+00:49:17.000 --> 00:49:36.000
+As, you know, with no inventory, you should either archive it or, you know, unlist these products, right? So if you go here, like, you know, you can see the categories missing. There are some suggestions, you've got to go back and, you know, update all your product categories
+
+00:49:36.000 --> 00:49:39.000
+titles, etc.
+
+00:49:39.000 --> 00:49:43.000
+So this is simple things that you could do on your product catalog site.
+
+00:49:43.000 --> 00:49:53.000
+Now, let's move on to the agent side, right? What is like, for example, if I were to search for best hot pepper sauce right now
+
+00:49:53.000 --> 00:50:03.000
+When I search this, this is what people are seeing currently, right? But this store isn't in the top 250 of the 359 results.
+
+00:50:03.000 --> 00:50:21.000
+Right? What this helps you do is look at the competition and see what their title, what their description, what their specs, right, is already saying, right? Or view their product. So a lot of competitor analysis here helps in defining some of the things that you may want to update for yourself as well.
+
+00:50:21.000 --> 00:50:28.000
+Right? For example, if I searched for
+
+00:50:28.000 --> 00:50:46.000
+Best for blown sauce. This is where the product is number one, right? But you are number one here doesn't mean you will maintain this. You've got to maintain it with constant work in terms of making sure that you know your reviews increase, you're in, you know.
+
+00:50:46.000 --> 00:51:00.000
+Reddit mentions, or you know the listicle exchanges, the guides that, you know, you can put your brand in. All of that is continuous work, and a lot of the web work that we spoke about earlier, continues to serve the purpose here as well
+
+00:51:00.000 --> 00:51:16.000
+Right? Yeah, so this is, like, you know, I'm running very simple queries here, right? You've got to run your queries, you know, you've got to figure out what are the queries that are relevant to you. And when I
+
+00:51:16.000 --> 00:51:31.000
+Like, when I write this, this is not how agent is going to read the query and give you the results, right? The query is going to get split into even more sub queries, right? And those subqueries are differently going to get answered and recommendations, and then the final result is what is going to be shown
+
+00:51:31.000 --> 00:51:51.000
+So yes, you need to make sure that what you're selling, how you're selling, what people are perceiving, all of that, you know, you know when you're figuring out your intent prompts. Competitive answers, I think we've already spoken about. You can put a competitor store domain, like, figure out your intent prompts and see what they are doing, where they are ranking, and
+
+00:51:51.000 --> 00:51:55.000
+You know, you can improve in your own
+
+00:51:55.000 --> 00:51:56.000
+store
+
+00:51:56.000 --> 00:52:15.000
+Finally, optimize for prompts. So this is essentially what I've been saying up until now, right? So let's say this is one of the products, right? This is the recommendation in terms of the product health is good. But this is a recommended title and description of what to update. Now, let's say
+
+00:52:15.000 --> 00:52:21.000
+If I update, you know, for another intent prompt, it'll tell me
+
+00:52:21.000 --> 00:52:39.000
+It'll tell me another, you know, what, a recommended title and description, right? But what you also need to do is here, like I said, right, like, you need to think how this source will be used, for example, by is it a burger sauce? Is it a source for
+
+00:52:39.000 --> 00:52:57.000
+Asian, cooking, right? You've got to get very specific now, because you don't know what, how people will search for the price point, are they price sensitive, right? All of those things need to come in your description now, with, with a lot of specifics
+
+00:52:57.000 --> 00:53:10.000
+Alright. So yeah, so essentially what the four checks that you need to do now so that you know that you know your AI agent, you know, actually recommends you is store readiness.
+
+00:53:10.000 --> 00:53:25.000
+product readiness, understand how the shoppers are shopping. So search the catalog the way a buyer would, right? And finally, optimize for those prompts, right? So depending on three, optimize your listing for those particular prompts
+
+00:53:25.000 --> 00:53:42.000
+This part, at least, is very doable now. This, I think, is ongoing continuous work that you can continue to, you know, work on your store.
+
+00:53:42.000 --> 00:53:50.000
+Yeah, yeah, so product record, not the product page is what's broken. These were the findings. Again, right? Search the catalog.
+
+00:53:50.000 --> 00:54:09.000
+Pick the prompts a buyer would type, right? Then fix the product for that prompt. We've covered this already. This is important, right? So what Shopify already handles for you and what only you can fix, right? Shopify is already handling checkout, payments, sending your catalog to AI platforms, right? The whole UCP
+
+00:54:09.000 --> 00:54:25.000
+protocol, all your, you know, website actually being readable by AI, right? Order creation in your admin, all of this is being handled by Shopify. But what you can do is pass the gates, right? The basic gates of
+
+00:54:25.000 --> 00:54:46.000
+The first gate of will AI even recommend you, right? Set the categories, fill the fields, write titles that say what the product is, get reviews into Shopify's product rating field, archive what you no longer sell, right? Quick things that you can fix right away, you know, before BFC
+
+00:54:46.000 --> 00:55:03.000
+Other things that you can do to improve your AEO presence, you know, your FAQ page plus your Shopify knowledge base, very important. Whatever your, you know, the hesitations that a customer generally has before buying, put all of them in FAQs, right? When will it reach shipping time, delivery times, all of it
+
+00:55:03.000 --> 00:55:18.000
+Search titles and meta descriptions, right? Very important. These are, again, right, going back to the very basics of SEO, it's all the same now as well. You've got to write your meta descriptions, your alt text and clean images, right? Ratings are important
+
+00:55:18.000 --> 00:55:36.000
+intro copy on your collection pages, spelling mistakes, tail promos and titles, remove all of it, right? Archive what you no longer sell, and be in the lists that AI cites. So when you're searching for your brand, let's say, you know, ChatGPT recommends, you know, this particular listicle is suggesting these brands
+
+00:55:36.000 --> 00:55:47.000
+Because that listicle has a higher domain authority, or a lot of traffic, it considers it, you know, as an expert. You want to get listed on those. So this is a whole
+
+00:55:47.000 --> 00:56:00.000
+you know, exercise where you reach out to different, you know, listicles, gift guides, etc. and start, you know, making sure that you're getting traffic from some of these external websites as well.
+
+00:56:00.000 --> 00:56:10.000
+Alright, so that was the end on the AEO. So we've covered bug link, we've covered AEO. Let me take a quick pause here and see
+
+00:56:10.000 --> 00:56:25.000
+How are you feeling? Anything that, you know, you want me to cover before I move on to the next section? Any questions, feel free to put in the chat. You know, I'll just quickly look at that
+
+00:56:25.000 --> 00:56:26.000
+If not, we'll move, yeah
+
+00:56:26.000 --> 00:56:40.000
+Yeah, while people put their questions in, this is the only time I'm going to pitch in the app and also because we're not going to ask you for any payments to use this app for the next three to four months
+
+00:56:40.000 --> 00:56:56.000
+This is one of the new apps that we've launched. It's still in private beta. If you want to use this, the one that we were… that was showing to optimize for Agentic, you can reach out to us. I'll give you a link to download the app, and we'll help you set this up and
+
+00:56:56.000 --> 00:57:13.000
+Come back to you on what you need to do. As I said, the idea is not to… this is going to be free for you, because you're in private beta, at least for the next four months, so that you can run through this season. And
+
+00:57:13.000 --> 00:57:14.000
+Yeah.
+
+00:57:14.000 --> 00:57:28.000
+I do think Nitiqa, we're on time, so we might not be able to discuss, you know, what happens after the pay button. A lot of it is, I think, fairly common knowledge as well. We are going to send you all the details, so you should be able to craft the right kind of post-purchase offers and right kind of thank you
+
+00:57:28.000 --> 00:57:36.000
+Paid surveys and order page, you know, offers and stuff like that. But what we do want to sort of end with is,
+
+00:57:36.000 --> 00:57:54.000
+Just to recap, these are, you know, the four strategies that you can focus on. We'll be sending you toolkits and sidekick queries to help analyze and come up with the right offer strategy, right bundling strategy, figure out what's missing for AI search. And then, lastly, if you want us to do
+
+00:57:54.000 --> 00:58:09.000
+Any of the audits for your own store for Black Friday, based on everything that we spoke about, feel free to just book a meeting on this link. You can obviously reach out to us if you… if you're not able to sort of scan it and book it right now, and we'll send you the link
+
+00:58:09.000 --> 00:58:24.000
+or sit at skylama.com are all good emails. You can scan this and book it right now. The audit is free of cost. We're gonna run all the things that we spoke about for your own data, for your
+
+00:58:24.000 --> 00:58:33.000
+sort of strategy, try and understand your business objectives in a meeting, and then come up with a recommendation on what all you can do. So, yeah.
+
+00:58:33.000 --> 00:58:54.000
+Just just that I think I think we're at time, 4 minutes to go. If anybody has any questions, feel free to put them, and we can discuss it now, or obviously we can. We can do it in the in a separate session as well.
+
+00:58:54.000 --> 00:58:57.000
+Perfect. Alright.
+
+00:58:57.000 --> 00:59:06.000
+Hope the session was useful, and as I said, we'll be sending all these details by early next week.
+
+00:59:06.000 --> 00:59:27.000
+Thanks, everyone. Had a great time today and look forward to hearing from you. Bye-bye.
+
