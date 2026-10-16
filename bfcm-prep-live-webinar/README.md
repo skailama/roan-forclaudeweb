@@ -27,7 +27,7 @@ Needs `ffmpeg` and Python 3 with Pillow. Source files go in `source/` (the Zoom 
 ```bash
 # video
 ffmpeg -ss 223.7 -i source/GMT20261015-165816_Recording_1986x1050.mp4 -t 3327.8 \
-  -map 0:v:0 -map 0:a:0 \
+  -map 0:v:0 -map 0:a:0 -map_chapters -1 -map_metadata -1 \
   -vf "fade=t=in:st=0:d=0.5,fade=t=out:st=3326.8:d=1" \
   -af "afade=t=in:st=0:d=0.5,afade=t=out:st=3326.8:d=1" \
   -c:v libx264 -preset medium -crf 20 -tune stillimage -pix_fmt yuv420p -r 25 -g 50 \
