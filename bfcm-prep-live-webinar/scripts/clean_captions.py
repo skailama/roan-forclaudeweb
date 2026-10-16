@@ -62,7 +62,7 @@ FIXES = [
     (r"\btail promos\b", "stale promos"),
     (r"\bcovered bug link\b", "covered bundling"),
     (r"\bNitiqa\b", "Neetika"),
-    (r"\bor sit at skylama\.com\b", "Neetika@skailama.com or Sid@skailama.com"),
+    (r"\bor sit at skylama\.com\b", "neetika@skailama.com or sid@skailama.com"),
 ]
 
 

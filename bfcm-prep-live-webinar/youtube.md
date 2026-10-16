@@ -40,5 +40,5 @@ The fourth agenda item, "what happens after they pay", was skipped for time (Sid
 
 - Add the free audit booking link to the description if you want it there. It was a QR code on the last slide and isn't in the transcript.
 - Thumbnail: `thumbnails/youtube.jpg` (1280x720).
-- Captions: upload `output/BFCM-Prep-Live-2026.en.srt` under Subtitles. It's Zoom's captions, shifted onto the trimmed timeline, with about 45 mishearings fixed ("office strategy", "Psychic", "funding section"…) and split into two-line captions. Check the two emails at 54:25 (`Neetika@skailama.com`, `Sid@skailama.com`); they were inferred from "sit at skylama.com".
+- Captions: upload `output/BFCM-Prep-Live-2026.en.srt` under Subtitles. It's Zoom's captions, shifted onto the trimmed timeline, with about 45 mishearings fixed ("office strategy", "Psychic", "funding section"…) and split into two-line captions. Check the two emails at 54:25 (`neetika@skailama.com`, `sid@skailama.com`); they were inferred from "sit at skylama.com".
 - YouTube needs at least 3 chapters, the first at 00:00, each at least 10 seconds long. This list meets all three.
