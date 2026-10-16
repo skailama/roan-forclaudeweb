@@ -1,6 +1,6 @@
 """Short, well-timed captions: Zoom's corrected words on Whisper's word timings.
 
-Usage: python3 -I scripts/make_captions.py <zoom_shifted.srt> <whisper_words.json> <out.srt>
+Usage: python3 -I scripts/make_captions.py <zoom_shifted.srt> <whisper_words.json> <out.srt> [--one-line]
 
 <zoom_shifted.srt> is Zoom's captions on the trimmed timeline (scripts/shift_captions.py);
 its mishearings are fixed with the list in clean_captions.py. <whisper_words.json> is
@@ -8,9 +8,10 @@ its mishearings are fixed with the list in clean_captions.py. <whisper_words.jso
 Zoom's text is better (names, numbers), Whisper's timing is better (Zoom's cues run
 up to 30 s), so each Zoom word takes the time of the Whisper word it lines up with.
 
-Captions are one line of at most 42 characters: the text is cut into phrases at
-sentence ends, commas and pauses, each phrase into evenly sized lines (no lone word
-left on a line), and captions too brief to read are merged into a neighbour.
+Default: Zoom's captions cut into blocks of at most two 42-character lines
+(clean_captions.chunks), each block starting and ending on its words' timings.
+--one-line: one line of at most 42 characters, cut at sentence ends, commas and
+pauses, with brief captions merged into a neighbour.
 """
 import difflib
 import json
@@ -19,7 +20,9 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from clean_captions import fix, secs, srt_ts  # noqa: E402
+import textwrap  # noqa: E402
+
+from clean_captions import LINE, chunks, fix, secs, srt_ts  # noqa: E402
 
 MAX_CHARS = 42
 MIN_DUR, MAX_DUR = 1.0, 6.0
@@ -145,15 +148,31 @@ def captions(zw, times):
     return caps
 
 
-def main(zoom_srt, whisper_json, out):
+def two_line_captions(zoom_srt, zw, times):
+    """Zoom's cues cut into two-line blocks, timed by their own words."""
+    caps, k = [], 0
+    for block in open(zoom_srt, encoding="utf-8").read().strip().split("\n\n"):
+        for part in chunks(fix(" ".join(block.splitlines()[2:]))):
+            n = len(part.split())
+            caps.append([times[k][0], times[k + n - 1][1], "\n".join(textwrap.wrap(part, LINE))])
+            k += n
+    assert k == len(zw), (k, len(zw))
+    for i, c in enumerate(caps):
+        nxt = caps[i + 1][0] if i + 1 < len(caps) else c[1] + 2
+        c[1] = min(max(c[1] + LEAD_OUT, c[0] + MIN_DUR), nxt - 0.02)
+        c[1] = max(c[1], c[0] + 0.3)
+    return caps
+
+
+def main(zoom_srt, whisper_json, out, style="--two-line"):
     zw = zoom_words(zoom_srt)
     ww = json.load(open(whisper_json))
     times, matched = align(zw, ww)
-    caps = captions(zw, times)
+    caps = captions(zw, times) if style == "--one-line" else two_line_captions(zoom_srt, zw, times)
     with open(out, "w", encoding="utf-8") as f:
         for i, (a, b, text) in enumerate(caps, 1):
             f.write(f"{i}\n{srt_ts(a)} --> {srt_ts(b)}\n{text}\n\n")
-    print(f"{len(zw)} words ({matched / len(zw):.0%} timed by Whisper), {len(caps)} captions, longest {max(len(c[2]) for c in caps)} chars -> {out}")
+    print(f"{len(zw)} words ({matched / len(zw):.0%} timed by Whisper), {len(caps)} captions, at most {max(c[2].count(chr(10)) + 1 for c in caps)} lines -> {out}")
 
 
 if __name__ == "__main__":

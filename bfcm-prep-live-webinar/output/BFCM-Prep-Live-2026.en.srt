@@ -1,6928 +1,4221 @@
 1
-00:00:01,070 --> 00:00:02,330
+00:00:01,070 --> 00:00:03,450
 Alright, perfect. Welcome, everyone.
-
-2
-00:00:02,440 --> 00:00:03,450
 Welcome to the webinar.
 
+2
+00:00:03,980 --> 00:00:10,080
+We are here today to discuss strategies on
+how to make this a successful Black
+
 3
-00:00:03,980 --> 00:00:07,050
-We are here today to discuss strategies
+00:00:10,100 --> 00:00:15,990
+Friday in what we are calling this as the
+first true Black Friday of the AI era
 
 4
-00:00:07,480 --> 00:00:09,020
-on how to make this a
+00:00:16,240 --> 00:00:18,160
+I know ChatGPT has been around for a
+while,
 
 5
-00:00:09,040 --> 00:00:10,830
-successful Black Friday
+00:00:18,180 --> 00:00:22,290
+but I think something significant shifted
+in the last 8 to 10 months
 
 6
-00:00:11,540 --> 00:00:13,400
-in what we are calling this as the first
+00:00:22,760 --> 00:00:27,860
+That's completely changed the game in how
+we strategize for Black Friday and the
 
 7
-00:00:13,420 --> 00:00:16,590
-true Black Friday of the AI era I know
+00:00:27,880 --> 00:00:32,720
+things that we do. A quick intro. I'm Sid.
+I'm the founder at Skai Lama.
 
 8
-00:00:16,610 --> 00:00:18,160
-ChatGPT has been around for a while,
-
-9
-00:00:18,180 --> 00:00:19,580
-but I think something significant
-
-10
-00:00:19,600 --> 00:00:22,290
-shifted in the last 8 to 10 months
-
-11
-00:00:22,760 --> 00:00:24,660
-That's completely changed the game in
-
-12
-00:00:24,680 --> 00:00:27,300
-how we strategize for Black Friday and
-
-13
-00:00:27,320 --> 00:00:28,520
-the things that we do.
-
-14
-00:00:28,540 --> 00:00:30,880
-A quick intro.
-
-15
-00:00:30,900 --> 00:00:32,720
-I'm Sid. I'm the founder at Skai Lama.
-
-16
-00:00:32,740 --> 00:00:34,990
+00:00:32,740 --> 00:00:36,800
 I think we've I've spoken to some of you,
-
-17
-00:00:35,140 --> 00:00:36,800
 Neetika, who's also the co-founder,
 
-18
+9
 00:00:36,820 --> 00:00:38,890
 has spoken to other folks here
 
-19
-00:00:39,400 --> 00:00:42,420
+10
+00:00:39,400 --> 00:00:44,900
 And we have been working with e-commerce
-
-20
-00:00:42,440 --> 00:00:44,900
 and DTC brands for the last five years
 
-21
-00:00:44,920 --> 00:00:45,560
-now,
+11
+00:00:44,920 --> 00:00:49,160
+now, primarily helping them with
+increasing average order value and
 
-22
-00:00:45,580 --> 00:00:47,680
-primarily helping them with increasing
+12
+00:00:49,180 --> 00:00:50,180
+conversions.
 
-23
-00:00:47,700 --> 00:00:49,770
-average order value and conversions.
+13
+00:00:51,060 --> 00:00:54,440
+Let me be clear about one thing. I've
+attended quite a few webinars,
 
-24
-00:00:51,060 --> 00:00:52,920
-Let me be clear about one thing.
+14
+00:00:54,460 --> 00:00:59,860
+and 90% of those is are like one hour long
+sales pitches to their actual products
 
-25
-00:00:52,940 --> 00:00:54,440
-I've attended quite a few webinars,
+15
+00:00:59,880 --> 00:01:04,460
+and services. We're going to make sure
+this is none of that. There's no secret.
 
-26
-00:00:54,460 --> 00:00:58,040
-and 90% of those is are like one hour
+16
+00:01:04,480 --> 00:01:07,950
+We run a few apps in the bundling and the
+discounting domain,
 
-27
-00:00:58,060 --> 00:00:59,500
-long sales pitches to their actual
-
-28
-00:00:59,520 --> 00:01:00,630
-products and services.
-
-29
-00:01:00,940 --> 00:01:02,000
-We're going to make sure this
-
-30
-00:01:02,020 --> 00:01:03,210
-is none of that.
-
-31
-00:01:03,560 --> 00:01:04,460
-There's no secret.
-
-32
-00:01:04,480 --> 00:01:06,280
-We run a few apps in the bundling
-
-33
-00:01:06,300 --> 00:01:07,950
-and the discounting domain,
-
-34
+17
 00:01:08,180 --> 00:01:10,310
 but we're not here to talk about our apps
 
-35
-00:01:10,480 --> 00:01:12,200
+18
+00:01:10,480 --> 00:01:14,400
 Whatever we are going to talk about are
-
-36
-00:01:12,220 --> 00:01:14,400
 things that we've learned over the last 8
 
-37
-00:01:14,420 --> 00:01:17,200
+19
+00:01:14,420 --> 00:01:19,490
 to 10 months of working with brands across
-
-38
-00:01:17,220 --> 00:01:19,490
 different sizes, across the continent.
 
-39
-00:01:19,820 --> 00:01:21,330
-As of today, we work with
+20
+00:01:19,820 --> 00:01:22,020
+As of today, we work with 6,000 plus
+brands,
 
-40
-00:01:21,350 --> 00:01:22,020
-6,000 plus brands,
+21
+00:01:22,040 --> 00:01:25,330
+and we've seen it across different
+categories.
 
-41
-00:01:22,040 --> 00:01:24,420
-and we've seen it across
-
-42
-00:01:24,440 --> 00:01:25,440
-different categories.
-
-43
+22
 00:01:25,460 --> 00:01:26,630
 We are trying different strategies,
 
-44
-00:01:26,700 --> 00:01:29,440
+23
+00:01:26,700 --> 00:01:30,780
 so this is all sort of a consolidation of
-
-45
-00:01:29,460 --> 00:01:30,780
 everything that we've learned that could
 
-46
+24
 00:01:30,800 --> 00:01:32,610
 be applied to this Black Friday
 
-47
-00:01:33,450 --> 00:01:35,850
-As as an outcome of this,
+25
+00:01:33,450 --> 00:01:38,200
+As as an outcome of this, we are not going
+to ask you to download our apps.
 
-48
-00:01:35,960 --> 00:01:37,240
-we are not going to ask you to
+26
+00:01:38,220 --> 00:01:41,260
+Everything that we are going to talk about
+is going to be sent to you in the form
 
-49
-00:01:37,260 --> 00:01:38,200
-download our apps.
+27
+00:01:41,280 --> 00:01:44,880
+of, you know, Sidekick questions or
+toolkits that you can use with your AI
 
-50
-00:01:38,220 --> 00:01:39,080
-Everything that we are going to
+28
+00:01:44,900 --> 00:01:49,140
+chatbots to strategize and come up with a
+personalized strategy for your
 
-51
-00:01:39,100 --> 00:01:40,600
-talk about is going to be sent to
+29
+00:01:49,160 --> 00:01:53,250
+for your own brand. With that out of the
+way,
 
-52
-00:01:40,620 --> 00:01:41,830
-you in the form of,
-
-53
-00:01:41,850 --> 00:01:43,540
-you know, Sidekick questions or toolkits
-
-54
-00:01:43,560 --> 00:01:45,940
-that you can use with your AI chatbots to
-
-55
-00:01:45,960 --> 00:01:48,180
-strategize and come up with a personalized
-
-56
-00:01:48,200 --> 00:01:51,010
-strategy for your for your own brand.
-
-57
-00:01:51,540 --> 00:01:53,250
-With that out of the way,
-
-58
-00:01:53,680 --> 00:01:56,560
+30
+00:01:53,680 --> 00:01:58,890
 what I want to do is now talk about the
-
-59
-00:01:56,580 --> 00:01:58,890
 agenda for today's session.
 
-60
-00:01:59,100 --> 00:02:00,380
+31
+00:01:59,100 --> 00:02:02,320
 In the next hour, we're going to talk
-
-61
-00:02:00,400 --> 00:02:02,320
 about 4 different things,
 
-62
-00:02:02,340 --> 00:02:04,560
-primarily 3 we might not be able to
+32
+00:02:02,340 --> 00:02:05,420
+primarily 3 we might not be able to get to
+the fourth one,
 
-63
-00:02:04,580 --> 00:02:05,420
-get to the fourth one,
+33
+00:02:05,440 --> 00:02:07,850
+but that's fairly straightforward, and
+we'll send you more information
 
-64
-00:02:05,440 --> 00:02:06,420
-but that's fairly straightforward,
+34
+00:02:08,560 --> 00:02:11,160
+We are first and foremost when it's Black
+Friday, Cyber Monday,
 
-65
-00:02:06,440 --> 00:02:07,850
-and we'll send you more information
+35
+00:02:11,180 --> 00:02:12,990
+we have to talk about the offer strategy.
 
-66
-00:02:08,560 --> 00:02:09,820
-We are first and foremost when
+36
+00:02:13,460 --> 00:02:16,710
+So we're going to look at a real-life case
+study, a real-life account,
 
-67
-00:02:09,840 --> 00:02:10,580
-it's Black Friday,
-
-68
-00:02:10,600 --> 00:02:11,880
-Cyber Monday, we have to talk
-
-69
-00:02:11,900 --> 00:02:12,990
-about the offer strategy.
-
-70
-00:02:13,460 --> 00:02:14,670
-So we're going to look at a
-
-71
-00:02:14,730 --> 00:02:16,710
-real-life case study, a real-life account,
-
-72
-00:02:16,780 --> 00:02:18,380
+37
+00:02:16,780 --> 00:02:18,660
 obviously sensitized, you're not going to,
+you know,
 
-73
-00:02:18,400 --> 00:02:19,140
-you know, we're not going to talk
+38
+00:02:18,680 --> 00:02:20,150
+we're not going to talk about the brand
+names,
 
-74
-00:02:19,160 --> 00:02:20,160
-about the brand names,
-
-75
-00:02:20,420 --> 00:02:21,660
+39
+00:02:20,420 --> 00:02:23,620
 but we're going to talk about the actual
-
-76
-00:02:21,680 --> 00:02:23,620
 data and the audit that we did to come up
 
-77
-00:02:23,640 --> 00:02:24,800
+40
+00:02:23,640 --> 00:02:26,350
 with the personalized strategy and talk
+about how you can do the same thing
 
-78
-00:02:24,820 --> 00:02:26,900
-about how you can do the same thing As a
+41
+00:02:26,580 --> 00:02:31,340
+As a subset of offers and promotions,
+there's bundling, which is a big part of
 
-79
-00:02:26,920 --> 00:02:28,780
-subset of offers and promotions,
+42
+00:02:31,360 --> 00:02:37,140
+giving away a higher perceived value of
+discount and increasing the average order
 
-80
-00:02:28,800 --> 00:02:30,580
-there's bundling, which is a big
-
-81
-00:02:30,600 --> 00:02:33,030
-part of giving away
-
-82
-00:02:34,020 --> 00:02:36,213
-a higher perceived value of discount and
-
-83
-00:02:36,233 --> 00:02:37,750
-increasing the average order value.
-
-84
-00:02:37,920 --> 00:02:40,510
-The third thing is completely new,
-
-85
-00:02:40,660 --> 00:02:41,660
+43
+00:02:37,160 --> 00:02:41,660
+value. The third thing is completely new,
 more relevant than…
 
-86
-00:02:41,680 --> 00:02:43,120
-more relevant now than ever,
+44
+00:02:41,680 --> 00:02:46,400
+more relevant now than ever, the AI search
+and how Agentic commerce and AI chatbots
 
-87
-00:02:43,140 --> 00:02:45,280
-the AI search and how Agentic
+45
+00:02:46,420 --> 00:02:47,800
+find you and recommend you
 
-88
-00:02:45,300 --> 00:02:46,940
-commerce and AI chatbots find you
+46
+00:02:47,820 --> 00:02:51,900
+And then, if we do get time, we're going
+to talk about what happens after they pay,
 
-89
-00:02:46,960 --> 00:02:48,560
-and recommend you And then,
-
-90
-00:02:48,580 --> 00:02:49,615
-if we do get time,
-
-91
-00:02:49,635 --> 00:02:50,540
-we're going to talk about what
-
-92
-00:02:50,560 --> 00:02:51,900
-happens after they pay,
-
-93
-00:02:51,920 --> 00:02:53,770
+47
+00:02:51,920 --> 00:02:55,360
 the kind of strategies that you can use in
-
-94
-00:02:53,920 --> 00:02:55,360
 post-purchase thank you pages and even
 
-95
-00:02:55,380 --> 00:02:57,830
+48
+00:02:55,380 --> 00:02:58,270
 from a marketing strategy after that,
+right?
 
-96
-00:02:57,920 --> 00:02:59,520
-right? We're going to talk about a bunch
+49
+00:02:58,480 --> 00:03:01,460
+We're going to talk about a bunch of
+different prompts that you can use on your
 
-97
-00:02:59,540 --> 00:03:01,000
-of different prompts that you can use on
+50
+00:03:01,480 --> 00:03:05,040
+own Sidekick to get the data. We're going
+to give you toolkits that you can use that
 
-98
-00:03:01,020 --> 00:03:03,080
-your own Sidekick to get the data.
+51
+00:03:05,060 --> 00:03:07,070
+data to run and come up with your own
+strategy
 
-99
-00:03:03,100 --> 00:03:04,180
-We're going to give you toolkits that
-
-100
-00:03:04,200 --> 00:03:06,040
-you can use that data to run and come
-
-101
-00:03:06,060 --> 00:03:07,070
-up with your own strategy
-
-102
-00:03:08,050 --> 00:03:09,440
-Alright, with that,
-
-103
-00:03:09,460 --> 00:03:10,860
-let's get into Black
-
-104
-00:03:10,880 --> 00:03:12,870
+52
+00:03:08,050 --> 00:03:12,870
+Alright, with that, let's get into Black
 Friday's offer strategy.
 
-105
-00:03:13,540 --> 00:03:14,800
-The big thing that we've
+53
+00:03:13,540 --> 00:03:16,880
+The big thing that we've learned over the
+years, and some of you obviously know it,
 
-106
-00:03:14,820 --> 00:03:15,480
-learned over the years,
+54
+00:03:16,900 --> 00:03:20,250
+that this is Black Friday and Cyber Monday
+is not just about a weekend.
 
-107
-00:03:15,500 --> 00:03:16,880
-and some of you obviously know it,
+55
+00:03:20,540 --> 00:03:24,020
+The money is really made either side of
+it, pre-Black Friday and post-Black
 
-108
-00:03:16,900 --> 00:03:18,560
-that this is Black Friday and Cyber
+56
+00:03:24,040 --> 00:03:27,960
+Friday. Obviously, the weekend is a big
+driver on driving sales volume and getting
 
-109
-00:03:18,580 --> 00:03:20,250
-Monday is not just about a weekend.
+57
+00:03:27,980 --> 00:03:28,980
+new customers
 
-110
-00:03:20,540 --> 00:03:21,620
-The money is really made
+58
+00:03:29,260 --> 00:03:32,270
+But it is a three-phased weekend, right?
 
-111
-00:03:21,640 --> 00:03:22,840
-either side of it,
+59
+00:03:32,600 --> 00:03:36,540
+The first phase, some, you know, want to
+define it as two to three weeks before
 
-112
-00:03:22,860 --> 00:03:24,570
-pre-Black Friday and post-Black Friday.
+60
+00:03:36,560 --> 00:03:40,400
+November. For our purpose, we define
+everything from 1st of November leading up
 
-113
-00:03:24,600 --> 00:03:26,460
-Obviously, the weekend is a big driver on
+61
+00:03:40,420 --> 00:03:44,130
+to Black Friday. Then there's obviously
+the weekend, and then what happens
 
-114
-00:03:26,480 --> 00:03:28,340
-driving sales volume and getting new
-
-115
-00:03:28,360 --> 00:03:31,160
-customers But it is a three-phased
-
-116
-00:03:31,180 --> 00:03:31,920
-weekend,
-
-117
-00:03:31,940 --> 00:03:33,790
-right? The first phase,
-
-118
-00:03:34,060 --> 00:03:35,760
-some, you know, want to define it as two
-
-119
-00:03:35,780 --> 00:03:36,740
-to three weeks before November.
-
-120
-00:03:36,760 --> 00:03:38,380
-For our purpose, we define
-
-121
-00:03:38,400 --> 00:03:39,760
-everything from 1st of November
-
-122
-00:03:39,780 --> 00:03:41,250
-leading up to Black Friday.
-
-123
-00:03:41,360 --> 00:03:42,730
-Then there's obviously the weekend,
-
-124
-00:03:42,900 --> 00:03:44,980
-and then what happens 6 months from
-
-125
-00:03:45,000 --> 00:03:46,180
-Black Friday up to May,
-
-126
-00:03:46,200 --> 00:03:48,220
+62
+00:03:44,380 --> 00:03:48,220
+6 months from Black Friday up to May,
 right? The primary goal of the…
 
-127
-00:03:48,240 --> 00:03:49,960
-before Black Friday season is to
+63
+00:03:48,240 --> 00:03:52,310
+before Black Friday season is to make sure
+that we stop the wait and get some of the
 
-128
-00:03:49,980 --> 00:03:51,480
-make sure that we stop the wait and
-
-129
-00:03:51,500 --> 00:03:52,500
-get some of the user…
-
-130
-00:03:52,520 --> 00:03:53,660
-some of the customers to actually
-
-131
-00:03:53,680 --> 00:03:55,150
+64
+00:03:52,330 --> 00:03:55,150
+user… some of the customers to actually
 buy during that period.
 
-132
-00:03:55,820 --> 00:03:57,380
-Then, for Black Friday,
+65
+00:03:55,820 --> 00:04:00,160
+Then, for Black Friday, the main thing to
+understand and decide is what's the depth
 
-133
-00:03:57,400 --> 00:03:58,760
-the main thing to understand and
+66
+00:04:00,180 --> 00:04:02,540
+of discounting that you're okay with,
+given your margins
 
-134
-00:03:58,780 --> 00:04:00,380
-decide is what's the depth of
+67
+00:04:02,560 --> 00:04:05,590
+And how do you craft strategies that stick
+to that?
 
-135
-00:04:00,400 --> 00:04:01,780
-discounting that you're okay with,
+68
+00:04:05,880 --> 00:04:08,920
+And then obviously post Black Friday, the
+idea is how do you,
 
-136
-00:04:01,800 --> 00:04:03,940
-given your margins And how do you craft
+69
+00:04:08,940 --> 00:04:12,290
+for the new customers that you've
+acquired, how do you get the second order?
 
-137
-00:04:03,960 --> 00:04:05,590
-strategies that stick to that?
-
-138
-00:04:05,880 --> 00:04:07,820
-And then obviously post Black Friday,
-
-139
-00:04:07,840 --> 00:04:08,920
-the idea is how do you,
-
-140
-00:04:08,940 --> 00:04:09,880
-for the new customers that
-
-141
-00:04:09,900 --> 00:04:10,760
-you've acquired,
-
-142
-00:04:10,780 --> 00:04:12,290
-how do you get the second order?
-
-143
+70
 00:04:13,000 --> 00:04:14,740
 As we all know, during Black Friday,
 
-144
-00:04:14,760 --> 00:04:17,920
+71
+00:04:14,760 --> 00:04:19,780
 the cost of acquisition in terms of
+acquiring a new customer sometimes goes as
 
-145
-00:04:17,940 --> 00:04:19,240
-acquiring a new customer sometimes
+72
+00:04:19,800 --> 00:04:24,250
+high as 2x. So the depth on how far you
+want to sort of discount it
 
-146
-00:04:19,260 --> 00:04:21,140
-goes as high as 2x.
+73
+00:04:24,600 --> 00:04:28,960
+really matters. And the best way to figure
+all of this out on what the right
 
-147
-00:04:21,160 --> 00:04:22,980
-So the depth on how far you want
+74
+00:04:28,980 --> 00:04:33,150
+strategy is lies in your experience as a
+brand last year.
 
-148
-00:04:23,000 --> 00:04:24,250
-to sort of discount it
+75
+00:04:33,180 --> 00:04:35,220
+So you would have done some things last
+year.
 
-149
-00:04:24,600 --> 00:04:25,600
-really matters.
+76
+00:04:35,240 --> 00:04:37,370
+You would have a lot of data from last
+year.
 
-150
-00:04:26,220 --> 00:04:28,300
-And the best way to figure all of this out
-
-151
-00:04:28,320 --> 00:04:31,260
-on what the right strategy is lies in your
-
-152
-00:04:31,280 --> 00:04:33,150
-experience as a brand last year.
-
-153
-00:04:33,180 --> 00:04:34,400
-So you would have done some
-
-154
-00:04:34,420 --> 00:04:35,220
-things last year.
-
-155
-00:04:35,240 --> 00:04:36,220
-You would have a lot of data
-
-156
-00:04:36,240 --> 00:04:37,370
-from last year.
-
-157
-00:04:37,680 --> 00:04:39,680
+77
+00:04:37,680 --> 00:04:41,580
 And the whole aspect of this being the
+first Black Friday for the AI era
 
-158
-00:04:39,700 --> 00:04:42,240
-first Black Friday for the AI era means
+78
+00:04:41,600 --> 00:04:44,160
+means that you can now come up with
 
-159
-00:04:42,260 --> 00:04:45,260
-that you can now come up with an offer
+79
+00:04:44,180 --> 00:04:48,400
+an offer strategy that's rooted in your
+data, rooted in your business objectives,
 
-160
-00:04:45,280 --> 00:04:47,140
-strategy that's rooted in your data,
+80
+00:04:48,420 --> 00:04:52,820
+in a matter of few hours. What… and some
+of this would have been impossible
 
-161
-00:04:47,160 --> 00:04:48,400
-rooted in your business objectives,
+81
+00:04:52,840 --> 00:04:56,620
+earlier, and some of this would have taken
+weeks and multiple people to pull out the
 
-162
-00:04:48,420 --> 00:04:50,450
-in a matter of few hours.
+82
+00:04:56,640 --> 00:05:00,510
+data, make sense of it, analyze it, come
+up with the right strategy, debate it out,
 
-163
-00:04:51,020 --> 00:04:52,200
-What… and some of this would have
+83
+00:05:00,620 --> 00:05:01,620
+all of that, right?
 
-164
-00:04:52,220 --> 00:04:53,280
-been impossible earlier,
+84
+00:05:02,100 --> 00:05:06,580
+So the four-step process is we're going to
+ask 5 simple questions to Sidekick from
 
-165
-00:04:53,300 --> 00:04:54,820
-and some of this would have taken weeks
+85
+00:05:06,600 --> 00:05:08,510
+September to May, what happened last year.
 
-166
-00:04:54,840 --> 00:04:56,780
-and multiple people to pull out the data,
+86
+00:05:09,060 --> 00:05:12,610
+Then we're gonna figure out the insights
+from those… from that data.
 
-167
-00:04:56,800 --> 00:04:58,600
-make sense of it, analyze it,
+87
+00:05:12,880 --> 00:05:15,900
+We're gonna tell… we're gonna talk about
+the objectives that, you know,
 
-168
-00:04:58,620 --> 00:04:59,690
-come up with the right strategy,
+88
+00:05:15,920 --> 00:05:19,560
+we can have for different phases of Black
+Friday and for different customer sets,
 
-169
-00:04:59,900 --> 00:05:01,430
-debate it out, all of that, right?
-
-170
-00:05:02,100 --> 00:05:04,560
-So the four-step process is we're going
-
-171
-00:05:04,580 --> 00:05:06,320
-to ask 5 simple questions to Sidekick
-
-172
-00:05:06,340 --> 00:05:07,340
-from September to May,
-
-173
-00:05:07,360 --> 00:05:08,510
-what happened last year.
-
-174
-00:05:09,060 --> 00:05:10,580
-Then we're gonna figure out the
-
-175
-00:05:10,600 --> 00:05:12,610
-insights from those… from that data.
-
-176
-00:05:12,880 --> 00:05:14,130
-We're gonna tell…
-
-177
-00:05:14,220 --> 00:05:15,200
-we're gonna talk about the
-
-178
-00:05:15,220 --> 00:05:15,900
-objectives that,
-
-179
-00:05:15,920 --> 00:05:17,160
-you know, we can have for different
-
-180
-00:05:17,180 --> 00:05:18,800
-phases of Black Friday and for
-
-181
-00:05:18,820 --> 00:05:19,560
-different customer sets,
-
-182
+89
 00:05:19,580 --> 00:05:21,390
 and then come up with a personalized plan.
 
-183
-00:05:21,600 --> 00:05:23,660
-All of this is going to be no code,
+90
+00:05:21,600 --> 00:05:25,670
+All of this is going to be no code, no app
+required, plain English,
 
-184
-00:05:23,680 --> 00:05:25,670
-no app required, plain English,
-
-185
+91
 00:05:25,880 --> 00:05:27,410
 things that you can run on your own end.
 
-186
-00:05:28,240 --> 00:05:29,820
-The best way to start is actually
+92
+00:05:28,240 --> 00:05:30,740
+The best way to start is actually look at
+a case study that we,
 
-187
-00:05:29,840 --> 00:05:30,740
-look at a case study that we,
+93
+00:05:30,760 --> 00:05:36,850
+that we did for one of the US, United
+States beauty brands, right? What we saw
 
-188
-00:05:30,760 --> 00:05:33,430
-that we did for one of the US,
+94
+00:05:37,060 --> 00:05:38,680
+This is the lay of the land, right?
 
-189
-00:05:33,480 --> 00:05:35,250
-United States beauty brands, right?
+95
+00:05:38,700 --> 00:05:41,700
+So we, based on the five questions that I
+was talking about that we asked on
 
-190
-00:05:36,000 --> 00:05:38,520
-What we saw This is the lay of the land,
+96
+00:05:41,720 --> 00:05:42,960
+Sidekick, this was the lay of the land.
 
-191
-00:05:38,540 --> 00:05:39,820
-right? So we, based on the five
+97
+00:05:42,980 --> 00:05:48,820
+This is what happened from September till
+January end. The big thing to note is
 
-192
-00:05:39,840 --> 00:05:40,960
-questions that I was talking about
+98
+00:05:48,840 --> 00:05:53,540
+Black Friday was, of course, 2x higher
+than any other week.
 
-193
-00:05:40,980 --> 00:05:41,920
-that we asked on Sidekick,
-
-194
-00:05:41,940 --> 00:05:42,960
-this was the lay of the land.
-
-195
-00:05:42,980 --> 00:05:43,860
-This is what happened from
-
-196
-00:05:43,880 --> 00:05:46,350
-September till January end.
-
-197
-00:05:47,120 --> 00:05:50,780
-The big thing to note is Black Friday was,
-
-198
-00:05:50,800 --> 00:05:53,540
-of course, 2x higher than any other week.
-
-199
+99
 00:05:53,560 --> 00:05:56,970
 They drove 53,000 orders on Black Friday.
 
-200
-00:05:57,160 --> 00:05:59,280
-They obviously paid for it in the
+100
+00:05:57,160 --> 00:06:01,140
+They obviously paid for it in the highest
+depth of discount.
 
-201
-00:05:59,300 --> 00:06:01,140
-highest depth of discount.
-
-202
+101
 00:06:01,160 --> 00:06:03,750
 That's about 40% of normal prices.
 
-203
-00:06:04,600 --> 00:06:06,140
-And it's important to know what
+102
+00:06:04,600 --> 00:06:07,710
+And it's important to know what happened
+pre and after. So
 
-204
-00:06:06,160 --> 00:06:07,240
-happened pre and after.
+103
+00:06:07,760 --> 00:06:13,180
+four sort of sales in the 25 to 27, 23 to
+27% range that happened before,
 
-205
-00:06:07,260 --> 00:06:10,800
-So four sort of sales in the 25 to 27,
-
-206
-00:06:10,820 --> 00:06:13,180
-23 to 27% range that happened before,
-
-207
-00:06:13,200 --> 00:06:15,160
+104
+00:06:13,200 --> 00:06:16,710
 that obviously had an influence on what
-
-208
-00:06:15,180 --> 00:06:16,710
 happened on Black Friday as well.
 
-209
-00:06:16,740 --> 00:06:17,880
-So this is the lay of the land.
+105
+00:06:16,740 --> 00:06:20,300
+So this is the lay of the land. Let's
+double click on what happened before Black
 
-210
-00:06:17,900 --> 00:06:19,020
-Let's double click on what
+106
+00:06:20,320 --> 00:06:21,390
+Friday, right?
 
-211
-00:06:19,040 --> 00:06:21,390
-happened before Black Friday, right?
-
-212
-00:06:21,860 --> 00:06:23,490
-by Black Friday, 25%
-
-213
-00:06:23,940 --> 00:06:25,730
-was old news, right?
-
-214
-00:06:25,840 --> 00:06:27,280
+107
+00:06:21,860 --> 00:06:27,280
+by Black Friday, 25% was old news, right?
 So, if you've done an…
 
-215
-00:06:27,300 --> 00:06:28,910
+108
+00:06:27,300 --> 00:06:30,820
 if you've done offers in September,
+October, even leading up, like, late
 
-216
-00:06:29,240 --> 00:06:30,440
-October, even leading up,
-
-217
-00:06:30,460 --> 00:06:31,420
-like, late October,
-
-218
-00:06:31,440 --> 00:06:32,780
-early November, that is a certain
-
-219
-00:06:32,800 --> 00:06:34,810
+109
+00:06:30,840 --> 00:06:34,810
+October, early November, that is a certain
 headline discount site-wide discount.
 
-220
+110
 00:06:35,160 --> 00:06:36,580
 That is now your anchor that you know…
 
-221
-00:06:36,600 --> 00:06:39,200
-that you have no option but to beat
+111
+00:06:36,600 --> 00:06:40,060
+that you have no option but to beat if you
+want to attract
 
-222
-00:06:39,220 --> 00:06:40,600
-if you want to attract the Black
+112
+00:06:40,080 --> 00:06:44,860
+the Black Friday conscious shopper, right?
+So you can see they did 25%, 27%.
 
-223
-00:06:40,620 --> 00:06:41,920
-Friday conscious shopper,
+113
+00:06:44,880 --> 00:06:48,640
+What you see as the bars are the number of
+orders that they received in those
 
-224
-00:06:41,940 --> 00:06:44,000
-right? So you can see they did 25%,
+114
+00:06:48,660 --> 00:06:53,200
+months. And it's very visible that even at
+a higher discount, you know, we…
 
-225
-00:06:44,020 --> 00:06:46,580
-27%. What you see as the bars are
+115
+00:06:53,220 --> 00:06:57,020
+our data already suggests across 500
+stores that ran offers last year that we
 
-226
-00:06:46,600 --> 00:06:47,800
-the number of orders that they
+116
+00:06:57,040 --> 00:07:00,090
+analyzed, leading up to BFCM, especially
+October,
 
-227
-00:06:47,820 --> 00:06:49,190
-received in those months.
+117
+00:07:00,320 --> 00:07:03,420
+is generally a lull because now everyone's
+waiting if it's not like
 
-228
-00:06:49,520 --> 00:06:50,920
-And it's very visible that even
-
-229
-00:06:50,940 --> 00:06:53,200
-at a higher discount, you know, we…
-
-230
-00:06:53,220 --> 00:06:54,680
-our data already suggests across
-
-231
-00:06:54,700 --> 00:06:56,520
-500 stores that ran offers last
-
-232
-00:06:56,540 --> 00:06:59,200
-year that we analyzed, leading up to BFCM,
-
-233
-00:06:59,220 --> 00:07:00,220
-especially October,
-
-234
-00:07:00,320 --> 00:07:01,720
-is generally a lull because now
-
-235
-00:07:01,740 --> 00:07:03,580
-everyone's waiting if it's not like a
-
-236
-00:07:03,600 --> 00:07:05,540
-product that they immediately need.
-
-237
-00:07:05,560 --> 00:07:07,330
+118
+00:07:03,440 --> 00:07:07,330
+a product that they immediately need.
 Everybody's now waiting for the big deal.
 
-238
-00:07:07,440 --> 00:07:08,760
+119
+00:07:07,440 --> 00:07:09,240
 So even if there was a higher discount,
+there was a lull,
 
-239
-00:07:08,780 --> 00:07:09,940
-there was a lull, and they got much
+120
+00:07:09,260 --> 00:07:11,370
+and they got much lower number of orders.
 
-240
-00:07:09,960 --> 00:07:11,370
-lower number of orders.
-
-241
-00:07:11,520 --> 00:07:13,420
+121
+00:07:11,520 --> 00:07:15,300
 But the bigger point is you've anchored
-
-242
-00:07:13,440 --> 00:07:15,300
 the customer at a certain discount rate
 
-243
-00:07:15,320 --> 00:07:16,080
-because of a site-wide head,
+122
+00:07:15,320 --> 00:07:18,730
+because of a site-wide head, you know,
+headline discount that you publicized.
 
-244
-00:07:16,100 --> 00:07:17,880
-you know, headline discount
+123
+00:07:19,060 --> 00:07:20,340
+Now you have no option
 
-245
-00:07:17,900 --> 00:07:18,900
-that you publicized.
+124
+00:07:20,360 --> 00:07:23,730
+But to give away a much higher discount on
+Black Friday.
 
-246
-00:07:19,060 --> 00:07:21,820
-Now you have no option But to give away a
+125
+00:07:24,080 --> 00:07:29,060
+In total, September, October, they had
+already given $1 million in discount by
 
-247
-00:07:21,840 --> 00:07:23,730
-much higher discount on Black Friday.
+126
+00:07:29,080 --> 00:07:30,870
+running those 2 sales, right?
 
-248
-00:07:24,080 --> 00:07:25,320
-In total, September,
-
-249
-00:07:25,340 --> 00:07:27,280
-October, they had already given $1 million
-
-250
-00:07:27,300 --> 00:07:30,290
-in discount by running those 2 sales,
-
-251
-00:07:30,540 --> 00:07:31,540
-right?
-
-252
+127
 00:07:32,020 --> 00:07:33,990
 What happened during that period?
 
-253
-00:07:34,280 --> 00:07:35,370
-During that period,
+128
+00:07:34,280 --> 00:07:41,200
+During that period, they acquired roughly
+13,200 customers and gave away $2.9
 
-254
-00:07:35,560 --> 00:07:39,640
-they acquired roughly 13,200 customers and
+129
+00:07:41,220 --> 00:07:42,870
+million in discount.
 
-255
-00:07:39,660 --> 00:07:42,870
-gave away $2.9 million in discount.
+130
+00:07:43,380 --> 00:07:46,440
+If you just focus on the the new customers
+that they acquired,
 
-256
-00:07:43,380 --> 00:07:45,440
-If you just focus on the the new
-
-257
-00:07:45,460 --> 00:07:46,440
-customers that they acquired,
-
-258
+131
 00:07:46,460 --> 00:07:47,460
-which is a big part of,
+which is a big part of, you know,
 
-259
-00:07:47,480 --> 00:07:49,580
-you know, doing Black Friday sales for
+132
+00:07:47,480 --> 00:07:51,460
+doing Black Friday sales for any brand is
+to acquire new customers that you can
 
-260
-00:07:49,600 --> 00:07:51,000
-any brand is to acquire new customers
+133
+00:07:51,480 --> 00:07:55,440
+hopefully retain. They ended up paying
+about $220, right?
 
-261
-00:07:51,020 --> 00:07:52,450
-that you can hopefully retain.
-
-262
-00:07:53,200 --> 00:07:54,670
-They ended up paying about $220,
-
-263
-00:07:55,220 --> 00:07:57,320
-right? That doesn't mean that $220 was the
-
-264
-00:07:57,340 --> 00:07:59,100
+134
+00:07:55,460 --> 00:07:59,100
+That doesn't mean that $220 was the
 discount for every new customer.
 
-265
-00:07:59,120 --> 00:08:00,920
-A lot of the returning customers
+135
+00:07:59,120 --> 00:08:03,360
+A lot of the returning customers obviously
+use that discount as well. But if you
 
-266
-00:08:00,940 --> 00:08:02,860
-obviously use that discount as well.
+136
+00:08:03,380 --> 00:08:06,430
+Truly focus just on the new customer
+acquisition,
 
-267
-00:08:02,880 --> 00:08:05,440
-But if you Truly focus just on the
-
-268
-00:08:05,460 --> 00:08:06,460
-new customer acquisition,
-
-269
-00:08:06,940 --> 00:08:08,980
+137
+00:08:06,940 --> 00:08:10,370
 they have gave away 220 discount for every
-
-270
-00:08:09,000 --> 00:08:10,370
 new customer that they acquired,
 
-271
-00:08:10,680 --> 00:08:13,440
-and at 40% of normal prices
+138
+00:08:10,680 --> 00:08:16,370
+and at 40% of normal prices that every
+shopper got, both old and new.
 
-272
-00:08:13,460 --> 00:08:14,980
-that every shopper got,
+139
+00:08:16,720 --> 00:08:19,680
+What was interesting in their data, and
+this is all from those five Sidekick
 
-273
-00:08:15,000 --> 00:08:16,370
-both old and new.
-
-274
-00:08:16,720 --> 00:08:17,880
-What was interesting in their data,
-
-275
-00:08:17,900 --> 00:08:19,680
-and this is all from those five Sidekick
-
-276
+140
 00:08:19,700 --> 00:08:20,480
 sort of questions that you can ask your,
+you know,
 
-277
-00:08:20,500 --> 00:08:21,600
-you know, that you can ask your
+141
+00:08:20,500 --> 00:08:24,330
+that you can ask your Sidekick and get the
+data.
 
-278
-00:08:21,620 --> 00:08:24,330
-Sidekick and get the data.
+142
+00:08:24,620 --> 00:08:28,400
+The interesting thing was, there was a 30%
+off and then an extra code on top of it,
 
-279
-00:08:24,620 --> 00:08:25,520
-The interesting thing was,
+143
+00:08:28,420 --> 00:08:33,030
+right? Only 22% of the total orders were
+actually new customers,
 
-280
-00:08:25,540 --> 00:08:27,200
-there was a 30% off and then an
-
-281
-00:08:27,220 --> 00:08:28,400
-extra code on top of it,
-
-282
-00:08:28,420 --> 00:08:31,140
-right? Only 22% of the total orders
-
-283
-00:08:31,160 --> 00:08:33,030
-were actually new customers,
-
-284
+144
 00:08:33,140 --> 00:08:35,450
 78% were returning customers
 
-285
-00:08:36,120 --> 00:08:38,640
-19% of the people took the
+145
+00:08:36,120 --> 00:08:37,520
+19% of the people
 
-286
-00:08:38,660 --> 00:08:40,020
-code on top of that.
+146
+00:08:37,540 --> 00:08:42,990
+took the code on top of that. There is a
+VIP 30% code that's on top of the 30%
 
-287
-00:08:40,040 --> 00:08:42,040
-There is a VIP 30% code that's on
+147
+00:08:43,120 --> 00:08:44,620
+price markdown that they had already done.
 
-288
-00:08:42,060 --> 00:08:43,940
-top of the 30% price markdown that
-
-289
-00:08:43,960 --> 00:08:44,620
-they had already done.
-
-290
+148
 00:08:44,640 --> 00:08:46,630
 They just changed the prices on the store,
 
-291
-00:08:47,220 --> 00:08:49,300
+149
+00:08:47,220 --> 00:08:51,570
 versus 40% of the people who were
+returning customers got the code, right?
 
-292
-00:08:49,320 --> 00:08:51,220
-returning customers got the code,
+150
+00:08:51,720 --> 00:08:53,080
+Now, there's a school of thought, and
+these are…
 
-293
-00:08:51,240 --> 00:08:52,440
-right? Now, there's a school of thought,
+151
+00:08:53,100 --> 00:08:55,920
+these are the, you know, sort of strategy
+discussions that you need to have
 
-294
-00:08:52,460 --> 00:08:53,660
-and these are… these are the, you know,
+152
+00:08:55,940 --> 00:08:59,900
+internally. Did we really need to give
+away that much discount to a returning
 
-295
-00:08:53,680 --> 00:08:55,500
-sort of strategy discussions that you
+153
+00:08:59,920 --> 00:09:02,500
+customer? Could we have come up with offer
+strategies that were targeted
 
-296
-00:08:55,520 --> 00:08:56,260
-need to have internally.
+154
+00:09:02,520 --> 00:09:05,610
+differently for a new customer versus a
+returning customer.
 
-297
-00:08:56,280 --> 00:08:58,940
-Did we really need to give away that much
+155
+00:09:05,780 --> 00:09:07,100
+And the other problematic thing, of
+course,
 
-298
-00:08:58,960 --> 00:09:00,550
-discount to a returning customer?
+156
+00:09:07,120 --> 00:09:13,490
+is the new customer AOV was $55 compared
+to returning customers, which was $85,
 
-299
-00:09:00,580 --> 00:09:01,480
-Could we have come up with offer
-
-300
-00:09:01,500 --> 00:09:03,200
-strategies that were targeted differently
-
-301
-00:09:03,220 --> 00:09:05,000
-for a new customer versus a returning
-
-302
-00:09:05,020 --> 00:09:06,780
-customer. And the other problematic thing,
-
-303
-00:09:06,800 --> 00:09:10,760
-of course, is the new customer AOV was $55
-
-304
-00:09:10,780 --> 00:09:12,440
-compared to returning customers,
-
-305
-00:09:12,460 --> 00:09:13,490
-which was $85,
-
-306
+157
 00:09:13,880 --> 00:09:14,520
 right?
 
-307
-00:09:14,540 --> 00:09:16,840
+158
+00:09:14,540 --> 00:09:19,640
 All we're trying to do here is get a lay
-
-308
-00:09:16,860 --> 00:09:19,640
 of the land using the data and sort of
 
-309
+159
 00:09:19,660 --> 00:09:21,010
 drawing insights from it.
 
-310
-00:09:21,340 --> 00:09:22,590
-What happened after?
+160
+00:09:21,340 --> 00:09:24,930
+What happened after? There were two more
+sales that happened in December,
 
-311
-00:09:22,840 --> 00:09:23,880
-There were two more sales that
-
-312
-00:09:23,900 --> 00:09:24,930
-happened in December,
-
-313
-00:09:25,090 --> 00:09:27,020
+161
+00:09:25,090 --> 00:09:29,260
 and the interesting thing to note was
-
-314
-00:09:27,040 --> 00:09:29,260
 customers that were acquired in
 
-315
-00:09:29,280 --> 00:09:32,680
-September and October were 2x more
+162
+00:09:29,280 --> 00:09:35,940
+September and October were 2x more likely
+to come back and buy compared to the ones
 
-316
-00:09:32,700 --> 00:09:35,560
-likely to come back and buy compared to
+163
+00:09:35,960 --> 00:09:38,390
+that were acquired on Black Friday.
 
-317
-00:09:35,580 --> 00:09:37,020
-the ones that were acquired
+164
+00:09:38,480 --> 00:09:42,580
+The LTV of a customer acquired on Black
+Friday was $65, so on an average,
 
-318
-00:09:37,040 --> 00:09:38,390
-on Black Friday.
+165
+00:09:42,600 --> 00:09:43,710
+they came back and spent
 
-319
-00:09:38,480 --> 00:09:40,000
-The LTV of a customer acquired on
-
-320
-00:09:40,020 --> 00:09:41,310
-Black Friday was $65,
-
-321
-00:09:41,780 --> 00:09:43,710
-so on an average, they came back and spent
-
-322
-00:09:44,130 --> 00:09:46,660
+166
+00:09:44,130 --> 00:09:48,620
 10 additional dollars versus somebody who
-
-323
-00:09:46,680 --> 00:09:48,620
 was acquired in September and October came
 
-324
-00:09:48,640 --> 00:09:50,710
-back and spent in total $106,
+167
+00:09:48,640 --> 00:09:51,370
+back and spent in total $106, right?
 
-325
-00:09:51,100 --> 00:09:53,130
-right? So, Black Friday customers,
+168
+00:09:51,540 --> 00:09:54,880
+So, Black Friday customers, it's a fair
+sort of conclusion to make.
 
-326
-00:09:53,220 --> 00:09:54,880
-it's a fair sort of conclusion to make.
-
-327
-00:09:54,900 --> 00:09:56,320
+169
+00:09:54,900 --> 00:09:59,310
 The Black Friday customers that we
-
-328
-00:09:56,340 --> 00:09:59,310
 acquired came for nothing but the 40%
 
-329
+170
 00:09:59,440 --> 00:10:00,420
 discount
 
-330
-00:10:00,440 --> 00:10:01,920
-And… could you have used some
+171
+00:10:00,440 --> 00:10:04,340
+And… could you have used some strategies
+to sort of lure them back in January and
 
-331
-00:10:01,940 --> 00:10:03,520
-strategies to sort of lure them back
+172
+00:10:04,360 --> 00:10:06,740
+February, which are generally slower
+periods, right?
 
-332
-00:10:03,540 --> 00:10:04,460
-in January and February,
+173
+00:10:06,760 --> 00:10:09,240
+So these are things that we want to solve
+for. So
 
-333
-00:10:04,480 --> 00:10:06,580
-which are generally slower periods,
+174
+00:10:09,260 --> 00:10:14,990
+The idea we are not advocating for, hey,
+you know, you should reduce the discount.
 
-334
-00:10:06,600 --> 00:10:07,500
-right? So these are things that
-
-335
-00:10:07,520 --> 00:10:08,750
-we want to solve for.
-
-336
-00:10:09,100 --> 00:10:12,960
-So The idea we are not advocating for,
-
-337
-00:10:12,980 --> 00:10:13,960
-hey, you know, you should
-
-338
-00:10:13,980 --> 00:10:14,990
-reduce the discount.
-
-339
-00:10:15,160 --> 00:10:18,140
+175
+00:10:15,160 --> 00:10:20,320
 What we are advocating for is given what's
-
-340
-00:10:18,160 --> 00:10:20,320
 happened in the Shopify ecosystem with
 
-341
-00:10:20,340 --> 00:10:22,100
+176
+00:10:20,340 --> 00:10:24,107
 Shopify functions and the ability to
+create, you know,
 
-342
-00:10:22,120 --> 00:10:22,420
-create,
+177
+00:10:24,127 --> 00:10:27,840
+highly customized discounts run natively
+so there's no headache of coding and all
 
-343
-00:10:22,420 --> 00:10:24,640
-you know, highly customized discounts run
+178
+00:10:27,860 --> 00:10:28,440
+of that
 
-344
-00:10:24,660 --> 00:10:27,120
-natively so there's no headache of coding
+179
+00:10:28,460 --> 00:10:31,720
+You should really think about the
+different strategies that are at your hand
 
-345
-00:10:27,140 --> 00:10:29,620
-and all of that You should really think
+180
+00:10:31,740 --> 00:10:33,950
+and how you can apply to your business
+objectives.
 
-346
-00:10:29,640 --> 00:10:31,440
-about the different strategies that are at
+181
+00:10:34,460 --> 00:10:38,490
+So for the same store, same set of
+customers, what we are doing this year,
 
-347
-00:10:31,460 --> 00:10:33,080
-your hand and how you can apply to your
+182
+00:10:38,620 --> 00:10:41,340
+and this is still in discussion, some of
+it, you know, we are going to be changing,
 
-348
-00:10:33,100 --> 00:10:34,100
-business objectives.
-
-349
-00:10:34,460 --> 00:10:35,860
-So for the same store,
-
-350
-00:10:35,880 --> 00:10:36,910
-same set of customers,
-
-351
-00:10:37,150 --> 00:10:38,490
-what we are doing this year,
-
-352
-00:10:38,620 --> 00:10:39,880
-and this is still in discussion,
-
-353
-00:10:39,900 --> 00:10:40,660
-some of it, you know,
-
-354
-00:10:40,680 --> 00:10:41,340
-we are going to be changing,
-
-355
+183
 00:10:41,360 --> 00:10:43,730
 adding, but before it was
 
-356
+184
 00:10:44,220 --> 00:10:46,590
 2 25% sales in September and October.
 
-357
-00:10:46,840 --> 00:10:47,900
-We've already discussed,
+185
+00:10:46,840 --> 00:10:49,860
+We've already discussed, and instead of,
+you know,
 
-358
-00:10:47,920 --> 00:10:49,860
-and instead of, you know,
-
-359
-00:10:49,880 --> 00:10:52,380
+186
+00:10:49,880 --> 00:10:54,520
 running headline sales in headline
-
-360
-00:10:52,400 --> 00:10:54,520
 percentage sales or site-wide sales in
 
-361
-00:10:54,540 --> 00:10:55,540
-September and October,
+187
+00:10:54,540 --> 00:10:58,900
+September and October, they've already
+gone ahead and changed it to free gifts
 
-362
-00:10:55,740 --> 00:10:58,060
-they've already gone ahead and changed it
+188
+00:10:58,920 --> 00:11:02,010
+and tiered discounts, where the AOV can be
+potentially higher.
 
-363
-00:10:58,080 --> 00:10:59,660
-to free gifts and tiered discounts,
-
-364
-00:10:59,680 --> 00:11:02,010
-where the AOV can be potentially higher.
-
-365
-00:11:02,200 --> 00:11:04,120
+189
+00:11:02,200 --> 00:11:06,380
 For the weekend, they've made sure the
+code doesn't stack on top of the 30% that
 
-366
-00:11:04,140 --> 00:11:06,170
-code doesn't stack on top of the 30%
+190
+00:11:06,400 --> 00:11:10,260
+they're already doing. What they want to
+do for the VIP customers is more aligned
 
-367
-00:11:06,200 --> 00:11:07,350
-that they're already doing.
+191
+00:11:10,280 --> 00:11:13,010
+with free gifts and samplers and stuff
+like that.
 
-368
-00:11:07,420 --> 00:11:09,140
-What they want to do for the VIP customers
+192
+00:11:13,300 --> 00:11:16,480
+And they have a channel-specific strategy
+now based on the data that they got last
 
-369
-00:11:09,160 --> 00:11:11,440
-is more aligned with free gifts and
+193
+00:11:16,500 --> 00:11:18,240
+year. What they're also doing this year,
 
-370
-00:11:11,460 --> 00:11:13,010
-samplers and stuff like that.
-
-371
-00:11:13,300 --> 00:11:14,440
-And they have a channel-specific
-
-372
-00:11:14,460 --> 00:11:15,980
-strategy now based on the data that
-
-373
-00:11:16,000 --> 00:11:17,000
-they got last year.
-
-374
-00:11:17,160 --> 00:11:18,240
-What they're also doing this year,
-
-375
-00:11:18,260 --> 00:11:19,900
+194
+00:11:18,260 --> 00:11:21,420
 which is interesting and more sort of
+brands should use this
 
-376
-00:11:19,920 --> 00:11:23,440
-brands should use this is Instead of
+195
+00:11:21,440 --> 00:11:22,000
+is
 
-377
-00:11:23,460 --> 00:11:25,310
-giving a 30% off code
+196
+00:11:22,020 --> 00:11:27,730
+Instead of giving a 30% off code on Black
+Friday, for certain customers,
 
-378
-00:11:25,740 --> 00:11:27,730
-on Black Friday, for certain customers,
+197
+00:11:28,020 --> 00:11:31,420
+they're also doing a store credit, which
+is threshold-dependent,
 
-379
-00:11:28,020 --> 00:11:29,810
-they're also doing a store credit,
-
-380
-00:11:29,880 --> 00:11:30,790
-which is
-
-381
-00:11:30,810 --> 00:11:31,420
-threshold-dependent,
-
-382
+198
 00:11:31,440 --> 00:11:34,270
 and that store credit kicks in in January
 
-383
-00:11:34,760 --> 00:11:36,130
-expires in February.
+199
+00:11:34,760 --> 00:11:38,700
+expires in February. So there's a two-
+month period where they're forcing…
 
-384
-00:11:36,360 --> 00:11:37,500
-So there's a two-month period
+200
+00:11:38,720 --> 00:11:43,580
+not forcing people, but at least giving
+them an incentive to come back and buy a
 
-385
-00:11:37,520 --> 00:11:39,460
-where they're forcing… not forcing people,
+201
+00:11:43,600 --> 00:11:45,240
+refill, buy a new product, right?
 
-386
-00:11:39,480 --> 00:11:41,560
-but at least giving them an incentive to
+202
+00:11:45,260 --> 00:11:46,980
+And when you do strategies like that,
 
-387
-00:11:41,580 --> 00:11:44,050
-come back and buy a refill,
-
-388
-00:11:44,080 --> 00:11:46,000
-buy a new product, right? And when you do
-
-389
-00:11:46,020 --> 00:11:46,980
-strategies like that,
-
-390
-00:11:47,000 --> 00:11:50,260
+203
+00:11:47,000 --> 00:11:52,260
 what ends up happening is your overall
+margin impact is much lesser
 
-391
-00:11:50,280 --> 00:11:52,820
-margin impact is much lesser Because
+204
+00:11:52,280 --> 00:11:56,220
+Because they've come back in two orders to
+get the same sort of discount, right?
 
-392
-00:11:52,840 --> 00:11:54,580
-they've come back in two orders to get
+205
+00:11:56,240 --> 00:11:58,870
+So these are a few strategies that they're
+trying.
 
-393
-00:11:54,600 --> 00:11:55,810
-the same sort of discount,
+206
+00:11:59,180 --> 00:12:02,380
+But the point of all of this was not to
+say, hey,
 
-394
-00:11:55,860 --> 00:11:57,080
-right? So these are a few
+207
+00:12:02,400 --> 00:12:04,120
+these are the strategies that you should
+be applying.
 
-395
-00:11:57,100 --> 00:11:58,870
-strategies that they're trying.
+208
+00:12:04,140 --> 00:12:06,240
+The point of going through this case study
+was to say
 
-396
-00:11:59,180 --> 00:12:00,560
-But the point of all of this
+209
+00:12:06,260 --> 00:12:10,520
+What would have taken ages last year, some
+of it, as I said,
 
-397
-00:12:00,580 --> 00:12:01,880
-was not to say,
+210
+00:12:10,540 --> 00:12:12,390
+would have been impossible to really
+understand,
 
-398
-00:12:01,900 --> 00:12:03,260
-hey, these are the strategies that
+211
+00:12:12,620 --> 00:12:15,960
+can now be done by a single individual who
+has all the context,
 
-399
-00:12:03,280 --> 00:12:04,120
-you should be applying.
+212
+00:12:15,980 --> 00:12:20,410
+with all these AI tools that are available
+in a few hours, right?
 
-400
-00:12:04,140 --> 00:12:05,340
-The point of going through this case
+213
+00:12:20,460 --> 00:12:22,740
+So, what we want to do now is
 
-401
-00:12:05,360 --> 00:12:07,580
-study was to say What would have
+214
+00:12:22,760 --> 00:12:28,120
+Help you figure out how can you run the
+same analysis for your own store starts,
 
-402
-00:12:07,600 --> 00:12:09,520
-taken ages last year,
-
-403
-00:12:09,540 --> 00:12:10,520
-some of it, as I said,
-
-404
-00:12:10,540 --> 00:12:11,520
-would have been impossible to
-
-405
-00:12:11,540 --> 00:12:12,540
-really understand,
-
-406
-00:12:12,620 --> 00:12:14,100
-can now be done by a single
-
-407
-00:12:14,120 --> 00:12:15,960
-individual who has all the context,
-
-408
-00:12:15,980 --> 00:12:17,920
-with all these AI tools that are
-
-409
-00:12:17,940 --> 00:12:19,870
-available in a few hours,
-
-410
-00:12:19,960 --> 00:12:23,280
-right? So, what we want to do now is Help
-
-411
-00:12:23,300 --> 00:12:25,240
-you figure out how can you run the same
-
-412
-00:12:25,260 --> 00:12:28,120
-analysis for your own store starts,
-
-413
-00:12:28,140 --> 00:12:30,620
+215
+00:12:28,140 --> 00:12:33,040
 obviously, at the 5 questions that you
-
-414
-00:12:30,640 --> 00:12:33,040
 need to ask Sidekick very simply,
 
-415
-00:12:33,060 --> 00:12:35,610
-who bought week on week from September
+216
+00:12:33,060 --> 00:12:36,810
+who bought week on week from September all
+the way till January?
 
-416
-00:12:35,700 --> 00:12:36,810
-all the way till January?
+217
+00:12:37,280 --> 00:12:40,450
+What are the discounts that ran? What are
+the codes that ran?
 
-417
-00:12:37,280 --> 00:12:38,280
-What are the discounts
+218
+00:12:40,620 --> 00:12:44,880
+And how deep were those codes? Which
+channels sold the best and to whom new
 
-418
-00:12:38,380 --> 00:12:40,450
-that ran? What are the codes that ran?
+219
+00:12:44,900 --> 00:12:48,910
+customers or existing customers? Did the
+Black Friday customers come back in 60,
 
-419
-00:12:40,620 --> 00:12:42,330
-And how deep were those codes?
-
-420
-00:12:42,620 --> 00:12:44,640
-Which channels sold the best and to whom
-
-421
-00:12:44,660 --> 00:12:46,440
-new customers or existing customers?
-
-422
-00:12:46,460 --> 00:12:47,180
-Did the Black Friday
-
-423
-00:12:47,200 --> 00:12:48,910
-customers come back in 60,
-
-424
+220
 00:12:49,027 --> 00:12:51,170
 80, 60, 90, 120 day period
 
-425
-00:12:51,720 --> 00:12:54,260
-And if you cut the prices by
+221
+00:12:51,720 --> 00:12:57,650
+And if you cut the prices by changing the
+prices on Shopify, marking them down,
 
-426
-00:12:54,280 --> 00:12:56,210
-changing the prices on Shopify,
+222
+00:12:57,680 --> 00:12:59,980
+it's important for you to get the real
+depth, right?
 
-427
-00:12:56,360 --> 00:12:57,650
-marking them down,
+223
+00:13:00,000 --> 00:13:02,680
+So you can just copy-paste these questions
+on Sidekick,
 
-428
-00:12:57,680 --> 00:12:58,820
-it's important for you to
+224
+00:13:02,700 --> 00:13:06,400
+and you're going to get data, which can
+then lead to insights
 
-429
-00:12:58,840 --> 00:12:59,820
-get the real depth,
+225
+00:13:06,420 --> 00:13:12,010
+on each phase, right? So before Black
+Friday, you can now estimate,
 
-430
-00:12:59,840 --> 00:13:01,000
-right? So you can just copy-paste
+226
+00:13:12,200 --> 00:13:14,320
+was there a lull? Was there a period
+where, you know,
 
-431
-00:13:01,020 --> 00:13:02,680
-these questions on Sidekick,
+227
+00:13:14,340 --> 00:13:17,350
+your week-on-week orders were much lesser
+compared to normal?
 
-432
-00:13:02,700 --> 00:13:03,930
-and you're going to get data,
+228
+00:13:18,060 --> 00:13:20,880
+How many sale weeks did you run before
+Black Friday,
 
-433
-00:13:04,440 --> 00:13:06,040
-which can then lead to
-
-434
-00:13:06,060 --> 00:13:08,500
-insights on each phase,
-
-435
-00:13:08,520 --> 00:13:10,480
-right? So before Black Friday,
-
-436
-00:13:10,500 --> 00:13:13,070
-you can now estimate, was there a lull?
-
-437
-00:13:13,220 --> 00:13:14,320
-Was there a period where,
-
-438
-00:13:14,340 --> 00:13:15,920
-you know, your week-on-week orders were
-
-439
-00:13:15,940 --> 00:13:17,350
-much lesser compared to normal?
-
-440
-00:13:18,060 --> 00:13:19,580
-How many sale weeks did you run
-
-441
-00:13:19,600 --> 00:13:20,880
-before Black Friday,
-
-442
+229
 00:13:20,900 --> 00:13:22,570
 and did that impact your Black Friday
 
-443
-00:13:23,080 --> 00:13:24,180
-Okay? How many customers do you think
+230
+00:13:23,080 --> 00:13:25,930
+Okay? How many customers do you think were
+waiting for the sales,
 
-444
-00:13:24,200 --> 00:13:25,930
-were waiting for the sales,
+231
+00:13:26,220 --> 00:13:28,340
+and how many early codes did you give
+away?
 
-445
-00:13:26,220 --> 00:13:27,500
-and how many early codes
+232
+00:13:28,360 --> 00:13:31,300
+And did they really pull in the demand, or
+did you…
 
-446
-00:13:27,520 --> 00:13:28,340
-did you give away?
+233
+00:13:31,320 --> 00:13:34,590
+did it just cost you margin without
+actually getting you the demand, right?
 
-447
-00:13:28,360 --> 00:13:30,780
-And did they really pull in the demand,
+234
+00:13:34,640 --> 00:13:37,110
+For the weekend, it's important to know
+what was the real depth.
 
-448
-00:13:30,800 --> 00:13:32,780
-or did you… did it just cost you margin
-
-449
-00:13:32,800 --> 00:13:34,200
-without actually getting you the demand,
-
-450
-00:13:34,220 --> 00:13:35,320
-right? For the weekend,
-
-451
-00:13:35,340 --> 00:13:36,080
-it's important to know what
-
-452
-00:13:36,100 --> 00:13:37,110
-was the real depth.
-
-453
-00:13:37,140 --> 00:13:39,600
+235
+00:13:37,140 --> 00:13:41,140
 A lot of time brands plan for a 30% off
-
-454
-00:13:39,620 --> 00:13:41,140
 when the data comes in because of the
 
-455
-00:13:41,160 --> 00:13:42,500
+236
+00:13:41,160 --> 00:13:43,270
 welcome code and this code and the
+affiliate code
 
-456
-00:13:42,520 --> 00:13:44,240
-affiliate code The real discount is much,
+237
+00:13:43,500 --> 00:13:45,320
+The real discount is much, much larger.
 
-457
-00:13:44,260 --> 00:13:45,320
-much larger.
-
-458
+238
 00:13:45,340 --> 00:13:46,660
 Now, I'm not saying that's good or bad,
 
-459
-00:13:46,680 --> 00:13:47,800
-but it's good to know what the
+239
+00:13:46,680 --> 00:13:48,850
+but it's good to know what the real
+discount was.
 
-460
-00:13:47,820 --> 00:13:48,850
-real discount was.
+240
+00:13:49,100 --> 00:13:53,200
+How many of those codes were stacked? How
+many codes were actually out there?
 
-461
-00:13:49,100 --> 00:13:51,130
-How many of those codes were stacked?
-
-462
-00:13:51,340 --> 00:13:53,200
-How many codes were actually out there?
-
-463
-00:13:53,220 --> 00:13:55,520
+241
+00:13:53,220 --> 00:13:58,330
 There's a lot of surprises thrown in when
-
-464
-00:13:55,540 --> 00:13:58,330
 we've done these audits on a long tail of
 
-465
-00:13:59,570 --> 00:14:00,260
+242
+00:13:59,570 --> 00:14:02,370
 codes that they weren't really aware on
-
-466
-00:14:00,280 --> 00:14:02,370
 that were stacking on top of other things,
 
-467
-00:14:02,660 --> 00:14:04,300
+243
+00:14:02,660 --> 00:14:05,990
 and it's important to know how many codes
-
-468
-00:14:04,320 --> 00:14:05,990
 were out there that were used last year.
 
-469
-00:14:06,100 --> 00:14:06,980
-Who got it? New customers
+244
+00:14:06,100 --> 00:14:07,990
+Who got it? New customers versus
+returning?
 
-470
-00:14:07,000 --> 00:14:08,000
-versus returning?
+245
+00:14:08,060 --> 00:14:10,980
+What was the basket size, channel, and the
+same thing for, you know,
 
-471
-00:14:08,060 --> 00:14:08,860
-What was the basket size,
-
-472
-00:14:08,880 --> 00:14:10,980
-channel, and the same thing for,
-
-473
+246
 00:14:11,000 --> 00:14:13,890
-you know, after how many people came back
+after how many people came back
 
-474
-00:14:14,380 --> 00:14:15,680
-Did they come back in December,
+247
+00:14:14,380 --> 00:14:16,860
+Did they come back in December, or when
+did they come back,
 
-475
-00:14:15,700 --> 00:14:16,860
-or when did they come back,
+248
+00:14:16,880 --> 00:14:18,860
+and what was the real value of those
+customers,
 
-476
-00:14:16,880 --> 00:14:18,300
-and what was the real value
+249
+00:14:18,880 --> 00:14:20,860
+and did they ever buy in full price or
+not?
 
-477
-00:14:18,320 --> 00:14:18,860
-of those customers,
+250
+00:14:20,880 --> 00:14:22,900
+Or did you just attract the discount
+hunters, right?
 
-478
-00:14:18,880 --> 00:14:20,060
-and did they ever buy in
+251
+00:14:22,920 --> 00:14:27,400
+These are all insights that will
+automatically be drawn from the insights
 
-479
-00:14:20,080 --> 00:14:20,860
-full price or not?
+252
+00:14:27,420 --> 00:14:29,280
+based on the skill that we're going to
+send you,
 
-480
-00:14:20,880 --> 00:14:21,840
-Or did you just attract the
+253
+00:14:29,300 --> 00:14:32,010
+the AI skill that we're going to send you
+if you feed it the data
 
-481
-00:14:21,860 --> 00:14:22,640
-discount hunters,
+254
+00:14:32,200 --> 00:14:33,490
+It'll give you all these insights.
 
-482
-00:14:22,660 --> 00:14:24,340
-right? These are all insights that
+255
+00:14:34,140 --> 00:14:36,520
+Then comes, you know, what your objectives
+are for this year.
 
-483
-00:14:24,360 --> 00:14:27,060
-will automatically be drawn from the
-
-484
-00:14:27,080 --> 00:14:28,787
-insights based on the skill that we're
-
-485
-00:14:28,807 --> 00:14:29,280
-going to send you,
-
-486
-00:14:29,300 --> 00:14:30,680
-the AI skill that we're going to send
-
-487
-00:14:30,700 --> 00:14:32,400
-you if you feed it the data It'll give
-
-488
-00:14:32,420 --> 00:14:33,490
-you all these insights.
-
-489
-00:14:34,140 --> 00:14:34,580
-Then comes, you know,
-
-490
-00:14:34,600 --> 00:14:36,520
-what your objectives are for this year.
-
-491
-00:14:36,540 --> 00:14:39,310
+256
+00:14:36,540 --> 00:14:41,650
 If your objective is to win new customers,
+here are a few different strategies
 
-492
-00:14:39,720 --> 00:14:42,420
-here are a few different strategies that
-
-493
-00:14:42,440 --> 00:14:44,680
-you can look for a starter set,
-
-494
-00:14:44,700 --> 00:14:46,510
+257
+00:14:41,960 --> 00:14:46,510
+that you can look for a starter set,
 increasing the average order value.
 
-495
-00:14:46,900 --> 00:14:49,220
-So in their case, the $55 was the
+258
+00:14:46,900 --> 00:14:50,210
+So in their case, the $55 was the average
+order value.
 
-496
-00:14:49,240 --> 00:14:50,240
-average order value.
+259
+00:14:50,300 --> 00:14:54,040
+We're coming up with a starter set that at
+$65 right smaller sizes of their
 
-497
-00:14:50,300 --> 00:14:51,420
-We're coming up with a starter set
-
-498
-00:14:51,440 --> 00:14:53,860
-that at $65 right smaller sizes of
-
-499
-00:14:53,880 --> 00:14:54,320
-their products,
-
-500
-00:14:54,340 --> 00:14:56,440
-but at $65 trying to pull the
-
-501
-00:14:56,460 --> 00:14:58,690
+260
+00:14:54,060 --> 00:14:58,690
+products, but at $65 trying to pull the
 AOV slightly higher, at least right
 
-502
-00:14:59,205 --> 00:15:00,620
-It can run… it can be run to
+261
+00:14:59,205 --> 00:15:01,910
+It can run… it can be run to its own
+landing pages.
 
-503
-00:15:00,640 --> 00:15:01,910
-its own landing pages.
-
-504
-00:15:01,940 --> 00:15:04,140
+262
+00:15:01,940 --> 00:15:05,600
 So the important thing to know with the
-
-505
-00:15:04,160 --> 00:15:05,600
 kind of customizations and flexibility
 
-506
-00:15:05,620 --> 00:15:07,840
-that's available in terms of planning
+263
+00:15:05,620 --> 00:15:08,630
+that's available in terms of planning the
+promotions,
 
-507
-00:15:07,860 --> 00:15:08,860
-the promotions,
+264
+00:15:09,060 --> 00:15:14,510
+you can now come up with strategies that
+are hyper-specific to an ad set
 
-508
-00:15:09,060 --> 00:15:10,840
-you can now come up with strategies
+265
+00:15:14,600 --> 00:15:18,430
+to a customer segment, to a specific
+landing page, to a specific collection,
 
-509
-00:15:10,860 --> 00:15:14,510
-that are hyper-specific to an ad set
+266
+00:15:18,620 --> 00:15:21,900
+to a specific market, and you can track
+them really well and understand the
 
-510
-00:15:14,600 --> 00:15:15,830
-to a customer segment,
+267
+00:15:21,920 --> 00:15:24,360
+analytics, right? If your objective is to
+grow the basket,
 
-511
-00:15:15,880 --> 00:15:17,300
-to a specific landing page,
+268
+00:15:24,380 --> 00:15:28,870
+and if you're trying to impact everyone at
+the weekend, we can do tiered spend,
 
-512
-00:15:17,320 --> 00:15:18,430
-to a specific collection,
-
-513
-00:15:18,620 --> 00:15:19,750
-to a specific market,
-
-514
-00:15:20,020 --> 00:15:21,320
-and you can track them really well and
-
-515
-00:15:21,340 --> 00:15:22,470
-understand the analytics,
-
-516
-00:15:22,540 --> 00:15:23,560
-right? If your objective is
-
-517
-00:15:23,580 --> 00:15:24,360
-to grow the basket,
-
-518
-00:15:24,380 --> 00:15:26,220
-and if you're trying to impact
-
-519
-00:15:26,240 --> 00:15:27,790
-everyone at the weekend,
-
-520
-00:15:27,840 --> 00:15:28,870
-we can do tiered spend,
-
-521
-00:15:29,100 --> 00:15:30,000
+269
+00:15:29,100 --> 00:15:31,610
 where, you know, you're going to get a
-
-522
-00:15:30,020 --> 00:15:31,610
 higher discount if you spend more,
 
-523
-00:15:31,840 --> 00:15:33,480
-a really good gift above a
+270
+00:15:31,840 --> 00:15:35,380
+a really good gift above a certain
+threshold, you can do build your own
 
-524
-00:15:33,500 --> 00:15:34,060
-certain threshold,
+271
+00:15:35,400 --> 00:15:38,800
+boxes, build your own bundles. That are
+some things that we're going to talk about
 
-525
-00:15:34,080 --> 00:15:36,090
-you can do build your own boxes,
+272
+00:15:38,820 --> 00:15:40,110
+in the bundling section anyways
 
-526
-00:15:36,320 --> 00:15:37,400
-build your own bundles.
-
-527
-00:15:37,420 --> 00:15:38,380
-That are some things that we're going to
-
-528
-00:15:38,400 --> 00:15:40,110
-talk about in the bundling section anyways
-
-529
-00:15:40,520 --> 00:15:42,000
+273
+00:15:40,520 --> 00:15:44,490
 If you want to reward your customers
-
-530
-00:15:42,020 --> 00:15:44,490
 without leaking discounts,
 
-531
-00:15:44,860 --> 00:15:46,310
-you give early access
+274
+00:15:44,860 --> 00:15:49,210
+you give early access or a gift to your
+VIP set of customers,
 
-532
-00:15:46,720 --> 00:15:49,210
-or a gift to your VIP set of customers,
+275
+00:15:49,240 --> 00:15:53,590
+and you can make promises about the prices
+being the lowest they are.
 
-533
-00:15:49,240 --> 00:15:51,340
-and you can make promises about the
-
-534
-00:15:51,360 --> 00:15:53,590
-prices being the lowest they are.
-
-535
-00:15:54,240 --> 00:15:56,320
+276
+00:15:54,240 --> 00:15:58,780
 And a good way to do that is not giving
+away a site-wide discount of 20%, you
 
-536
-00:15:56,340 --> 00:15:58,520
-away a site-wide discount of 20%,
+277
+00:15:58,800 --> 00:16:02,320
+know, pre-Black Friday, giving a different
+discount that's hard to compare on the
 
-537
-00:15:58,540 --> 00:15:59,870
-you know, pre-Black Friday,
+278
+00:16:02,340 --> 00:16:02,820
+actual discount
 
-538
-00:16:00,000 --> 00:16:01,500
-giving a different discount that's hard
+279
+00:16:02,840 --> 00:16:05,960
+on Black Friday is a great way to say this
+is the best offer, you know,
 
-539
-00:16:01,520 --> 00:16:03,540
-to compare on the actual discount on
+280
+00:16:05,980 --> 00:16:08,570
+for these products or this… these set.
 
-540
-00:16:03,560 --> 00:16:05,360
-Black Friday is a great way to say this
+281
+00:16:09,720 --> 00:16:13,610
+Yeah, again, early access at the weekend
+price, an exclusive set, a price promise.
 
-541
-00:16:05,380 --> 00:16:05,960
-is the best offer,
-
-542
-00:16:05,980 --> 00:16:07,680
-you know, for these products or this…
-
-543
-00:16:07,700 --> 00:16:08,700
-these set.
-
-544
-00:16:09,720 --> 00:16:11,220
-Yeah, again, early access at
-
-545
-00:16:11,240 --> 00:16:12,060
-the weekend price,
-
-546
-00:16:12,080 --> 00:16:13,610
-an exclusive set, a price promise.
-
-547
-00:16:13,840 --> 00:16:15,750
+282
+00:16:13,840 --> 00:16:16,800
 A price promise goes a long way.
+Obviously,
 
-548
-00:16:16,260 --> 00:16:18,020
-Obviously, making a promise also means
+283
+00:16:16,820 --> 00:16:19,140
+making a promise also means that you have
+to keep it and not, you know,
 
-549
-00:16:18,040 --> 00:16:19,140
-that you have to keep it and not,
+284
+00:16:19,160 --> 00:16:23,840
+discount it further. And if you want to
+bring them back a store credit in January
 
-550
-00:16:19,160 --> 00:16:20,650
-you know, discount it further.
+285
+00:16:23,860 --> 00:16:27,210
+or February only, store credit goes a long
+way as well, right?
 
-551
-00:16:21,540 --> 00:16:22,980
-And if you want to bring them back a store
+286
+00:16:27,320 --> 00:16:29,750
+These are some offers to consider. But
+again.
 
-552
-00:16:23,000 --> 00:16:25,150
-credit in January or February only,
+287
+00:16:29,780 --> 00:16:31,680
+There's a lot more that you can do.
 
-553
-00:16:25,170 --> 00:16:26,880
-store credit goes a long way as well,
+288
+00:16:31,700 --> 00:16:34,520
+So these are all the potential offers that
+you can think of.
 
-554
-00:16:26,900 --> 00:16:29,030
-right? These are some offers to consider.
+289
+00:16:34,540 --> 00:16:37,200
+There's a bunch of sort of sub-segments
+that come within these.
 
-555
-00:16:29,140 --> 00:16:31,020
-But again. There's a lot more
+290
+00:16:37,220 --> 00:16:41,330
+The most common are percentage off and
+dollar off.
 
-556
-00:16:31,040 --> 00:16:31,680
-that you can do.
+291
+00:16:41,740 --> 00:16:45,240
+Then there's free gift with purchase, but
+then you can do, you know, buy three,
 
-557
-00:16:31,700 --> 00:16:33,060
-So these are all the potential
+292
+00:16:45,260 --> 00:16:46,820
+get two at 50% off, or
 
-558
-00:16:33,080 --> 00:16:34,520
-offers that you can think of.
+293
+00:16:46,840 --> 00:16:50,740
+Buy four and get one free, you can do
+tiered spends, higher the spend,
 
-559
-00:16:34,540 --> 00:16:35,645
-There's a bunch of sort of
+294
+00:16:50,760 --> 00:16:55,060
+higher the discount, you can do sets and
+starter bundles that have a higher
 
-560
-00:16:35,665 --> 00:16:37,200
-sub-segments that come within these.
+295
+00:16:55,080 --> 00:16:59,280
+perceived value of discount. You can do
+credits for later that sort of incentivize
 
-561
-00:16:37,220 --> 00:16:38,920
-The most common are percentage
-
-562
-00:16:38,940 --> 00:16:41,330
-off and dollar off.
-
-563
-00:16:41,740 --> 00:16:43,370
-Then there's free gift with purchase,
-
-564
-00:16:43,400 --> 00:16:45,240
-but then you can do, you know, buy three,
-
-565
-00:16:45,260 --> 00:16:46,600
-get two at 50% off,
-
-566
-00:16:46,620 --> 00:16:49,420
-or Buy four and get one free,
-
-567
-00:16:49,440 --> 00:16:50,440
-you can do tiered spends,
-
-568
-00:16:50,460 --> 00:16:51,570
-higher the spend, higher the discount,
-
-569
-00:16:52,660 --> 00:16:54,660
-you can do sets and starter bundles that
-
-570
-00:16:54,680 --> 00:16:56,490
-have a higher perceived value of discount.
-
-571
-00:16:56,580 --> 00:16:57,730
-You can do credits for later
-
-572
-00:16:58,420 --> 00:16:59,280
-that sort of incentivize
-
-573
+296
 00:16:59,300 --> 00:17:01,280
 people to come back. And then, as I said,
 
-574
-00:17:01,300 --> 00:17:02,840
-you can do highly targeted and
+297
+00:17:01,300 --> 00:17:03,990
+you can do highly targeted and landing
+page codes,
 
-575
-00:17:02,860 --> 00:17:03,990
-landing page codes,
-
-576
+298
 00:17:04,100 --> 00:17:06,080
 run ads to specific landing pages,
 
-577
-00:17:06,100 --> 00:17:07,720
+299
+00:17:06,100 --> 00:17:09,780
 come up with bundles that are only on
-
-578
-00:17:07,740 --> 00:17:09,780
 those landing pages and the discount is
 
-579
-00:17:09,800 --> 00:17:11,460
+300
+00:17:09,800 --> 00:17:12,720
 going to be only for those customers who
-
-580
-00:17:11,480 --> 00:17:12,720
 add from this landing page.
 
-581
-00:17:12,740 --> 00:17:13,520
-None of the other store,
+301
+00:17:12,740 --> 00:17:15,550
+None of the other store, like, you know,
+visitors need to know.
 
-582
-00:17:13,540 --> 00:17:15,550
-like, you know, visitors need to know.
+302
+00:17:16,080 --> 00:17:22,060
+So what Shopify has made possible with
+Shopify functions and different apps that
 
-583
-00:17:16,080 --> 00:17:18,600
-So what Shopify has made possible
+303
+00:17:22,080 --> 00:17:25,780
+are available, one of them is ours, but
+that's besides the point.
 
-584
-00:17:18,620 --> 00:17:19,890
-with Shopify functions
+304
+00:17:25,800 --> 00:17:28,900
+You can configure a lot of these discounts
+natively on Shopify,
 
-585
-00:17:20,660 --> 00:17:22,710
-and different apps that are available,
+305
+00:17:28,920 --> 00:17:32,440
+but the first and foremost thing is to use
+the data, come up with the insights,
 
-586
-00:17:22,840 --> 00:17:23,840
-one of them is ours,
+306
+00:17:32,460 --> 00:17:34,140
+figure out the objectives, and then
 
-587
-00:17:24,240 --> 00:17:25,780
-but that's besides the point.
+307
+00:17:34,160 --> 00:17:37,740
+figure out what are the offers that you
+want to run, right?
 
-588
-00:17:25,800 --> 00:17:27,460
-You can configure a lot of these
+308
+00:17:37,760 --> 00:17:41,620
+The important thing to note this time
+around when you do set these discounts is
 
-589
-00:17:27,480 --> 00:17:28,900
-discounts natively on Shopify,
+309
+00:17:41,640 --> 00:17:46,430
+to set it up correctly in a way that you
+can track this much better for next year.
 
-590
-00:17:28,920 --> 00:17:30,400
-but the first and foremost thing
+310
+00:17:46,760 --> 00:17:50,400
+There are apps that already have MCP
+access, and if you track the codes, if you
 
-591
-00:17:30,420 --> 00:17:31,440
-is to use the data,
+311
+00:17:50,420 --> 00:17:54,340
+you know, create the codes which are
+hyper-specific to a customer segment, or
 
-592
-00:17:31,460 --> 00:17:32,440
-come up with the insights,
+312
+00:17:54,360 --> 00:17:58,980
+to, you know, a channel, you can track a
+lot of these better for next year
 
-593
-00:17:32,460 --> 00:17:33,630
-figure out the objectives,
+313
+00:17:59,000 --> 00:18:01,900
+analysis, or even during that period to
+figure out what you should be doing in
 
-594
-00:17:33,880 --> 00:17:35,240
-and then figure out what are the
-
-595
-00:17:35,260 --> 00:17:36,550
-offers that you want to run,
-
-596
-00:17:37,030 --> 00:17:39,340
-right? The important thing to note this
-
-597
-00:17:39,360 --> 00:17:40,960
-time around when you do set these
-
-598
-00:17:40,980 --> 00:17:42,820
-discounts is to set it up correctly in
-
-599
-00:17:42,840 --> 00:17:44,780
-a way that you can track this much
-
-600
-00:17:44,800 --> 00:17:46,430
-better for next year.
-
-601
-00:17:46,760 --> 00:17:47,920
-There are apps that already
-
-602
-00:17:47,940 --> 00:17:49,180
-have MCP access,
-
-603
-00:17:49,200 --> 00:17:50,250
-and if you track the codes,
-
-604
-00:17:50,340 --> 00:17:52,000
-if you you know, create the codes which
-
-605
-00:17:52,020 --> 00:17:53,910
-are hyper-specific to a customer segment,
-
-606
-00:17:54,140 --> 00:17:56,130
-or to, you know, a channel,
-
-607
-00:17:56,200 --> 00:17:58,260
-you can track a lot of these better
-
-608
-00:17:58,280 --> 00:17:59,320
-for next year analysis,
-
-609
-00:17:59,340 --> 00:18:00,900
-or even during that period to figure
-
-610
-00:18:00,920 --> 00:18:01,900
-out what you should be doing in
-
-611
+314
 00:18:01,920 --> 00:18:03,030
 December and January.
 
-612
-00:18:04,680 --> 00:18:06,700
-So yeah, as I said,
+315
+00:18:04,680 --> 00:18:10,020
+So yeah, as I said, you know, just
+wrapping up on creating this offer
 
-613
-00:18:06,720 --> 00:18:09,300
-you know, just wrapping up on
-
-614
-00:18:09,320 --> 00:18:10,610
-creating this offer strategy,
-
-615
-00:18:10,700 --> 00:18:12,630
-the idea is to come up with a
-
-616
-00:18:12,820 --> 00:18:14,760
+316
+00:18:10,040 --> 00:18:14,760
+strategy, the idea is to come up with a
 hyper-personalized strategy for you,
 
-617
-00:18:14,780 --> 00:18:15,540
-for your own brand,
+317
+00:18:14,780 --> 00:18:18,470
+for your own brand, that's rooted in data
+from what happened last year.
 
-618
-00:18:15,560 --> 00:18:17,420
-that's rooted in data from what
+318
+00:18:18,800 --> 00:18:22,880
+So you ask the questions to Sidekick, you
+add the skill to Claude or any other bot
 
-619
-00:18:17,440 --> 00:18:18,470
-happened last year.
+319
+00:18:22,900 --> 00:18:25,990
+that you use, that we're going to be
+sending to you on Tuesday.
 
-620
-00:18:18,800 --> 00:18:20,500
-So you ask the questions to Sidekick,
+320
+00:18:26,200 --> 00:18:32,230
+You paste all the data, and also the
+questions, objectives of this year's goal,
 
-621
-00:18:20,520 --> 00:18:22,480
-you add the skill to Claude or any
-
-622
-00:18:22,500 --> 00:18:24,090
-other bot that you use,
-
-623
-00:18:24,340 --> 00:18:24,980
-that we're going to be sending
-
-624
-00:18:25,000 --> 00:18:27,760
-to you on Tuesday. You paste all the data,
-
-625
-00:18:27,780 --> 00:18:29,590
-and also the questions,
-
-626
-00:18:30,420 --> 00:18:32,230
-objectives of this year's goal,
-
-627
-00:18:32,520 --> 00:18:34,280
+321
+00:18:32,520 --> 00:18:35,470
 and then you get a personalized plan that
-
-628
-00:18:34,300 --> 00:18:35,470
 you can sort of tweak around.
 
-629
-00:18:35,920 --> 00:18:38,340
-Remember to do… not do a few things,
+322
+00:18:35,920 --> 00:18:39,600
+Remember to do… not do a few things, make
+sure there's not
 
-630
-00:18:38,360 --> 00:18:39,600
-make sure there's not
+323
+00:18:39,620 --> 00:18:44,310
+Unintentional stacking, all the stray
+codes, try and let's try and remove those,
 
-631
-00:18:39,620 --> 00:18:41,190
-Unintentional stacking,
+324
+00:18:44,600 --> 00:18:49,170
+make sure prices of Black Friday are not
+beaten pre and post.
 
-632
-00:18:41,620 --> 00:18:42,467
-all the stray codes,
-
-633
-00:18:42,487 --> 00:18:44,310
-try and let's try and remove those,
-
-634
-00:18:44,600 --> 00:18:47,360
-make sure prices of Black Friday are
-
-635
-00:18:47,380 --> 00:18:49,170
-not beaten pre and post.
-
-636
-00:18:50,220 --> 00:18:53,070
+325
+00:18:50,220 --> 00:18:54,660
 Let's not do same depth for all customers.
+A newer customer is
 
-637
-00:18:53,340 --> 00:18:56,200
-A newer customer is way more useful
+326
+00:18:54,680 --> 00:18:58,330
+way more useful than a returning customer.
 
-638
-00:18:56,220 --> 00:18:58,330
-than a returning customer.
+327
+00:18:58,420 --> 00:19:00,950
+Returning customer might have bought with
+a slightly lesser discount.
 
-639
-00:18:58,420 --> 00:18:59,540
-Returning customer might have bought
+328
+00:19:01,040 --> 00:19:04,160
+How do you craft that strategy? Those are
+the things that you can sort of come up
 
-640
-00:18:59,560 --> 00:19:00,950
-with a slightly lesser discount.
+329
+00:19:04,180 --> 00:19:06,950
+with. And then, as I said, don't go deeper
+after.
 
-641
-00:19:01,040 --> 00:19:02,360
-How do you craft that strategy?
+330
+00:19:07,340 --> 00:19:10,920
+And the one line sort of takeaway that I
+want to leave you with when you come up
 
-642
-00:19:02,380 --> 00:19:03,220
-Those are the things that you can
+331
+00:19:10,940 --> 00:19:11,240
+with
 
-643
-00:19:03,240 --> 00:19:05,860
-sort of come up with. And then, as I said,
+332
+00:19:10,940 --> 00:19:13,680
+you know, Black Friday offer strategy is
+to make sure that
 
-644
-00:19:05,880 --> 00:19:06,950
-don't go deeper after.
+333
+00:19:13,700 --> 00:19:17,220
+You understand that the season doesn't end
+on Cyber Monday.
 
-645
-00:19:07,340 --> 00:19:08,920
-And the one line sort of takeaway
-
-646
-00:19:08,940 --> 00:19:10,540
-that I want to leave you with when
-
-647
-00:19:10,560 --> 00:19:11,140
-you come up with you know,
-
-648
-00:19:11,160 --> 00:19:13,060
-Black Friday offer strategy is to make
-
-649
-00:19:13,080 --> 00:19:15,560
-sure that You understand that the season
-
-650
-00:19:15,580 --> 00:19:17,220
-doesn't end on Cyber Monday.
-
-651
-00:19:17,240 --> 00:19:19,220
+334
+00:19:17,240 --> 00:19:20,980
 It ends when you know what Black Friday,
-
-652
-00:19:19,240 --> 00:19:20,980
 Cyber Monday really cost you.
 
-653
-00:19:21,000 --> 00:19:23,240
-And that takes analysis post-Black
+335
+00:19:21,000 --> 00:19:24,840
+And that takes analysis post-Black Friday
+and the retention and all of those numbers
 
-654
-00:19:23,260 --> 00:19:24,480
-Friday and the retention and all of
+336
+00:19:24,860 --> 00:19:25,860
+as well
 
-655
-00:19:24,500 --> 00:19:25,500
-those numbers as well
-
-656
+337
 00:19:26,120 --> 00:19:27,120
 Cool.
 
-657
-00:19:28,060 --> 00:19:29,160
-We are going to be sending you
+338
+00:19:28,060 --> 00:19:31,960
+We are going to be sending you all of this
+information, and with that,
 
-658
-00:19:29,180 --> 00:19:30,180
-all of this information,
+339
+00:19:31,980 --> 00:19:34,840
+let's do a segue into bundling. As I said,
 
-659
-00:19:30,700 --> 00:19:32,660
-and with that, let's do a
+340
+00:19:34,860 --> 00:19:37,540
+a lot of the offer strategy leads into
+bundles,
 
-660
-00:19:32,680 --> 00:19:34,290
-segue into bundling.
+341
+00:19:37,560 --> 00:19:41,640
+and the bundles are a great way to sort of
+improve conversion as well as the average
 
-661
-00:19:34,500 --> 00:19:35,700
-As I said, a lot of the offer
+342
+00:19:41,660 --> 00:19:44,710
+order value. So Neetika is going to take
+you through some strategies
 
-662
-00:19:35,720 --> 00:19:37,540
-strategy leads into bundles,
+343
+00:19:45,000 --> 00:19:48,160
+on what we've seen with brands having
+worked with them, you know,
 
-663
-00:19:37,560 --> 00:19:39,140
-and the bundles are a great way to
+344
+00:19:48,180 --> 00:19:51,550
+in the last 8-10 months on doing
+interesting things.
 
-664
-00:19:39,160 --> 00:19:41,240
-sort of improve conversion as well as
+345
+00:19:53,400 --> 00:19:58,840
+Alright. Thanks, Sid. That was a great
+session on offers and a great segue now
 
-665
-00:19:41,260 --> 00:19:42,260
-the average order value.
+346
+00:19:58,860 --> 00:20:02,430
+into bundles. Very similar to offers,
 
-666
-00:19:42,280 --> 00:19:43,280
-So Neetika is going to take you through
-
-667
-00:19:43,300 --> 00:19:46,240
-some strategies on what we've seen with
-
-668
-00:19:46,260 --> 00:19:47,827
-brands having worked with them,
-
-669
-00:19:47,847 --> 00:19:49,920
-you know, in the last 8-10 months on
-
-670
-00:19:49,940 --> 00:19:51,550
-doing interesting things.
-
-671
-00:19:53,400 --> 00:19:54,400
-Alright. Thanks, Sid.
-
-672
-00:19:55,420 --> 00:19:58,000
-That was a great session on offers and a
-
-673
-00:19:58,020 --> 00:19:59,750
-great segue now into bundles.
-
-674
-00:20:00,740 --> 00:20:02,430
-Very similar to offers,
-
-675
-00:20:02,480 --> 00:20:05,020
+347
+00:20:02,480 --> 00:20:06,610
 we are going to study do a case study
-
-676
-00:20:05,040 --> 00:20:06,610
 where we look at the store data,
 
-677
+348
 00:20:06,680 --> 00:20:07,910
 come up with a bundling strategy.
 
-678
-00:20:08,500 --> 00:20:10,360
-And really see how,
+349
+00:20:08,500 --> 00:20:13,900
+And really see how, with the help of
+Sidekick AI, you can build, you know,
 
-679
-00:20:10,380 --> 00:20:12,790
-with the help of Sidekick AI,
-
-680
-00:20:13,420 --> 00:20:13,900
-you can build, you know,
-
-681
-00:20:13,920 --> 00:20:17,150
+350
+00:20:13,920 --> 00:20:17,920
 your own bundling strategy for your store,
+right?
 
-682
-00:20:17,420 --> 00:20:18,560
-right? Essentially,
+351
+00:20:17,940 --> 00:20:23,920
+Essentially, what we've seen internally is
+that almost all of your bundles are
 
-683
-00:20:18,580 --> 00:20:21,980
-what we've seen internally is that
+352
+00:20:23,940 --> 00:20:25,770
+already sitting in your data
 
-684
-00:20:22,000 --> 00:20:24,300
-almost all of your bundles are already
-
-685
-00:20:24,320 --> 00:20:26,430
-sitting in your data Right?
-
-686
-00:20:26,860 --> 00:20:28,820
-We've done a lot of data analysis
-
-687
-00:20:28,840 --> 00:20:30,080
+353
+00:20:26,040 --> 00:20:30,080
+Right? We've done a lot of data analysis
 across a lot of stores,
 
-688
-00:20:30,100 --> 00:20:32,580
+354
+00:20:30,100 --> 00:20:35,220
 and we've always found that what people
-
-689
-00:20:32,600 --> 00:20:35,220
 are actually buying already or putting
 
-690
-00:20:35,240 --> 00:20:37,740
+355
+00:20:35,240 --> 00:20:39,710
 together with hand is what the bundles
-
-691
-00:20:37,760 --> 00:20:39,710
 should start reflecting, right?
 
-692
-00:20:40,300 --> 00:20:43,120
-So if you see here In about
+356
+00:20:40,300 --> 00:20:41,380
+So if you see here
 
-693
-00:20:43,140 --> 00:20:44,710
-13 of 16 stores,
+357
+00:20:41,400 --> 00:20:47,640
+In about 13 of 16 stores, right, that we
+audited 700 orders,
 
-694
-00:20:44,760 --> 00:20:47,640
-right, that we audited 700 orders,
+358
+00:20:47,660 --> 00:20:52,420
+and a fragrance brand had the same 2
+perfumes, 3,400 orders, two different
 
-695
-00:20:47,660 --> 00:20:48,980
-and a fragrance brand had the
+359
+00:20:52,440 --> 00:20:56,920
+brands, that were already selling, but
+people are putting together it by hand,
 
-696
-00:20:49,000 --> 00:20:51,670
-same 2 perfumes, 3,400 orders,
+360
+00:20:56,940 --> 00:20:57,480
+right?
 
-697
-00:20:52,040 --> 00:20:53,040
-two different brands,
+361
+00:20:57,500 --> 00:21:01,800
+But here, what we found was the brand was
+actually selling a quantity ladder.
 
-698
-00:20:53,520 --> 00:20:54,960
-that were already selling,
-
-699
-00:20:54,980 --> 00:20:55,540
-but people are putting
-
-700
-00:20:55,560 --> 00:20:56,920
-together it by hand,
-
-701
-00:20:56,940 --> 00:20:59,480
-right? But here, what we found was the
-
-702
-00:20:59,500 --> 00:21:01,260
-brand was actually selling a quantity
-
-703
-00:21:01,280 --> 00:21:01,800
-ladder.
-
-704
-00:21:01,820 --> 00:21:04,120
+362
+00:21:01,820 --> 00:21:06,360
 So they were selling more of the same
-
-705
-00:21:04,140 --> 00:21:06,360
 pants when people were actually putting
 
-706
-00:21:06,380 --> 00:21:07,780
+363
+00:21:06,380 --> 00:21:08,610
 together two different pants together.
+Right.
 
-707
-00:21:07,800 --> 00:21:10,440
-Right. So you definitely need to go into
+364
+00:21:08,940 --> 00:21:12,470
+So you definitely need to go into your
+data and first start looking at
 
-708
-00:21:10,460 --> 00:21:12,470
-your data and first start looking at
+365
+00:21:13,590 --> 00:21:15,850
+What are people actually already buying
+right?
 
-709
-00:21:13,590 --> 00:21:13,900
-What are people actually
-
-710
-00:21:13,920 --> 00:21:15,850
-already buying right?
-
-711
-00:21:16,560 --> 00:21:19,300
+366
+00:21:16,560 --> 00:21:23,180
 The other thing that you know to keep in
-
-712
-00:21:19,320 --> 00:21:23,180
 mind is a very different like a pre BFCM,
 
-713
-00:21:23,200 --> 00:21:26,630
+367
+00:21:23,200 --> 00:21:28,430
 BFCM and post BFCM needs different offers,
-
-714
-00:21:27,040 --> 00:21:28,430
 needs different bundles
 
-715
-00:21:29,060 --> 00:21:31,000
-Each customer type itself needs
+368
+00:21:29,060 --> 00:21:32,550
+Each customer type itself needs a
+different bundle, right?
 
-716
-00:21:31,020 --> 00:21:32,020
-a different bundle,
+369
+00:21:32,740 --> 00:21:37,700
+A new customer from an ad, a brand-aware
+customer coming from, you know,
 
-717
-00:21:32,120 --> 00:21:34,940
-right? A new customer from an ad,
+370
+00:21:37,720 --> 00:21:41,300
+coming directly or directly to your
+collections page, you know,
 
-718
-00:21:34,960 --> 00:21:37,010
-a brand-aware customer coming from,
+371
+00:21:41,320 --> 00:21:45,100
+someone that you're acquiring organically
+needs to be sent to different bundle
 
-719
-00:21:37,400 --> 00:21:38,860
-you know, coming directly or directly
+372
+00:21:45,120 --> 00:21:48,030
+types, because each bundle has a job,
+right?
 
-720
-00:21:38,880 --> 00:21:40,330
-to your collections page,
+373
+00:21:48,320 --> 00:21:54,410
+In AI era, you know, creating bundles and
+figuring out bundles is not hard.
 
-721
-00:21:40,840 --> 00:21:41,940
-you know, someone that you're
+374
+00:21:54,840 --> 00:22:00,200
+What we really need to do is start digging
+a little bit more deeper into the data to
 
-722
-00:21:41,960 --> 00:21:43,920
-acquiring organically needs to be
+375
+00:22:00,220 --> 00:22:03,000
+just figure out what bundle suits at what
+stage
 
-723
-00:21:43,940 --> 00:21:45,560
-sent to different bundle types,
+376
+00:22:03,020 --> 00:22:04,020
+Right?
 
-724
-00:21:45,580 --> 00:21:47,550
-because each bundle has a job,
-
-725
-00:21:47,700 --> 00:21:50,800
-right? In AI era, you know,
-
-726
-00:21:50,820 --> 00:21:52,960
-creating bundles and figuring out
-
-727
-00:21:52,980 --> 00:21:54,410
-bundles is not hard.
-
-728
-00:21:54,840 --> 00:21:56,600
-What we really need to do is start
-
-729
-00:21:56,620 --> 00:21:58,740
-digging a little bit more deeper into
-
-730
-00:21:58,760 --> 00:22:02,000
-the data to just figure out what bundle
-
-731
-00:22:02,020 --> 00:22:03,990
-suits at what stage Right?
-
-732
-00:22:06,120 --> 00:22:08,200
+377
+00:22:06,120 --> 00:22:08,820
 Every bundle is actually just 4 decisions,
+right?
 
-733
-00:22:08,220 --> 00:22:10,010
-right? What to bundle,
-
-734
-00:22:10,380 --> 00:22:11,220
-which is essentially which
-
-735
-00:22:11,240 --> 00:22:12,530
+378
+00:22:08,840 --> 00:22:12,530
+What to bundle, which is essentially which
 products go together,
 
-736
-00:22:13,200 --> 00:22:15,060
-what the offer needs to be,
+379
+00:22:13,200 --> 00:22:17,470
+what the offer needs to be, and it ties
+back to a lot of what Sid has been saying,
 
-737
-00:22:15,080 --> 00:22:16,513
-and it ties back to a lot of what
+380
+00:22:17,560 --> 00:22:20,940
+right? A lot of the Sidekick prompts help
+here as well,
 
-738
-00:22:16,533 --> 00:22:17,810
-Sid has been saying, right?
+381
+00:22:20,960 --> 00:22:24,670
+but essentially what and how do you price
+your bundles, right?
 
-739
-00:22:18,240 --> 00:22:19,900
-A lot of the Sidekick prompts
+382
+00:22:24,800 --> 00:22:27,580
+Is it a quantity break? Is it a fixed
+price bundle? Is it
 
-740
-00:22:19,920 --> 00:22:20,940
-help here as well,
+383
+00:22:27,600 --> 00:22:30,870
+percentage off? Right? You just need to
+decide,
 
-741
-00:22:20,960 --> 00:22:22,660
-but essentially what and how do
+384
+00:22:31,280 --> 00:22:33,970
+who this offer is for and how do you price
+it
 
-742
-00:22:22,680 --> 00:22:24,320
-you price your bundles,
-
-743
-00:22:24,340 --> 00:22:25,950
-right? Is it a quantity break?
-
-744
-00:22:25,980 --> 00:22:27,190
-Is it a fixed price bundle?
-
-745
-00:22:27,300 --> 00:22:29,307
-Is it percentage off?
-
-746
-00:22:29,327 --> 00:22:30,870
-Right? You just need to decide,
-
-747
-00:22:31,280 --> 00:22:32,860
-who this offer is for and
-
-748
-00:22:32,880 --> 00:22:33,970
-how do you price it
-
-749
+385
 00:22:34,520 --> 00:22:36,560
 of where it lives, extremely important.
 
-750
-00:22:36,580 --> 00:22:38,350
-A lot of new customers directly
+386
+00:22:36,580 --> 00:22:40,070
+A lot of new customers directly land on a
+PDP from your ad.
 
-751
-00:22:38,370 --> 00:22:40,070
-land on a PDP from your ad.
+387
+00:22:40,100 --> 00:22:44,110
+You need to make sure the bundles that
+you're selling there, you know,
 
-752
-00:22:40,100 --> 00:22:41,320
-You need to make sure the bundles
+388
+00:22:44,130 --> 00:22:48,160
+are serve a purpose for new customers
+compared to something in your navigation
 
-753
-00:22:41,340 --> 00:22:42,630
-that you're selling there,
+389
+00:22:48,180 --> 00:22:50,170
+where, you know, a brand-aware customers
 
-754
-00:22:43,000 --> 00:22:46,000
-you know, are serve a purpose for new
+390
+00:22:50,440 --> 00:22:54,670
+Even new customers, when they're
+navigating, you know, go to the menu,
 
-755
-00:22:46,020 --> 00:22:47,660
-customers compared to something in
+391
+00:22:54,800 --> 00:22:58,470
+the navigation or the homepage panel,
+right?
 
-756
-00:22:47,680 --> 00:22:48,600
-your navigation where,
-
-757
-00:22:48,620 --> 00:22:49,580
-you know, a brand-aware
-
-758
-00:22:49,600 --> 00:22:51,800
-customers Even new customers,
-
-759
-00:22:51,820 --> 00:22:52,700
-when they're navigating,
-
-760
-00:22:52,720 --> 00:22:54,670
-you know, go to the menu,
-
-761
-00:22:54,800 --> 00:22:56,310
-the navigation or the
-
-762
-00:22:56,780 --> 00:22:58,470
-homepage panel, right?
-
-763
-00:22:59,680 --> 00:23:02,520
+392
+00:22:59,680 --> 00:23:04,900
 What to name it, or call it is essentially
-
-764
-00:23:02,540 --> 00:23:04,900
 the fourth and one of the most important
 
-765
-00:23:04,920 --> 00:23:06,810
-decisions we've seen for bundle.
+393
+00:23:04,920 --> 00:23:09,580
+decisions we've seen for bundle. It's once
+you start tying your bundle to an
 
-766
-00:23:06,920 --> 00:23:08,980
-It's once you start tying your
+394
+00:23:09,600 --> 00:23:13,650
+emotion, we've seen a much, much better
+conversion, right?
 
-767
-00:23:09,000 --> 00:23:10,270
-bundle to an emotion,
-
-768
-00:23:10,780 --> 00:23:12,870
-we've seen a much, much better conversion,
-
-769
-00:23:13,280 --> 00:23:14,980
-right? How all of these
-
-770
-00:23:15,000 --> 00:23:16,970
-decisions tie back into,
-
-771
-00:23:17,140 --> 00:23:19,400
+395
+00:23:13,840 --> 00:23:19,400
+How all of these decisions tie back into,
 you know, a particular store,
 
-772
-00:23:19,420 --> 00:23:21,220
-we just go through that But
+396
+00:23:19,420 --> 00:23:20,590
+we just go through that
 
-773
-00:23:21,240 --> 00:23:23,420
-before we do that, 3 shoppers, right,
+397
+00:23:20,840 --> 00:23:24,467
+But before we do that, 3 shoppers, right,
+we're going to cover, like,
 
-774
-00:23:23,440 --> 00:23:23,960
-we're going to cover,
+398
+00:23:24,487 --> 00:23:28,410
+there is a new customer who's never bought
+from you, may come from ads,
 
-775
-00:23:23,980 --> 00:23:25,940
-like, there is a new customer who's
-
-776
-00:23:25,960 --> 00:23:28,410
-never bought from you, may come from ads,
-
-777
-00:23:28,460 --> 00:23:30,440
+399
+00:23:28,460 --> 00:23:32,440
 AI assistant lands on the product page,
-
-778
-00:23:30,460 --> 00:23:32,440
 right? Needs a very first easy yes.
 
-779
-00:23:32,460 --> 00:23:34,500
-Very different bundle from a brand
+400
+00:23:32,460 --> 00:23:35,700
+Very different bundle from a brand aware
+customer who knows you.
 
-780
-00:23:34,520 --> 00:23:35,700
-aware customer who knows you.
+401
+00:23:35,720 --> 00:23:40,620
+Hasn't bought much yet, right? Lands on
+your homepage collection needs help
 
-781
-00:23:35,720 --> 00:23:37,530
-Hasn't bought much yet,
+402
+00:23:40,640 --> 00:23:44,400
+choosing because he knows what your
+products are, but requires, you know,
 
-782
-00:23:37,760 --> 00:23:39,500
-right? Lands on your homepage
+403
+00:23:44,420 --> 00:23:47,490
+a mix and match, or a reason to, you know,
+buy more than one.
 
-783
-00:23:39,520 --> 00:23:41,320
-collection needs help choosing because
+404
+00:23:48,000 --> 00:23:51,000
+A returning customer has bought before, so
+it's…
 
-784
-00:23:41,340 --> 00:23:42,640
-he knows what your products are,
+405
+00:23:51,020 --> 00:23:54,620
+he's probably coming from your email, your
+SMS, or your loyalty program, right?
 
-785
-00:23:42,660 --> 00:23:44,400
-but requires, you know,
+406
+00:23:54,640 --> 00:23:57,110
+Or wherever your email is sending them.
 
-786
-00:23:44,420 --> 00:23:46,180
-a mix and match, or a reason to,
+407
+00:23:57,260 --> 00:24:03,920
+They need the next size, a refill, or
+something new, not a deeper price, right?
 
-787
-00:23:46,200 --> 00:23:47,490
-you know, buy more than one.
+408
+00:24:03,940 --> 00:24:06,860
+Because we saw in the offer a lot of time
+returning customers would buy
 
-788
-00:23:48,000 --> 00:23:50,190
-A returning customer has bought before,
+409
+00:24:06,880 --> 00:24:12,090
+Most likely anyways from you, even if you
+don't offer, like, a very deep discount,
 
-789
-00:23:50,380 --> 00:23:51,640
-so it's… he's probably coming
+410
+00:24:12,200 --> 00:24:13,200
+right?
 
-790
-00:23:51,660 --> 00:23:52,660
-from your email,
+411
+00:24:14,060 --> 00:24:17,890
+So we are going to go through a natural
+personal care brand.
 
-791
-00:23:52,720 --> 00:23:54,040
-your SMS, or your loyalty program,
+412
+00:24:17,940 --> 00:24:22,750
+We work with this store. It's a US-based
+store. It's a men's grooming brand.
 
-792
-00:23:54,060 --> 00:23:56,160
-right? Or wherever your email
+413
+00:24:23,000 --> 00:24:29,010
+Essentially 18,000 orders a month, $35
+AOV, $60 was the free shipping line
 
-793
-00:23:56,180 --> 00:23:59,150
-is sending them. They need the next size,
+414
+00:24:29,447 --> 00:24:34,050
+6 in 10 orders are new customers and about
+1.6 orders per customer, right?
 
-794
-00:23:59,280 --> 00:24:00,190
-a refill,
+415
+00:24:34,100 --> 00:24:39,440
+We follow the exact same strategy in terms
+of asking Sidekick, reading, you know,
 
-795
-00:24:00,210 --> 00:24:03,550
-or something new, not a deeper price,
-
-796
-00:24:03,640 --> 00:24:05,280
-right? Because we saw in the offer a lot
-
-797
-00:24:05,300 --> 00:24:07,940
-of time returning customers would buy Most
-
-798
-00:24:07,960 --> 00:24:09,200
-likely anyways from you,
-
-799
-00:24:09,220 --> 00:24:10,540
-even if you don't offer,
-
-800
-00:24:10,560 --> 00:24:12,650
-like, a very deep discount, right?
-
-801
-00:24:14,060 --> 00:24:16,200
-So we are going to go through a
-
-802
-00:24:16,220 --> 00:24:17,890
-natural personal care brand.
-
-803
-00:24:17,940 --> 00:24:19,220
-We work with this store.
-
-804
-00:24:19,240 --> 00:24:20,470
-It's a US-based store.
-
-805
-00:24:20,580 --> 00:24:22,750
-It's a men's grooming brand.
-
-806
-00:24:23,000 --> 00:24:25,010
-Essentially 18,000 orders a month,
-
-807
-00:24:25,040 --> 00:24:29,010
-$35 AOV, $60 was the free shipping line
-
-808
-00:24:29,447 --> 00:24:31,760
-6 in 10 orders are new customers and
-
-809
-00:24:31,780 --> 00:24:33,760
-about 1.6 orders per customer,
-
-810
-00:24:33,780 --> 00:24:35,440
-right? We follow the exact same strategy
-
-811
-00:24:35,460 --> 00:24:38,050
-in terms of asking Sidekick, reading,
-
-812
-00:24:38,640 --> 00:24:39,910
-you know, the data,
-
-813
-00:24:39,960 --> 00:24:41,280
-what findings come out of it,
-
-814
-00:24:41,300 --> 00:24:43,970
+416
+00:24:39,460 --> 00:24:43,970
+the data, what findings come out of it,
 and finally build the bundles per finding
 
-815
-00:24:45,260 --> 00:24:47,160
-These are the five questions that,
+417
+00:24:45,260 --> 00:24:48,870
+These are the five questions that, you
+know, you need to start with.
 
-816
-00:24:47,180 --> 00:24:48,870
-you know, you need to start with.
+418
+00:24:48,960 --> 00:24:51,530
+Essentially, what is already selling?
 
-817
-00:24:48,960 --> 00:24:49,960
-Essentially,
-
-818
-00:24:50,220 --> 00:24:51,530
-what is already selling?
-
-819
-00:24:51,600 --> 00:24:53,970
+419
+00:24:51,600 --> 00:24:56,580
 So your top 10 products last 10 months,
-
-820
-00:24:54,400 --> 00:24:56,580
 last 12 months, what goes together?
 
-821
-00:24:56,600 --> 00:24:57,480
-So what people are already
+420
+00:24:56,600 --> 00:25:00,630
+So what people are already buying
+together, which bundles already sell
 
-822
-00:24:57,500 --> 00:24:58,500
-buying together,
+421
+00:25:00,880 --> 00:25:06,170
+Right? Who buys and how often? So, new
+versus returning customer, what's your
 
-823
-00:24:58,820 --> 00:25:01,250
-which bundles already sell Right?
+422
+00:25:06,200 --> 00:25:08,530
+AOV? What's your order per customer over
+the last 12 months?
 
-824
-00:25:01,600 --> 00:25:03,590
-Who buys and how often?
+423
+00:25:08,900 --> 00:25:11,180
+And where is the order landing, right?
 
-825
-00:25:03,660 --> 00:25:05,530
-So, new versus returning customer,
+424
+00:25:11,200 --> 00:25:14,460
+In terms of increments, is it the first
+$20, $40, $50,
 
-826
-00:25:05,700 --> 00:25:06,460
-what's your AOV?
+425
+00:25:14,480 --> 00:25:17,100
+how far away from the shipping threshold,
+or how
 
-827
-00:25:06,480 --> 00:25:07,300
-What's your order per customer
+426
+00:25:17,120 --> 00:25:20,330
+Much beyond the shipping threshold, right?
 
-828
-00:25:07,320 --> 00:25:08,530
-over the last 12 months?
+427
+00:25:20,540 --> 00:25:25,780
+This essentially gives you this kind of
+data in terms of what the sales are
 
-829
-00:25:08,900 --> 00:25:10,810
-And where is the order landing,
-
-830
-00:25:10,900 --> 00:25:12,080
-right? In terms of increments,
-
-831
-00:25:12,100 --> 00:25:13,350
-is it the first $20,
-
-832
-00:25:13,460 --> 00:25:15,880
-$40, $50, how far away from the
-
-833
-00:25:15,900 --> 00:25:16,420
-shipping threshold,
-
-834
-00:25:16,440 --> 00:25:19,870
-or how Much beyond the shipping threshold,
-
-835
-00:25:19,960 --> 00:25:23,100
-right? This essentially gives you this
-
-836
-00:25:23,120 --> 00:25:25,360
-kind of data in terms of what the
-
-837
-00:25:25,380 --> 00:25:26,340
-sales are looking like,
-
-838
-00:25:26,360 --> 00:25:27,560
-what are people are already
-
-839
-00:25:27,580 --> 00:25:29,900
+428
+00:25:25,800 --> 00:25:29,900
+looking like, what are people are already
 buying together, what bundles are selling,
 
-840
+429
 00:25:29,920 --> 00:25:32,310
 and who buys, and how often, right?
 
-841
-00:25:32,680 --> 00:25:34,920
-This essentially then leads to 5
+430
+00:25:32,680 --> 00:25:37,450
+This essentially then leads to 5 findings
+that we had for this store, right?
 
-842
-00:25:34,940 --> 00:25:36,830
-findings that we had for this store,
+431
+00:25:37,640 --> 00:25:39,840
+We'll go through each of these findings,
 
-843
-00:25:36,940 --> 00:25:38,560
-right? We'll go through each
-
-844
-00:25:38,580 --> 00:25:39,840
-of these findings,
-
-845
-00:25:39,860 --> 00:25:41,340
+432
+00:25:39,860 --> 00:25:43,080
 and then I'll walk you through what
-
-846
-00:25:41,360 --> 00:25:43,080
 bundles we built for each of these
 
-847
-00:25:43,100 --> 00:25:45,150
-particular findings that came
+433
+00:25:43,100 --> 00:25:45,680
+particular findings that came up.
 
-848
-00:25:45,600 --> 00:25:47,620
-up. So the first one was essentially the
+434
+00:25:45,700 --> 00:25:51,510
+So the first one was essentially the three
+pack always outsells the single,
 
-849
-00:25:47,640 --> 00:25:51,510
-three pack always outsells the single,
+435
+00:25:51,780 --> 00:25:56,510
+but the average order is still 35 and free
+shipping starts at 60, right?
 
-850
-00:25:51,780 --> 00:25:54,320
-but the average order is still 35 and
+436
+00:25:56,980 --> 00:26:01,920
+A simple fix here was, you know, a new
+customer is landing before the weekend,
 
-851
-00:25:54,340 --> 00:25:56,510
-free shipping starts at 60, right?
+437
+00:26:01,940 --> 00:26:07,370
+most likely comes here, because this is
+where they're running their ads
 
-852
-00:25:56,980 --> 00:25:59,070
-A simple fix here was,
+438
+00:26:08,660 --> 00:26:11,180
+This is their most picked, right? You…
 
-853
-00:25:59,160 --> 00:26:00,660
-you know, a new customer is
+439
+00:26:11,200 --> 00:26:15,530
+we just put another one right next to it
+that says, hey, it ships free,
 
-854
-00:26:00,680 --> 00:26:01,920
-landing before the weekend,
+440
+00:26:15,960 --> 00:26:22,060
+you clear the shipping threshold, and you
+get a year's worth of product with you,
 
-855
-00:26:01,940 --> 00:26:04,400
-most likely comes here,
+441
+00:26:22,080 --> 00:26:26,390
+right? So you have your whole year, you're
+saving $16, and it ships free
 
-856
-00:26:04,420 --> 00:26:06,420
-because this is where they're
+442
+00:26:26,500 --> 00:26:28,340
+Right? Suddenly, we saw that, you know,
 
-857
-00:26:06,440 --> 00:26:07,440
-running their ads
+443
+00:26:28,360 --> 00:26:34,100
+now this quantity ladder has led people to
+this particular tier more than buying
 
-858
-00:26:08,660 --> 00:26:10,200
-This is their most picked,
+444
+00:26:34,120 --> 00:26:39,520
+just the 3-pack, right? Now, some more
+examples right here, for example,
 
-859
-00:26:10,220 --> 00:26:12,780
-right? You… we just put another one
+445
+00:26:39,540 --> 00:26:42,680
+for this particular brand, we again did
+the same thing where the three was,
 
-860
-00:26:12,800 --> 00:26:14,460
-right next to it that says,
-
-861
-00:26:14,480 --> 00:26:15,530
-hey, it ships free,
-
-862
-00:26:15,960 --> 00:26:17,350
-you clear the shipping threshold,
-
-863
-00:26:17,800 --> 00:26:19,980
-and you get a year's worth of
-
-864
-00:26:20,000 --> 00:26:22,060
-product with you,
-
-865
-00:26:22,080 --> 00:26:24,100
-right? So you have your whole year,
-
-866
-00:26:24,120 --> 00:26:25,120
-you're saving $16,
-
-867
-00:26:25,240 --> 00:26:26,930
-and it ships free Right?
-
-868
-00:26:27,000 --> 00:26:28,020
-Suddenly, we saw that,
-
-869
-00:26:28,040 --> 00:26:30,280
-you know, now this quantity ladder has
-
-870
-00:26:30,300 --> 00:26:33,180
-led people to this particular tier more
-
-871
-00:26:33,200 --> 00:26:35,730
-than buying just the 3-pack, right?
-
-872
-00:26:36,620 --> 00:26:38,860
-Now, some more examples right here,
-
-873
-00:26:38,880 --> 00:26:40,700
-for example, for this particular brand,
-
-874
-00:26:40,720 --> 00:26:41,740
-we again did the same thing
-
-875
-00:26:41,760 --> 00:26:42,680
-where the three was,
-
-876
+446
 00:26:42,700 --> 00:26:45,560
 you know, 3 ships free plus gift.
 
-877
-00:26:45,580 --> 00:26:46,910
-But then another lander tells them,
+447
+00:26:45,580 --> 00:26:48,690
+But then another lander tells them, Hey,
+you're saving a lot more
 
-878
-00:26:46,930 --> 00:26:48,690
-Hey, you're saving a lot more
+448
+00:26:48,740 --> 00:26:54,880
+unlocking a mystery gift, right? The idea
+is not to show you, like, you know,
 
-879
-00:26:48,740 --> 00:26:51,070
-unlocking a mystery gift,
+449
+00:26:54,900 --> 00:26:59,560
+different designs here. The idea is that,
+essentially,
 
-880
-00:26:51,140 --> 00:26:53,860
-right? The idea is not to show you,
-
-881
-00:26:53,880 --> 00:26:57,470
-like, you know, different designs here.
-
-882
-00:26:57,660 --> 00:26:59,560
-The idea is that, essentially,
-
-883
-00:26:59,580 --> 00:27:02,350
+450
+00:26:59,580 --> 00:27:04,480
 the findings for these stores is the same,
+right? What we are doing
 
-884
-00:27:02,620 --> 00:27:05,600
-right? What we are doing is we are
+451
+00:27:04,500 --> 00:27:10,090
+is we are building custom bundles suited
+for those stores, right?
 
-885
-00:27:05,620 --> 00:27:09,140
-building custom bundles suited for those
+452
+00:27:10,180 --> 00:27:15,290
+It is not hard to do a lot of this with
+Claude, with your devs, right?
 
-886
-00:27:09,160 --> 00:27:12,520
-stores, right? It is not hard to do a lot
+453
+00:27:15,500 --> 00:27:19,640
+Earlier, building these bundles like
+simple quantity breaks is simple
 
-887
-00:27:12,540 --> 00:27:13,620
-of this with Claude,
+454
+00:27:19,660 --> 00:27:23,500
+Right? But truly building quantity breaks
+where, you know,
 
-888
-00:27:13,640 --> 00:27:15,290
-with your devs, right?
+455
+00:27:23,520 --> 00:27:28,480
+now it starts making sense for your brand
+is suited for what you, you know,
 
-889
-00:27:15,500 --> 00:27:17,190
-Earlier, building these bundles
+456
+00:27:28,500 --> 00:27:33,910
+want to sell to your customers required a
+lot of dev work. Now it doesn't, right?
 
-890
-00:27:17,860 --> 00:27:19,120
-like simple quantity breaks
-
-891
-00:27:19,140 --> 00:27:20,100
-is simple Right?
-
-892
-00:27:20,120 --> 00:27:23,240
-But truly building quantity breaks where,
-
-893
-00:27:23,260 --> 00:27:25,220
-you know, now it starts making sense for
-
-894
-00:27:25,240 --> 00:27:27,220
-your brand is suited for what you,
-
-895
-00:27:27,240 --> 00:27:29,800
-you know, want to sell to your customers
-
-896
-00:27:29,820 --> 00:27:32,300
-required a lot of dev work.
-
-897
-00:27:32,320 --> 00:27:33,910
-Now it doesn't, right?
-
-898
-00:27:34,240 --> 00:27:36,620
+457
+00:27:34,240 --> 00:27:37,580
 Just simply by connecting your store data
+to an MCP
 
-899
-00:27:36,640 --> 00:27:39,600
-to an MCP With your LLM using,
+458
+00:27:37,600 --> 00:27:41,120
+With your LLM using, like, you know,
+minimum dev work,
 
-900
-00:27:39,620 --> 00:27:41,120
-like, you know, minimum dev work,
+459
+00:27:41,140 --> 00:27:45,050
+all of this is possible alone, like, by
+any brand now, right?
 
-901
-00:27:41,140 --> 00:27:42,840
-all of this is possible alone,
+460
+00:27:46,280 --> 00:27:49,320
+So yeah, so this is, you know, the first
+finding that we had.
 
-902
-00:27:42,860 --> 00:27:45,050
-like, by any brand now, right?
-
-903
-00:27:46,280 --> 00:27:47,750
-So yeah, so this is,
-
-904
-00:27:47,860 --> 00:27:49,320
-you know, the first finding that we had.
-
-905
-00:27:49,340 --> 00:27:51,720
+461
+00:27:49,340 --> 00:27:53,740
 And these are some of the bundles that you
-
-906
-00:27:51,740 --> 00:27:53,740
 know we built around this finding.
 
-907
+462
 00:27:53,760 --> 00:27:54,400
 And then finally.
 
-908
-00:27:54,420 --> 00:27:56,900
+463
+00:27:54,420 --> 00:28:00,920
 The next finding was like about 1,300
-
-909
-00:27:56,920 --> 00:28:00,920
 orders were putting a body wash or soap
 
-910
-00:28:00,940 --> 00:28:02,850
-with deodorant by hand, right?
+464
+00:28:00,940 --> 00:28:06,300
+with deodorant by hand, right? 5,600 more
+bought it as a combo from a page shoppers
 
-911
-00:28:03,580 --> 00:28:05,480
-5,600 more bought it as a combo from
+465
+00:28:06,320 --> 00:28:11,070
+never see. So how do I put what people
+were already buying
 
-912
-00:28:05,500 --> 00:28:07,410
-a page shoppers never see.
+466
+00:28:11,170 --> 00:28:16,260
+In front of them, when the SKUs were so
+many that like it was very hard for
 
-913
-00:28:07,460 --> 00:28:09,960
-So how do I put what people were
+467
+00:28:16,280 --> 00:28:19,870
+someone to actually navigate to every
+product and find what they need, right?
 
-914
-00:28:09,980 --> 00:28:12,120
-already buying In front of them,
+468
+00:28:20,320 --> 00:28:24,340
+So what we did here was, while they were
+already buying this,
 
-915
-00:28:12,140 --> 00:28:15,000
-when the SKUs were so many that like
-
-916
-00:28:15,020 --> 00:28:16,680
-it was very hard for someone to
-
-917
-00:28:16,700 --> 00:28:18,440
-actually navigate to every product and
-
-918
-00:28:18,460 --> 00:28:19,870
-find what they need, right?
-
-919
-00:28:20,320 --> 00:28:21,780
-So what we did here was,
-
-920
-00:28:21,800 --> 00:28:24,340
-while they were already buying this,
-
-921
-00:28:24,360 --> 00:28:26,320
+469
+00:28:24,360 --> 00:28:28,390
 we went ahead and added an entire build
-
-922
-00:28:26,340 --> 00:28:28,390
 your morning routine right on the PDP.
 
-923
-00:28:28,540 --> 00:28:30,080
-So any new customer who's
+470
+00:28:28,540 --> 00:28:33,100
+So any new customer who's buying a
+particular scent natural deodorant pack
 
-924
-00:28:30,100 --> 00:28:31,100
-buying a particular
+471
+00:28:33,120 --> 00:28:37,090
+can then right here add a body wash, add a
+body spray.
 
-925
-00:28:31,660 --> 00:28:33,990
-scent natural deodorant pack can then
+472
+00:28:37,320 --> 00:28:41,820
+You get, you know, the shipping free and
+you've crossed, you know,
 
-926
-00:28:34,010 --> 00:28:36,040
-right here add a body wash,
+473
+00:28:41,840 --> 00:28:45,270
+you get a free gift or whatever offer you
+want to run, but essentially you want
 
-927
-00:28:36,060 --> 00:28:38,780
-add a body spray. You get, you know,
+474
+00:28:45,460 --> 00:28:48,790
+you know, encourage them to order all of
+it together,
 
-928
-00:28:38,800 --> 00:28:40,960
-the shipping free and you've crossed,
+475
+00:28:49,260 --> 00:28:53,960
+and hopefully increase the basket size as
+well as the AOV.
 
-929
-00:28:40,980 --> 00:28:43,060
-you know, you get a free gift or
+476
+00:28:53,980 --> 00:28:59,680
+Very similar, right? Just the vibes or the
+cherry pair. Again, right?
 
-930
-00:28:43,080 --> 00:28:44,180
-whatever offer you want to run,
+477
+00:28:59,700 --> 00:29:03,640
+This is a saddle brand where, you know,
 
-931
-00:28:44,200 --> 00:28:46,020
-but essentially you want you know,
+478
+00:29:03,660 --> 00:29:07,293
+a lot of people were only buying saddle
+and then coming back and buying maple
 
-932
-00:28:46,040 --> 00:28:47,860
-encourage them to order all
+479
+00:29:07,313 --> 00:29:08,390
+lined robes, right?
 
-933
-00:28:47,880 --> 00:28:48,880
-of it together,
+480
+00:29:08,660 --> 00:29:11,710
+So it was just obvious that, you know, you
+go ahead and sell all of it together
 
-934
-00:28:49,260 --> 00:28:50,480
-and hopefully increase the
-
-935
-00:28:50,500 --> 00:28:51,950
-basket size as well as the
-
-936
-00:28:53,000 --> 00:28:55,370
-AOV. Very similar, right?
-
-937
-00:28:55,920 --> 00:28:58,790
-Just the vibes or the cherry pair.
-
-938
-00:28:58,940 --> 00:28:59,680
-Again, right?
-
-939
-00:28:59,700 --> 00:29:02,650
-This is a saddle brand where,
-
-940
-00:29:02,780 --> 00:29:04,720
-you know, a lot of people were only
-
-941
-00:29:04,740 --> 00:29:06,660
-buying saddle and then coming back and
-
-942
-00:29:06,680 --> 00:29:07,560
-buying maple lined robes,
-
-943
-00:29:07,580 --> 00:29:09,860
-right? So it was just obvious that,
-
-944
-00:29:09,880 --> 00:29:10,860
-you know, you go ahead and sell
-
-945
-00:29:10,880 --> 00:29:11,880
-all of it together
-
-946
-00:29:13,200 --> 00:29:15,160
+481
+00:29:13,200 --> 00:29:17,120
 The third finding that we had from the
-
-947
-00:29:15,180 --> 00:29:17,120
 data was like there are three pack,
 
-948
-00:29:17,140 --> 00:29:18,480
-six-pack, and the body wash 3-pack,
+482
+00:29:17,140 --> 00:29:20,880
+six-pack, and the body wash 3-pack, they
+all sell, they're all fixed scents.
 
-949
-00:29:18,500 --> 00:29:20,880
-they all sell, they're all fixed scents.
+483
+00:29:20,900 --> 00:29:23,600
+But a brand-aware customer is now coming
+back.
 
-950
-00:29:20,900 --> 00:29:22,820
-But a brand-aware customer is
+484
+00:29:23,620 --> 00:29:26,930
+You need to now expose them to different
+scents, right?
 
-951
-00:29:22,840 --> 00:29:23,600
-now coming back.
+485
+00:29:27,000 --> 00:29:29,820
+They were all coming back and still
+buying, you know,
 
-952
-00:29:23,620 --> 00:29:25,740
-You need to now expose them to
+486
+00:29:29,840 --> 00:29:32,360
+one or two things that they were already
+buying. So how do you make sure
 
-953
-00:29:25,760 --> 00:29:26,600
-different scents,
+487
+00:29:32,380 --> 00:29:37,240
+They buy more from you, right? This is
+where mix and match comes in handy.
 
-954
-00:29:26,620 --> 00:29:27,600
-right? They were all coming
+488
+00:29:37,260 --> 00:29:42,400
+This is where, you know, different scents,
+you give a quantity order discount, and,
 
-955
-00:29:27,620 --> 00:29:28,790
-back and still buying,
+489
+00:29:42,420 --> 00:29:45,890
+you know, you expose them to all your
+products in a single page, different
 
-956
-00:29:29,060 --> 00:29:30,460
-you know, one or two things that
+490
+00:29:46,020 --> 00:29:50,630
+scents, and you know, much easier to buy
+with a subscription as well.
 
-957
-00:29:30,480 --> 00:29:31,480
-they were already buying.
+491
+00:29:51,500 --> 00:29:55,940
+A very different use case of a very
+similar thing was, you know,
 
-958
-00:29:31,500 --> 00:29:33,160
-So how do you make sure They
+492
+00:29:55,960 --> 00:30:00,820
+when you have a lot of SKUs, you also
+don't want to offer mix and match in a way
 
-959
-00:29:33,180 --> 00:29:33,920
-buy more from you,
+493
+00:30:00,840 --> 00:30:04,390
+where the customer is getting confused.
 
-960
-00:29:33,940 --> 00:29:35,600
-right? This is where mix and
+494
+00:30:04,600 --> 00:30:09,400
+So what we did was we did this case, like
+12 bottles fixed, right?
 
-961
-00:29:35,620 --> 00:29:37,240
-match comes in handy.
+495
+00:30:09,420 --> 00:30:11,050
+This is our pick for you
 
-962
-00:29:37,260 --> 00:29:38,770
-This is where, you know,
+496
+00:30:11,120 --> 00:30:15,010
+Even if you want to change, you go ahead
+and then swap, right?
 
-963
-00:29:39,040 --> 00:29:40,720
-different scents, you give a
-
-964
-00:29:40,740 --> 00:29:41,700
-quantity order discount,
-
-965
-00:29:41,720 --> 00:29:43,900
-and, you know, you expose them to all
-
-966
-00:29:43,920 --> 00:29:45,280
-your products in a single page,
-
-967
-00:29:45,300 --> 00:29:47,860
-different scents, and you know,
-
-968
-00:29:47,880 --> 00:29:49,500
-much easier to buy with a
-
-969
-00:29:49,520 --> 00:29:50,630
-subscription as well.
-
-970
-00:29:51,500 --> 00:29:53,760
-A very different use case of a
-
-971
-00:29:53,780 --> 00:29:55,420
-very similar thing was,
-
-972
-00:29:55,440 --> 00:29:58,300
-you know, when you have a lot of SKUs,
-
-973
-00:29:58,320 --> 00:30:00,020
-you also don't want to offer mix
-
-974
-00:30:00,040 --> 00:30:01,150
-and match in a way where
-
-975
-00:30:02,720 --> 00:30:04,390
-the customer is getting confused.
-
-976
-00:30:04,600 --> 00:30:07,810
-So what we did was we did this case,
-
-977
-00:30:07,900 --> 00:30:08,960
-like 12 bottles fixed,
-
-978
-00:30:08,980 --> 00:30:11,050
-right? This is our pick for you
-
-979
-00:30:11,120 --> 00:30:12,440
-Even if you want to change,
-
-980
-00:30:12,460 --> 00:30:15,010
-you go ahead and then swap, right?
-
-981
-00:30:15,400 --> 00:30:18,240
+497
+00:30:15,400 --> 00:30:20,250
 But essentially here, you're making sure,
-
-982
-00:30:18,260 --> 00:30:20,250
 even though when someone is brand aware,
 
-983
-00:30:20,360 --> 00:30:22,220
-but a lot of SKUs you want to
+498
+00:30:20,360 --> 00:30:25,360
+but a lot of SKUs you want to still not
+expose them to, you know, too much,
 
-984
-00:30:22,240 --> 00:30:24,330
-still not expose them to,
+499
+00:30:25,380 --> 00:30:28,030
+otherwise, you know, confusion, all of
+that
 
-985
-00:30:24,500 --> 00:30:26,820
-you know, too much, otherwise, you know,
+500
+00:30:29,440 --> 00:30:32,700
+So yeah, so these are some examples of how
+you, you know,
 
-986
-00:30:26,840 --> 00:30:28,030
-confusion, all of that
+501
+00:30:32,720 --> 00:30:37,010
+how brand aware customers are can be shown
+more of mix and match.
 
-987
-00:30:29,440 --> 00:30:30,840
-So yeah, so these are some
-
-988
-00:30:30,860 --> 00:30:32,260
-examples of how you,
-
-989
-00:30:32,280 --> 00:30:34,120
-you know, how brand aware customers are
-
-990
-00:30:34,140 --> 00:30:37,010
-can be shown more of mix and match.
-
-991
-00:30:38,200 --> 00:30:40,500
+502
+00:30:38,200 --> 00:30:42,080
 The fourth finding we had for them was,
+you know,
 
-992
-00:30:40,520 --> 00:30:43,910
-you know, the Try Them All kit was
+503
+00:30:42,100 --> 00:30:45,930
+the Try Them All kit was their top five
+product, right?
 
-993
-00:30:43,930 --> 00:30:45,250
-their top five product,
+504
+00:30:46,260 --> 00:30:49,910
+But once the try all kit was bought,
 
-994
-00:30:45,600 --> 00:30:48,060
-right? But once the try all
-
-995
-00:30:48,080 --> 00:30:49,910
-kit was bought,
-
-996
-00:30:50,140 --> 00:30:51,740
+505
+00:30:50,140 --> 00:30:52,640
 there was nothing else that we were
+selling them again
 
-997
-00:30:51,760 --> 00:30:53,570
-selling them again Right?
+506
+00:30:52,660 --> 00:30:57,560
+Right? So for a returning customer, what
+we did was now, like, you know,
 
-998
-00:30:53,660 --> 00:30:54,840
-So for a returning customer,
+507
+00:30:57,580 --> 00:31:00,210
+send them an email and get them to this
+page right?
 
-999
-00:30:54,860 --> 00:30:57,190
-what we did was now,
-
-1000
-00:30:57,300 --> 00:30:58,660
-like, you know, send them an email and
-
-1001
-00:30:58,680 --> 00:31:00,210
-get them to this page right?
-
-1002
-00:31:00,300 --> 00:31:02,930
+508
+00:31:00,300 --> 00:31:05,040
 You've already found your favorite right
-
-1003
-00:31:03,020 --> 00:31:05,040
 now for that particular scent.
 
-1004
-00:31:05,060 --> 00:31:06,200
-Here's everything that you
+509
+00:31:05,060 --> 00:31:07,570
+Here's everything that you can now buy
+right?
 
-1005
-00:31:06,220 --> 00:31:07,570
-can now buy right?
+510
+00:31:07,760 --> 00:31:10,210
+So this was an email campaign that you can
+run.
 
-1006
-00:31:07,760 --> 00:31:09,140
-So this was an email campaign
-
-1007
-00:31:09,160 --> 00:31:10,210
-that you can run.
-
-1008
-00:31:10,700 --> 00:31:12,800
+511
+00:31:10,700 --> 00:31:13,330
 Essentially, once you have found what you
+like
 
-1009
-00:31:12,820 --> 00:31:14,810
-like Here's everything else,
+512
+00:31:13,500 --> 00:31:17,130
+Here's everything else, like, you know, an
+offer, a discount,
 
-1010
-00:31:15,060 --> 00:31:16,550
-like, you know, an offer,
+513
+00:31:17,420 --> 00:31:19,820
+however you want to price it. But this is,
 
-1011
-00:31:16,570 --> 00:31:19,170
-a discount, however you want to price it.
+514
+00:31:19,840 --> 00:31:22,510
+this was something that was targeting the
+returning customers.
 
-1012
-00:31:19,340 --> 00:31:21,060
-But this is, this was something that was
-
-1013
-00:31:21,080 --> 00:31:22,510
-targeting the returning customers.
-
-1014
+515
 00:31:24,300 --> 00:31:27,040
 Finally, customers ordering 1.6 time,
 
-1015
-00:31:27,060 --> 00:31:28,380
-returning customers spend no
+516
+00:31:27,060 --> 00:31:29,740
+returning customers spend no more than the
+new ones, right?
 
-1016
-00:31:28,400 --> 00:31:29,520
-more than the new ones,
+517
+00:31:29,760 --> 00:31:36,220
+So how do you get the returning customers
+to now have their AOV higher than your
 
-1017
-00:31:29,540 --> 00:31:31,440
-right? So how do you get the returning
+518
+00:31:36,240 --> 00:31:40,080
+first basket, right? So what we really did
+was, you know,
 
-1018
-00:31:31,460 --> 00:31:34,900
-customers to now have their AOV higher
+519
+00:31:40,100 --> 00:31:42,110
+build never run out on your morning.
 
-1019
-00:31:34,920 --> 00:31:37,590
-than your first basket, right?
+520
+00:31:42,400 --> 00:31:46,110
+So like, you know, go for a subscription
+every six weeks, 10 weeks, come back
 
-1020
-00:31:37,940 --> 00:31:39,510
-So what we really did was,
+521
+00:31:46,540 --> 00:31:52,880
+Get your deliveries, right? Or refill
+packs, right? You've already bought from
 
-1021
-00:31:39,640 --> 00:31:41,160
-you know, build never run out
+522
+00:31:52,900 --> 00:31:55,810
+us. 10 designs now take you up until July.
 
-1022
-00:31:41,180 --> 00:31:43,000
-on your morning. So like, you know,
+523
+00:31:56,140 --> 00:31:59,360
+Select your design, you have your, you
+know, refills ready.
 
-1023
-00:31:43,020 --> 00:31:44,820
-go for a subscription every six weeks,
+524
+00:31:59,380 --> 00:32:01,400
+So yeah, so these were, you know,
 
-1024
-00:31:44,840 --> 00:31:46,110
-10 weeks, come back
+525
+00:32:01,420 --> 00:32:04,440
+five findings that we had for this
+particular store.
 
-1025
-00:31:46,540 --> 00:31:48,230
-Get your deliveries, right?
+526
+00:32:04,460 --> 00:32:12,220
+We built their entire, you know, bundling
+journey and again, right? All of this
 
-1026
-00:31:48,600 --> 00:31:50,890
-Or refill packs, right?
-
-1027
-00:31:51,200 --> 00:31:53,120
-You've already bought from us.
-
-1028
-00:31:53,140 --> 00:31:55,810
-10 designs now take you up until July.
-
-1029
-00:31:56,140 --> 00:31:57,060
-Select your design,
-
-1030
-00:31:57,080 --> 00:31:59,360
-you have your, you know, refills ready.
-
-1031
-00:31:59,380 --> 00:32:00,640
-So yeah, so these were,
-
-1032
-00:32:00,660 --> 00:32:03,180
-you know, five findings that we had
-
-1033
-00:32:03,200 --> 00:32:04,440
-for this particular store.
-
-1034
-00:32:04,460 --> 00:32:06,220
-We built their entire,
-
-1035
-00:32:06,240 --> 00:32:08,690
-you know, bundling journey and
-
-1036
-00:32:10,160 --> 00:32:14,280
-again, right? All of this is simply…
-
-1037
-00:32:14,300 --> 00:32:16,650
-is… can… is doable by you also,
-
-1038
-00:32:16,700 --> 00:32:18,660
-right? You just have to go to Sidekick,
-
-1039
-00:32:18,680 --> 00:32:20,160
-ask for the relevant data,
-
-1040
-00:32:20,180 --> 00:32:21,490
-you have to dig into,
-
-1041
-00:32:21,520 --> 00:32:23,160
-you know, what's currently happening,
-
-1042
-00:32:23,180 --> 00:32:24,220
-what are people buying,
-
-1043
-00:32:24,240 --> 00:32:26,700
-and all of the prompts that we gave,
-
-1044
-00:32:26,720 --> 00:32:28,300
-right? And looking at that,
-
-1045
-00:32:28,320 --> 00:32:29,260
-you know, come up with a
-
-1046
-00:32:29,280 --> 00:32:29,920
-bundling strategy,
-
-1047
-00:32:29,940 --> 00:32:31,300
-like I said, every bundle
-
-1048
-00:32:31,320 --> 00:32:32,390
-has four decisions,
-
-1049
-00:32:32,500 --> 00:32:34,140
-one by one. If you you know,
-
-1050
-00:32:34,160 --> 00:32:35,080
-map out your customers,
-
-1051
-00:32:35,100 --> 00:32:37,720
-map out your templates to each of those,
-
-1052
-00:32:37,740 --> 00:32:38,890
-figure out the strategy,
-
-1053
-00:32:38,980 --> 00:32:40,520
-and then the build part now
-
-1054
-00:32:40,540 --> 00:32:42,140
-is not as hard,
-
-1055
-00:32:42,160 --> 00:32:44,740
-like, you know, what used to take,
-
-1056
-00:32:44,760 --> 00:32:46,220
-like I said, what used to take months
-
-1057
-00:32:46,240 --> 00:32:48,340
-is now just a couple of days,
-
-1058
-00:32:48,360 --> 00:32:49,840
-right? So that's the power of
-
-1059
-00:32:49,860 --> 00:32:50,800
-AI you need to use,
-
-1060
-00:32:50,820 --> 00:32:52,560
-that whatever strategy comes out
-
-1061
-00:32:52,580 --> 00:32:54,860
-can be customized for you,
-
-1062
-00:32:54,880 --> 00:32:56,460
-for your store, and that's what you need
-
-1063
-00:32:56,480 --> 00:32:58,870
-to present to your customer.
-
-1064
-00:32:59,820 --> 00:33:00,820
-Finally,
-
-1065
-00:33:01,080 --> 00:33:02,350
-from the four decisions,
-
-1066
-00:33:02,480 --> 00:33:04,230
-one of the decisions was where it lives,
-
-1067
-00:33:04,380 --> 00:33:05,140
+527
+00:32:12,240 --> 00:32:17,000
+is simply… is… can… is doable by you also,
 right?
 
-1068
-00:33:05,160 --> 00:33:07,280
-There are a number of places in a shopper
+528
+00:32:17,020 --> 00:32:21,490
+You just have to go to Sidekick, ask for
+the relevant data, you have to dig into,
 
-1069
-00:33:07,300 --> 00:33:08,990
+529
+00:32:21,520 --> 00:32:24,220
+you know, what's currently happening, what
+are people buying,
+
+530
+00:32:24,240 --> 00:32:27,110
+and all of the prompts that we gave,
+right?
+
+531
+00:32:27,400 --> 00:32:30,960
+And looking at that, you know, come up
+with a bundling strategy, like I said,
+
+532
+00:32:30,980 --> 00:32:33,630
+every bundle has four decisions, one by
+one. If you
+
+533
+00:32:33,740 --> 00:32:37,720
+you know, map out your customers, map out
+your templates to each of those,
+
+534
+00:32:37,740 --> 00:32:43,060
+figure out the strategy, and then the
+build part now is not as hard, like, you
+
+535
+00:32:43,080 --> 00:32:45,340
+know, what used to take, like I said,
+
+536
+00:32:45,360 --> 00:32:48,730
+what used to take months is now just a
+couple of days, right?
+
+537
+00:32:48,800 --> 00:32:52,560
+So that's the power of AI you need to use,
+that whatever strategy comes out
+
+538
+00:32:52,580 --> 00:32:55,700
+can be customized for you, for your store,
+
+539
+00:32:55,720 --> 00:32:58,870
+and that's what you need to present to
+your customer.
+
+540
+00:32:59,820 --> 00:33:04,750
+Finally, from the four decisions, one of
+the decisions was where it lives, right?
+
+541
+00:33:05,160 --> 00:33:08,990
+There are a number of places in a shopper
 journey where you could place bundles.
 
-1070
-00:33:09,700 --> 00:33:11,707
-Top bar is where everyone sees it,
+542
+00:33:09,700 --> 00:33:13,890
+Top bar is where everyone sees it, menu is
+mostly for brand-aware customers,
 
-1071
-00:33:11,727 --> 00:33:13,890
-menu is mostly for brand-aware customers,
+543
+00:33:14,380 --> 00:33:18,120
+homepage, again, brand aware and
+returning, but when you send your new
 
-1072
-00:33:14,380 --> 00:33:15,520
-homepage, again, brand
+544
+00:33:18,140 --> 00:33:20,090
+customers to, let's say, a product page,
 
-1073
-00:33:15,540 --> 00:33:16,540
-aware and returning,
-
-1074
-00:33:16,580 --> 00:33:18,940
-but when you send your new customers to,
-
-1075
-00:33:18,960 --> 00:33:20,090
-let's say, a product page,
-
-1076
-00:33:20,140 --> 00:33:22,140
+545
+00:33:20,140 --> 00:33:23,950
 or if they land from like a Google or an
-
-1077
-00:33:22,160 --> 00:33:23,950
 agent directly to a product page
 
-1078
-00:33:24,700 --> 00:33:26,570
-That's where you expose them to your
+546
+00:33:24,700 --> 00:33:29,030
+That's where you expose them to your top
+two three products right there.
 
-1079
-00:33:27,460 --> 00:33:29,030
-top two three products right there.
+547
+00:33:29,200 --> 00:33:33,740
+And after the order also, we've seen a lot
+of post-purchase upsells happening in
 
-1080
-00:33:29,200 --> 00:33:31,120
-And after the order also,
-
-1081
-00:33:31,140 --> 00:33:32,500
-we've seen a lot of post-purchase
-
-1082
-00:33:32,520 --> 00:33:34,180
-upsells happening in terms of,
-
-1083
-00:33:34,200 --> 00:33:35,880
-you know, quick refill packs,
-
-1084
-00:33:35,900 --> 00:33:36,900
+548
+00:33:33,760 --> 00:33:36,630
+terms of, you know, quick refill packs,
 quick bundles,
 
-1085
+549
 00:33:37,140 --> 00:33:39,340
 that's also a great place to upsell
 
-1086
+550
 00:33:39,360 --> 00:33:41,210
 To returning customers.
 
-1087
-00:33:43,250 --> 00:33:45,410
-Finally, the fourth decision we had
+551
+00:33:43,250 --> 00:33:46,930
+Finally, the fourth decision we had was
+naming your bundles,
 
-1088
-00:33:45,430 --> 00:33:46,930
-was naming your bundles,
+552
+00:33:46,950 --> 00:33:49,400
+as you would have seen in a lot of
+examples before.
 
-1089
-00:33:46,950 --> 00:33:48,170
-as you would have seen in a lot
+553
+00:33:49,850 --> 00:33:54,760
+These bundles were not really called like
+a trio, duo, mix and match kit, right?
 
-1090
-00:33:48,190 --> 00:33:49,400
-of examples before.
+554
+00:33:54,890 --> 00:33:58,550
+They had names because they were
+essentially, you know, targeting a certain
 
-1091
-00:33:49,850 --> 00:33:51,230
-These bundles were not really
+555
+00:33:58,570 --> 00:34:00,480
+emotion. They were targeting a need
 
-1092
-00:33:51,250 --> 00:33:52,610
-called like a trio,
+556
+00:34:01,010 --> 00:34:03,910
+So, you're coming back, how many sticks do
+you need, right?
 
-1093
-00:33:52,630 --> 00:33:54,180
-duo, mix and match kit,
+557
+00:34:03,930 --> 00:34:07,710
+Build your pack, found your favorite, fill
+a freezer for someone you love, right?
 
-1094
-00:33:54,250 --> 00:33:55,910
-right? They had names because
+558
+00:34:07,730 --> 00:34:11,890
+Set a Thanksgiving table. So a lot of
+these namings we've seen have resulted in
 
-1095
-00:33:55,930 --> 00:33:57,110
-they were essentially,
+559
+00:34:11,910 --> 00:34:20,040
+slightly higher conversion, than, you
+know, your typical trio duo sales, names.
 
-1096
-00:33:57,130 --> 00:33:58,870
-you know, targeting a certain emotion.
+560
+00:34:22,620 --> 00:34:25,370
+Alright, so this is sort of like the
+summary, right?
 
-1097
-00:33:58,890 --> 00:34:00,480
-They were targeting a need
+561
+00:34:26,180 --> 00:34:29,860
+Give each bundle a job, a shopper, and a
+page, right?
 
-1098
-00:34:01,010 --> 00:34:02,430
-So, you're coming back,
+562
+00:34:29,880 --> 00:34:35,320
+With new customers before BFCM. Here's
+where, you know,
 
-1099
-00:34:02,450 --> 00:34:03,630
-how many sticks do you need,
+563
+00:34:35,340 --> 00:34:38,330
+the bundle types that we showed you were
+like a ladder or a routine
 
-1100
-00:34:03,650 --> 00:34:04,430
-right? Build your pack,
+564
+00:34:38,900 --> 00:34:41,750
+The weekend, put the depth inside the
+sets, right?
 
-1101
-00:34:04,450 --> 00:34:05,150
-found your favorite,
+565
+00:34:41,880 --> 00:34:45,110
+Go for deeper offers, but send them to
+build your own pages.
 
-1102
-00:34:05,170 --> 00:34:07,000
-fill a freezer for someone you love,
+566
+00:34:45,460 --> 00:34:49,290
+It's mostly for brand aware pages, build
+your pack, quantity breaks, right?
 
-1103
-00:34:07,270 --> 00:34:08,830
-right? Set a Thanksgiving table.
+567
+00:34:49,800 --> 00:34:54,970
+December, start doing gifting, and we'll
+go slightly deeper into this
 
-1104
-00:34:08,850 --> 00:34:11,110
-So a lot of these namings we've seen have
+568
+00:34:55,420 --> 00:35:00,540
+And finally, January is when you need to
+target your returning customers with
 
-1105
-00:34:11,130 --> 00:34:12,950
-resulted in slightly higher conversion,
+569
+00:35:00,560 --> 00:35:03,180
+refill packs, found your favorites, come
+back, right?
 
-1106
-00:34:12,970 --> 00:34:16,460
-than, you know, your typical
+570
+00:35:03,200 --> 00:35:05,230
+All your email campaigns start running
+here.
 
-1107
-00:34:17,450 --> 00:34:20,040
-trio duo sales, names.
+571
+00:35:05,680 --> 00:35:09,680
+Like I said, you know, each shape has its
+offer, you just need to figure out
 
-1108
-00:34:22,620 --> 00:34:23,800
-Alright, so this is sort of
+572
+00:35:09,700 --> 00:35:11,330
+what that is
 
-1109
-00:34:23,820 --> 00:34:25,370
-like the summary, right?
-
-1110
-00:34:26,180 --> 00:34:27,630
-Give each bundle a job,
-
-1111
-00:34:27,720 --> 00:34:29,230
-a shopper, and a page,
-
-1112
-00:34:29,400 --> 00:34:33,230
-right? With new customers before BFCM.
-
-1113
-00:34:33,880 --> 00:34:35,320
-Here's where, you know,
-
-1114
-00:34:35,340 --> 00:34:36,640
-the bundle types that we showed you
-
-1115
-00:34:36,660 --> 00:34:38,330
-were like a ladder or a routine
-
-1116
-00:34:38,900 --> 00:34:40,080
-The weekend, put the depth
-
-1117
-00:34:40,100 --> 00:34:41,170
-inside the sets,
-
-1118
-00:34:41,500 --> 00:34:42,970
-right? Go for deeper offers,
-
-1119
-00:34:43,140 --> 00:34:45,110
-but send them to build your own pages.
-
-1120
-00:34:45,460 --> 00:34:47,130
-It's mostly for brand aware pages,
-
-1121
-00:34:47,400 --> 00:34:49,290
-build your pack, quantity breaks, right?
-
-1122
-00:34:49,800 --> 00:34:51,600
-December, start doing gifting,
-
-1123
-00:34:51,620 --> 00:34:54,970
-and we'll go slightly deeper into this
-
-1124
-00:34:55,420 --> 00:34:57,660
-And finally, January is when you
-
-1125
-00:34:57,680 --> 00:34:58,940
-need to target your returning
-
-1126
-00:34:58,960 --> 00:35:01,470
-customers with refill packs,
-
-1127
-00:35:01,620 --> 00:35:03,180
-found your favorites, come back, right?
-
-1128
-00:35:03,200 --> 00:35:04,200
-All your email campaigns
-
-1129
-00:35:04,220 --> 00:35:05,230
-start running here.
-
-1130
-00:35:05,680 --> 00:35:06,890
-Like I said, you know,
-
-1131
-00:35:07,240 --> 00:35:08,700
-each shape has its offer,
-
-1132
-00:35:08,720 --> 00:35:11,330
-you just need to figure out what that is
-
-1133
-00:35:13,580 --> 00:35:15,730
+573
+00:35:13,580 --> 00:35:21,240
 Gifting in the last quarter becomes
-
-1134
-00:35:17,320 --> 00:35:18,410
-extremely important
-
-1135
-00:35:19,120 --> 00:35:20,120
-and
-
-1136
-00:35:20,960 --> 00:35:21,620
-targeting those customers,
-
-1137
-00:35:21,640 --> 00:35:23,820
-you know, you could build your gift boxes.
-
-1138
-00:35:23,840 --> 00:35:25,880
-What we've generally seen is again a
-
-1139
-00:35:25,900 --> 00:35:29,040
-fixed price gift boxes work the most
-
-1140
-00:35:29,060 --> 00:35:30,380
-Because these are,
-
-1141
-00:35:30,400 --> 00:35:32,030
-you know, price sensitive customers.
-
-1142
-00:35:32,480 --> 00:35:33,880
-So a lot of time, you know,
-
-1143
-00:35:33,900 --> 00:35:36,080
-gifts under $50, gift under $100,
-
-1144
-00:35:36,100 --> 00:35:37,170
-gift under $200.
-
-1145
-00:35:37,940 --> 00:35:39,690
-Who are you buying for? Right.
-
-1146
-00:35:40,320 --> 00:35:41,960
-Those sort of things start working.
-
-1147
-00:35:41,980 --> 00:35:42,680
-And then, you know,
-
-1148
-00:35:42,700 --> 00:35:45,630
-putting a card, putting You know,
-
-1149
-00:35:45,660 --> 00:35:47,740
-a note, all of that start working,
-
-1150
-00:35:47,760 --> 00:35:49,250
-but essentially
-
-1151
-00:35:49,660 --> 00:35:52,700
-a box needs to be built around the
-
-1152
-00:35:52,720 --> 00:35:53,990
-person or the occasion.
-
-1153
-00:35:54,880 --> 00:35:56,940
-Generally, a fixed price box with
-
-1154
-00:35:56,960 --> 00:35:58,720
-wrapping card included is what we've
-
-1155
-00:35:58,740 --> 00:36:00,700
-seen convert the highest for when it
-
-1156
-00:36:00,720 --> 00:36:01,770
-comes to gift boxes
-
-1157
-00:36:02,540 --> 00:36:05,230
-A gift page in the menu,
-
-1158
-00:36:05,260 --> 00:36:07,190
-the December home page, thank you page.
-
-1159
-00:36:07,500 --> 00:36:08,840
-This is essentially where you
-
-1160
-00:36:08,860 --> 00:36:10,250
-could put your gift boxes.
-
-1161
-00:36:10,900 --> 00:36:11,980
-And again, right from a
-
-1162
-00:36:12,000 --> 00:36:13,000
-naming perspective,
-
-1163
-00:36:13,740 --> 00:36:15,140
-like for new parents at the
-
-1164
-00:36:15,160 --> 00:36:18,210
-Thanksgiving table for a baby,
-
-1165
-00:36:18,320 --> 00:36:19,790
-a Christmas dinner, right?
-
-1166
-00:36:20,880 --> 00:36:22,280
-these are some of the,
-
-1167
-00:36:22,300 --> 00:36:25,810
-you know, examples of gift boxes
-
-1168
-00:36:27,320 --> 00:36:29,140
-Once you actually find a
-
-1169
-00:36:29,160 --> 00:36:30,540
-bundle that sells,
-
-1170
-00:36:30,560 --> 00:36:32,220
-right, what we've now seen a lot of
-
-1171
-00:36:32,240 --> 00:36:33,960
-brands doing is actually running ads
-
-1172
-00:36:33,980 --> 00:36:37,590
-directly to their bundling pages, right?
-
-1173
-00:36:38,260 --> 00:36:40,360
-Essentially, what we see here is,
-
-1174
-00:36:40,380 --> 00:36:42,140
-you know, once you've figured out
-
-1175
-00:36:42,160 --> 00:36:44,010
-what offer is working, what
-
-1176
-00:36:45,500 --> 00:36:48,250
-your pre-curated sets that are working,
-
-1177
-00:36:48,340 --> 00:36:49,540
-so there's a brand who's done like,
-
-1178
-00:36:49,560 --> 00:36:50,900
-you know, pre-curated sets and build
-
-1179
-00:36:50,920 --> 00:36:53,130
-your own on the same page Right?
-
-1180
-00:36:53,480 --> 00:36:55,790
-So they're running ads now directly here.
-
-1181
-00:36:56,120 --> 00:36:57,710
-So now what that does is,
-
-1182
-00:36:58,280 --> 00:37:00,760
-you know, for your customers,
-
-1183
-00:37:00,780 --> 00:37:02,420
-they're able to see a lot of your
-
-1184
-00:37:02,440 --> 00:37:04,110
-SKUs and products right here.
-
-1185
-00:37:04,580 --> 00:37:05,360
-And, you know, the offer
-
-1186
-00:37:05,380 --> 00:37:06,380
-starts making sense,
-
-1187
-00:37:06,400 --> 00:37:07,700
-the products start making sense,
-
-1188
-00:37:07,720 --> 00:37:10,010
-but how do you reach this place is once
-
-1189
-00:37:10,030 --> 00:37:11,720
-you've run a lot of your data,
-
-1190
-00:37:11,740 --> 00:37:13,510
-a lot of your analysis,
-
-1191
-00:37:13,680 --> 00:37:14,520
-you run a couple of bundles,
-
-1192
-00:37:14,540 --> 00:37:16,630
-and all of that then leads you to,
-
-1193
-00:37:16,980 --> 00:37:18,600
-you know, figuring out what's working,
-
-1194
-00:37:18,620 --> 00:37:19,800
-and then you can even run,
-
-1195
-00:37:19,820 --> 00:37:21,830
-you know, your ads directly to it.
-
-1196
-00:37:22,880 --> 00:37:24,460
-These are the 7 prompts we'll
-
-1197
-00:37:24,480 --> 00:37:25,380
-obviously send it to you,
-
-1198
-00:37:25,400 --> 00:37:27,660
+extremely important and targeting those
+
+574
+00:35:21,260 --> 00:35:23,820
+customers, you know, you could build your
+gift boxes.
+
+575
+00:35:23,840 --> 00:35:29,040
+What we've generally seen is again a fixed
+price gift boxes work the most
+
+576
+00:35:29,060 --> 00:35:32,030
+Because these are, you know, price
+sensitive customers.
+
+577
+00:35:32,480 --> 00:35:37,170
+So a lot of time, you know, gifts under
+$50, gift under $100, gift under $200.
+
+578
+00:35:37,940 --> 00:35:41,960
+Who are you buying for? Right. Those sort
+of things start working.
+
+579
+00:35:41,980 --> 00:35:44,070
+And then, you know, putting a card,
+putting
+
+580
+00:35:44,140 --> 00:35:47,740
+You know, a note, all of that start
+working,
+
+581
+00:35:47,760 --> 00:35:53,990
+but essentially a box needs to be built
+around the person or the occasion.
+
+582
+00:35:54,880 --> 00:35:59,620
+Generally, a fixed price box with wrapping
+card included is what we've seen convert
+
+583
+00:35:59,640 --> 00:36:01,770
+the highest for when it comes to gift
+boxes
+
+584
+00:36:02,540 --> 00:36:07,190
+A gift page in the menu, the December home
+page, thank you page.
+
+585
+00:36:07,500 --> 00:36:10,250
+This is essentially where you could put
+your gift boxes.
+
+586
+00:36:10,900 --> 00:36:12,870
+And again, right from a naming
+perspective,
+
+587
+00:36:13,740 --> 00:36:16,460
+like for new parents at the Thanksgiving
+table for
+
+588
+00:36:16,480 --> 00:36:19,790
+a baby, a Christmas dinner, right?
+
+589
+00:36:20,880 --> 00:36:25,810
+these are some of the, you know, examples
+of gift boxes
+
+590
+00:36:27,320 --> 00:36:30,820
+Once you actually find a bundle that
+sells, right,
+
+591
+00:36:30,840 --> 00:36:35,500
+what we've now seen a lot of brands doing
+is actually running ads directly to their
+
+592
+00:36:35,520 --> 00:36:40,800
+bundling pages, right? Essentially, what
+we see here is, you know,
+
+593
+00:36:40,820 --> 00:36:43,360
+once you've figured out what offer is
+working,
+
+594
+00:36:43,380 --> 00:36:49,360
+what your pre-curated sets that are
+working, so there's a brand who's done
+
+595
+00:36:49,380 --> 00:36:52,140
+like, you know, pre-curated sets and build
+your own on the same page
+
+596
+00:36:52,160 --> 00:36:55,790
+Right? So they're running ads now directly
+here.
+
+597
+00:36:56,120 --> 00:37:00,760
+So now what that does is, you know, for
+your customers,
+
+598
+00:37:00,780 --> 00:37:04,110
+they're able to see a lot of your SKUs and
+products right here.
+
+599
+00:37:04,580 --> 00:37:07,700
+And, you know, the offer starts making
+sense, the products start making sense,
+
+600
+00:37:07,720 --> 00:37:08,860
+but how do you reach this place
+
+601
+00:37:08,880 --> 00:37:13,510
+is once you've run a lot of your data, a
+lot of your analysis,
+
+602
+00:37:13,680 --> 00:37:17,720
+you run a couple of bundles, and all of
+that then leads you to, you know,
+
+603
+00:37:17,740 --> 00:37:20,540
+figuring out what's working, and then you
+can even run, you know,
+
+604
+00:37:20,560 --> 00:37:21,830
+your ads directly to it.
+
+605
+00:37:22,880 --> 00:37:25,380
+These are the 7 prompts we'll obviously
+send it to you,
+
+606
+00:37:25,400 --> 00:37:29,360
 and then we'll also send a skill that with
+these prompts will help you figure out
 
-1199
-00:37:27,680 --> 00:37:29,620
-these prompts will help you figure out the
+607
+00:37:29,380 --> 00:37:31,310
+the bundle strategy itself, right?
 
-1200
-00:37:29,640 --> 00:37:31,040
-bundle strategy itself,
+608
+00:37:31,460 --> 00:37:33,740
+So all the findings and the strategies
+that you were seeing,
 
-1201
-00:37:31,060 --> 00:37:32,460
-right? So all the findings and the
+609
+00:37:33,760 --> 00:37:36,650
+you'll be able to generate for your store
+as well.
 
-1202
-00:37:32,480 --> 00:37:33,740
-strategies that you were seeing,
+610
+00:37:38,610 --> 00:37:41,760
+Yeah, so this is just one pager, I think
+we've gone through it.
 
-1203
-00:37:33,760 --> 00:37:35,700
-you'll be able to generate for
-
-1204
-00:37:35,720 --> 00:37:36,720
-your store as well.
-
-1205
-00:37:38,610 --> 00:37:40,370
-Yeah, so this is just one pager,
-
-1206
-00:37:40,390 --> 00:37:41,760
-I think we've gone through it.
-
-1207
-00:37:41,890 --> 00:37:44,900
+611
+00:37:41,890 --> 00:37:47,730
 That's the end to the bundling section.
+And now we are going to move on to
 
-1208
-00:37:45,450 --> 00:37:48,890
-And now we are going to move on to A very
+612
+00:37:47,750 --> 00:37:54,170
+A very interesting section on AI right
+AEO,
 
-1209
-00:37:48,910 --> 00:37:54,170
-interesting section on AI right AEO,
+613
+00:37:54,190 --> 00:37:56,840
+which is essentially Ask Engine
+Optimization
 
-1210
-00:37:54,190 --> 00:37:55,470
-which is essentially Ask
+614
+00:37:57,650 --> 00:38:02,580
+Will shoppers reach your store through AI
+this BFCM, right?
 
-1211
-00:37:55,490 --> 00:37:56,840
-Engine Optimization
+615
+00:38:03,530 --> 00:38:08,180
+Shopify is already started sending your
+products to
 
-1212
-00:37:57,650 --> 00:37:59,790
-Will shoppers reach your store
-
-1213
-00:37:59,810 --> 00:38:02,580
-through AI this BFCM, right?
-
-1214
-00:38:03,530 --> 00:38:06,510
-Shopify is already started sending
-
-1215
-00:38:06,530 --> 00:38:09,600
-your products to you know,
-
-1216
-00:38:10,990 --> 00:38:11,870
-has already started sending your
-
-1217
-00:38:11,890 --> 00:38:14,240
+616
+00:38:08,470 --> 00:38:14,240
+you know, has already started sending your
 products to all these LLMs.
 
-1218
-00:38:14,510 --> 00:38:17,210
-You probably are already seeing,
+617
+00:38:14,510 --> 00:38:19,110
+You probably are already seeing, you know,
+traffic from LLMs.
 
-1219
-00:38:17,230 --> 00:38:19,110
-you know, traffic from LLMs.
+618
+00:38:19,130 --> 00:38:23,530
+You're seeing, you know, purchases from
+LLM. But what
 
-1220
-00:38:19,130 --> 00:38:21,430
-You're seeing, you know,
+619
+00:38:23,550 --> 00:38:28,350
+The data is also telling is there is a
+higher conversion from people who coming
 
-1221
-00:38:21,450 --> 00:38:23,290
-purchases from LLM.
+620
+00:38:28,370 --> 00:38:33,980
+from LLMs and also greater revenue per
+visit from AI referred shoppers, right?
 
-1222
-00:38:23,310 --> 00:38:25,990
-But what The data is also telling is there
+621
+00:38:34,530 --> 00:38:39,930
+These are, you know, high intent driven
+customers who you want to make sure are,
 
-1223
-00:38:26,010 --> 00:38:28,110
-is a higher conversion from people who
+622
+00:38:39,950 --> 00:38:45,880
+you know, increasing in terms of the size
+of your customers, customer segment,
 
-1224
-00:38:28,130 --> 00:38:30,690
-coming from LLMs and also greater revenue
-
-1225
-00:38:30,710 --> 00:38:33,170
-per visit from AI referred shoppers,
-
-1226
-00:38:33,190 --> 00:38:34,190
+623
+00:38:46,090 --> 00:38:47,010
 right?
 
-1227
-00:38:34,530 --> 00:38:36,010
-These are, you know,
+624
+00:38:47,030 --> 00:38:52,430
+How do we essentially do that? That's what
+I'm going to take you through this
 
-1228
-00:38:36,030 --> 00:38:38,510
-high intent driven customers who
+625
+00:38:52,450 --> 00:38:53,450
+section.
 
-1229
-00:38:38,530 --> 00:38:39,930
-you want to make sure are,
+626
+00:38:54,530 --> 00:38:57,300
+AI shopping, like, there are two different
+things, right?
 
-1230
-00:38:39,950 --> 00:38:43,170
-you know, increasing in terms of the
+627
+00:38:57,430 --> 00:39:02,360
+One is an LLM chat recommendation, and the
+other is Agentic shopping, right?
 
-1231
-00:38:43,190 --> 00:38:45,090
-size of your customers,
+628
+00:39:02,790 --> 00:39:03,990
+What that means is
 
-1232
-00:38:45,110 --> 00:38:46,500
-customer segment, right?
+629
+00:39:04,010 --> 00:39:07,990
+Simply when you type, you know, what are
+good running shoe brands,
 
-1233
-00:38:47,030 --> 00:38:49,160
-How do we essentially do that?
+630
+00:39:08,010 --> 00:39:12,000
+an LLM would suggest, you know, different
+products, it'll tell you the price point,
 
-1234
-00:38:49,550 --> 00:38:51,250
-That's what I'm going to take you
+631
+00:39:12,150 --> 00:39:14,190
+what the reviews are saying, you follow
+the link,
 
-1235
-00:38:51,270 --> 00:38:53,080
-through this section.
+632
+00:39:14,210 --> 00:39:17,680
+and you end up on that website where you
+complete your purchase, right?
 
-1236
-00:38:54,530 --> 00:38:55,610
-AI shopping, like,
-
-1237
-00:38:55,630 --> 00:38:56,880
-there are two different things,
-
-1238
-00:38:57,050 --> 00:38:59,390
-right? One is an LLM chat recommendation,
-
-1239
-00:38:59,410 --> 00:39:02,360
-and the other is Agentic shopping, right?
-
-1240
-00:39:02,790 --> 00:39:06,250
-What that means is Simply when you type,
-
-1241
-00:39:06,270 --> 00:39:06,930
-you know, what are good
-
-1242
-00:39:06,950 --> 00:39:09,150
-running shoe brands, an LLM would suggest,
-
-1243
-00:39:09,170 --> 00:39:10,540
-you know, different products,
-
-1244
-00:39:10,650 --> 00:39:12,000
-it'll tell you the price point,
-
-1245
-00:39:12,150 --> 00:39:13,210
-what the reviews are saying,
-
-1246
-00:39:13,230 --> 00:39:14,190
-you follow the link,
-
-1247
-00:39:14,210 --> 00:39:15,970
-and you end up on that website where
-
-1248
-00:39:15,990 --> 00:39:17,680
-you complete your purchase, right?
-
-1249
+633
 00:39:18,150 --> 00:39:20,370
 The other part is an agentic shopping,
 
-1250
-00:39:20,390 --> 00:39:22,850
+634
+00:39:20,390 --> 00:39:26,420
 where the agent itself is checking out and
+completing the entire transaction, right?
 
-1251
-00:39:22,870 --> 00:39:25,760
-completing the entire transaction,
+635
+00:39:26,570 --> 00:39:29,990
+So you've said, like, you know, find my
+running shoes and $100 that can arrive by
 
-1252
-00:39:26,030 --> 00:39:27,090
-right? So you've said,
+636
+00:39:30,010 --> 00:39:33,290
+Friday, right? Agent finds it
 
-1253
-00:39:27,110 --> 00:39:28,880
-like, you know, find my running shoes and
+637
+00:39:33,310 --> 00:39:38,510
+puts it in the cart and completes it,
+right? Both of these matter, right?
 
-1254
-00:39:28,950 --> 00:39:30,500
-$100 that can arrive by Friday,
+638
+00:39:38,530 --> 00:39:39,950
+This is getting traffic to your website.
 
-1255
-00:39:30,790 --> 00:39:33,770
-right? Agent finds it puts it in
+639
+00:39:39,970 --> 00:39:44,500
+This is directly converting for you from
+an agent, right?
 
-1256
-00:39:33,790 --> 00:39:35,480
-the cart and completes it, right?
+640
+00:39:44,750 --> 00:39:49,250
+How you appear in both of those is
+essentially recommendation is where, like,
 
-1257
-00:39:36,110 --> 00:39:37,940
-Both of these matter,
+641
+00:39:49,270 --> 00:39:50,735
+your brand needs to get named.
 
-1258
-00:39:38,070 --> 00:39:38,910
-right? This is getting
+642
+00:39:50,755 --> 00:39:54,680
+Right? Agentic shopping is where the sales
+happen.
 
-1259
-00:39:38,930 --> 00:39:39,950
-traffic to your website.
+643
+00:39:55,450 --> 00:39:58,440
+Now, how do you get recommended? There are
+two ways.
 
-1260
-00:39:39,970 --> 00:39:41,990
-This is directly converting for
+644
+00:39:59,350 --> 00:40:05,350
+Route A via the web, Route B via the
+Shopify product catalog. This is a longer
 
-1261
-00:39:42,010 --> 00:39:44,040
-you from an agent,
+645
+00:40:05,370 --> 00:40:11,410
+play. This you can do in, you know, a
+week's time right? So we'll focus more
 
-1262
-00:39:44,150 --> 00:39:47,190
-right? How you appear in both of those is
+646
+00:40:11,430 --> 00:40:15,790
+here. But essentially the web is
+everything you've been doing so far
 
-1263
-00:39:47,210 --> 00:39:49,070
-essentially recommendation is where,
+647
+00:40:15,810 --> 00:40:20,580
+anyways, right from an SEO perspective,
+whatever you were doing for product pages
 
-1264
-00:39:49,090 --> 00:39:50,735
-like, your brand needs to get named.
+648
+00:40:20,890 --> 00:40:25,250
+blog posts, FAQs, making sure, you know,
+you're getting listed in other gift
 
-1265
-00:39:50,755 --> 00:39:51,670
-Right?
+649
+00:40:25,270 --> 00:40:29,530
+guides, in other recipe blogs, for
+example, if you're a food and beverage
 
-1266
-00:39:51,690 --> 00:39:53,150
-Agentic shopping is where
+650
+00:40:29,550 --> 00:40:31,680
+brand, the Reddit threads, right?
 
-1267
-00:39:53,170 --> 00:39:54,680
-the sales happen.
-
-1268
-00:39:55,450 --> 00:39:57,340
-Now, how do you get recommended?
-
-1269
-00:39:57,690 --> 00:39:58,690
-There are two ways.
-
-1270
-00:39:59,350 --> 00:40:01,360
-Route A via the web,
-
-1271
-00:40:01,570 --> 00:40:03,830
-Route B via the Shopify product catalog.
-
-1272
-00:40:03,850 --> 00:40:05,710
-This is a longer play.
-
-1273
-00:40:05,730 --> 00:40:07,950
-This you can do in,
-
-1274
-00:40:07,970 --> 00:40:09,880
-you know, a week's time right?
-
-1275
-00:40:10,350 --> 00:40:11,670
-So we'll focus more here.
-
-1276
-00:40:11,690 --> 00:40:14,470
-But essentially the web is everything
-
-1277
-00:40:14,490 --> 00:40:16,330
-you've been doing so far anyways,
-
-1278
-00:40:16,350 --> 00:40:18,010
-right from an SEO perspective,
-
-1279
-00:40:18,030 --> 00:40:19,450
-whatever you were doing for
-
-1280
-00:40:19,470 --> 00:40:22,100
-product pages blog posts,
-
-1281
-00:40:22,350 --> 00:40:23,810
-FAQs, making sure,
-
-1282
-00:40:23,830 --> 00:40:24,630
-you know, you're getting listed
-
-1283
-00:40:24,650 --> 00:40:25,940
-in other gift guides,
-
-1284
-00:40:26,030 --> 00:40:27,810
-in other recipe blogs,
-
-1285
-00:40:27,830 --> 00:40:29,150
-for example, if you're a food
-
-1286
-00:40:29,170 --> 00:40:31,060
-and beverage brand, the Reddit threads,
-
-1287
-00:40:31,310 --> 00:40:32,010
-right?
-
-1288
-00:40:32,030 --> 00:40:33,970
+651
+00:40:32,030 --> 00:40:35,980
 The good work that you are doing from a
-
-1289
-00:40:33,990 --> 00:40:35,980
 website perspective is what
 
-1290
-00:40:37,270 --> 00:40:39,730
-you know, is now helping you get
+652
+00:40:37,270 --> 00:40:41,540
+you know, is now helping you get cited by
+LLMs as well.
 
-1291
-00:40:39,750 --> 00:40:41,540
-cited by LLMs as well.
+653
+00:40:41,870 --> 00:40:45,300
+The second part is your Shopify product
+catalog,
 
-1292
-00:40:41,870 --> 00:40:43,650
-The second part is your
+654
+00:40:45,550 --> 00:40:50,620
+essentially your entire product taxonomy
+from what category each product is selling
 
-1293
-00:40:43,670 --> 00:40:45,300
-Shopify product catalog,
+655
+00:40:50,810 --> 00:40:53,660
+title, price, stock, shipping, reviews
 
-1294
-00:40:45,550 --> 00:40:46,870
-essentially your entire product
+656
+00:40:54,550 --> 00:41:00,610
+Right, everything that Shopify is passing
+to LLMs to read is what, you know,
 
-1295
-00:40:46,890 --> 00:40:49,530
-taxonomy from what category each
+657
+00:41:00,630 --> 00:41:04,580
+your Route B is, right? Both of these help
+you get recommended.
 
-1296
-00:40:49,550 --> 00:40:51,060
-product is selling title,
+658
+00:41:07,310 --> 00:41:12,470
+I am now going to actually… okay, so this
+is quickly on route A, like,
 
-1297
-00:40:51,550 --> 00:40:52,270
-price,
+659
+00:41:12,490 --> 00:41:16,260
+if you were to, you know, search for
+something like what is the best hot sauce?
 
-1298
-00:40:52,290 --> 00:40:53,660
-stock, shipping, reviews
+660
+00:41:16,350 --> 00:41:19,680
+This is how an LLM would come up with, you
+know, recommendation.
 
-1299
-00:40:54,550 --> 00:40:56,850
-Right, everything that Shopify is
-
-1300
-00:40:56,870 --> 00:40:59,640
-passing to LLMs to read is what,
-
-1301
-00:40:59,670 --> 00:41:02,190
-you know, your Route B is,
-
-1302
-00:41:02,210 --> 00:41:03,530
-right? Both of these help you
-
-1303
-00:41:03,550 --> 00:41:04,580
-get recommended.
-
-1304
-00:41:07,310 --> 00:41:09,900
-I am now going to actually…
-
-1305
-00:41:10,010 --> 00:41:12,370
-okay, so this is quickly on route A,
-
-1306
-00:41:12,390 --> 00:41:13,250
-like, if you were to,
-
-1307
-00:41:13,270 --> 00:41:14,910
-you know, search for something like
-
-1308
-00:41:14,930 --> 00:41:16,260
-what is the best hot sauce?
-
-1309
-00:41:16,350 --> 00:41:18,250
-This is how an LLM would come up with,
-
-1310
-00:41:18,270 --> 00:41:19,680
-you know, recommendation.
-
-1311
+661
 00:41:19,910 --> 00:41:21,220
 It'll tell you some of their picks
 
-1312
-00:41:21,730 --> 00:41:23,590
-You know, why they're picking this,
+662
+00:41:21,730 --> 00:41:24,510
+You know, why they're picking this, and a
+lot of this is, again,
 
-1313
-00:41:23,610 --> 00:41:24,290
-and a lot of this is,
+663
+00:41:24,530 --> 00:41:25,920
+coming from your product pages.
 
-1314
-00:41:24,310 --> 00:41:25,920
-again, coming from your product pages.
+664
+00:41:26,750 --> 00:41:30,090
+If you were to go to Google and select
+best hot sauce, like, you know,
 
-1315
-00:41:26,750 --> 00:41:28,370
-If you were to go to Google and
+665
+00:41:30,110 --> 00:41:34,980
+this AI overview, is, you know, what,
+again, you know,
 
-1316
-00:41:28,390 --> 00:41:29,650
-select best hot sauce,
+666
+00:41:35,230 --> 00:41:40,280
+if the AI overview starts recommending you
+is because, you know, your, description,
 
-1317
-00:41:29,670 --> 00:41:31,200
-like, you know, this AI overview,
+667
+00:41:40,450 --> 00:41:41,690
+title, etc.
 
-1318
-00:41:32,070 --> 00:41:33,370
-is, you know, what,
-
-1319
-00:41:33,390 --> 00:41:36,250
-again, you know, if the AI overview
-
-1320
-00:41:36,270 --> 00:41:37,930
-starts recommending you is because,
-
-1321
-00:41:37,950 --> 00:41:40,280
-you know, your, description,
-
-1322
-00:41:40,450 --> 00:41:43,030
-title, etc. everything is,
-
-1323
-00:41:43,050 --> 00:41:43,790
-you know, matching this
-
-1324
-00:41:43,810 --> 00:41:45,050
+668
+00:41:41,710 --> 00:41:45,050
+everything is, you know, matching this
 particular intent flow.
 
-1325
-00:41:45,070 --> 00:41:48,340
+669
+00:41:45,070 --> 00:41:48,790
 So this is how, you know, the route A
+works
 
-1326
-00:41:48,695 --> 00:41:51,350
-works But let's now go to route B,
+670
+00:41:48,810 --> 00:41:55,250
+But let's now go to route B, and let me
+quickly show you what that means right is
 
-1327
-00:41:51,370 --> 00:41:53,750
-and let me quickly show you what that
+671
+00:41:55,270 --> 00:41:58,560
+your store being cited in the Shopify
+catalog today?
 
-1328
-00:41:53,770 --> 00:41:56,830
-means right is your store being cited in
+672
+00:41:59,525 --> 00:42:03,830
+4 checks, store readiness, product
+readiness, how your shoppers are shopping,
 
-1329
-00:41:56,850 --> 00:41:58,560
-the Shopify catalog today?
+673
+00:42:03,850 --> 00:42:07,240
+optimize for prompts. So I'll do a quick
+demo here.
 
-1330
-00:41:59,525 --> 00:42:01,260
-4 checks, store readiness,
-
-1331
-00:42:01,330 --> 00:42:02,330
-product readiness,
-
-1332
-00:42:02,630 --> 00:42:03,830
-how your shoppers are shopping,
-
-1333
-00:42:03,850 --> 00:42:05,210
-optimize for prompts.
-
-1334
-00:42:05,230 --> 00:42:07,240
-So I'll do a quick demo here.
-
-1335
+674
 00:42:07,690 --> 00:42:10,040
 Essentially, this is a store check, right?
 
-1336
-00:42:10,790 --> 00:42:12,290
-The high-level store checks is,
+675
+00:42:10,790 --> 00:42:13,660
+The high-level store checks is, is your
+store public
 
-1337
-00:42:12,310 --> 00:42:13,660
-is your store public
+676
+00:42:14,323 --> 00:42:18,170
+Are you on an eligible plan, ships to US
+or Canada earlier, you know,
 
-1338
-00:42:14,323 --> 00:42:15,640
-Are you on an eligible plan,
+677
+00:42:18,190 --> 00:42:20,600
+a lot of Shopify had only allowed for US
+or Canada.
 
-1339
-00:42:15,870 --> 00:42:17,700
-ships to US or Canada earlier,
+678
+00:42:20,630 --> 00:42:24,150
+Now, even if you're outside US, you can
+still ship to US,
 
-1340
-00:42:17,970 --> 00:42:19,370
-you know, a lot of Shopify had only
-
-1341
-00:42:19,390 --> 00:42:20,600
-allowed for US or Canada.
-
-1342
-00:42:20,630 --> 00:42:22,290
-Now, even if you're outside US,
-
-1343
-00:42:22,310 --> 00:42:24,150
-you can still ship to US,
-
-1344
-00:42:24,170 --> 00:42:25,590
+679
+00:42:24,170 --> 00:42:27,550
 but then there are some certain
-
-1345
-00:42:25,610 --> 00:42:27,550
 restrictions depending on which LLM you're
 
-1346
-00:42:27,570 --> 00:42:28,570
-on.
+680
+00:42:27,570 --> 00:42:31,200
+on. Content compliancy, extremely
+important.
 
-1347
-00:42:28,650 --> 00:42:29,850
-Content compliancy,
+681
+00:42:31,250 --> 00:42:34,850
+Your shipping policies, privacy policies,
+all of these need to be updated
 
-1348
-00:42:29,870 --> 00:42:31,200
-extremely important.
+682
+00:42:34,870 --> 00:42:40,590
+On your website, right? So these are very
+high level store checks which get you at
 
-1349
-00:42:31,250 --> 00:42:32,300
-Your shipping policies,
+683
+00:42:40,610 --> 00:42:45,150
+least eligible to get listed right? Now,
+review your AI channel.
 
-1350
-00:42:32,490 --> 00:42:34,170
-privacy policies, all of these need to
-
-1351
-00:42:34,190 --> 00:42:36,560
-be updated On your website,
-
-1352
-00:42:36,930 --> 00:42:37,830
-right?
-
-1353
-00:42:37,850 --> 00:42:39,130
-So these are very high level store
-
-1354
-00:42:39,150 --> 00:42:40,750
-checks which get you at least
-
-1355
-00:42:40,770 --> 00:42:42,840
-eligible to get listed right?
-
-1356
-00:42:43,370 --> 00:42:45,150
-Now, review your AI channel.
-
-1357
+684
 00:42:45,170 --> 00:42:47,080
 This is something that you do on.
 
-1358
-00:42:47,470 --> 00:42:50,190
+685
+00:42:47,470 --> 00:42:51,680
 So if you go to as on your sales channel,
-
-1359
-00:42:50,210 --> 00:42:51,680
 if you go to Agentic
 
-1360
-00:42:52,050 --> 00:42:53,690
-This is where you will find,
+686
+00:42:52,050 --> 00:42:57,610
+This is where you will find, you know,
+what Shopify is already putting you on,
 
-1361
-00:42:53,710 --> 00:42:55,230
-you know, what Shopify is
+687
+00:42:57,630 --> 00:43:01,210
+right? So if you allow Shopify to manage
+for me,
 
-1362
-00:42:55,250 --> 00:42:57,610
-already putting you on,
+688
+00:43:01,230 --> 00:43:04,800
+you're currently getting listed on all of
+these AI channels, right?
 
-1363
-00:42:57,630 --> 00:43:00,170
-right? So if you allow Shopify
-
-1364
-00:43:00,190 --> 00:43:01,210
-to manage for me,
-
-1365
-00:43:01,230 --> 00:43:02,750
-you're currently getting listed on
-
-1366
-00:43:02,770 --> 00:43:04,800
-all of these AI channels, right?
-
-1367
-00:43:05,510 --> 00:43:07,530
+689
+00:43:05,510 --> 00:43:09,870
 Now, what you could do here is like
-
-1368
-00:43:07,550 --> 00:43:09,870
 Shopify is already telling you what recent
 
-1369
-00:43:09,890 --> 00:43:12,840
-searches your products appeared for,
+690
+00:43:09,890 --> 00:43:10,350
+searches
 
-1370
-00:43:13,350 --> 00:43:14,970
-and let's say, you know,
+691
+00:43:10,370 --> 00:43:14,970
+your products appeared for, and let's say,
+you know,
 
-1371
-00:43:14,990 --> 00:43:15,950
-this particular brand is in
+692
+00:43:14,990 --> 00:43:16,900
+this particular brand is in food and
+beverage.
 
-1372
-00:43:15,970 --> 00:43:16,970
-food and beverage.
+693
+00:43:18,070 --> 00:43:23,170
+So for this particular category, what
+people are searching for so that these,
 
-1373
-00:43:18,070 --> 00:43:19,890
-So for this particular category,
-
-1374
-00:43:19,910 --> 00:43:21,630
-what people are searching
-
-1375
-00:43:21,650 --> 00:43:23,170
-for so that these,
-
-1376
-00:43:23,190 --> 00:43:24,870
+694
+00:43:23,190 --> 00:43:26,640
 you know, are the intent prompts
-
-1377
-00:43:24,890 --> 00:43:26,640
 essentially that will help you
 
-1378
-00:43:27,170 --> 00:43:28,750
-Understand what your title or
+695
+00:43:27,170 --> 00:43:30,380
+Understand what your title or description
+needs to have, right?
 
-1379
-00:43:28,770 --> 00:43:30,380
-description needs to have, right?
-
-1380
-00:43:31,530 --> 00:43:33,840
+696
+00:43:31,530 --> 00:43:36,010
 Just updating your title and description,
+you know, basis, you know,
 
-1381
-00:43:34,410 --> 00:43:35,410
-you know, basis,
+697
+00:43:36,030 --> 00:43:37,890
+what you think it should be now is not
+relevant.
 
-1382
-00:43:35,650 --> 00:43:36,750
-you know, what you think it should
-
-1383
-00:43:36,770 --> 00:43:37,890
-be now is not relevant.
-
-1384
-00:43:37,910 --> 00:43:40,470
+698
+00:43:37,910 --> 00:43:42,510
 What you really need to think about is how
-
-1385
-00:43:40,490 --> 00:43:42,510
 are people finding you right?
 
-1386
-00:43:42,530 --> 00:43:44,110
-What are they searching for?
+699
+00:43:42,530 --> 00:43:45,650
+What are they searching for? What is
+important to them
 
-1387
-00:43:44,130 --> 00:43:46,500
-What is important to them Right?
+700
+00:43:45,670 --> 00:43:49,220
+Right? Those are your intent prompts, and
+once you have those,
 
-1388
-00:43:46,530 --> 00:43:47,770
-Those are your intent prompts,
+701
+00:43:49,490 --> 00:43:54,040
+that is what then helps you, you know,
+write your proper titles, descriptions,
 
-1389
-00:43:47,790 --> 00:43:49,220
-and once you have those,
-
-1390
-00:43:49,490 --> 00:43:51,700
-that is what then helps you,
-
-1391
-00:43:51,790 --> 00:43:53,640
-you know, write your proper titles,
-
-1392
-00:43:53,690 --> 00:43:54,690
-descriptions,
-
-1393
+702
 00:43:54,730 --> 00:43:55,730
 categories, etc.
 
-1394
-00:43:56,750 --> 00:44:00,070
+703
+00:43:56,750 --> 00:44:01,780
 What Shopify has also actually done is if
-
-1395
-00:44:00,090 --> 00:44:01,780
 you go to your product catalog,
 
-1396
-00:44:02,170 --> 00:44:04,160
-you can select any product.
+704
+00:44:02,170 --> 00:44:07,290
+you can select any product. Right now,
+this is set to like product title,
 
-1397
-00:44:04,810 --> 00:44:06,270
-Right now, this is set to
+705
+00:44:07,310 --> 00:44:14,600
+but essentially you could set another meta
+field in your product page.
 
-1398
-00:44:06,290 --> 00:44:07,290
-like product title,
-
-1399
-00:44:07,310 --> 00:44:09,150
-but essentially you could set another
-
-1400
-00:44:09,170 --> 00:44:14,600
-meta field in your product page.
-
-1401
-00:44:14,970 --> 00:44:17,270
+706
+00:44:14,970 --> 00:44:18,810
 And what that could do is you could have a
-
-1402
-00:44:17,290 --> 00:44:18,810
 separate title and description on your
 
-1403
-00:44:18,830 --> 00:44:21,710
-website But what agents read could be
+707
+00:44:18,830 --> 00:44:19,630
+website
 
-1404
-00:44:21,730 --> 00:44:23,300
-another title or description,
+708
+00:44:19,650 --> 00:44:23,610
+But what agents read could be another
+title or description, right?
 
-1405
-00:44:23,550 --> 00:44:25,370
-right? So these could be much more
+709
+00:44:23,630 --> 00:44:27,950
+So these could be much more nuanced for
+intent prompts that we were just talking
 
-1406
-00:44:25,390 --> 00:44:27,550
-nuanced for intent prompts that we
+710
+00:44:27,970 --> 00:44:31,830
+about. And you could write, you know,
+anything here,
 
-1407
-00:44:27,570 --> 00:44:28,700
-were just talking about.
+711
+00:44:31,850 --> 00:44:35,340
+but it will not reflect on your actual
+page
 
-1408
-00:44:28,950 --> 00:44:30,360
-And you could write,
+712
+00:44:36,890 --> 00:44:41,920
+Yeah, so this is all in your, Agentic
+sales channel.
 
-1409
-00:44:30,590 --> 00:44:31,830
-you know, anything here,
+713
+00:44:42,490 --> 00:44:48,320
+And now the second part of your product
+catalog, right? How do you fix that?
 
-1410
-00:44:31,850 --> 00:44:33,130
-but it will not reflect on
+714
+00:44:49,250 --> 00:44:55,570
+So, product readiness is essentially all
+everything on your when you update your
 
-1411
-00:44:33,150 --> 00:44:35,340
-your actual page
+715
+00:44:55,590 --> 00:44:59,430
+product, right? Right now, for example,
+you have,
 
-1412
-00:44:36,890 --> 00:44:38,860
-Yeah, so this is all in your,
+716
+00:44:59,450 --> 00:45:03,210
+you will see probably here there are
+categories missing category improvements
 
-1413
-00:44:39,170 --> 00:44:41,920
-Agentic sales channel.
+717
+00:45:03,230 --> 00:45:04,090
+needed
 
-1414
-00:44:42,490 --> 00:44:44,330
-And now the second part of
+718
+00:45:04,110 --> 00:45:06,338
+You might have listed some other
+categories,
 
-1415
-00:44:44,350 --> 00:44:45,640
-your product catalog,
+719
+00:45:06,358 --> 00:45:08,680
+Shopify thinks it's some another category
+right?
 
-1416
-00:44:46,030 --> 00:44:48,320
-right? How do you fix that?
-
-1417
-00:44:49,250 --> 00:44:51,070
-So, product readiness is
-
-1418
-00:44:51,090 --> 00:44:54,330
-essentially all everything on your
-
-1419
-00:44:54,350 --> 00:44:56,800
-when you update your product, right?
-
-1420
-00:44:57,410 --> 00:44:59,020
-Right now, for example,
-
-1421
-00:44:59,070 --> 00:45:00,490
-you have, you will see probably here
-
-1422
-00:45:00,510 --> 00:45:01,920
-there are categories missing
-
-1423
-00:45:02,310 --> 00:45:04,930
-category improvements needed You might
-
-1424
-00:45:04,950 --> 00:45:06,338
-have listed some other categories,
-
-1425
-00:45:06,358 --> 00:45:07,350
-Shopify thinks it's some
-
-1426
-00:45:07,370 --> 00:45:08,680
-another category right?
-
-1427
-00:45:09,250 --> 00:45:10,570
+720
+00:45:09,250 --> 00:45:12,110
 So there are category improvements,
+descriptions missing, you know,
 
-1428
-00:45:10,590 --> 00:45:11,640
-descriptions missing,
+721
+00:45:12,130 --> 00:45:16,360
+you've got to review a few things
+individually. This is a big no, right?
 
-1429
-00:45:11,930 --> 00:45:12,890
-you know, you've got to review a
-
-1430
-00:45:12,910 --> 00:45:13,940
-few things individually.
-
-1431
-00:45:14,610 --> 00:45:16,360
-This is a big no, right?
-
-1432
+722
 00:45:16,610 --> 00:45:18,420
 If your products have no inventory,
 
-1433
-00:45:18,530 --> 00:45:20,990
-that's a big bad signal to LLMs
+723
+00:45:18,530 --> 00:45:22,500
+that's a big bad signal to LLMs that
+you're out of stock.
 
-1434
-00:45:21,010 --> 00:45:22,500
-that you're out of stock.
-
-1435
+724
 00:45:22,630 --> 00:45:24,460
 But essentially, if you have no inventory,
 
-1436
-00:45:24,570 --> 00:45:26,290
-then this is this is happening
+725
+00:45:24,570 --> 00:45:28,390
+then this is this is happening because
+these should be unlisted products or
 
-1437
-00:45:26,310 --> 00:45:27,590
-because these should be unlisted
+726
+00:45:28,410 --> 00:45:32,550
+archived products, right? So do not leave
+products that you're not selling
 
-1438
-00:45:27,610 --> 00:45:29,010
-products or archived products,
+727
+00:45:32,570 --> 00:45:39,670
+As, you know, with no inventory, you
+should either archive it or, you know,
 
-1439
-00:45:29,030 --> 00:45:30,970
-right? So do not leave products
+728
+00:45:39,690 --> 00:45:44,270
+unlist these products, right? So if you go
+here, like, you know,
 
-1440
-00:45:30,990 --> 00:45:34,860
-that you're not selling As, you know,
+729
+00:45:44,290 --> 00:45:46,660
+you can see the categories missing.
 
-1441
-00:45:35,350 --> 00:45:35,990
-with no inventory,
+730
+00:45:46,890 --> 00:45:49,930
+There are some suggestions, you've got to
+go back and, you know,
 
-1442
-00:45:36,010 --> 00:45:37,750
-you should either archive it or,
+731
+00:45:49,950 --> 00:45:51,860
+update all your product categories
 
-1443
-00:45:37,770 --> 00:45:41,200
-you know, unlist these products, right?
-
-1444
-00:45:42,070 --> 00:45:43,530
-So if you go here,
-
-1445
-00:45:43,550 --> 00:45:45,650
-like, you know, you can see the
-
-1446
-00:45:45,670 --> 00:45:46,670
-categories missing.
-
-1447
-00:45:46,890 --> 00:45:47,890
-There are some suggestions,
-
-1448
-00:45:48,370 --> 00:45:49,690
-you've got to go back and,
-
-1449
-00:45:49,710 --> 00:45:50,870
-you know, update all your
-
-1450
-00:45:50,890 --> 00:45:51,890
-product categories
-
-1451
+732
 00:45:52,230 --> 00:45:53,640
 titles, etc.
 
-1452
-00:45:54,450 --> 00:45:56,870
-So this is simple things that you could
+733
+00:45:54,450 --> 00:45:59,090
+So this is simple things that you could do
+on your product catalog site.
 
-1453
-00:45:56,890 --> 00:45:58,180
-do on your product catalog
-
-1454
-00:45:58,615 --> 00:46:00,310
-site. Now, let's move on to
-
-1455
-00:46:00,330 --> 00:46:02,260
-the agent side, right?
-
-1456
-00:46:02,670 --> 00:46:04,570
-What is like, for example,
-
-1457
-00:46:04,590 --> 00:46:06,923
-if I were to search for best hot pepper
-
-1458
-00:46:06,943 --> 00:46:10,220
-sauce right now When I search this,
-
-1459
-00:46:10,450 --> 00:46:12,900
-this is what people are seeing currently,
-
-1460
-00:46:13,230 --> 00:46:14,050
+734
+00:45:59,110 --> 00:46:02,260
+Now, let's move on to the agent side,
 right?
 
-1461
-00:46:14,070 --> 00:46:16,210
-But this store isn't in the top
+735
+00:46:02,670 --> 00:46:07,650
+What is like, for example, if I were to
+search for best hot pepper sauce right now
 
-1462
-00:46:16,230 --> 00:46:18,460
-250 of the 359 results.
+736
+00:46:07,670 --> 00:46:13,640
+When I search this, this is what people
+are seeing currently, right?
 
-1463
-00:46:18,670 --> 00:46:22,110
+737
+00:46:14,070 --> 00:46:18,460
+But this store isn't in the top 250 of the
+359 results.
+
+738
+00:46:18,670 --> 00:46:25,230
 Right? What this helps you do is look at
-
-1464
-00:46:22,130 --> 00:46:25,230
 the competition and see what their title,
 
-1465
-00:46:25,250 --> 00:46:26,250
-what their description,
+739
+00:46:25,250 --> 00:46:29,110
+what their description, what their specs,
+right, is already saying, right?
 
-1466
-00:46:26,350 --> 00:46:27,730
-what their specs, right,
+740
+00:46:29,130 --> 00:46:33,530
+Or view their product. So a lot of
+competitor analysis here helps in defining
 
-1467
-00:46:27,750 --> 00:46:28,710
-is already saying,
+741
+00:46:33,550 --> 00:46:37,480
+some of the things that you may want to
+update for yourself as well.
 
-1468
-00:46:28,730 --> 00:46:30,390
-right? Or view their product.
+742
+00:46:37,630 --> 00:46:41,280
+Right? For example, if I searched for
 
-1469
-00:46:30,410 --> 00:46:32,610
-So a lot of competitor analysis here helps
+743
+00:46:44,595 --> 00:46:48,310
+Best poblano sauce. This is where the
+product is number one, right?
 
-1470
-00:46:32,630 --> 00:46:35,410
-in defining some of the things that you
+744
+00:46:48,580 --> 00:46:52,030
+But you are number one here doesn't mean
+you will maintain this.
 
-1471
-00:46:35,430 --> 00:46:37,480
-may want to update for yourself as well.
-
-1472
-00:46:37,630 --> 00:46:39,290
-Right? For example,
-
-1473
-00:46:39,310 --> 00:46:41,280
-if I searched for
-
-1474
-00:46:44,595 --> 00:46:45,460
-Best poblano sauce.
-
-1475
-00:46:45,480 --> 00:46:47,820
-This is where the product is number one,
-
-1476
-00:46:47,840 --> 00:46:50,380
-right? But you are number one here
-
-1477
-00:46:50,400 --> 00:46:52,030
-doesn't mean you will maintain this.
-
-1478
-00:46:52,260 --> 00:46:54,500
+745
+00:46:52,260 --> 00:46:58,160
 You've got to maintain it with constant
+work in terms of making sure that you know
 
-1479
-00:46:54,520 --> 00:46:58,000
-work in terms of making sure that you
+746
+00:46:58,180 --> 00:47:00,670
+your reviews increase, you're in, you
+know.
 
-1480
-00:46:58,020 --> 00:46:59,090
-know your reviews increase,
+747
+00:47:00,780 --> 00:47:06,040
+Reddit mentions, or you know the listicle
+exchanges, the guides that, you know,
 
-1481
-00:46:59,120 --> 00:47:00,670
-you're in, you know.
+748
+00:47:06,060 --> 00:47:10,170
+you can put your brand in. All of that is
+continuous work,
 
-1482
-00:47:00,780 --> 00:47:03,180
-Reddit mentions, or you know the
+749
+00:47:10,320 --> 00:47:12,780
+and a lot of the web work that we spoke
+about earlier,
 
-1483
-00:47:03,200 --> 00:47:04,230
-listicle exchanges,
+750
+00:47:12,800 --> 00:47:16,070
+continues to serve the purpose here as
+well
 
-1484
-00:47:04,520 --> 00:47:06,040
-the guides that, you know,
+751
+00:47:16,340 --> 00:47:22,380
+Right? Yeah, so this is, like, you know,
+I'm running very simple queries here,
 
-1485
-00:47:06,060 --> 00:47:08,010
-you can put your brand in.
+752
+00:47:22,400 --> 00:47:25,820
+right? You've got to run your queries, you
+know,
 
-1486
-00:47:08,040 --> 00:47:10,170
-All of that is continuous work,
+753
+00:47:25,840 --> 00:47:30,510
+you've got to figure out what are the
+queries that are relevant to you.
 
-1487
-00:47:10,320 --> 00:47:11,880
-and a lot of the web work that we
+754
+00:47:30,760 --> 00:47:31,320
+And when I
 
-1488
-00:47:11,900 --> 00:47:12,780
-spoke about earlier,
+755
+00:47:31,340 --> 00:47:35,200
+Like, when I write this, this is not how
+agent is going to read the query and give
 
-1489
-00:47:12,800 --> 00:47:15,260
-continues to serve the purpose
+756
+00:47:35,220 --> 00:47:40,160
+you the results, right? The query is going
+to get split into even more sub queries,
 
-1490
-00:47:15,280 --> 00:47:16,670
-here as well Right?
-
-1491
-00:47:17,500 --> 00:47:19,160
-Yeah, so this is, like,
-
-1492
-00:47:19,180 --> 00:47:20,880
-you know, I'm running very
-
-1493
-00:47:20,900 --> 00:47:22,380
-simple queries here,
-
-1494
-00:47:22,400 --> 00:47:24,210
-right? You've got to run your queries,
-
-1495
-00:47:24,680 --> 00:47:27,420
-you know, you've got to figure out what
-
-1496
-00:47:27,440 --> 00:47:30,510
-are the queries that are relevant to you.
-
-1497
-00:47:30,760 --> 00:47:32,620
-And when I Like, when I write this,
-
-1498
-00:47:32,640 --> 00:47:34,640
-this is not how agent is going to read the
-
-1499
-00:47:34,660 --> 00:47:35,970
-query and give you the results,
-
-1500
-00:47:36,100 --> 00:47:38,220
-right? The query is going to get split
-
-1501
-00:47:38,240 --> 00:47:40,160
-into even more sub queries,
-
-1502
-00:47:40,180 --> 00:47:41,880
+757
+00:47:40,180 --> 00:47:43,460
 right? And those subqueries are
+differently going to get answered and
 
-1503
-00:47:41,900 --> 00:47:43,140
-differently going to get answered
+758
+00:47:43,480 --> 00:47:46,670
+recommendations, and then the final result
+is what is going to be shown
 
-1504
-00:47:43,160 --> 00:47:44,170
-and recommendations,
+759
+00:47:47,320 --> 00:47:51,860
+So yes, you need to make sure that what
+you're selling, how you're selling,
 
-1505
-00:47:44,320 --> 00:47:45,700
-and then the final result is what
-
-1506
-00:47:45,720 --> 00:47:46,720
-is going to be shown
-
-1507
-00:47:47,320 --> 00:47:49,620
-So yes, you need to make sure
-
-1508
-00:47:49,640 --> 00:47:51,380
-that what you're selling,
-
-1509
-00:47:51,400 --> 00:47:51,860
-how you're selling,
-
-1510
-00:47:51,880 --> 00:47:54,210
+760
+00:47:51,880 --> 00:47:54,780
 what people are perceiving, all of that,
+you know,
 
-1511
-00:47:54,640 --> 00:47:55,640
-you know, you know when you're
+761
+00:47:54,800 --> 00:47:57,430
+you know when you're figuring out your
+intent prompts.
 
-1512
-00:47:55,780 --> 00:47:57,430
-figuring out your intent prompts.
+762
+00:47:58,100 --> 00:48:00,630
+Competitor analysis, I think we've already
+spoken about.
 
-1513
-00:47:58,100 --> 00:47:59,160
-Competitor analysis,
-
-1514
-00:47:59,180 --> 00:48:00,630
-I think we've already spoken about.
-
-1515
-00:48:00,720 --> 00:48:02,850
+763
+00:48:00,720 --> 00:48:02,940
 You can put a competitor store domain,
+like,
 
-1516
-00:48:02,940 --> 00:48:04,020
-like, figure out your intent prompts
+764
+00:48:02,960 --> 00:48:06,060
+figure out your intent prompts and see
+what they are doing, where they are
 
-1517
-00:48:04,040 --> 00:48:05,560
-and see what they are doing,
+765
+00:48:06,080 --> 00:48:07,080
+ranking, and
 
-1518
-00:48:05,580 --> 00:48:06,910
-where they are ranking, and
-
-1519
+766
 00:48:07,340 --> 00:48:09,290
 You know, you can improve in your own
 
-1520
-00:48:11,800 --> 00:48:14,290
-store Finally, optimize for prompts.
+767
+00:48:11,800 --> 00:48:12,360
+store
 
-1521
-00:48:14,560 --> 00:48:15,960
-So this is essentially what I've
+768
+00:48:12,380 --> 00:48:17,820
+Finally, optimize for prompts. So this is
+essentially what I've been saying up until
 
-1522
-00:48:15,980 --> 00:48:18,650
-been saying up until now, right?
+769
+00:48:17,840 --> 00:48:21,530
+now, right? So let's say this is one of
+the products, right?
 
-1523
-00:48:19,080 --> 00:48:20,840
-So let's say this is one of the products,
+770
+00:48:22,160 --> 00:48:26,560
+This is the recommendation in terms of the
+product health is good.
 
-1524
-00:48:20,860 --> 00:48:21,860
-right?
-
-1525
-00:48:22,160 --> 00:48:24,480
-This is the recommendation in terms of
-
-1526
-00:48:24,500 --> 00:48:26,560
-the product health is good.
-
-1527
-00:48:26,580 --> 00:48:27,960
+771
+00:48:26,580 --> 00:48:29,560
 But this is a recommended title and
-
-1528
-00:48:27,980 --> 00:48:29,560
 description of what to update.
 
-1529
-00:48:29,580 --> 00:48:31,960
-Now, let's say If I update,
+772
+00:48:29,580 --> 00:48:30,400
+Now, let's say
 
-1530
-00:48:31,980 --> 00:48:34,140
-you know, for another intent prompt,
+773
+00:48:30,420 --> 00:48:34,950
+If I update, you know, for another intent
+prompt, it'll tell me
 
-1531
-00:48:34,160 --> 00:48:35,160
-it'll tell me
+774
+00:48:36,900 --> 00:48:43,990
+It'll tell me another, you know, what, a
+recommended title and description, right?
 
-1532
-00:48:36,900 --> 00:48:38,800
-It'll tell me another,
+775
+00:48:44,600 --> 00:48:48,040
+But what you also need to do is here, like
+I said, right, like,
 
-1533
-00:48:38,820 --> 00:48:41,900
-you know, what, a recommended
+776
+00:48:48,060 --> 00:48:52,820
+you need to think how this sauce will be
+used, for example, by is it a burger
 
-1534
-00:48:41,920 --> 00:48:43,990
-title and description, right?
+777
+00:48:52,840 --> 00:48:54,840
+sauce? Is it a sauce for
 
-1535
-00:48:44,600 --> 00:48:46,700
-But what you also need to do is here,
+778
+00:48:54,860 --> 00:49:00,650
+Asian, cooking, right? You've got to get
+very specific now,
 
-1536
-00:48:46,720 --> 00:48:47,880
-like I said, right,
+779
+00:49:00,820 --> 00:49:04,490
+because you don't know what, how people
+will search for the price point,
 
-1537
-00:48:47,900 --> 00:48:49,380
-like, you need to think how this
+780
+00:49:04,510 --> 00:49:08,320
+are they price sensitive, right? All of
+those things need to come in your
 
-1538
-00:48:49,400 --> 00:48:50,600
-sauce will be used,
+781
+00:49:08,340 --> 00:49:11,630
+description now, with, with a lot of
+specifics
 
-1539
-00:48:50,620 --> 00:48:53,410
-for example, by is it a burger sauce?
-
-1540
-00:48:53,460 --> 00:48:55,660
-Is it a sauce for Asian,
-
-1541
-00:48:55,680 --> 00:48:57,690
-cooking, right?
-
-1542
-00:48:57,780 --> 00:49:00,650
-You've got to get very specific now,
-
-1543
-00:49:00,820 --> 00:49:02,140
-because you don't know what,
-
-1544
-00:49:02,160 --> 00:49:03,460
-how people will search for
-
-1545
-00:49:03,480 --> 00:49:04,490
-the price point,
-
-1546
-00:49:04,510 --> 00:49:06,030
-are they price sensitive,
-
-1547
-00:49:06,260 --> 00:49:07,860
-right? All of those things need to
-
-1548
-00:49:07,880 --> 00:49:09,450
-come in your description now,
-
-1549
-00:49:09,890 --> 00:49:11,630
-with, with a lot of specifics
-
-1550
-00:49:14,240 --> 00:49:17,000
+782
+00:49:14,240 --> 00:49:19,620
 Alright. So yeah, so essentially what the
-
-1551
-00:49:17,020 --> 00:49:19,620
 four checks that you need to do now so
 
-1552
-00:49:19,640 --> 00:49:21,540
+783
+00:49:19,640 --> 00:49:23,220
 that you know that you know your AI agent,
+you know,
 
-1553
-00:49:21,560 --> 00:49:23,980
-you know, actually recommends
+784
+00:49:23,240 --> 00:49:25,180
+actually recommends you is store
+readiness.
 
-1554
-00:49:24,000 --> 00:49:25,180
-you is store readiness.
+785
+00:49:25,200 --> 00:49:29,790
+product readiness, understand how the
+shoppers are shopping.
 
-1555
-00:49:25,200 --> 00:49:27,110
-product readiness,
+786
+00:49:30,040 --> 00:49:33,590
+So search the catalog the way a buyer
+would, right?
 
-1556
-00:49:27,400 --> 00:49:29,790
-understand how the shoppers are shopping.
+787
+00:49:33,720 --> 00:49:35,880
+And finally, optimize for those prompts,
+right?
 
-1557
-00:49:30,040 --> 00:49:31,800
-So search the catalog the
+788
+00:49:35,900 --> 00:49:41,550
+So depending on three, optimize your
+listing for those particular prompts
 
-1558
-00:49:31,820 --> 00:49:34,200
-way a buyer would, right? And finally,
+789
+00:49:42,420 --> 00:49:46,880
+This part, at least, is very doable now.
 
-1559
-00:49:34,220 --> 00:49:35,340
-optimize for those prompts,
+790
+00:49:46,900 --> 00:49:52,510
+This, I think, is ongoing continuous work
+that you can continue to, you know,
 
-1560
-00:49:35,360 --> 00:49:37,190
-right? So depending on three,
+791
+00:49:52,700 --> 00:49:54,010
+work on your store.
 
-1561
-00:49:37,460 --> 00:49:40,180
-optimize your listing for those
+792
+00:49:56,570 --> 00:50:00,970
+Yeah, yeah, so product record, not the
+product page is what's broken.
 
-1562
-00:49:40,200 --> 00:49:41,550
-particular prompts
-
-1563
-00:49:42,420 --> 00:49:43,820
-This part, at least,
-
-1564
-00:49:43,840 --> 00:49:45,170
-is very doable
-
-1565
-00:49:46,380 --> 00:49:48,360
-now. This, I think,
-
-1566
-00:49:48,380 --> 00:49:49,980
-is ongoing continuous work that
-
-1567
-00:49:50,000 --> 00:49:51,210
-you can continue to,
-
-1568
-00:49:51,320 --> 00:49:54,010
-you know, work on your store.
-
-1569
-00:49:56,570 --> 00:49:59,260
-Yeah, yeah, so product record,
-
-1570
-00:49:59,290 --> 00:50:00,970
-not the product page is what's broken.
-
-1571
-00:50:00,990 --> 00:50:01,990
-These were the findings.
-
-1572
-00:50:02,530 --> 00:50:03,530
-Again, right?
-
-1573
-00:50:04,010 --> 00:50:05,120
+793
+00:50:00,990 --> 00:50:05,120
+These were the findings. Again, right?
 Search the catalog.
 
-1574
-00:50:05,810 --> 00:50:07,890
+794
+00:50:05,810 --> 00:50:10,210
 Pick the prompts a buyer would type,
+right? Then fix the product for that
 
-1575
-00:50:07,910 --> 00:50:09,810
-right? Then fix the product
+795
+00:50:10,230 --> 00:50:14,790
+prompt. We've covered this already. This
+is important, right?
 
-1576
-00:50:09,830 --> 00:50:10,830
-for that prompt.
+796
+00:50:14,810 --> 00:50:18,680
+So what Shopify already handles for you
+and what only you can fix, right?
 
-1577
-00:50:11,210 --> 00:50:12,600
-We've covered this already.
+797
+00:50:18,890 --> 00:50:21,640
+Shopify is already handling checkout,
+payments,
 
-1578
-00:50:13,310 --> 00:50:14,370
-This is important,
+798
+00:50:21,870 --> 00:50:24,370
+sending your catalog to AI platforms,
+right? The whole UCP
 
-1579
-00:50:14,390 --> 00:50:16,610
-right? So what Shopify already handles for
+799
+00:50:24,390 --> 00:50:31,900
+protocol, all your, you know, website
+actually being readable by AI, right?
 
-1580
-00:50:16,630 --> 00:50:18,330
-you and what only you can fix,
+800
+00:50:32,010 --> 00:50:35,520
+Order creation in your admin, all of this
+is being handled by Shopify.
 
-1581
-00:50:18,350 --> 00:50:19,830
-right? Shopify is already
-
-1582
-00:50:19,850 --> 00:50:22,130
-handling checkout, payments, sending your
-
-1583
-00:50:22,150 --> 00:50:23,600
-catalog to AI platforms,
-
-1584
-00:50:23,710 --> 00:50:26,620
-right? The whole UCP protocol,
-
-1585
-00:50:27,130 --> 00:50:28,660
-all your, you know,
-
-1586
-00:50:29,010 --> 00:50:31,360
-website actually being readable by AI,
-
-1587
-00:50:31,490 --> 00:50:33,480
-right? Order creation in your admin,
-
-1588
-00:50:33,530 --> 00:50:35,520
-all of this is being handled by Shopify.
-
-1589
-00:50:35,670 --> 00:50:39,040
+801
+00:50:35,670 --> 00:50:41,550
 But what you can do is pass the gates,
+right? The basic gates of
 
-1590
-00:50:40,045 --> 00:50:41,696
-right? The basic gates of The first gate
+802
+00:50:41,591 --> 00:50:44,560
+The first gate of will AI even recommend
+you, right?
 
-1591
-00:50:41,716 --> 00:50:44,560
-of will AI even recommend you, right?
+803
+00:50:45,130 --> 00:50:50,430
+Set the categories, fill the fields, write
+titles that say what the product is,
 
-1592
-00:50:45,130 --> 00:50:47,480
-Set the categories, fill the fields,
+804
+00:50:50,450 --> 00:50:54,970
+get reviews into Shopify's product rating
+field, archive what you no longer sell,
 
-1593
-00:50:47,910 --> 00:50:50,430
-write titles that say what the product is,
+805
+00:50:54,990 --> 00:51:01,590
+right? Quick things that you can fix right
+away, you know, before BFCM
 
-1594
-00:50:50,450 --> 00:50:51,770
-get reviews into Shopify's
+806
+00:51:01,610 --> 00:51:05,210
+Other things that you can do to improve
+your AEO presence, you know,
 
-1595
-00:50:51,790 --> 00:50:52,940
-product rating field,
+807
+00:51:05,230 --> 00:51:08,520
+your FAQ page plus your Shopify knowledge
+base, very important.
 
-1596
-00:50:53,290 --> 00:50:54,970
-archive what you no longer sell,
+808
+00:51:09,130 --> 00:51:12,810
+Whatever your, you know, the hesitations
+that a customer generally has before
 
-1597
-00:50:54,990 --> 00:50:56,770
-right? Quick things that you
+809
+00:51:12,830 --> 00:51:15,750
+buying, put all of them in FAQs, right?
 
-1598
-00:50:56,790 --> 00:50:59,600
-can fix right away, you know, before
+810
+00:51:15,770 --> 00:51:18,740
+When will it reach shipping time, delivery
+times, all of it
 
-1599
-00:51:00,825 --> 00:51:03,430
-BFCM Other things that you can do to
-
-1600
-00:51:03,450 --> 00:51:04,570
-improve your AEO presence,
-
-1601
-00:51:04,590 --> 00:51:06,570
-you know, your FAQ page plus your
-
-1602
-00:51:06,590 --> 00:51:08,520
-Shopify knowledge base, very important.
-
-1603
-00:51:09,130 --> 00:51:10,530
-Whatever your, you know,
-
-1604
-00:51:10,550 --> 00:51:11,670
-the hesitations that a customer
-
-1605
-00:51:11,690 --> 00:51:13,130
-generally has before buying,
-
-1606
-00:51:13,150 --> 00:51:15,530
-put all of them in FAQs,
-
-1607
-00:51:15,550 --> 00:51:17,330
-right? When will it reach shipping time,
-
-1608
-00:51:17,350 --> 00:51:18,740
-delivery times, all of it
-
-1609
-00:51:19,230 --> 00:51:21,340
+811
+00:51:19,230 --> 00:51:22,350
 Search titles and meta descriptions,
-
-1610
-00:51:21,530 --> 00:51:22,350
 right? Very important.
 
-1611
-00:51:22,370 --> 00:51:23,050
-These are, again, right,
+812
+00:51:22,370 --> 00:51:25,100
+These are, again, right, going back to the
+very basics of SEO,
 
-1612
-00:51:23,070 --> 00:51:25,100
-going back to the very basics of SEO,
+813
+00:51:25,150 --> 00:51:29,240
+it's all the same now as well. You've got
+to write your meta descriptions,
 
-1613
-00:51:25,150 --> 00:51:26,780
-it's all the same now as well.
-
-1614
-00:51:27,330 --> 00:51:28,490
-You've got to write your
-
-1615
-00:51:28,510 --> 00:51:29,510
-meta descriptions,
-
-1616
-00:51:29,530 --> 00:51:31,640
+814
+00:51:29,530 --> 00:51:33,220
 your alt text and clean images, right?
-
-1617
-00:51:32,510 --> 00:51:33,510
 Ratings are important
 
-1618
-00:51:34,265 --> 00:51:35,940
+815
+00:51:34,265 --> 00:51:38,330
 intro copy on your collection pages,
+spelling mistakes, stale promos and
 
-1619
-00:51:36,770 --> 00:51:37,690
-spelling mistakes,
+816
+00:51:38,350 --> 00:51:42,770
+titles, remove all of it, right? Archive
+what you no longer sell,
 
-1620
-00:51:37,710 --> 00:51:38,860
-stale promos and titles,
-
-1621
-00:51:38,990 --> 00:51:40,500
-remove all of it, right?
-
-1622
-00:51:41,630 --> 00:51:42,770
-Archive what you no longer sell,
-
-1623
+817
 00:51:42,790 --> 00:51:45,170
 and be in the lists that AI cites.
 
-1624
-00:51:45,190 --> 00:51:46,760
+818
+00:51:45,190 --> 00:51:48,370
 So when you're searching for your brand,
-
-1625
-00:51:47,130 --> 00:51:48,370
 let's say, you know, ChatGPT recommends,
 
-1626
-00:51:48,390 --> 00:51:50,210
+819
+00:51:48,390 --> 00:51:51,230
 you know, this particular listicle is
+suggesting these brands
 
-1627
-00:51:50,230 --> 00:51:52,470
-suggesting these brands Because that
+820
+00:51:51,250 --> 00:51:55,790
+Because that listicle has a higher domain
+authority, or a lot of traffic,
 
-1628
-00:51:52,490 --> 00:51:54,250
-listicle has a higher domain authority,
-
-1629
-00:51:54,270 --> 00:51:55,790
-or a lot of traffic,
-
-1630
-00:51:55,810 --> 00:51:57,180
-it considers it,
-
-1631
-00:51:57,610 --> 00:51:58,720
-you know, as an expert.
-
-1632
-00:51:59,050 --> 00:52:00,780
+821
+00:51:55,810 --> 00:52:00,780
+it considers it, you know, as an expert.
 You want to get listed on those.
 
-1633
-00:52:00,850 --> 00:52:03,990
-So this is a whole you know,
+822
+00:52:00,850 --> 00:52:02,410
+So this is a whole
 
-1634
-00:52:04,010 --> 00:52:05,930
-exercise where you reach out to different,
+823
+00:52:02,430 --> 00:52:07,540
+you know, exercise where you reach out to
+different, you know, listicles,
 
-1635
-00:52:05,950 --> 00:52:08,820
-you know, listicles, gift guides, etc.
+824
+00:52:07,670 --> 00:52:10,510
+gift guides, etc. and start, you know,
 
-1636
-00:52:09,390 --> 00:52:10,510
-and start, you know,
+825
+00:52:10,530 --> 00:52:13,810
+making sure that you're getting traffic
+from some of these external websites as
 
-1637
-00:52:10,530 --> 00:52:11,450
-making sure that you're getting
+826
+00:52:13,830 --> 00:52:14,830
+well.
 
-1638
-00:52:11,470 --> 00:52:12,690
-traffic from some of these
-
-1639
-00:52:12,710 --> 00:52:14,200
-external websites as well.
-
-1640
+827
 00:52:16,740 --> 00:52:19,890
 Alright, so that was the end on the AEO.
 
-1641
-00:52:20,620 --> 00:52:22,260
-So we've covered bundling,
+828
+00:52:20,620 --> 00:52:23,510
+So we've covered bundling, we've covered
+AEO.
 
-1642
-00:52:22,280 --> 00:52:23,510
-we've covered AEO.
+829
+00:52:23,680 --> 00:52:25,580
+Let me take a quick pause here and see
 
-1643
-00:52:23,680 --> 00:52:25,300
-Let me take a quick pause here and
+830
+00:52:25,600 --> 00:52:29,220
+How are you feeling? Anything that, you
+know,
 
-1644
-00:52:25,320 --> 00:52:27,500
-see How are you feeling?
+831
+00:52:29,240 --> 00:52:32,150
+you want me to cover before I move on to
+the next section?
 
-1645
-00:52:27,520 --> 00:52:29,220
-Anything that, you know,
+832
+00:52:32,200 --> 00:52:34,370
+Any questions, feel free to put in the
+chat.
 
-1646
-00:52:29,240 --> 00:52:30,770
-you want me to cover before I move
-
-1647
-00:52:30,790 --> 00:52:32,150
-on to the next section?
-
-1648
-00:52:32,200 --> 00:52:33,500
-Any questions, feel free to
-
-1649
-00:52:33,520 --> 00:52:34,520
-put in the chat.
-
-1650
+833
 00:52:35,480 --> 00:52:37,670
 You know, I'll just quickly look at that
 
-1651
-00:52:40,000 --> 00:52:41,950
-If not, we'll move,
+834
+00:52:40,000 --> 00:52:42,370
+If not, we'll move, yeah
 
-1652
-00:52:42,040 --> 00:52:44,280
-yeah Yeah, while people put
+835
+00:52:42,480 --> 00:52:45,410
+Yeah, while people put their questions in,
 
-1653
-00:52:44,300 --> 00:52:45,410
-their questions in,
+836
+00:52:45,680 --> 00:52:50,620
+this is the only time I'm going to pitch
+in the app and also because we're not
 
-1654
-00:52:45,680 --> 00:52:47,380
-this is the only time I'm going to
+837
+00:52:50,640 --> 00:52:55,810
+going to ask you for any payments to use
+this app for the next three to four months
 
-1655
-00:52:47,400 --> 00:52:50,500
-pitch in the app and also because we're
+838
+00:52:56,160 --> 00:52:59,430
+This is one of the new apps that we've
+launched. It's still in private beta.
 
-1656
-00:52:50,520 --> 00:52:51,790
-not going to ask you for
+839
+00:52:59,640 --> 00:53:02,520
+If you want to use this, the one that we
+were…
 
-1657
-00:52:52,360 --> 00:52:54,700
-any payments to use this app for the next
-
-1658
-00:52:54,720 --> 00:52:57,040
-three to four months This is one of the
-
-1659
-00:52:57,060 --> 00:52:58,140
-new apps that we've launched.
-
-1660
-00:52:58,160 --> 00:52:59,430
-It's still in private beta.
-
-1661
-00:52:59,640 --> 00:53:00,900
-If you want to use this,
-
-1662
-00:53:00,920 --> 00:53:02,520
-the one that we were…
-
-1663
-00:53:02,540 --> 00:53:05,460
+840
+00:53:02,540 --> 00:53:07,560
 that was showing to optimize for Agentic,
-
-1664
-00:53:05,480 --> 00:53:07,560
 you can reach out to us.
 
-1665
-00:53:07,580 --> 00:53:10,100
+841
+00:53:07,580 --> 00:53:11,480
 I'll give you a link to download the app,
+and we'll help you set this up and
 
-1666
-00:53:10,120 --> 00:53:12,220
-and we'll help you set this up and Come
-
-1667
-00:53:12,240 --> 00:53:14,270
-back to you on what you need to do.
-
-1668
-00:53:14,760 --> 00:53:17,070
+842
+00:53:11,500 --> 00:53:17,070
+Come back to you on what you need to do.
 As I said, the idea is not to…
 
-1669
-00:53:17,380 --> 00:53:18,600
-this is going to be free for you,
+843
+00:53:17,380 --> 00:53:19,620
+this is going to be free for you, because
+you're in private beta,
 
-1670
-00:53:18,620 --> 00:53:19,620
-because you're in private beta,
+844
+00:53:19,640 --> 00:53:24,410
+at least for the next four months, so that
+you can run through this season. And
 
-1671
-00:53:19,640 --> 00:53:21,240
-at least for the next four months,
-
-1672
-00:53:21,260 --> 00:53:23,450
-so that you can run through this season.
-
-1673
-00:53:23,980 --> 00:53:24,980
-And
-
-1674
+845
 00:53:29,800 --> 00:53:30,179
-Yeah. I do think Neetika,
+Yeah.
 
-1675
+846
 00:53:30,199 --> 00:53:30,499
-we're on time, so we might not
+I do think Neetika, we're on time, so we
+might not be able to discuss, you know,
 
-1676
-00:53:30,199 --> 00:53:30,499
-be able to discuss,
+847
+00:53:30,199 --> 00:53:32,480
+what happens after the pay button.
 
-1677
-00:53:30,199 --> 00:53:30,800
-you know, what happens after
+848
+00:53:32,500 --> 00:53:36,290
+A lot of it is, I think, fairly common
+knowledge as well.
 
-1678
-00:53:30,820 --> 00:53:32,480
-the pay button.
-
-1679
-00:53:32,500 --> 00:53:34,110
-A lot of it is, I think,
-
-1680
-00:53:34,140 --> 00:53:36,290
-fairly common knowledge as well.
-
-1681
+849
 00:53:36,420 --> 00:53:38,470
 We are going to send you all the details,
 
-1682
-00:53:38,920 --> 00:53:40,460
+850
+00:53:38,920 --> 00:53:42,160
 so you should be able to craft the right
-
-1683
-00:53:40,480 --> 00:53:42,160
 kind of post-purchase offers and right
 
-1684
-00:53:42,180 --> 00:53:44,800
-kind of thank you Paid surveys and order
+851
+00:53:42,180 --> 00:53:43,230
+kind of thank you
 
-1685
-00:53:44,820 --> 00:53:45,520
-page,
+852
+00:53:43,540 --> 00:53:47,390
+Paid surveys and order page, you know,
+offers and stuff like that.
 
-1686
-00:53:45,540 --> 00:53:47,390
-you know, offers and stuff like that.
+853
+00:53:47,720 --> 00:53:50,600
+But what we do want to sort of end with
+is,
 
-1687
-00:53:47,720 --> 00:53:49,280
-But what we do want to sort
+854
+00:53:50,620 --> 00:53:57,350
+Just to recap, these are, you know, the
+four strategies that you can focus on.
 
-1688
-00:53:49,300 --> 00:53:50,600
-of end with is,
+855
+00:53:57,398 --> 00:54:01,700
+We'll be sending you toolkits and Sidekick
+queries to help analyze and come up with
 
-1689
-00:53:50,620 --> 00:53:53,540
-Just to recap, these are,
+856
+00:54:01,720 --> 00:54:03,540
+the right offer strategy, right bundling
+strategy,
 
-1690
-00:53:53,560 --> 00:53:55,630
-you know, the four strategies that you can
-
-1691
-00:53:56,600 --> 00:53:58,865
-focus on. We'll be sending you toolkits
-
-1692
-00:53:58,885 --> 00:54:01,320
-and Sidekick queries to help analyze and
-
-1693
-00:54:01,340 --> 00:54:02,750
-come up with the right offer strategy,
-
-1694
-00:54:02,820 --> 00:54:03,540
-right bundling strategy,
-
-1695
-00:54:03,560 --> 00:54:06,230
+857
+00:54:03,560 --> 00:54:09,450
 figure out what's missing for AI search.
-
-1696
-00:54:06,620 --> 00:54:09,450
 And then, lastly, if you want us to do
 
-1697
-00:54:09,820 --> 00:54:11,800
-Any of the audits for your own
+858
+00:54:09,820 --> 00:54:12,980
+Any of the audits for your own store for
+Black Friday,
 
-1698
-00:54:11,820 --> 00:54:12,980
-store for Black Friday,
-
-1699
+859
 00:54:13,000 --> 00:54:15,590
 based on everything that we spoke about,
 
-1700
-00:54:15,680 --> 00:54:17,360
-feel free to just book a
+860
+00:54:15,680 --> 00:54:18,450
+feel free to just book a meeting on this
+link.
 
-1701
-00:54:17,380 --> 00:54:18,450
-meeting on this link.
-
-1702
+861
 00:54:18,760 --> 00:54:20,600
 You can obviously reach out to us if you…
 
-1703
-00:54:20,620 --> 00:54:21,980
-if you're not able to sort of scan
+862
+00:54:20,620 --> 00:54:23,280
+if you're not able to sort of scan it and
+book it right now,
 
-1704
-00:54:22,000 --> 00:54:23,280
-it and book it right now,
-
-1705
+863
 00:54:23,300 --> 00:54:25,130
 and we'll send you the link
 
-1706
-00:54:26,300 --> 00:54:27,750
-neetika@skailama.com or
+864
+00:54:26,300 --> 00:54:30,770
+neetika@skailama.com or sid@skailama.com
+are all good emails.
 
-1707
-00:54:28,440 --> 00:54:30,770
-sid@skailama.com are all good emails.
-
-1708
-00:54:31,220 --> 00:54:33,090
+865
+00:54:31,220 --> 00:54:34,790
 You can scan this and book it right now.
-
-1709
-00:54:33,500 --> 00:54:34,790
 The audit is free of cost.
 
-1710
-00:54:35,240 --> 00:54:37,460
+866
+00:54:35,240 --> 00:54:39,840
 We're gonna run all the things that we
+spoke about for your own data, for your
 
-1711
-00:54:37,480 --> 00:54:39,380
-spoke about for your own data,
+867
+00:54:39,860 --> 00:54:43,640
+sort of strategy, try and understand your
+business objectives in a meeting,
 
-1712
-00:54:39,400 --> 00:54:41,340
-for your sort of strategy,
+868
+00:54:43,660 --> 00:54:48,550
+and then come up with a recommendation on
+what all you can do. So, yeah.
 
-1713
-00:54:41,360 --> 00:54:42,620
-try and understand your business
+869
+00:54:49,010 --> 00:54:53,240
+Just just that I think I think we're at
+time, 4 minutes to go.
 
-1714
-00:54:42,640 --> 00:54:43,640
-objectives in a meeting,
+870
+00:54:53,260 --> 00:54:57,180
+If anybody has any questions, feel free to
+put them, and we can discuss it now,
 
-1715
-00:54:43,660 --> 00:54:44,660
-and then come up with a
+871
+00:54:57,200 --> 00:55:01,690
+or obviously we can. We can do it in the
+in a separate session as well.
 
-1716
-00:54:44,680 --> 00:54:46,610
-recommendation on what all you can do.
+872
+00:55:10,260 --> 00:55:13,520
+Perfect. Alright.
 
-1717
-00:54:47,280 --> 00:54:48,550
-So, yeah.
+873
+00:55:13,540 --> 00:55:17,200
+Hope the session was useful, and as I
+said,
 
-1718
-00:54:49,010 --> 00:54:50,780
-Just just that I think I
+874
+00:55:17,220 --> 00:55:19,970
+we'll be sending all these details by
+early next week.
 
-1719
-00:54:50,800 --> 00:54:53,240
-think we're at time, 4 minutes to go.
+875
+00:55:21,840 --> 00:55:27,232
+Thanks, everyone. Had a great time today
+and look forward to hearing from you.
 
-1720
-00:54:53,260 --> 00:54:54,870
-If anybody has any questions,
-
-1721
-00:54:55,180 --> 00:54:55,920
-feel free to put them,
-
-1722
-00:54:55,940 --> 00:54:57,180
-and we can discuss it now,
-
-1723
-00:54:57,200 --> 00:54:59,180
-or obviously we can.
-
-1724
-00:54:59,200 --> 00:55:00,100
-We can do it in the in a
-
-1725
-00:55:00,120 --> 00:55:01,690
-separate session as well.
-
-1726
-00:55:10,260 --> 00:55:11,260
-Perfect.
-
-1727
-00:55:12,020 --> 00:55:15,160
-Alright. Hope the session was useful,
-
-1728
-00:55:15,180 --> 00:55:18,080
-and as I said, we'll be sending all
-
-1729
-00:55:18,100 --> 00:55:19,970
-these details by early next week.
-
-1730
-00:55:21,840 --> 00:55:22,760
-Thanks, everyone.
-
-1731
-00:55:22,780 --> 00:55:25,310
-Had a great time today and look forward to
-
-1732
-00:55:26,430 --> 00:55:28,050
-hearing from you. Bye-bye.
+876
+00:55:27,252 --> 00:55:28,252
+Bye-bye.
 

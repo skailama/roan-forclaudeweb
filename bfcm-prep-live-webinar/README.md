@@ -5,7 +5,7 @@ Cleanup of the Zoom recording of **BFCM Prep Live** (15 Oct 2026, Sid and Neetik
 | What | Where |
 |---|---|
 | Trimmed video, demo store's name blurred (55:28, 1986x1050, H.264/AAC) | `output/BFCM-Prep-Live-2026.mp4`, not in git (too big); sent in the session |
-| Captions for YouTube (one line, up to 42 characters, word-timed) | `output/BFCM-Prep-Live-2026.en.srt` |
+| Captions for YouTube (at most two lines, timed to the speech) | `output/BFCM-Prep-Live-2026.en.srt` |
 | Title, description, chapters | `youtube.md` |
 | Email thumbnail, play button only | `thumbnails/email-play.jpg` (1200x675) |
 | Email thumbnail, play button + "BFCM Prep Live" label | `thumbnails/email-play-label.jpg` (1200x675) |
@@ -60,7 +60,7 @@ python3 -I scripts/render_video.py $SRC redactions.json output/BFCM-Prep-Live-20
 
 # captions: shift Zoom's captions onto the trimmed timeline
 python3 -I scripts/shift_captions.py source/GMT20261015-165816_Recording.cc.vtt work/captions-raw.srt 223.7 3551.5
-#    word timings from Whisper (pip install faster-whisper), then one-line captions:
+#    word timings from Whisper (pip install faster-whisper), then two-line captions (--one-line for single lines):
 #    Zoom's corrected words (fix list in clean_captions.py) on Whisper's timing
 ffmpeg -i output/BFCM-Prep-Live-2026.mp4 -vn -ac 1 -ar 16000 work/audio16k.wav
 #    faster-whisper "base.en", word_timestamps=True -> work/whisper_words.json as [{"w","s","e"}]
