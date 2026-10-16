@@ -20,6 +20,13 @@ Nothing in the middle. Only the two ends:
 
 Half-second fade in and one-second fade out, so neither cut is abrupt.
 
+## Checked, nothing else to cut
+
+The whole trimmed video was scanned for silences over 4 seconds, black frames and frozen video, and the captions were read end to end. No internal talk or dead air in the middle. The only pause is about 8 seconds at 55:01, while Sid waits for questions.
+
+- **The live demo shows a real store's admin**, about 42:20 to 49:30: the store handle `gindos` is in the browser tab and URL, with its order badge (9,999+) and product-readiness counts. The slides' case studies were anonymised; this isn't. Blurring the tab and URL bar for that stretch is a small change if it's needed.
+- Sid calls Neetika "Aditi" once (around 53:00). It's spoken, so it stays in the video; the captions leave the name out.
+
 ## Rebuilding
 
 Needs `ffmpeg` and Python 3 with Pillow. Source files go in `source/` (the Zoom export: `GMT20261015-165816_Recording_1986x1050.mp4` plus its `.cc.vtt` and `.transcript.vtt`).
@@ -33,9 +40,10 @@ ffmpeg -ss 223.7 -i source/GMT20261015-165816_Recording_1986x1050.mp4 -t 3327.8 
   -c:v libx264 -preset medium -crf 20 -tune stillimage -pix_fmt yuv420p -r 25 -g 50 \
   -c:a aac -b:a 160k -ar 48000 -movflags +faststart output/BFCM-Prep-Live-2026.mp4
 
-# captions, shifted onto the trimmed timeline
-python3 -I scripts/shift_captions.py source/GMT20261015-165816_Recording.cc.vtt \
-  output/BFCM-Prep-Live-2026.en.srt 223.7 3551.5
+# captions: shift onto the trimmed timeline, then fix mishearings and split long blocks
+mkdir -p work && python3 -I scripts/shift_captions.py source/GMT20261015-165816_Recording.cc.vtt \
+  work/captions-raw.srt 223.7 3551.5
+python3 -I scripts/clean_captions.py work/captions-raw.srt output/BFCM-Prep-Live-2026.en.srt
 
 # thumbnails, from source/thumbnail-source.png
 python3 -I scripts/thumbnails.py
